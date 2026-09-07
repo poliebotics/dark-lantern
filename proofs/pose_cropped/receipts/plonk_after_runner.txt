@@ -1,0 +1,4 @@
+utc=2026-08-24T15:58:43Z
+plonk_usage_usec=263999738738
+plonk_mem=36439220224
+plonk_active=active

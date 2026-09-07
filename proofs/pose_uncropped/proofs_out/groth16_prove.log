@@ -1,0 +1,64 @@
+private_input_bytes=24472512
+blob_sha256=c95b00724f801e9ea8b841c060ac23d2b4267c77691c1755cc6a111550197ed7
+public_values_bytes=400
+row=52
+verdict=1
+head_saturation=0
+logit_sums=[15920, 17697, 8569, -5875, -18570, -2396, -31817, -1193, -21262, -7977, 781]
+typed_root=efd35d054df639c3b07acff6ebab5d2ebec59a85ed0dcde5c0e99aa95006d395
+uncropped_commitment=fa5f5e09d2ef05e583b00bd87c96faa10d60b10c10cc792da59981e739210cf7
+prover=local_cpu_explicit
+program_vkey_hash=0x0059e3fc7ad252555e8ecbee192c1ed057d7519cd87e8f231b6b97dc333c8d23
+Setting environment variables took 268.465µs
+Reading R1CS took 28.859108151s
+Reading proving key took 4.947225043s
+Reading witness file took 1.51507ms
+Deserializing JSON data took 32.407276ms
+Generating witness took 1.585827797s
+[90m01:24:38[0m DBG constraint system solver done [36mnbConstraints=[0m15972262 [36mtook=[0m10068.386027
+[90m01:24:45[0m DBG prover done [36macceleration=[0mnone [36mbackend=[0mgroth16 [36mcurve=[0mbn254 [36mnbConstraints=[0m15972262 [36mtook=[0m6669.914624
+Generating proof took 16.744660051s
+[90m01:24:45[0m [33mWRN[0m [1mignoring uninitialized slice[0m [36mslice name=[0mVars [36mslice type=[0m[]frontend.Variable
+[90m01:24:45[0m [33mWRN[0m [1mignoring uninitialized slice[0m [36mslice name=[0mVars [36mslice type=[0m[]frontend.Variable
+[90m01:24:45[0m [33mWRN[0m [1mignoring uninitialized slice[0m [36mslice name=[0mVars [36mslice type=[0m[]frontend.Variable
+[90m01:24:45[0m DBG verifier done [36mbackend=[0mgroth16 [36mcurve=[0mbn254 [36mtook=[0m1.208685
+proof_file=proofs_out/uncr64_groth16.proof.bin
+proof_file_bytes=2094
+proof_file_sha256=645620988aab7997bb45c06ae7e5a862e2cbb818666e4241e8ae536ee08940e6
+saved_proof_cold_loaded_and_verified=true
+mode=groth16_zk_snark
+onchain_proof_bytes=356
+setup_elapsed_ms=1324
+prove_elapsed_ms=3171629
+verify_elapsed_ms=503
+verified_public_values=true
+verified_proof=true
+tampered_public_values_rejected_by_verifier=true
+tampered_proof_bytes_rejected_by_verifier=true
+wrong_program_vkey_hash=0x007118b51f5ad095a0c0ac22f39434646e19c7abf05c064fb7310c9a463310c9
+wrong_vkey_rejected_by_verifier=true
+public_file=proofs_out/uncr64_groth16_publics.bin
+proof_acceptance_controls_passed=true
+	Command being timed: "./target/release/zeebeam-uncr64-pose --mode groth16 --witness fixtures/uncr64_row52_witness.bin --proof-out proofs_out/uncr64_groth16.proof.bin --public-out proofs_out/uncr64_groth16_publics.bin"
+	User time (seconds): 160296.19
+	System time (seconds): 32661.98
+	Percent of CPU this job got: 6027%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 53:21.53
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 105546132
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 390
+	Minor (reclaiming a frame) page faults: 765717553
+	Voluntary context switches: 204792607
+	Involuntary context switches: 2534040225
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 5480
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

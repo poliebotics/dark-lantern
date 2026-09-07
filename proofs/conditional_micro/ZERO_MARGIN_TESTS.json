@@ -1,0 +1,14 @@
+{
+ "discriminator": {
+  "input": "synthetic zero tensors, nonce 0, receipt context (fixed diffusion noise unchanged)",
+  "rejected": true,
+  "returncode": 1,
+  "message": "lator.calculateWTNSBin (build/discriminator/discriminator_js/witness_calculator.js:216:20)\n    at build/discriminator/discriminator_js/generate_witness.js:16:38\n\nNode.js v22.22.1"
+ },
+ "diffusion": {
+  "input": "synthetic zero tensors, nonce 0, receipt context (fixed diffusion noise unchanged)",
+  "rejected": true,
+  "returncode": 1,
+  "message": " at WitnessCalculator.calculateWTNSBin (build/diffusion/diffusion_js/witness_calculator.js:216:20)\n    at build/diffusion/diffusion_js/generate_witness.js:16:38\n\nNode.js v22.22.1"
+ }
+}

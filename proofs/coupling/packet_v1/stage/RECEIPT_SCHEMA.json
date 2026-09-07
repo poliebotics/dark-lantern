@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "zeebeam-bosun-worker-trained-r32-proof-receipt/v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "stage_sha256sums_sha256",
+    "operator",
+    "host",
+    "guest_elf_sha256",
+    "host_binary_sha256",
+    "commands",
+    "resource_caps",
+    "execute",
+    "core",
+    "groth16",
+    "circuit_files_verified",
+    "verification_rows_accessed",
+    "run_sha256sums_sha256",
+    "claim_boundary"
+  ],
+  "properties": {
+    "schema": {"const": "zeebeam-bosun-worker-trained-r32-proof-receipt/v1"},
+    "stage_sha256sums_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "operator": {"type": "string", "minLength": 1},
+    "host": {"type": "object"},
+    "guest_elf_sha256": {"const": "8a275c57b7b6d1db14103af0b530bb594ac772983937065bf3172d25b52234b6"},
+    "host_binary_sha256": {"const": "2ef2be401ee0bfc25ad5797b10c48973cc6666b6ddabfe8f8b0ff3e9e0cbf461"},
+    "commands": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "resource_caps": {"type": "object"},
+    "execute": {"$ref": "#/$defs/run"},
+    "core": {"$ref": "#/$defs/proofRun"},
+    "groth16": {"$ref": "#/$defs/proofRun"},
+    "circuit_files_verified": {"const": true},
+    "verification_rows_accessed": {"const": false},
+    "run_sha256sums_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "claim_boundary": {"type": "string", "minLength": 1}
+  },
+  "$defs": {
+    "run": {
+      "type": "object",
+      "required": ["exit_code", "elapsed_seconds", "maximum_resident_set_kib", "verified_public_values"],
+      "properties": {
+        "exit_code": {"const": 0},
+        "elapsed_seconds": {"type": "number", "minimum": 0},
+        "maximum_resident_set_kib": {"type": "integer", "minimum": 1},
+        "verified_public_values": {"const": true}
+      }
+    },
+    "proofRun": {
+      "allOf": [
+        {"$ref": "#/$defs/run"},
+        {
+          "type": "object",
+          "required": ["proof_sha256", "proof_bytes", "verified_proof", "tampered_public_values_rejected"],
+          "properties": {
+            "proof_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+            "proof_bytes": {"type": "integer", "minimum": 1},
+            "verified_proof": {"const": true},
+            "tampered_public_values_rejected": {"const": true}
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "schema": "zeebeam-sp1-typed-root-groth16/v1-candidate",
+  "status": "GROTH16_PROOF_VERIFIED",
+  "date": "2026-08-23",
+  "component": "zeebeam-sp1-typed-root-v1",
+  "toolchain": {
+    "sp1_crates": "6.4.0",
+    "cargo_prove": "cargo-prove sp1 (f66b4bf 2026-08-12T14:40:11.709680161Z)",
+    "prover_selection": "ProverClient::builder().cpu()",
+    "privacy_mode": "groth16_zk_snark"
+  },
+  "private_input": {
+    "kind": "frozen_synthetic_golden_vector",
+    "bytes": 458752,
+    "layout": "camera_u8_4x256x256_then_emission_u8_3x256x256_channel_major",
+    "blake3": "84c79fc735ecf6598e6b8d0abdebeafe9c8212c16ad550f0803aa61946b35049"
+  },
+  "public_values": {
+    "bytes": 64,
+    "layout": "context_digest_32_then_typed_root_32",
+    "context_digest": "9d99a1f294eb4e7d1d8b87e21498cf1b598354a9f79b130a227fe6621d794789",
+    "typed_root": "229ca1e2b6115305dfb115224872f71bbda24b66de7853bb02aac57b9d9f4da9"
+  },
+  "timing": {
+    "zk_wrap_feature_compile_seconds": 57.83,
+    "setup_elapsed_ms": 946,
+    "prove_elapsed_ms": 288186,
+    "verify_elapsed_ms": 256,
+    "gnark_generate_proof_seconds": 13.342417335,
+    "gnark_prover_seconds": 11.173954345,
+    "compile_time_included_in_prove_elapsed": false
+  },
+  "resources": {
+    "peak_rss_kib_observed_from_linux_proc_status": 52074476,
+    "peak_rss_bytes_derived": 53324263424,
+    "observation_scope": "VmHWM sampled from the active local proof process",
+    "programmatic_peak_meter_in_host": false
+  },
+  "proof": {
+    "onchain_proof_bytes": 356,
+    "saved_envelope_path": "results/typed_root_groth16.proof.bin",
+    "saved_envelope_bytes": 1759,
+    "saved_envelope_sha256": "f13e10fa7f6a38a61e79382e0145554fa60046628764b062b66be76b8c44b707",
+    "guest_elf_sha256": "2fa84baf9011f293b39685faf3c260fbfca607ac1f1788b4ee447fb26c01fa6f",
+    "verification_key_hash": "0x00b290e13768cb7176c57fc3e299cf6bace3823cad83cce678a93d24695a2e87",
+    "constraint_count": 15972262
+  },
+  "checks": {
+    "frozen_context_digest": "PASS",
+    "frozen_typed_root": "PASS",
+    "exact_public_values": "PASS",
+    "proof_verified": "PASS",
+    "one_bit_public_root_tamper_rejected_by_proof_verifier": "PASS"
+  },
+  "claim_ceiling": "preprocessed_tensors_to_typed_root_only",
+  "not_proved": [
+    "raw_media_membership",
+    "preprocessing_correctness",
+    "development_or_verification_seal_membership",
+    "capture_or_chronology",
+    "model_inference",
+    "reality_or_pose"
+  ]
+}

@@ -1,0 +1,53 @@
+{
+ "schema": "n7-integer-positive-spec/v1",
+ "frozen_utc": "2026-09-06T18:47:39Z",
+ "status": "retrospective engineering demonstration on public data; tau chosen after inspecting the two examples",
+ "statistic": "per-channel Pearson correlation of 4x4 RGB cell sums (each cell 512x288 pixels of the 2048x1152 pair image; equal areas so identical to cell-mean correlation), mean over channels",
+ "grid": {
+  "rows": 4,
+  "cols": 4,
+  "channels": 3,
+  "order": "row-major cells, interleaved RGB",
+  "cell_pixels": 147456,
+  "value_bits": 26,
+  "max_value": 37601280
+ },
+ "S": 65536,
+ "N": 16,
+ "tau": "1/8",
+ "z_offset": 196608,
+ "guards": {
+  "Q_matched_min": 24579,
+  "Q_mismatch_max": 24572,
+  "z_matched_min": 221187,
+  "z_mismatch_max": 221180
+ },
+ "error_bound": "|Q/(3S) - mean_rho| < 1/S",
+ "selection_rule": "lexicographically first target of each session in the seed-2026090601 random map; mismatch emission by inverting the map at that target",
+ "map_path": "n7_raw_20260906/package/results/maps/random_seed2026090601.json",
+ "map_sha256": "255a21e8ad94bea1ed0b430b424ae35fe244f5c8dec76d8188c9b8e835b653e3",
+ "pairs_manifest_sha256": "e49476a1f0eee471b5d05d6cf9c1e69ef5eee50cb07401a1ebeddfbb5df30b18",
+ "examples": {
+  "d2": {
+   "target": "d2_005392.png",
+   "mismatch_emission": "d2_005980.png",
+   "directed_edge": "recorded N7 edge E_donor -> B_target (map inverted at the target capture)"
+  },
+  "v10": {
+   "target": "v10_003368.png",
+   "mismatch_emission": "v10_003697.png",
+   "directed_edge": "recorded N7 edge E_donor -> B_target (map inverted at the target capture)"
+  }
+ },
+ "commitment": {
+  "hash": "Poseidon(11) from circomlib",
+  "tag_domain": "BOSUN_N7_G4_SUM_V1",
+  "roles": {
+   "capture": 0,
+   "matched_emission": 1,
+   "recorded_mismatch": 2
+  },
+  "packing": "nine 26-bit values per field word, 6 words (last holds 3)",
+  "inputs": "manifest_hi128, manifest_lo128, nonce_role, 48, tag_role, p0..p5"
+ }
+}

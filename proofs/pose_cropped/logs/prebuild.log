@@ -1,0 +1,102 @@
+=== fmt check ===
+=== model/native/relation tests ===
+    Finished `release` profile [optimized] target(s) in 0.17s
+     Running unittests src/lib.rs (target/release/deps/zeebeam_trained_r32_pose_ptq_v2_model-2e94f3697708e1ba)
+
+running 3 tests
+test tests::first_argmax_keeps_the_first_tie ... ok
+test tests::parser_rejects_length_and_magic_changes ... ok
+test tests::signed_nearest_even_covers_ties ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/release/deps/zeebeam_trained_r32_pose_ptq_v2_native-06f9dd61f94d9cb1)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/parity.rs (target/release/deps/parity-555442d986315f3f)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/parity.rs (target/release/deps/parity-559b59631c0d7c07)
+
+running 3 tests
+test changed_camera_changes_the_frozen_relation ... ok
+test primary_reduction_and_inference_match_first_python_vector ... ok
+test all_1276_logits_and_116_verdicts_match_python_bit_for_bit ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.05s
+
+     Running unittests src/lib.rs (target/release/deps/zeebeam_trained_r32_pose_ptq_v2_relation-c0f8a7f0f28a0af3)
+
+running 1 test
+test tests::frozen_context_and_public_size_hold ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests zeebeam_trained_r32_pose_ptq_v2_model
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests zeebeam_trained_r32_pose_ptq_v2_native
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests zeebeam_trained_r32_pose_ptq_v2_relation
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+=== script tests ===
+warning: zeebeam-trained-r32-pose-ptq-v2-script@0.1.0: rustc +succinct --version: "rustc 1.94.0-dev\n"
+warning: zeebeam-trained-r32-pose-ptq-v2-script@0.1.0: zeebeam-trained-r32-pose-ptq-v2-program built at 2026-08-24 15:31:53
+    Finished `release` profile [optimized] target(s) in 0.55s
+warning: the following packages contain code that will be rejected by a future version of Rust: proc-macro-error2 v2.0.1
+note: to see what the problems were, use the option `--future-incompat-report`, or run `cargo report future-incompatibilities --id 1`
+     Running unittests src/bin/main.rs (target/release/deps/zeebeam_trained_r32_pose_ptq_v2-c0f1a4833db15f2f)
+
+running 2 tests
+test tests::frozen_host_vector_matches_python_root_logits_and_verdict ... ok
+test tests::public_tamper_and_length_are_rejected ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+=== zk-wrap host build ===
+   Compiling bindgen v0.70.1
+warning: zeebeam-trained-r32-pose-ptq-v2-script@0.1.0: rustc +succinct --version: "rustc 1.94.0-dev\n"
+warning: zeebeam-trained-r32-pose-ptq-v2-script@0.1.0: zeebeam-trained-r32-pose-ptq-v2-program built at 2026-08-24 15:33:56
+   Compiling sp1-recursion-compiler v6.4.0
+   Compiling sp1-prover-types v6.4.0
+   Compiling sp1-recursion-circuit v6.4.0
+   Compiling sp1-recursion-gnark-ffi v6.4.0
+   Compiling sp1-prover v6.4.0
+   Compiling sp1-sdk v6.4.0
+   Compiling zeebeam-trained-r32-pose-ptq-v2-script v0.1.0 (<box path redacted>)
+    Finished `release` profile [optimized] target(s) in 1m 36s
+warning: the following packages contain code that will be rejected by a future version of Rust: proc-macro-error2 v2.0.1
+note: to see what the problems were, use the option `--future-incompat-report`, or run `cargo report future-incompatibilities --id 1`
+=== native parity ===
+    Finished `release` profile [optimized] target(s) in 0.16s
+     Running `target/release/parity frozen/r32_pose_training_calibrated_ptq.bin fixtures/pose_evaluation_r32_parity_v2.bin`
+blob_sha256=c1f16af543f1140dc98944c0343955603fc38f25519784a33c8ff7c34f468d68
+parity_vector_sha256=5b48ec93a73dfc7f2714cdbc4ba1af1f10fa04e588b10eff1a4deb450389e600
+evaluation_rows=116
+integer_logits_checked=1276
+integer_verdicts_checked=116
+evaluation_saturation_count=2
+primary_to_r32_checked=true
+elapsed_ms=33
+bit_exact=true
+=== host binary hash ===
+122968ef2b6d8898e559720e86ca1edae65a1fbfe1047a1a8b99fce64e8297cf  target/release/zeebeam-trained-r32-pose-ptq-v2
+host_bytes=88265656
+PREBUILD_ALL_OK

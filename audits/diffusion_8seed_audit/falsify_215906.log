@@ -1,0 +1,8 @@
+ckpt step=12000 out_size=768,896 base_ch=96 hint=14
+T1a correct condition, position 1 vs last: 20/20 bit-identical  PASS
+T1b duplicated wrong condition, two positions: 20/20 bit-identical  PASS
+T3 TRUE correct conditioning: paired fraction 60/60 = 1.0000
+T3 DERANGED (+613) conditioning: paired fraction 32/60 = 0.5333
+
+TRUE paired=1.0000  DERANGED paired=0.5333
+T3 PASS: perfect pairing collapses under derangement, so it tracks the conditioning.

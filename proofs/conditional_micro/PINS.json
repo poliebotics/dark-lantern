@@ -1,0 +1,22 @@
+{
+ "zkey_sha256": {
+  "discriminator": "2ed38bb7284ff43d94cbd607dc0c432dc4495a6ede811349612e96345ba44a8f",
+  "diffusion": "9a719cad56516e85a806a39e1c6565e428d729896059ce3fce53d8c3b8b55f38"
+ },
+ "zkey_bytes": {
+  "discriminator": 46022384,
+  "diffusion": 51652504
+ },
+ "ptau_sha256": "3ef2ecc5b75d687048cf2d59195119b42fb07c5af639c5f283d84bfa69829e7f",
+ "ptau": "powersOfTau28_hez_final_15.ptau (37,831,832 bytes; not included)",
+ "snarkjs": "0.7.6",
+ "circom": "2.2.3",
+ "verification_key_sha256": {
+  "discriminator": "5b92d8c79e633dbb96415ba43ad7f9d72f16f79b1822a6baf88ce4605b3aeae4",
+  "diffusion": "eecab416dabfe3f2e5f05ce0378c07c714a9d067b169c557c63167516aae9940"
+ },
+ "path_scrub": {
+  "rule": "absolute paths of the build machine reduced to paths relative to the 23 August experiment directory, the repository root, or toolchain/",
+  "applied_to": "copied JSON, .stdout and .time files"
+ }
+}

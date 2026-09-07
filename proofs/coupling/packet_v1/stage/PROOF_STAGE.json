@@ -1,0 +1,75 @@
+{
+  "schema": "zeebeam-bosun-worker-trained-r32-proof-stage/v1",
+  "recorded_at": "2026-08-23T21:47:39Z",
+  "status": "FROZEN_FOR_EXTERNAL_EXECUTION_NO_PROOF_YET",
+  "relation": {
+    "private_input_kind": "frozen_development_architecture_position_0",
+    "private_input_bytes": 458752,
+    "verification_row": false,
+    "guest_elf_sha256": "8a275c57b7b6d1db14103af0b530bb594ac772983937065bf3172d25b52234b6",
+    "guest_elf_bytes": 311456,
+    "expected_total_instructions": 203004795,
+    "expected_typed_root": "8ee3eefa1027cc02d955b65f06840fe624ce07077f8d52f7e9e9f4eb309043b2",
+    "expected_score_numerator": 56835791,
+    "expected_score_denominator": 4,
+    "expected_public_values_bytes": 344
+  },
+  "execute_verified_host": {
+    "path": "bin/zeebeam-trained-r32-ptq-v2-zkwrap",
+    "sha256": "2ef2be401ee0bfc25ad5797b10c48973cc6666b6ddabfe8f8b0ff3e9e0cbf461",
+    "bytes": 88713184,
+    "zk_wrap_feature": true,
+    "execute_replay_exact": true,
+    "execute_replay_maximum_resident_set_kib": 7137468,
+    "canonical_relation_binding": "guest_ELF_not_native_host_binary",
+    "native_host_build_reproducibility": "not_assumed"
+  },
+  "source_and_toolchain": {
+    "source_tar_sha256": "5fdf22ab689eac6b1d07bcf25bb663d7ea8c01b04a968bbf493a19b71f57bdb2",
+    "source_tar_bytes": 1310720,
+    "sp1_sdk_version": "6.4.0",
+    "sp1_circuit_version": "v6.1.0",
+    "cargo_prove_archive_sha256": "8ad88ebd4d970f0b9b7561f9b5899242f01c7da6d04ec4bd5d09f4cf044a541b",
+    "go_archive_sha256": "675c26c449cbb18fc24b74650de1eabbae6e16f64326fd85a283fb3b58280685",
+    "rust_host_toolchain": "1.97.1",
+    "guest_toolchain": "succinct_rustc_1.94.0_dev_from_cargo_prove_6.4.0"
+  },
+  "proof_order": [
+    "execute_replay",
+    "core_STARK",
+    "hash_verified_Groth16_circuit_preparation",
+    "Groth16_zero_knowledge_proof",
+    "receipt_freeze"
+  ],
+  "resource_ceiling": {
+    "minimum_host_memory_kib": 1500000000,
+    "minimum_free_disk_bytes": 322122547200,
+    "swap_allowed": false,
+    "rayon_threads": 224,
+    "trace_chunk_slots": 2,
+    "worker_queues": "one_worker_one_buffer_each",
+    "core_memory_max": "512G",
+    "core_timeout": "4h_plus_5m_for_interrupt_cleanup",
+    "groth16_memory_max": "1200G",
+    "groth16_timeout": "12h_plus_5m_for_interrupt_cleanup",
+    "timeout_or_OOM_is_a_failed_attempt_not_a_proof_receipt": true
+  },
+  "claim_boundary": {
+    "successful_core_result": "cryptographic_STARK_proof_of_joined_private_tensor_to_typed_root_and_exact_frozen_integer_score",
+    "successful_groth16_result": "zero_knowledge_Groth16_proof_of_the_same_joined_relation",
+    "capture_proven": false,
+    "chronology_proven": false,
+    "physical_pose_proven": false,
+    "liveness_proven": false,
+    "reality_proven": false,
+    "scientific_threshold_applied": false
+  },
+  "authority": {
+    "prepared_by_codex_locally": true,
+    "provider_operated_by_codex": false,
+    "intended_operator": "BOSUN_under_her_separate_owner_authority",
+    "verification_open": false,
+    "chain_transaction": false,
+    "publication": false
+  }
+}

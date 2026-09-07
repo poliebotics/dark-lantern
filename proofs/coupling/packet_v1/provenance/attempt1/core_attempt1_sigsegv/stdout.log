@@ -1,0 +1,18 @@
+input_kind=frozen_development_architecture_position_0
+private_input_bytes=458752
+blob_sha256=0188b5c0f4ea08e81940aef1a8cb303c00b24e7f8b7730a64bf5080d4030353a
+typed_root=8ee3eefa1027cc02d955b65f06840fe624ce07077f8d52f7e9e9f4eb309043b2
+score_numerator=56835791
+score_denominator=4
+public_values_bytes=344
+prover=local_cpu_explicit
+[2m2026-08-23T22:18:06.336727Z[0m [32m INFO[0m initializing cpu prover
+[2m2026-08-23T22:18:32.272494Z[0m [32m INFO[0m starting proof generation [3mmode[0m[2m=[0mCore
+[2m2026-08-23T22:18:35.136918Z[0m [32m INFO[0m ┌╴model_binding
+[2m2026-08-23T22:18:35.235703Z[0m [32m INFO[0m └╴5,376,112 cycles
+[2m2026-08-23T22:18:35.235767Z[0m [32m INFO[0m ┌╴typed_root
+[2m2026-08-23T22:18:35.553297Z[0m [32m INFO[0m └╴14,748,143 cycles
+[2m2026-08-23T22:18:35.553356Z[0m [32m INFO[0m ┌╴reduction_and_inference
+[2m2026-08-23T22:18:38.181154Z[0m [32m INFO[0m └╴182,849,120 cycles
+[2m2026-08-23T22:18:38.181238Z[0m [32m INFO[0m ┌╴public_commitment
+[2m2026-08-23T22:18:38.181720Z[0m [32m INFO[0m └╴25,012 cycles

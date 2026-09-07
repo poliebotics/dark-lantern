@@ -1,0 +1,146 @@
+{
+ "checkpoint": "[machine path redacted]",
+ "checkpoint_sha256": "82df3c9dd9116e85992790ddf9d631f6ca4d3670277c1ffa902b38e67c2b0317",
+ "checkpoint_step": 12000,
+ "crop_id": "UNCROPPED_FULL_FRAME_20260825",
+ "out_size": "768,896",
+ "arch": {
+  "base_ch": 96,
+  "mults": [
+   1,
+   2,
+   4,
+   4
+  ],
+  "hint_in_ch": 14
+ },
+ "preprocessing": "ARM-C: NO crop; full sensor frame area-resized to out_size; emission resized not cropped",
+ "protocol": {
+  "t": 150,
+  "offsets": [
+   -2,
+   2,
+   -15,
+   15,
+   30
+  ],
+  "stride": 1,
+  "seed": 20260823,
+  "sub_blocks": 40,
+  "noise_rule": "one generator per session, manual_seed(EVAL_SEED), one draw per row in row order",
+  "statistics": "published protocol statistics; one-stream scoring RNG seeded once per session with the protocol seed"
+ },
+ "sessions": {
+  "d2": {
+   "n_rows": 1200,
+   "contiguous_eval_blocks": [
+    400,
+    400,
+    400
+   ],
+   "blocks_used": [
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40
+   ],
+   "conditions": {
+    "correct": 0.0024380098675222447,
+    "wrong_-2": 0.005198567705616976,
+    "wrong_+2": 0.005199145139583076,
+    "wrong_-15": 0.005199154319707304,
+    "wrong_+15": 0.005200070194744815,
+    "wrong_+30": 0.00519799993140623
+   },
+   "delta_wrong_mean": {
+    "mean": 0.0027609775906894357,
+    "ci95": [
+     0.0027507489408725326,
+     0.00277106691893908
+    ]
+   },
+   "paired_fraction_correct_lower": 1.0,
+   "auroc": {
+    "correct_vs_wrong_avg": 1.0,
+    "correct_vs_wrong_-2": 1.0,
+    "correct_vs_wrong_+2": 1.0,
+    "correct_vs_wrong_-15": 1.0,
+    "correct_vs_wrong_+15": 1.0,
+    "correct_vs_wrong_+30": 1.0
+   },
+   "raw_scores": "[machine path redacted]"
+  },
+  "v10": {
+   "n_rows": 500,
+   "contiguous_eval_blocks": [
+    250,
+    250
+   ],
+   "blocks_used": [
+    42,
+    42,
+    42,
+    42,
+    41,
+    41,
+    42,
+    42,
+    42,
+    42,
+    41,
+    41
+   ],
+   "conditions": {
+    "correct": 0.0029249978200532496,
+    "wrong_-2": 0.005704654902219772,
+    "wrong_+2": 0.005700682043097914,
+    "wrong_-15": 0.005699930389411747,
+    "wrong_+15": 0.005703537511639297,
+    "wrong_+30": 0.005701708468608558
+   },
+   "delta_wrong_mean": {
+    "mean": 0.002777104842942208,
+    "ci95": [
+     0.0027622261821117966,
+     0.002790305173821341
+    ]
+   },
+   "paired_fraction_correct_lower": 1.0,
+   "auroc": {
+    "correct_vs_wrong_avg": 1.0,
+    "correct_vs_wrong_-2": 1.0,
+    "correct_vs_wrong_+2": 1.0,
+    "correct_vs_wrong_-15": 1.0,
+    "correct_vs_wrong_+15": 1.0,
+    "correct_vs_wrong_+30": 1.0
+   },
+   "raw_scores": "[machine path redacted]"
+  }
+ }
+}

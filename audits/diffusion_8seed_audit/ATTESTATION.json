@@ -1,0 +1,169 @@
+{
+ "date": "2026-08-31",
+ "eval_runner_correction": "run_seeds.sh (sha 55ec01fb...) and run_seeds2.sh are EVALUATION runners, not training launchers; training provenance rests on the histories and checkpoint-recorded args, not on a launcher script",
+ "evaluator": {
+  "path": "[machine path redacted]",
+  "sha256": "0bcfa7a7701e5dbf7e0a68264157a34f998542ccca33f07e9ad6753d3bd6d245"
+ },
+ "evidence_md_sha256_v1_asaudited": "976d1093593aefb8aa27d5b21d9dc66b388eb4f2399493d0567c127f644cc36e",
+ "falsifier": {
+  "determinism": "runs 2 and 3, sha-bound to ckpt 03dd6caf, agree exactly; the original run recorded no ckpt hash and is unbound",
+  "original_log": {
+   "path": "[machine path redacted]",
+   "sha256": "12a665a27c74bbb7b18c72e5ffc962d963de1f34e2f5da2417384a75b23d9e4b"
+  },
+  "path": "[machine path redacted]",
+  "sha256": "bec430f481a6e71f06d273b276e6c24a6e92ba2a7556fc0287be7fc79b0ea56c",
+  "sha_bound_rerun": {
+   "path": "[machine path redacted]",
+   "sha256": "3e753f33e7167117a988d5f16568bb56326186d4cbfcca2ba115ba4111df5488"
+  },
+  "third_run": {
+   "deranged": "37/60 = 0.6167, exactly equal to run 2",
+   "local_copy": "falsify_rerun3_shabound_030937.log",
+   "path": "[machine path redacted]",
+   "sha256": "7aebac3886f2aed9e4165c31bdba52aa301754de345e289887cd01c0adc0500e"
+  }
+ },
+ "full_histories_local": {
+  "armc_xof_uncropped_20260825": {
+   "path": "histories/armc_xof_uncropped_20260825/history.jsonl",
+   "sha256": "80d69cf6f77feca570955870379e0d197e57c8fd851ce6e7b78cb0f6f557439f",
+   "verified_local_copy": true
+  },
+  "armc_xof_uncropped_20260825_seed0828_boxA": {
+   "path": "histories/armc_xof_uncropped_20260825_seed0828_boxA/history.jsonl",
+   "sha256": "d5c8d24402f91684024d9b9edcd5bfbe15bfab570991d866d0c9e1f0ae7120c6",
+   "verified_local_copy": true
+  },
+  "armc_xof_uncropped_20260825_seed0829_boxA": {
+   "path": "histories/armc_xof_uncropped_20260825_seed0829_boxA/history.jsonl",
+   "sha256": "ad8105e37d9c837432b83514575b70e1067b0897fc2536c51d54c0a3b3ee92b6",
+   "verified_local_copy": true
+  },
+  "armc_xof_uncropped_20260825_seed0830_boxA": {
+   "path": "histories/armc_xof_uncropped_20260825_seed0830_boxA/history.jsonl",
+   "sha256": "c8082bf468267db7925fa59bceb8a6a8e3b6b2286ad51922caaa372dffee09ea",
+   "verified_local_copy": true
+  },
+  "armc_xof_uncropped_20260825_seed0831_boxB": {
+   "path": "histories/armc_xof_uncropped_20260825_seed0831_boxB/history.jsonl",
+   "sha256": "5612f68453f86eb6706a42edef1def39cb51a2bac5db2c0a6b38273f0d4fdc36",
+   "verified_local_copy": true
+  },
+  "armc_xof_uncropped_20260825_seed0832_boxB": {
+   "path": "histories/armc_xof_uncropped_20260825_seed0832_boxB/history.jsonl",
+   "sha256": "4c6d2628644b1ed9cbfafae03d8e0067b5f33ae2bae7f8dbb61d1a9472868721",
+   "verified_local_copy": true
+  },
+  "armc_xof_uncropped_20260825_seed26": {
+   "path": "histories/armc_xof_uncropped_20260825_seed26/history.jsonl",
+   "sha256": "d6f786adf733dbdcee1685474931c5303a19668ff6c87af911b2031c4173a122",
+   "verified_local_copy": true
+  },
+  "armc_xof_uncropped_20260825_seed27_boxA": {
+   "path": "histories/armc_xof_uncropped_20260825_seed27_boxA/history.jsonl",
+   "sha256": "e550168cf85560949cdbbbb4c9b31a1da6e165d50923f9a16c4c88fc3aab228c",
+   "verified_local_copy": true
+  }
+ },
+ "independent_recompute": {
+  "file": "INDEPENDENT_RECOMPUTE.json",
+  "mismatched_cells": 0,
+  "sha256": "a2849d4dac8e50083fea15d029367dcc4ed9ec75cb886f50598e71d0c7cd30aa"
+ },
+ "independent_stats_code_sha256": "35bc60b896913689aa91fd2a5c23df3d5f8d1df9d4d53855a32e87290a805e05",
+ "provenance_histories": {
+  "note": "history.jsonl first/last lines + file shas for all 8 runs; first lines open at step 50, loss ~0.987 (from-scratch); last lines at step 12000 (finality)",
+  "path": "provenance_histories.json",
+  "sha256": "347a81761897281a82a9b6bd4c62f316668093362169c0be2e6de1a4876cb0d4"
+ },
+ "results": {
+  "armc_xof_uncropped_20260825.json": {
+   "checkpoint": "[machine path redacted]",
+   "checkpoint_sha256": "03dd6cafd37ed63788867d9da2a39c5b13834c766328fb52656d255aca0e83c8",
+   "checkpoint_step": 12000,
+   "raw_npz": {
+    "d2": "67db5eb013fdf3c811165c4019250c9b057bdbecf1b90ffdc43b3245aa0e2007",
+    "v10": "65f5af228f45806f2dcdf847810c46c103b31fd8196c06545f5bbcc07450dcd9"
+   },
+   "result_sha256": "f55f99d85d57e4070916487a512f67d01065f9336eb157e8c58dbb33ba81d6eb"
+  },
+  "armc_xof_uncropped_20260825_seed0828_boxA.json": {
+   "checkpoint": "[machine path redacted]",
+   "checkpoint_sha256": "82df3c9dd9116e85992790ddf9d631f6ca4d3670277c1ffa902b38e67c2b0317",
+   "checkpoint_step": 12000,
+   "raw_npz": {
+    "d2": "32124e839ddeff5846be25d9c3192de9caef070ab9f81b4309d65804caae1921",
+    "v10": "c4a68490d0ebd2eef2f457494087d4721ebf6f125de893472dc73583e7d0c7ec"
+   },
+   "result_sha256": "2bb2849be146f9ff447593af8e6bc2e524c970ac80dff9b2cf15e84b74c74bc9"
+  },
+  "armc_xof_uncropped_20260825_seed0829_boxA.json": {
+   "checkpoint": "[machine path redacted]",
+   "checkpoint_sha256": "3a7a9c5b1687029cdca9941449ab7d75f86bf9071a7f0c82862e5dc86b4550e7",
+   "checkpoint_step": 12000,
+   "raw_npz": {
+    "d2": "d9e6193d5bded15a4cf67943b71916f4df45f456e5a77b3644557548e084a2a1",
+    "v10": "eb50fcc683a680823c637be18cc4b92f581d2b9695795cc8387bb9e74ead2b71"
+   },
+   "result_sha256": "153c3d52368cb9ae4069fb3b1cbc443ac8f7aa034517979c85ea74bd1bb2ecb5"
+  },
+  "armc_xof_uncropped_20260825_seed0830_boxA.json": {
+   "checkpoint": "[machine path redacted]",
+   "checkpoint_sha256": "36c479ffb9ac3195e4d721562d2a880acbc5e8d3ef0ca198be32ee0698c02728",
+   "checkpoint_step": 12000,
+   "raw_npz": {
+    "d2": "11c179a8c2a50336a696ce3129514a0c72266c6d8be7f27149922026e1cbb7bf",
+    "v10": "1a0f6ea7961472531a4cbb768abcbeb0c475889801b4f88dab516d177624d435"
+   },
+   "result_sha256": "aefa840d8a57c0e4d0ed4b4d25f88248a7aedc1caa5c08023af97e3c88da2958"
+  },
+  "armc_xof_uncropped_20260825_seed0831_boxB.json": {
+   "checkpoint": "[machine path redacted]",
+   "checkpoint_sha256": "591579d8ec56943d6ab8d1008a3e1d8ba4cf5202c1728f7c92f7affb5261584e",
+   "checkpoint_step": 12000,
+   "raw_npz": {
+    "d2": "2e1775f09241140ca9757caaf81b0806ca685fc882254ac53e6d2d7ff90e5dd7",
+    "v10": "3911a760d1c73e50ed47adde97aea8e1eb734a7c17cac42ce2fe8b31c2e01cab"
+   },
+   "result_sha256": "2df9c62d86b1670520a05dfc21536defdc83e217b09b4336c7a4efcbca49c258"
+  },
+  "armc_xof_uncropped_20260825_seed0832_boxB.json": {
+   "checkpoint": "[machine path redacted]",
+   "checkpoint_sha256": "bbe37e4bf8651ed091ceefb80b63cd322faca3ac8ac3ea87cb5eeec87af20e73",
+   "checkpoint_step": 12000,
+   "raw_npz": {
+    "d2": "b61a823797e508e062899f46fc453d6a6a26c825fc939e2ca18e2f9c945a6f2a",
+    "v10": "e1739dbea0864f15204a59cb74bcca503abd040a7c55d8c7acf3ef35b8a3f386"
+   },
+   "result_sha256": "9816e2e9e8e81f2f608263feae3015b2a44a03bbc94d5d706b136c212fcacd07"
+  },
+  "armc_xof_uncropped_20260825_seed26.json": {
+   "checkpoint": "[machine path redacted]",
+   "checkpoint_sha256": "5ea1a8041f3c2ca9322f417f305cdf42838ee76547a8568cac0596dfdc77dfa5",
+   "checkpoint_step": 12000,
+   "raw_npz": {
+    "d2": "142ab0f9d31d5a8c7a883bb2d2abbb717e10ee3f5c6003b48b42939eb352b511",
+    "v10": "cc3de66f497c291bc9ea4524f44c6c1831c12fdde0787ec88d727424bec9ac66"
+   },
+   "result_sha256": "b26d8bb24c2831d4ad70a5a6a09e4e3e7b40fc939dcdce5df545c6742c1755fa"
+  },
+  "armc_xof_uncropped_20260825_seed27_boxA.json": {
+   "checkpoint": "[machine path redacted]",
+   "checkpoint_sha256": "aa9b0361a64d13ce0251ee66a6c85779b45dfddde999bdee0e744174297dfce7",
+   "checkpoint_step": 12000,
+   "raw_npz": {
+    "d2": "bed03baea7cab7183a66ce2ba924ba14f235825f2805cd0458fcb1a1c6e51c0b",
+    "v10": "473e183dd86fa9bf82643a41f0fe61af6f525bffa3a9df0e1ccfa2e8ac1cacd4"
+   },
+   "result_sha256": "57b6f5fc3c825217ade706272393161ebef62ee824c6e66aad91f876787bc1e6"
+  }
+ },
+ "run_finality": "history.jsonl final line step=12000 confirmed for all 8 runs, 2026-08-31",
+ "schema": "c-nc8-attestation/v1",
+ "trainer": {
+  "path": "[machine path redacted]",
+  "sha256": "04c837431bc66bb993267fffa4ff8894f8712c291d9f77ea51c980024cb817fd"
+ }
+}

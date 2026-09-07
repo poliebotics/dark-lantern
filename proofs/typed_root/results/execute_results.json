@@ -1,0 +1,60 @@
+{
+  "schema": "zeebeam-sp1-typed-root-execute/v1-candidate",
+  "status": "EXECUTE_ONLY_VERIFIED",
+  "date": "2026-08-23",
+  "component": "zeebeam-sp1-typed-root-v1",
+  "toolchain": {
+    "sp1_crates": "6.4.0",
+    "cargo_prove": "cargo-prove sp1 (f66b4bf 2026-08-12T14:40:11.709680161Z)",
+    "cargo_prove_sha256": "d8835f80b386d5025420d6b09e73ad825b822ac143e8ed09312b2e08018ff106",
+    "cargo_prove_archive_sha256": "8ad88ebd4d970f0b9b7561f9b5899242f01c7da6d04ec4bd5d09f4cf044a541b",
+    "prover_selection": "ProverClient::builder().cpu()"
+  },
+  "private_input": {
+    "kind": "frozen_synthetic_golden_vector",
+    "bytes": 458752,
+    "layout": "camera_u8_4x256x256_then_emission_u8_3x256x256_channel_major",
+    "blake3": "84c79fc735ecf6598e6b8d0abdebeafe9c8212c16ad550f0803aa61946b35049"
+  },
+  "public_values": {
+    "bytes": 64,
+    "layout": "context_digest_32_then_typed_root_32",
+    "context_json_bytes": 712,
+    "context_digest": "9d99a1f294eb4e7d1d8b87e21498cf1b598354a9f79b130a227fe6621d794789",
+    "typed_root": "229ca1e2b6115305dfb115224872f71bbda24b66de7853bb02aac57b9d9f4da9"
+  },
+  "execute": {
+    "context_span_cycles": 19771,
+    "leaves_span_cycles": 14584487,
+    "tree_span_cycles": 143516,
+    "root_span_cycles": 4581,
+    "tracked_span_cycles": 14752355,
+    "total_instruction_count": 14762851,
+    "untracked_instruction_count": 10496,
+    "total_syscall_count": 0,
+    "host_elapsed_ms": 414
+  },
+  "checks": {
+    "locked_guest_build": "PASS",
+    "host_tests": "2_PASS_0_FAIL",
+    "frozen_context_digest": "PASS",
+    "frozen_typed_root": "PASS",
+    "exact_public_values": "PASS",
+    "one_bit_public_root_tamper_rejected_by_host": "PASS",
+    "proof_verified": "NOT_RUN",
+    "tampered_public_values_rejected_by_proof_verifier": "NOT_RUN"
+  },
+  "artifacts": {
+    "guest_elf_bytes": 161088,
+    "guest_elf_sha256": "2fa84baf9011f293b39685faf3c260fbfca607ac1f1788b4ee447fb26c01fa6f",
+    "verification_key_hash": "0x00b290e13768cb7176c57fc3e299cf6bace3823cad83cce678a93d24695a2e87",
+    "host_binary_bytes": 61997056,
+    "host_binary_sha256": "f1eeabd08484de3dc9c08768ccda91f3220535e0cd63a5b7f49d4caed3577d59"
+  },
+  "proof_modes": {
+    "core": "IMPLEMENTED_NOT_RUN",
+    "groth16": "IMPLEMENTED_NOT_RUN",
+    "plonk": "IMPLEMENTED_NOT_RUN"
+  },
+  "claim_ceiling": "preprocessed_tensors_to_typed_root_only"
+}

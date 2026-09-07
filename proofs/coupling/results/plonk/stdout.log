@@ -1,0 +1,40 @@
+input_kind=frozen_development_architecture_position_0
+private_input_bytes=458752
+blob_sha256=0188b5c0f4ea08e81940aef1a8cb303c00b24e7f8b7730a64bf5080d4030353a
+typed_root=8ee3eefa1027cc02d955b65f06840fe624ce07077f8d52f7e9e9f4eb309043b2
+score_numerator=56835791
+score_denominator=4
+public_values_bytes=344
+prover=local_cpu_explicit
+[2m2026-08-24T14:53:29.372164Z[0m [32m INFO[0m initializing cpu prover
+[2m2026-08-24T14:53:55.498302Z[0m [32m INFO[0m starting proof generation [3mmode[0m[2m=[0mPlonk
+[2m2026-08-24T14:53:58.152608Z[0m [32m INFO[0m ┌╴model_binding
+[2m2026-08-24T14:53:58.239866Z[0m [32m INFO[0m └╴5,376,112 cycles
+[2m2026-08-24T14:53:58.239930Z[0m [32m INFO[0m ┌╴typed_root
+[2m2026-08-24T14:53:58.529354Z[0m [32m INFO[0m └╴14,748,143 cycles
+[2m2026-08-24T14:53:58.529410Z[0m [32m INFO[0m ┌╴reduction_and_inference
+[2m2026-08-24T14:54:01.007192Z[0m [32m INFO[0m └╴182,849,120 cycles
+[2m2026-08-24T14:54:01.007363Z[0m [32m INFO[0m ┌╴public_commitment
+[2m2026-08-24T14:54:01.008067Z[0m [32m INFO[0m └╴25,012 cycles
+[2m2026-08-24T18:49:52.163982Z[0m [32m INFO[0m [1mprove shrink[0m: close [3mtime.busy[0m[2m=[0m1.87s [3mtime.idle[0m[2m=[0m67.1s
+[2m2026-08-24T18:52:26.763836Z[0m [32m INFO[0m [1mprove wrap[0m: close [3mtime.busy[0m[2m=[0m8.82s [3mtime.idle[0m[2m=[0m136s
+[2m2026-08-24T18:52:27.341298Z[0m [32m INFO[0m [sp1] plonk circuit artifacts for version v6.1.0 are missing or incomplete at <box path redacted> downloading...
+[90m18:54:30[0m DBG constraint system solver done [36mnbConstraints=[0m27576375 [36mtook=[0m11112.127906
+[90m18:56:35[0m DBG prover done [36mbackend=[0mplonk [36mcurve=[0mbn254 [36mnbConstraints=[0m27576375 [36mtook=[0m154625.751421
+[90m18:56:35[0m DBG verifier done [36mbackend=[0mplonk [36mcurve=[0mbn254 [36mtook=[0m3.189158
+[90m18:56:35[0m [33mWRN[0m [1mignoring uninitialized slice[0m [36mslice name=[0mVars [36mslice type=[0m[]frontend.Variable
+[90m18:56:35[0m [33mWRN[0m [1mignoring uninitialized slice[0m [36mslice name=[0mVars [36mslice type=[0m[]frontend.Variable
+[90m18:56:35[0m [33mWRN[0m [1mignoring uninitialized slice[0m [36mslice name=[0mVars [36mslice type=[0m[]frontend.Variable
+[90m18:56:35[0m DBG verifier done [36mbackend=[0mplonk [36mcurve=[0mbn254 [36mtook=[0m3.450978
+[2m2026-08-24T18:56:35.697935Z[0m [32m INFO[0m [1mprove plonk[0m: close [3mtime.busy[0m[2m=[0m13.3µs [3mtime.idle[0m[2m=[0m182s
+[2m2026-08-24T18:56:35.699455Z[0m [32m INFO[0m [1mprove[0m: close [3mtime.busy[0m[2m=[0m798µs [3mtime.idle[0m[2m=[0m14560s [2m[3mmode[0m[2m=[0mPlonk[0m
+mode=plonk_zk_snark
+onchain_proof_bytes=964
+setup_elapsed_ms=1583
+prove_elapsed_ms=14560201
+verify_elapsed_ms=825
+verified_public_values=true
+verified_proof=true
+tampered_public_values_rejected_by_verifier=true
+proof_file=<box path redacted>
+proof_file_bytes=4414

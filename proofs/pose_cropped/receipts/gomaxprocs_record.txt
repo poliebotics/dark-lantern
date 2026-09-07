@@ -1,0 +1,2 @@
+manager GOMAXPROCS=8 set at 2026-08-24T15:38:30Z
+manager GOMAXPROCS unset at 2026-08-24T15:58:43Z

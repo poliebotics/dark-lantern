@@ -1,0 +1,42 @@
+{
+ "schema": "n7-raw-v1-registration/v1",
+ "frozen_utc": "2026-09-06T18:12:21Z",
+ "statistic_source": "scripts/coupling_stat.py",
+ "statistic_sha256": "1ee0fb09f5557b312a503ac525b2f05eb9471c19c2cfef6eb5f4091e7a4b50e3",
+ "box_record": "box_record/coupling_stat.json",
+ "box_record_sha256": "e138137fd11cffce4fe51e3a441aa629b15b48ce9948a17f2487659037fa9ac2",
+ "pairs_manifest_sha256": "e49476a1f0eee471b5d05d6cf9c1e69ef5eee50cb07401a1ebeddfbb5df30b18",
+ "grids": [
+  4,
+  8,
+  16,
+  32,
+  64
+ ],
+ "seeds": [
+  2026090601,
+  2026090602,
+  2026090603,
+  2026090604,
+  2026090605
+ ],
+ "rng": "numpy PCG64",
+ "floor": 0.6,
+ "sessions": {
+  "d2": {
+   "n": 600,
+   "first": "d2_005392.png",
+   "last": "d2_005991.png"
+  },
+  "v10": {
+   "n": 375,
+   "first": "v10_003368.png",
+   "last": "v10_003742.png"
+  }
+ },
+ "registration_text_source": "scratch/astra_negatives_20260906/ASTRA_NEGATIVES.md, section \"N7 registration text\"",
+ "environment": {
+  "python": "3.14.4",
+  "numpy": "2.3.5"
+ }
+}

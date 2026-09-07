@@ -1,0 +1,79 @@
+Dark Lantern Research and Private Use Licence, version 1.2 (5 September 2026), adapted from the ZeeBeam Research and Private Use Licence
+
+Copyright (c) 2026 Cathal Ryan Hynes (PolieBotics). All rights reserved, except as
+granted below.
+
+1. Definitions.
+
+   "The licensed materials" means, to the extent it is the copyright holder's own work,
+   material distributed in this repository, including notes, audit records, proof
+   artefacts, fixtures, scripts, logs, oracles, build drivers and front matter. It
+   excludes the third-party material identified in section 4 or listed in
+   THIRD_PARTY_NOTICES.md.
+
+   "Non-commercial" means not primarily intended for or directed towards commercial
+   advantage or monetary compensation. Use inside a company or under a grant is
+   non-commercial when the use itself is research, teaching, verification or private
+   study and the licensed materials are not offered, embedded or relied upon in a
+   product, service or offering.
+
+   "Research group or class" means the members of one research group, project team or
+   taught class working or studying together, and their collaborators on that work.
+
+   "Published results" means descriptions, measurements, comparisons, conclusions,
+   independent reimplementations written without copying the licensed materials, and
+   outputs obtained by running the licensed materials (such as verification results,
+   decoded statements and scores), including quotations under section 2(d), but not the
+   licensed materials themselves or modified versions of them, and not weights or
+   models derived from the bundled models.
+
+2. Permitted uses. Subject to section 3, you may, without charge and solely for
+   non-commercial purposes:
+   (a) view, download and keep copies of the licensed materials for private study;
+   (b) verify the proofs, run the verifier, decode the statements, rebuild the programs
+       and study how the materials work;
+   (c) use, copy, run and modify the licensed materials, other than LICENSE and
+       CITATION.cff, for research and teaching, and share copies, including modified
+       copies, within a research group or class for that work; and publish the results
+       of that work with attribution;
+   (d) quote reasonable excerpts with attribution.
+   Attribution means naming Cathal Ryan Hynes, Dark Lantern, version 1.2, and
+   https://github.com/poliebotics/dark-lantern.
+
+3. Reserved rights. Everything not granted in section 2 is reserved. In particular,
+   without the prior written permission of the copyright holder you may not:
+   (a) use the licensed materials, or anything derived from them, for a commercial
+       purpose;
+   (b) redistribute the licensed materials, modified versions of them, or substantial
+       parts of them, outside a research group or class, other than the quotations that
+       section 2(d) allows; publishing results is permitted, redistributing the materials
+       is not;
+   (c) distribute weights or models derived from the bundled models;
+   (d) sublicense any of the licensed materials;
+   (e) use the names ZeeBeam, Dark Lantern, Truth Beam, PolieBotics or BOSUN, or the
+       copyright holder's name, to endorse or promote derived work;
+   (f) remove or alter this licence, the copyright notice, CITATION.cff or
+       THIRD_PARTY_NOTICES.md.
+
+4. Third-party materials. THIRD_PARTY_NOTICES.md identifies every third-party work
+   actually distributed here, including SP1 runtime and verifier material and sourced
+   public data, with the corresponding licence texts in licenses/. Those terms govern
+   those materials; this licence does not.
+
+5. Patents and trade marks. No trade mark rights are granted. No patent licence is
+   granted, except that the copyright holder will not assert patent claims against the
+   non-commercial uses that section 2 permits.
+
+6. Statutory rights. Nothing in this licence restricts any use permitted by applicable
+   law without the copyright holder's permission.
+
+7. No warranty. The licensed materials are provided as they are, without warranty of
+   any kind. The ZeeBeam manuscript and each note state what the artefacts establish and
+   what they do not; nothing in this licence extends those statements.
+
+8. Termination. Your rights under this licence end automatically if you breach it, and
+   revive if you cure the breach within thirty days of becoming aware of it. Published
+   results already released are unaffected.
+
+9. Other uses. For any use this licence does not permit, ask the copyright holder
+   through the repository.

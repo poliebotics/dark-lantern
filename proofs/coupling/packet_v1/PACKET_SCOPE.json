@@ -1,0 +1,81 @@
+{
+  "schema": "zeebeam-l1-1-coupling-durable-packet/v1",
+  "recorded_at_utc": "2026-08-24T05:36:00Z",
+  "status": "SEALED_FOR_COLD_VERIFY",
+  "packet_path": "[machine path redacted]",
+  "copy_policy": "additive_only_destination_absence_checked_no_overwrite_no_delete",
+  "stage": {
+    "source": "<box path redacted>",
+    "packet_subtree": "stage",
+    "regular_file_count": 50,
+    "regular_file_bytes": 21055979036,
+    "sha256sums_sha256": "50259940280c85c7ff5f947301c5d5d5c3f04cf83bb3cb38c21ce787dce15791",
+    "sha256sums_entries": 11,
+    "run_sha256sums_sha256": "e6e6aabca413388869ba87390ed586eae9f17eb0b18b2923f7a7af8b5a2e63ab",
+    "run_sha256sums_entries": 33,
+    "circuit_sha256sums_sha256": "c27db90fe7fa77748118c60e00abc1704b271316171430663b939a5165b61b6b",
+    "symlinks": 0,
+    "special_files": 0
+  },
+  "proofs": {
+    "core": {
+      "path": "stage/results/core/trained_r32_core.proof.bin",
+      "bytes": 35253193,
+      "sha256": "dd09c38e45560456eeaeedcf27f4eb3495800ad3cd6b1e9f8084f4f1961b3e12",
+      "verified": true
+    },
+    "groth16": {
+      "path": "stage/results/groth16/trained_r32_groth16.proof.bin",
+      "serialized_bytes": 2038,
+      "onchain_proof_bytes": 356,
+      "sha256": "4dcdadb1ae766b22aeeeaa62c37d607e3f9bde7fa1af0bfbcc9408a835e69079",
+      "verified": true,
+      "saved_core_proof_wrapped": false,
+      "relationship_to_core": "independent full proof request over the same pinned guest and input"
+    }
+  },
+  "provenance": {
+    "packet_subtree": "provenance",
+    "regular_file_count": 12,
+    "regular_file_bytes": 40303,
+    "attempt1_time_sha256": "4a38ebe3ceac92e9c77bd27dcdc16effbcca121b42cacfe1b08ba8de22755fdc",
+    "attempt2_wrapper_sha256": "e97c9e3c69b3ee5c537b0788a9319ae41e708f5f02263d69933af85744398e58",
+    "attempt2_core_launch_log_sha256": "d4d77a85df92d1f317e7c98c94d0d5512744689d8b9727e09bf5871cd3974658",
+    "attempt2_first_wrap_log_sha256": "d3a6977c4b02b5d43e2bc17bd7e289eab5a34d371837b2f657c9eca9e4d7eeee",
+    "groth16_chain_script_sha256": "b4832a5a47e988ada611afc240836b87784cc27544017c9f3c804e2e476a5b7e",
+    "groth16_chain_runner_log_sha256": "0efcb0ea291b9b0662b8370fd804c56229fe738b0deb6989aa1ce4d31c59ee7b",
+    "groth16_chain_log_sha256": "e88aebaa5364b78180c080851ea9cc8f32be741dc3774fa2e1909a6917ad1218",
+    "symlinks": 0,
+    "special_files": 0
+  },
+  "relation": {
+    "private_input_bytes": 458752,
+    "public_values_bytes": 344,
+    "sp1_instructions": 203004795,
+    "typed_root": "8ee3eefa1027cc02d955b65f06840fe624ce07077f8d52f7e9e9f4eb309043b2",
+    "score_numerator": 56835791,
+    "score_denominator": 4,
+    "verification_rows_accessed": false
+  },
+  "interpretation": {
+    "rust_min_stack": "mitigation-associated and consistent with worker-stack exhaustion, not a confirmed root cause",
+    "first_archive_eof": "observed during in-flight extraction; clean re-fetch followed; preserved named partial file now equals final archive",
+    "not_proved": [
+      "raw_or_session_membership",
+      "preprocessing_correctness",
+      "capture_or_custody",
+      "chronology",
+      "pose_or_liveness",
+      "authenticity_or_physical_coupling",
+      "reality",
+      "adversarial_robustness",
+      "scientific_threshold"
+    ]
+  },
+  "packet_manifest": {
+    "path": "PACKET_SHA256SUMS",
+    "excludes_itself": true,
+    "expected_regular_file_entries": 64,
+    "path_contract": "exact sorted regular-file set excluding PACKET_SHA256SUMS"
+  }
+}

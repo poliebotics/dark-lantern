@@ -1,0 +1,52 @@
+{
+ "random_seed2026090601": {
+  "path": "results/maps/random_seed2026090601.json",
+  "sha256": "255a21e8ad94bea1ed0b430b424ae35fe244f5c8dec76d8188c9b8e835b653e3",
+  "kind": "within-session derangement",
+  "seed": 2026090601
+ },
+ "random_seed2026090602": {
+  "path": "results/maps/random_seed2026090602.json",
+  "sha256": "d429dc9ee5931aa3932c630e0151137876654f9cc3db73b238d9f4774d2673db",
+  "kind": "within-session derangement",
+  "seed": 2026090602
+ },
+ "random_seed2026090603": {
+  "path": "results/maps/random_seed2026090603.json",
+  "sha256": "c6f7383590ca0e1d88b119c617b3fc91166d4135ba5d3394d0ce1a8d5a4abd62",
+  "kind": "within-session derangement",
+  "seed": 2026090603
+ },
+ "random_seed2026090604": {
+  "path": "results/maps/random_seed2026090604.json",
+  "sha256": "e61824573562a3941fdbd24d0bd5c9193b8b4fda319b19837c9f2282dff91bab",
+  "kind": "within-session derangement",
+  "seed": 2026090604
+ },
+ "random_seed2026090605": {
+  "path": "results/maps/random_seed2026090605.json",
+  "sha256": "60aef562fcab794ab5c646fbbda64373b6a1c34dcd174da711e2c135159cd569",
+  "kind": "within-session derangement",
+  "seed": 2026090605
+ },
+ "hard_prev": {
+  "path": "results/maps/hard_prev.json",
+  "sha256": "b44d7935070c987a94047cfcaa8e21be97b0b661f46e549f3d8fd213c82a818c",
+  "kind": "hard negative family (emissions only, same session, self excluded, lexicographic tie-break)"
+ },
+ "hard_next": {
+  "path": "results/maps/hard_next.json",
+  "sha256": "fed9b6a3e09ad3bd59002751c7fc285874cddbe6f13789d12feaedf97b18ca3a",
+  "kind": "hard negative family (emissions only, same session, self excluded, lexicographic tie-break)"
+ },
+ "hard_nearest_mean_rgb": {
+  "path": "results/maps/hard_nearest_mean_rgb.json",
+  "sha256": "4579dc9d132763dd06aac04736d91af77315deaa0124a0e29277759ebf239f6c",
+  "kind": "hard negative family (emissions only, same session, self excluded, lexicographic tie-break)"
+ },
+ "hard_nearest_pattern32": {
+  "path": "results/maps/hard_nearest_pattern32.json",
+  "sha256": "0d01f1d2cf1f4e0b878799219e3257a6b0f36eba75ea4c035350532233879fbd",
+  "kind": "hard negative family (emissions only, same session, self excluded, lexicographic tie-break)"
+ }
+}

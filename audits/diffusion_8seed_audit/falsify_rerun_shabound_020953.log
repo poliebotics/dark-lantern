@@ -1,0 +1,14 @@
+FALSIFY RERUN 2026-08-31 (Sol F2: execution log + checkpoint binding)
+Mon Aug 31 02:09:53 UTC 2026
+bec430f481a6e71f06d273b276e6c24a6e92ba2a7556fc0287be7fc79b0ea56c  bin/falsify_eval.py
+0bcfa7a7701e5dbf7e0a68264157a34f998542ccca33f07e9ad6753d3bd6d245  bin/armc_pubproto_eval.py
+04c837431bc66bb993267fffa4ff8894f8712c291d9f77ea51c980024cb817fd  <box path redacted>
+03dd6cafd37ed63788867d9da2a39c5b13834c766328fb52656d255aca0e83c8  [machine path redacted]
+ckpt step=12000 out_size=768,896 base_ch=96 hint=14
+T1a correct condition, position 1 vs last: 20/20 bit-identical  PASS
+T1b duplicated wrong condition, two positions: 20/20 bit-identical  PASS
+T3 TRUE correct conditioning: paired fraction 60/60 = 1.0000
+T3 DERANGED (+613) conditioning: paired fraction 37/60 = 0.6167
+
+TRUE paired=1.0000  DERANGED paired=0.6167
+T3 PASS: perfect pairing collapses under derangement, so it tracks the conditioning.

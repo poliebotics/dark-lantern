@@ -1,0 +1,176 @@
+.gitignore: OK
+Cargo.lock: OK
+Cargo.toml: OK
+rust-toolchain: OK
+README.md: OK
+BOSUN-worker_HANDOFF.md: OK
+BOSUN-worker_RECEIPT_SCHEMA.json: OK
+model/Cargo.toml: OK
+model/src/lib.rs: OK
+native/Cargo.toml: OK
+native/src/lib.rs: OK
+native/src/bin/parity.rs: OK
+native/tests/parity.rs: OK
+relation/Cargo.toml: OK
+relation/src/lib.rs: OK
+program/Cargo.toml: OK
+program/src/main.rs: OK
+script/Cargo.toml: OK
+script/build.rs: OK
+script/src/bin/main.rs: OK
+tools/export_native_pose_parity_vectors.py: OK
+tools/run_bosun-worker_groth16_bounded.sh: OK
+frozen/r32_pose_training_calibrated_ptq.bin: OK
+fixtures/pose_evaluation_r32_parity_v2.bin: OK
+fixtures/pose_evaluation_r32_parity_v2_manifest.json: OK
+results/native_parity_results.json: OK
+results/execute_results.json: OK
+results/local_groth16_attempt_interrupted.json: OK
+cargo:warning=rustc +succinct --version: "rustc 1.94.0-dev\n"
+[sp1]      Finished `release` profile [optimized] target(s) in 0.19s
+cargo:rustc-env=SP1_ELF_zeebeam-trained-r32-pose-ptq-v2-program=<box path redacted>
+target/elf-compilation/riscv64im-succinct-zkvm-elf/release/zeebeam-trained-r32-pose-ptq-v2-program: OK
+    Finished `release` profile [optimized] target(s) in 0.15s
+     Running unittests src/lib.rs (target/release/deps/zeebeam_trained_r32_pose_ptq_v2_model-2e94f3697708e1ba)
+
+running 3 tests
+test tests::first_argmax_keeps_the_first_tie ... ok
+test tests::parser_rejects_length_and_magic_changes ... ok
+test tests::signed_nearest_even_covers_ties ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/release/deps/zeebeam_trained_r32_pose_ptq_v2_native-06f9dd61f94d9cb1)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/parity.rs (target/release/deps/parity-555442d986315f3f)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/parity.rs (target/release/deps/parity-559b59631c0d7c07)
+
+running 3 tests
+test changed_camera_changes_the_frozen_relation ... ok
+test primary_reduction_and_inference_match_first_python_vector ... ok
+test all_1276_logits_and_116_verdicts_match_python_bit_for_bit ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+
+     Running unittests src/lib.rs (target/release/deps/zeebeam_trained_r32_pose_ptq_v2_relation-c0f8a7f0f28a0af3)
+
+running 1 test
+test tests::frozen_context_and_public_size_hold ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests zeebeam_trained_r32_pose_ptq_v2_model
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests zeebeam_trained_r32_pose_ptq_v2_native
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests zeebeam_trained_r32_pose_ptq_v2_relation
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+warning: zeebeam-trained-r32-pose-ptq-v2-script@0.1.0: rustc +succinct --version: "rustc 1.94.0-dev\n"
+warning: zeebeam-trained-r32-pose-ptq-v2-script@0.1.0: zeebeam-trained-r32-pose-ptq-v2-program built at 2026-08-24 15:31:53
+    Finished `release` profile [optimized] target(s) in 0.47s
+warning: the following packages contain code that will be rejected by a future version of Rust: proc-macro-error2 v2.0.1
+note: to see what the problems were, use the option `--future-incompat-report`, or run `cargo report future-incompatibilities --id 1`
+     Running unittests src/bin/main.rs (target/release/deps/zeebeam_trained_r32_pose_ptq_v2-c0f1a4833db15f2f)
+
+running 2 tests
+test tests::frozen_host_vector_matches_python_root_logits_and_verdict ... ok
+test tests::public_tamper_and_length_are_rejected ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+warning: zeebeam-trained-r32-pose-ptq-v2-script@0.1.0: rustc +succinct --version: "rustc 1.94.0-dev\n"
+warning: zeebeam-trained-r32-pose-ptq-v2-script@0.1.0: zeebeam-trained-r32-pose-ptq-v2-program built at 2026-08-24 15:33:56
+    Finished `release` profile [optimized] target(s) in 0.48s
+warning: the following packages contain code that will be rejected by a future version of Rust: proc-macro-error2 v2.0.1
+note: to see what the problems were, use the option `--future-incompat-report`, or run `cargo report future-incompatibilities --id 1`
+Running as unit: bosun-zeebeam-pose-groth16-20260824T153833Z.service; invocation ID: [identifier redacted]
+input_kind=frozen_development_pose_evaluation_row_52
+input_row_index=52
+source_role=pose_evaluation_development
+true_class_id_diagnostic_only=0
+private_input_bytes=262656
+private_input_layout=camera_uint8_4x256x256_then_16_emission_leaf_hashes
+blob_sha256=c1f16af543f1140dc98944c0343955603fc38f25519784a33c8ff7c34f468d68
+typed_context=9d99a1f294eb4e7d1d8b87e21498cf1b598354a9f79b130a227fe6621d794789
+typed_root=efd35d054df639c3b07acff6ebab5d2ebec59a85ed0dcde5c0e99aa95006d395
+predicted_class_id=1
+saturation_count=0
+integer_logits_le_i16_csv=8403,8677,184,-1435,6346,-4488,-1564,2047,2253,413,583
+public_values_bytes=490
+prover=local_cpu_explicit
+Setting environment variables took 61.009µs
+Reading R1CS took 31.545670078s
+Reading proving key took 5.838847957s
+Reading witness file took 5.193057ms
+Deserializing JSON data took 14.596895ms
+Generating witness took 2.434091969s
+[90m15:57:49[0m DBG constraint system solver done [36mnbConstraints=[0m15972262 [36mtook=[0m16643.902409
+[90m15:58:38[0m DBG prover done [36macceleration=[0mnone [36mbackend=[0mgroth16 [36mcurve=[0mbn254 [36mnbConstraints=[0m15972262 [36mtook=[0m48441.830627
+Generating proof took 1m5.086750045s
+[90m15:58:38[0m [33mWRN[0m [1mignoring uninitialized slice[0m [36mslice name=[0mVars [36mslice type=[0m[]frontend.Variable
+[90m15:58:38[0m [33mWRN[0m [1mignoring uninitialized slice[0m [36mslice name=[0mVars [36mslice type=[0m[]frontend.Variable
+[90m15:58:38[0m [33mWRN[0m [1mignoring uninitialized slice[0m [36mslice name=[0mVars [36mslice type=[0m[]frontend.Variable
+[90m15:58:38[0m DBG verifier done [36mbackend=[0mgroth16 [36mcurve=[0mbn254 [36mtook=[0m1.434714
+mode=groth16_zk_snark
+onchain_proof_bytes=356
+setup_elapsed_ms=4189
+prove_elapsed_ms=1154097
+verify_elapsed_ms=482
+verified_public_values=true
+verified_proof=true
+tampered_public_values_rejected_by_verifier=true
+proof_file=results/pose_join_groth16.proof.bin
+proof_file_bytes=2184
+	Command being timed: "<box path redacted> --mode groth16 --proof-out results/pose_join_groth16.proof.bin"
+	User time (seconds): 6961.99
+	System time (seconds): 431.75
+	Percent of CPU this job got: 611%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 20:09.09
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 34617848
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 81255747
+	Voluntary context switches: 1456085
+	Involuntary context switches: 7866777
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 5528
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+Finished with result: success
+Main processes terminated with: code=exited/status=0
+Service runtime: 20min 9.104s
+CPU time consumed: 2h 3min 13.783s
+Memory peak: 33.1G
+Memory swap peak: 0B
+762f91c0016f5746769292c2f9045ca491ace3c0c7920bcfa585cd191a7ac53e  results/pose_join_groth16.proof.bin
+proof_bytes=2184
+proof relation self-verified and tampered public values were rejected before save

@@ -1,0 +1,80 @@
+{
+ "schema": "n7-integer-positive-controls-detail/v1",
+ "run_utc": "2026-09-06T19:08:56Z",
+ "note": "rerun of the witness-layer controls with the assertion message and circuit location retained; CONTROLS.json is the first-run record",
+ "controls": [
+  {
+   "control": "donor_in_matched_role",
+   "returncode": 1,
+   "assertion": "Error: Error: Assert Failed.",
+   "circuit_location": "Error in template N7IntegerTriplet_93 line: 198",
+   "stderr_tail": "                         ^\n\nError: Error: Assert Failed.\nError in template N7IntegerTriplet_93 line: 198\n\n    at build/n7_triplet_js/witness_calculator.js:166:27\n    at Array.forEach (<anonymous>)\n    at WitnessCalculator._doCalculateWitness (build/n7_triplet_js/witness_calculator.js:141:14)\n    at WitnessCalculator.calculateWTNSBin (build/n7_triplet_js/witness_calculator.js:216:20)\n    at build/n7_triplet_js/generate_witness.js:16:38\n\nNode.js v22.22.1",
+   "failed_at_witness": true
+  },
+  {
+   "control": "emissions_exchanged",
+   "returncode": 1,
+   "assertion": "Error: Error: Assert Failed.",
+   "circuit_location": "Error in template N7IntegerTriplet_93 line: 198",
+   "stderr_tail": "                         ^\n\nError: Error: Assert Failed.\nError in template N7IntegerTriplet_93 line: 198\n\n    at build/n7_triplet_js/witness_calculator.js:166:27\n    at Array.forEach (<anonymous>)\n    at WitnessCalculator._doCalculateWitness (build/n7_triplet_js/witness_calculator.js:141:14)\n    at WitnessCalculator.calculateWTNSBin (build/n7_triplet_js/witness_calculator.js:216:20)\n    at build/n7_triplet_js/generate_witness.js:16:38\n\nNode.js v22.22.1",
+   "failed_at_witness": true
+  },
+  {
+   "control": "complement_matched_emission",
+   "returncode": 1,
+   "assertion": "Error: Error: Assert Failed.",
+   "circuit_location": "Error in template N7IntegerTriplet_93 line: 198",
+   "stderr_tail": "                         ^\n\nError: Error: Assert Failed.\nError in template N7IntegerTriplet_93 line: 198\n\n    at build/n7_triplet_js/witness_calculator.js:166:27\n    at Array.forEach (<anonymous>)\n    at WitnessCalculator._doCalculateWitness (build/n7_triplet_js/witness_calculator.js:141:14)\n    at WitnessCalculator.calculateWTNSBin (build/n7_triplet_js/witness_calculator.js:216:20)\n    at build/n7_triplet_js/generate_witness.js:16:38\n\nNode.js v22.22.1",
+   "failed_at_witness": true
+  },
+  {
+   "control": "constant_zero_grids_circuit",
+   "returncode": 1,
+   "assertion": "Error: Error: Assert Failed.",
+   "circuit_location": "Error in template NonzeroInverse_80 line: 77",
+   "stderr_tail": "ert Failed.\nError in template NonzeroInverse_80 line: 77\nError in template N7IntegerTriplet_93 line: 180\n\n    at build/n7_triplet_js/witness_calculator.js:166:27\n    at Array.forEach (<anonymous>)\n    at WitnessCalculator._doCalculateWitness (build/n7_triplet_js/witness_calculator.js:141:14)\n    at WitnessCalculator.calculateWTNSBin (build/n7_triplet_js/witness_calculator.js:216:20)\n    at build/n7_triplet_js/generate_witness.js:16:38\n\nNode.js v22.22.1",
+   "failed_at_witness": true
+  },
+  {
+   "control": "quotient_witness_plus_one",
+   "returncode": 1,
+   "assertion": "Error: Error: Assert Failed.",
+   "circuit_location": "Error in template Num2Bits_86 line: 38",
+   "stderr_tail": "Bits_86 line: 38\nError in template ChannelQ_88 line: 110\nError in template N7IntegerTriplet_93 line: 183\n\n    at build/n7_triplet_js/witness_calculator.js:166:27\n    at Array.forEach (<anonymous>)\n    at WitnessCalculator._doCalculateWitness (build/n7_triplet_js/witness_calculator.js:141:14)\n    at WitnessCalculator.calculateWTNSBin (build/n7_triplet_js/witness_calculator.js:216:20)\n    at build/n7_triplet_js/generate_witness.js:16:38\n\nNode.js v22.22.1",
+   "failed_at_witness": true
+  },
+  {
+   "control": "quotient_witness_minus_one",
+   "returncode": 1,
+   "assertion": "Error: Error: Assert Failed.",
+   "circuit_location": "Error in template Num2Bits_87 line: 38",
+   "stderr_tail": "Bits_87 line: 38\nError in template ChannelQ_88 line: 113\nError in template N7IntegerTriplet_93 line: 183\n\n    at build/n7_triplet_js/witness_calculator.js:166:27\n    at Array.forEach (<anonymous>)\n    at WitnessCalculator._doCalculateWitness (build/n7_triplet_js/witness_calculator.js:141:14)\n    at WitnessCalculator.calculateWTNSBin (build/n7_triplet_js/witness_calculator.js:216:20)\n    at build/n7_triplet_js/generate_witness.js:16:38\n\nNode.js v22.22.1",
+   "failed_at_witness": true
+  },
+  {
+   "control": "grid_value_2_pow_26",
+   "returncode": 1,
+   "assertion": "Error: Error: Assert Failed.",
+   "circuit_location": "Error in template Num2Bits_1 line: 38",
+   "stderr_tail": "Bits_1 line: 38\nError in template GridCommit_76 line: 21\nError in template N7IntegerTriplet_93 line: 155\n\n    at build/n7_triplet_js/witness_calculator.js:166:27\n    at Array.forEach (<anonymous>)\n    at WitnessCalculator._doCalculateWitness (build/n7_triplet_js/witness_calculator.js:141:14)\n    at WitnessCalculator.calculateWTNSBin (build/n7_triplet_js/witness_calculator.js:216:20)\n    at build/n7_triplet_js/generate_witness.js:16:38\n\nNode.js v22.22.1",
+   "failed_at_witness": true
+  },
+  {
+   "control": "nonce_2_pow_128",
+   "returncode": 1,
+   "assertion": "Error: Error: Assert Failed.",
+   "circuit_location": "Error in template Num2Bits_0 line: 38",
+   "stderr_tail": "Bits_0 line: 38\nError in template GridCommit_76 line: 24\nError in template N7IntegerTriplet_93 line: 155\n\n    at build/n7_triplet_js/witness_calculator.js:166:27\n    at Array.forEach (<anonymous>)\n    at WitnessCalculator._doCalculateWitness (build/n7_triplet_js/witness_calculator.js:141:14)\n    at WitnessCalculator.calculateWTNSBin (build/n7_triplet_js/witness_calculator.js:216:20)\n    at build/n7_triplet_js/generate_witness.js:16:38\n\nNode.js v22.22.1",
+   "failed_at_witness": true
+  },
+  {
+   "control": "wrong_covariance_sign",
+   "returncode": 1,
+   "assertion": "Error: Error: Assert Failed.",
+   "circuit_location": "Error in template ChannelQ_88 line: 91",
+   "stderr_tail": "r: Assert Failed.\nError in template ChannelQ_88 line: 91\nError in template N7IntegerTriplet_93 line: 183\n\n    at build/n7_triplet_js/witness_calculator.js:166:27\n    at Array.forEach (<anonymous>)\n    at WitnessCalculator._doCalculateWitness (build/n7_triplet_js/witness_calculator.js:141:14)\n    at WitnessCalculator.calculateWTNSBin (build/n7_triplet_js/witness_calculator.js:216:20)\n    at build/n7_triplet_js/generate_witness.js:16:38\n\nNode.js v22.22.1",
+   "failed_at_witness": true
+  }
+ ],
+ "all_failed_at_witness": true
+}

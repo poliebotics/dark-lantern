@@ -1,0 +1,46 @@
+input_kind=frozen_development_architecture_position_0
+private_input_bytes=458752
+blob_sha256=0188b5c0f4ea08e81940aef1a8cb303c00b24e7f8b7730a64bf5080d4030353a
+typed_root=8ee3eefa1027cc02d955b65f06840fe624ce07077f8d52f7e9e9f4eb309043b2
+score_numerator=56835791
+score_denominator=4
+public_values_bytes=344
+prover=local_cpu_explicit
+[2m2026-08-24T01:33:46.749853Z[0m [32m INFO[0m initializing cpu prover
+[2m2026-08-24T01:34:13.406618Z[0m [32m INFO[0m starting proof generation [3mmode[0m[2m=[0mGroth16
+[2m2026-08-24T01:34:15.870900Z[0m [32m INFO[0m ┌╴model_binding
+[2m2026-08-24T01:34:15.955402Z[0m [32m INFO[0m └╴5,376,112 cycles
+[2m2026-08-24T01:34:15.955436Z[0m [32m INFO[0m ┌╴typed_root
+[2m2026-08-24T01:34:16.238597Z[0m [32m INFO[0m └╴14,748,143 cycles
+[2m2026-08-24T01:34:16.238655Z[0m [32m INFO[0m ┌╴reduction_and_inference
+[2m2026-08-24T01:34:18.642956Z[0m [32m INFO[0m └╴182,849,120 cycles
+[2m2026-08-24T01:34:18.643006Z[0m [32m INFO[0m ┌╴public_commitment
+[2m2026-08-24T01:34:18.643448Z[0m [32m INFO[0m └╴25,012 cycles
+[2m2026-08-24T05:17:16.421390Z[0m [32m INFO[0m [1mprove shrink[0m: close [3mtime.busy[0m[2m=[0m1.77s [3mtime.idle[0m[2m=[0m69.6s
+[2m2026-08-24T05:19:36.803892Z[0m [32m INFO[0m [1mprove wrap[0m: close [3mtime.busy[0m[2m=[0m8.01s [3mtime.idle[0m[2m=[0m123s
+[2m2026-08-24T05:19:37.373129Z[0m [32m INFO[0m [sp1] groth16 circuit artifacts are already installed at <box path redacted> if you want to re-download them, delete the directory
+Setting environment variables took 27.109µs
+Reading R1CS took 24.353954613s
+Reading proving key took 5.239076824s
+Reading witness file took 990.998µs
+Deserializing JSON data took 18.008032ms
+Generating witness took 1.85380681s
+[90m05:20:19[0m DBG constraint system solver done [36mnbConstraints=[0m15972262 [36mtook=[0m11036.378799
+[90m05:20:28[0m DBG prover done [36macceleration=[0mnone [36mbackend=[0mgroth16 [36mcurve=[0mbn254 [36mnbConstraints=[0m15972262 [36mtook=[0m8440.624542
+Generating proof took 19.47772413s
+[90m05:20:28[0m [33mWRN[0m [1mignoring uninitialized slice[0m [36mslice name=[0mVars [36mslice type=[0m[]frontend.Variable
+[90m05:20:28[0m [33mWRN[0m [1mignoring uninitialized slice[0m [36mslice name=[0mVars [36mslice type=[0m[]frontend.Variable
+[90m05:20:28[0m [33mWRN[0m [1mignoring uninitialized slice[0m [36mslice name=[0mVars [36mslice type=[0m[]frontend.Variable
+[90m05:20:28[0m DBG verifier done [36mbackend=[0mgroth16 [36mcurve=[0mbn254 [36mtook=[0m1.520895
+[2m2026-08-24T05:20:28.355475Z[0m [32m INFO[0m [1mprove groth16[0m: close [3mtime.busy[0m[2m=[0m16.9µs [3mtime.idle[0m[2m=[0m51.0s
+[2m2026-08-24T05:20:28.357013Z[0m [32m INFO[0m [1mprove[0m: close [3mtime.busy[0m[2m=[0m646µs [3mtime.idle[0m[2m=[0m13575s [2m[3mmode[0m[2m=[0mGroth16[0m
+mode=groth16_zk_snark
+onchain_proof_bytes=356
+setup_elapsed_ms=1883
+prove_elapsed_ms=13574950
+verify_elapsed_ms=445
+verified_public_values=true
+verified_proof=true
+tampered_public_values_rejected_by_verifier=true
+proof_file=<box path redacted>
+proof_file_bytes=2038

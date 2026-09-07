@@ -1,0 +1,12 @@
+FALSIFY RERUN-3 2026-08-31 (third observation of deranged-fraction variability)
+Mon Aug 31 03:09:37 UTC 2026
+bec430f481a6e71f06d273b276e6c24a6e92ba2a7556fc0287be7fc79b0ea56c  bin/falsify_eval.py
+03dd6cafd37ed63788867d9da2a39c5b13834c766328fb52656d255aca0e83c8  [machine path redacted]
+ckpt step=12000 out_size=768,896 base_ch=96 hint=14
+T1a correct condition, position 1 vs last: 20/20 bit-identical  PASS
+T1b duplicated wrong condition, two positions: 20/20 bit-identical  PASS
+T3 TRUE correct conditioning: paired fraction 60/60 = 1.0000
+T3 DERANGED (+613) conditioning: paired fraction 37/60 = 0.6167
+
+TRUE paired=1.0000  DERANGED paired=0.6167
+T3 PASS: perfect pairing collapses under derangement, so it tracks the conditioning.

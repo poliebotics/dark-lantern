@@ -1,0 +1,114 @@
+{
+ "n_frames": 975,
+ "sessions": {
+  "d2": 600,
+  "v10": 375
+ },
+ "grids": {
+  "4": {
+   "d2": {
+    "n": 600,
+    "auroc": 0.6876333333333333,
+    "matched_mean": 0.10544490290986902,
+    "mismatched_mean": 0.0021566636250291093,
+    "paired_matched_greater": 0.945
+   },
+   "v10": {
+    "n": 375,
+    "auroc": 0.6772906666666667,
+    "matched_mean": 0.10720115986780823,
+    "mismatched_mean": 0.010351765054740813,
+    "paired_matched_greater": 0.888
+   },
+   "pooled": {
+    "n_pairs": 975,
+    "auroc": 0.6829412228796845,
+    "paired_matched_greater": 0.9230769230769231
+   }
+  },
+  "8": {
+   "d2": {
+    "n": 600,
+    "auroc": 0.7682,
+    "matched_mean": 0.07786942346374887,
+    "mismatched_mean": -0.0030580114318079273,
+    "paired_matched_greater": 0.9316666666666666
+   },
+   "v10": {
+    "n": 375,
+    "auroc": 0.7360213333333333,
+    "matched_mean": 0.07853956842167963,
+    "mismatched_mean": 0.004288209033405395,
+    "paired_matched_greater": 0.9146666666666666
+   },
+   "pooled": {
+    "n_pairs": 975,
+    "auroc": 0.7555871137409598,
+    "paired_matched_greater": 0.9251282051282051
+   }
+  },
+  "16": {
+   "d2": {
+    "n": 600,
+    "auroc": 0.7263972222222221,
+    "matched_mean": 0.04019461051788239,
+    "mismatched_mean": -0.00019331051958871705,
+    "paired_matched_greater": 0.8533333333333334
+   },
+   "v10": {
+    "n": 375,
+    "auroc": 0.710264888888889,
+    "matched_mean": 0.04178074198193763,
+    "mismatched_mean": 0.0026327119950806423,
+    "paired_matched_greater": 0.8533333333333334
+   },
+   "pooled": {
+    "n_pairs": 975,
+    "auroc": 0.720382905982906,
+    "paired_matched_greater": 0.8533333333333334
+   }
+  },
+  "32": {
+   "d2": {
+    "n": 600,
+    "auroc": 0.709275,
+    "matched_mean": 0.02433766868406733,
+    "mismatched_mean": -0.0018464823152229911,
+    "paired_matched_greater": 0.8533333333333334
+   },
+   "v10": {
+    "n": 375,
+    "auroc": 0.6868906666666668,
+    "matched_mean": 0.027421804169425495,
+    "mismatched_mean": 0.0037234120332541613,
+    "paired_matched_greater": 0.8213333333333334
+   },
+   "pooled": {
+    "n_pairs": 975,
+    "auroc": 0.7003171597633135,
+    "paired_matched_greater": 0.841025641025641
+   }
+  },
+  "64": {
+   "d2": {
+    "n": 600,
+    "auroc": 0.6890166666666666,
+    "matched_mean": 0.019572740753487316,
+    "mismatched_mean": -0.0003277165205644011,
+    "paired_matched_greater": 0.78
+   },
+   "v10": {
+    "n": 375,
+    "auroc": 0.7037155555555554,
+    "matched_mean": 0.022844910621546376,
+    "mismatched_mean": -0.00037208829281378984,
+    "paired_matched_greater": 0.8346666666666667
+   },
+   "pooled": {
+    "n_pairs": 975,
+    "auroc": 0.6947534516765285,
+    "paired_matched_greater": 0.801025641025641
+   }
+  }
+ }
+}

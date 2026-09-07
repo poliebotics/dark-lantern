@@ -1,0 +1,20 @@
+== clean verify ==
+program_vkey (derived from ELF): 0x00ca89d51c93402cec467415f9a938dc93911baffd9878d39382dfb56d0a8084
+vkey_derivation_ms: 50418
+verify_ms: 426
+VERDICT: ACCEPTED — proof is valid for this program and these public values
+clean_exit=0
+== tamper publics ==
+program_vkey (derived from ELF): 0x00ca89d51c93402cec467415f9a938dc93911baffd9878d39382dfb56d0a8084
+vkey_derivation_ms: 49715
+TAMPER: flipped one bit in public values
+verify_ms: 768
+VERDICT: REJECTED — Proof verification failed
+tamper_publics_exit=1
+== tamper proof ==
+program_vkey (derived from ELF): 0x00ca89d51c93402cec467415f9a938dc93911baffd9878d39382dfb56d0a8084
+vkey_derivation_ms: 50075
+TAMPER: flipped one bit in proof bytes
+verify_ms: 98
+VERDICT: REJECTED — General error: BN254 Group Error: Point is not on curve
+tamper_proof_exit=1

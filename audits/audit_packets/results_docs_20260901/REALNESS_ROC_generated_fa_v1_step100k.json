@@ -1,0 +1,140 @@
+{
+  "LABEL": "REALNESS_NEGATIVES_GENERATED",
+  "NOT_A_REALNESS_ROC": false,
+  "attack_class": "generated_fa_v1_step100k",
+  "explanation": "generator-based F-A v1 step-100k negatives; this is a real-vs-generated ROC subject to the limitations in realness_roc_note",
+  "score_key": "primary_score",
+  "attack_success_rate_test": {
+    "mean": 0.0,
+    "min": 0.0,
+    "max": 0.0,
+    "per_run_values": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "runs": [
+    {
+      "eval_seed": 20260823,
+      "forger_seed": 100000,
+      "calib_threshold": 0.001987036585342139,
+      "youden_J": 1.0,
+      "SECURITY_DIAGNOSTIC_attack_success_rate_test": 0.0,
+      "FNR_test_real_rejected": 0.0,
+      "security_diagnostic_auroc_real_vs_attack": {
+        "auroc_point": 1.0,
+        "auroc_bootstrap_mean": 1.0,
+        "auroc_ci95": [
+          1.0,
+          1.0
+        ],
+        "n_pos": 6,
+        "n_neg": 6,
+        "n_pos_clusters": 5,
+        "n_neg_clusters": 5,
+        "CI_WARNING": null
+      },
+      "n_forgeries_test": 6,
+      "n_real_test": 6,
+      "forgery_scores_test": [
+        4.203538410365573e-05,
+        -1.0199658572673624e-05,
+        -9.264051914215261e-06,
+        3.643101081252098e-06,
+        6.346707232296467e-05,
+        0.00012157959863543562
+      ],
+      "real_scores_test": [
+        0.004006920335814356,
+        0.004054698650725186,
+        0.003981084423139691,
+        0.00390847628004849,
+        0.003971099783666432,
+        0.004004209861159324
+      ]
+    },
+    {
+      "eval_seed": 20260901,
+      "forger_seed": 100000,
+      "calib_threshold": 0.0019851955003105104,
+      "youden_J": 1.0,
+      "SECURITY_DIAGNOSTIC_attack_success_rate_test": 0.0,
+      "FNR_test_real_rejected": 0.0,
+      "security_diagnostic_auroc_real_vs_attack": {
+        "auroc_point": 1.0,
+        "auroc_bootstrap_mean": 1.0,
+        "auroc_ci95": [
+          1.0,
+          1.0
+        ],
+        "n_pos": 6,
+        "n_neg": 6,
+        "n_pos_clusters": 5,
+        "n_neg_clusters": 5,
+        "CI_WARNING": null
+      },
+      "n_forgeries_test": 6,
+      "n_real_test": 6,
+      "forgery_scores_test": [
+        4.6789133921265776e-05,
+        -9.427638724446383e-06,
+        -1.2214295566082e-05,
+        7.472187280654647e-06,
+        6.3691521063447e-05,
+        0.00014087604358792305
+      ],
+      "real_scores_test": [
+        0.003994513349607587,
+        0.004045084211975336,
+        0.003985368809662759,
+        0.0039197545731440185,
+        0.003957606572657824,
+        0.004001890984363854
+      ]
+    },
+    {
+      "eval_seed": 20260902,
+      "forger_seed": 100000,
+      "calib_threshold": 0.001971589936874807,
+      "youden_J": 1.0,
+      "SECURITY_DIAGNOSTIC_attack_success_rate_test": 0.0,
+      "FNR_test_real_rejected": 0.0,
+      "security_diagnostic_auroc_real_vs_attack": {
+        "auroc_point": 1.0,
+        "auroc_bootstrap_mean": 1.0,
+        "auroc_ci95": [
+          1.0,
+          1.0
+        ],
+        "n_pos": 6,
+        "n_neg": 6,
+        "n_pos_clusters": 5,
+        "n_neg_clusters": 5,
+        "CI_WARNING": null
+      },
+      "n_forgeries_test": 6,
+      "n_real_test": 6,
+      "forgery_scores_test": [
+        5.819769576191928e-05,
+        -9.327614679932334e-06,
+        3.90433706343174e-06,
+        9.948620572686195e-06,
+        5.1938090473413554e-05,
+        0.00014360779896378534
+      ],
+      "real_scores_test": [
+        0.003997204918414354,
+        0.0040577011415734885,
+        0.003961650840938091,
+        0.0039058584719896317,
+        0.0039761621505022045,
+        0.004012997495010495
+      ]
+    }
+  ],
+  "realness_roc_note": "Generator-based negatives on the held-out sessions: this IS a real-vs-generated ROC, with limits: one published F-A v1 checkpoint (step-100k), zero-shot forger, one occasion, presented==declared chain semantics, shadow-raw loader path (round-trip asserted), noise keyed by presented identity per the frozen convention.",
+  "forger_checkpoint_sha256": "2bf156d07b1ddf72ec53dab500cc0df2344596edd40890f904a60901217ad92e",
+  "config_sha256": "67d4bef305e567313adf05ab64366f35d68b3a5139930ae2d91264fe1ccdae44",
+  "script_sha256": "fdb8745de31430b562d62e573b235052c973cb3323abfe1ae20204b42f90fe43"
+}

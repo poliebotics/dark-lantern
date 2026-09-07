@@ -1,0 +1,11 @@
+CIRCUIT_SHA256SUMS: OK
+PROOF_STAGE.json: OK
+README.md: OK
+RECEIPT_SCHEMA.json: OK
+bin/zeebeam-trained-r32-ptq-v2-program.elf: OK
+bin/zeebeam-trained-r32-ptq-v2-zkwrap: OK
+prepare_groth16_circuits.py: OK
+run_frozen_proof_stage.sh: OK
+source/zeebeam-trained-r32-ptq-v2-sp1-v1-source.tar: OK
+toolchain/cargo_prove_v6.4.0_linux_amd64.tar.gz: OK
+toolchain/go1.27.0.linux-amd64.tar.gz: OK

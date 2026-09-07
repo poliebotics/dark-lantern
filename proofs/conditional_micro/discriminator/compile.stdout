@@ -1,0 +1,12 @@
+[32mtemplate instances[0m: 87
+non-linear constraints: 3231
+linear constraints: 1350
+public inputs: 1
+private inputs: 225
+public outputs: 8
+wires: 4581
+labels: 6675
+[32mWritten successfully:[0m build/discriminator/discriminator.r1cs
+[32mWritten successfully:[0m build/discriminator/discriminator.sym
+[32mWritten successfully:[0m build/discriminator/discriminator_js/discriminator.wasm
+[32mEverything went okay[0m

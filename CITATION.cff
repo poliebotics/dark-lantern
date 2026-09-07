@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this work, cite the ZeeBeam manuscript for the result and this repository for the programme record."
+title: "Dark Lantern: Zero-Knowledge Light, Shuttered by Design (programme record)"
+type: software
+version: "1.0.0"
+authors:
+  - family-names: Hynes
+    given-names: Cathal Ryan
+    affiliation: PolieBotics
+repository-code: "https://github.com/poliebotics/dark-lantern"
+license-url: "https://github.com/poliebotics/dark-lantern/blob/main/LICENSE"
+abstract: >-
+  Dark Lantern is the privacy and zero-knowledge research programme whose core result is ZeeBeam
+  (github.com/poliebotics/zeebeam). This repository is a curated public subset of the programme record beyond
+  ZeeBeam: selected standalone proof outputs, diagnostics, notes, audit prompts and verdicts, and retained fixtures.
+  Publication-subset notices identify omitted and non-rebuildable material. Historical notes are published as such;
+  the ZeeBeam manuscript controls every current claim.
+keywords:
+  - Dark Lantern
+  - ZeeBeam
+  - zero-knowledge proofs
+  - projector-camera capture
+  - execution binding
+notes: "Drafted, built, proved and verified with BOSUN, the project's automated research assistant, under the principal's direction."

@@ -1,0 +1,100 @@
+{
+ "schema": "n7-integer-positive-manifest/v1",
+ "created_utc": "2026-09-06T18:51:19Z",
+ "spec_freeze_sha256": "29e47c0b5d01865fc1aa6414dd638f0f661f162f4d86728e6b77964f6704ebd4",
+ "examples_sha256": "080fa8d69f04be08a981da1553dc7ed351d549b5190d1010edc6a1634154d14a",
+ "circuit_source_sha256": "bdb39301c025c248ff5378d729697f3b52bb04dc3bb4c964174149edf376777f",
+ "r1cs_sha256": "2dbfaa660729adf944c4bb7f959ba6a5bf9948fdbbcad1ed890bb11b31d9ecb7",
+ "wasm_sha256": "b314a4d6faaf73ea8dc55b4f462f3186066f8bff2755e590c1f1b7502df37c64",
+ "ptau": {
+  "path": "powersOfTau28_hez_final_15.ptau",
+  "sha256": "3ef2ecc5b75d687048cf2d59195119b42fb07c5af639c5f283d84bfa69829e7f"
+ },
+ "statistic": "per-channel Pearson correlation of 4x4 RGB cell sums (each cell 512x288 pixels of the 2048x1152 pair image; equal areas so identical to cell-mean correlation), mean over channels",
+ "grid": {
+  "rows": 4,
+  "cols": 4,
+  "channels": 3,
+  "order": "row-major cells, interleaved RGB",
+  "cell_pixels": 147456,
+  "value_bits": 26,
+  "max_value": 37601280
+ },
+ "S": 65536,
+ "N": 16,
+ "tau": "1/8",
+ "guards": {
+  "Q_matched_min": 24579,
+  "Q_mismatch_max": 24572,
+  "z_matched_min": 221187,
+  "z_mismatch_max": 221180
+ },
+ "selection_rule": "lexicographically first target of each session in the seed-2026090601 random map; mismatch emission by inverting the map at that target",
+ "map_sha256": "255a21e8ad94bea1ed0b430b424ae35fe244f5c8dec76d8188c9b8e835b653e3",
+ "pairs_manifest_sha256": "e49476a1f0eee471b5d05d6cf9c1e69ef5eee50cb07401a1ebeddfbb5df30b18",
+ "status": "retrospective engineering demonstration on public data; tau chosen after inspecting the two examples",
+ "sources": {
+  "d2": {
+   "capture": {
+    "file": "d2_005392.png",
+    "side": "test_B",
+    "png_sha256": "56ef84f285dd2f3f5e00f85b40176785c7e78d9cf6af0d2eb24f088a025a3369",
+    "pixels_sha256": "1af0339e81939f271a4ed03ac2338abef38476071eaec379fdfd09e6245ff82b"
+   },
+   "matched_emission": {
+    "file": "d2_005392.png",
+    "side": "test_A",
+    "png_sha256": "12510ff6f652d133c60d877903e680de89f0b25451e6519cfb4c489bc1394d07",
+    "pixels_sha256": "d4b984a6897fba961ac771e2a17b655d2187513280ab0e855ac5dfc92f35aceb"
+   },
+   "recorded_mismatch": {
+    "file": "d2_005980.png",
+    "side": "test_A",
+    "png_sha256": "678415495e18afba2ad648fe3a820f28457e6017c6994c4a81e9f2afcf89e9ba",
+    "pixels_sha256": "b68bc5bfea83f6689df37dc4b554f1ca788e512ccb7ecdbc74ae6e85ea4da0d2"
+   }
+  },
+  "v10": {
+   "capture": {
+    "file": "v10_003368.png",
+    "side": "test_B",
+    "png_sha256": "6ebfeab778e71449b0d189fdb30e936e7cc7fc9aae3fa7a495bf0a489eebce74",
+    "pixels_sha256": "d7e06c8f08d3fc04601e86fd48346318a7eee0897ec5182c8ada59422852d7e4"
+   },
+   "matched_emission": {
+    "file": "v10_003368.png",
+    "side": "test_A",
+    "png_sha256": "c68ca681c59ad0117ddbf21ed71e33d05602c2417bc602831c76f9f59ce991ed",
+    "pixels_sha256": "df2052847892d806651fd7f5accdb541355308fabe32316c142c350bbbbbb017"
+   },
+   "recorded_mismatch": {
+    "file": "v10_003697.png",
+    "side": "test_A",
+    "png_sha256": "b4efd237027620f2c55d74351cc6cb945af6a311a560a718743e20c39e0a1735",
+    "pixels_sha256": "e1d894938a207130d718125d617933f1383da8d9fc6505591c7a4c63bf08a382"
+   }
+  }
+ },
+ "grid_digests": {
+  "d2": {
+   "capture": "ff9b60f71696b04af4fdaf060a7b3cc7b4d290744d4dd27766a8c66e1c6f7b98",
+   "matched_emission": "12f55471038b44330e04ec2b178f59987349d509ae099e8abdc7cfada94bbec4",
+   "recorded_mismatch": "f532e60c41882ea3afdb474d5af01a5994f984d50940c76df4f03f02373725ff"
+  },
+  "v10": {
+   "capture": "f97f015c131eea26d12bd19ba52e8f2c0b7532add8167f5ced03e6823ed35413",
+   "matched_emission": "c0a9792fcd5d7650ad658ff5f8799ca6d47d8478246e8e6a158fcccf966e2660",
+   "recorded_mismatch": "c89c0b0d046c9bf0eb7bca71284772118f090eebe79db12d604708dc11da7015"
+  }
+ },
+ "expected_public": {
+  "d2": {
+   "z_matched": 242758,
+   "z_mismatch": 216537
+  },
+  "v10": {
+   "z_matched": 224989,
+   "z_mismatch": 182626
+  }
+ }
+}

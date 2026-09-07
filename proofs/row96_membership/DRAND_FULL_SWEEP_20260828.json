@@ -1,0 +1,18 @@
+{
+ "schema": "zeebeam.drand.full-sweep/1",
+ "rows": 712,
+ "bls_failures": [],
+ "all_ok": true,
+ "elapsed_s": 130.4,
+ "written": "2026-08-28T02:48:16Z",
+ "provenance": {
+  "chain_log": "august_chain_log.csv",
+  "chain_log_sha256": "5d9af297ae37119df15412f516a4543ee9f54b6aa66186abe478512fe9a1ff48",
+  "generator": "drand_full_sweep.py",
+  "generator_sha256": "4e4abf8ee75dd58597881631b6adc9346a4128237078371b47bed46b0b440cd5",
+  "verifier": "campaign drand_client.py (BLS via py_ecc)",
+  "verifier_sha256": "5a9ebb64331e3574893f089e5f7f2beb04e6ded5e7fbb1dbd861ed972ec7bf67",
+  "quicknet_chain_hash": "52db9ba70e0cc0f6eaf7803dd07447a1f5477735fd3f661792ba94600c84e971",
+  "method": "verify_round_full = BLS signature verify (G1 sig, G2 pubkey, msg=sha256(round_be)) AND randomness==sha256(sig), per row"
+ }
+}

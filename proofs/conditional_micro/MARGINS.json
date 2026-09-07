@@ -1,0 +1,20 @@
+{
+ "discriminator": {
+  "aggregate_delta": 93980,
+  "first_direction_tt_minus_tu": -374704,
+  "second_direction_uu_minus_ut": 468684,
+  "public_delta": 93980,
+  "passed": 1
+ },
+ "diffusion": {
+  "matched_residual": 3479214655984,
+  "crossed_residual": 3923146435158,
+  "aggregate_margin": 443931779174,
+  "first_direction_tu_minus_tt": -49565405256,
+  "second_direction_ut_minus_uu": 493497184430,
+  "public_matched": 3479214655984,
+  "public_crossed": 3923146435158,
+  "public_margin": 443931779174,
+  "passed": 1
+ }
+}

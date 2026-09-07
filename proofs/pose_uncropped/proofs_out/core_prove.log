@@ -1,0 +1,51 @@
+private_input_bytes=24472512
+blob_sha256=c95b00724f801e9ea8b841c060ac23d2b4267c77691c1755cc6a111550197ed7
+public_values_bytes=400
+row=52
+verdict=1
+head_saturation=0
+logit_sums=[15920, 17697, 8569, -5875, -18570, -2396, -31817, -1193, -21262, -7977, 781]
+typed_root=efd35d054df639c3b07acff6ebab5d2ebec59a85ed0dcde5c0e99aa95006d395
+uncropped_commitment=fa5f5e09d2ef05e583b00bd87c96faa10d60b10c10cc792da59981e739210cf7
+prover=local_cpu_explicit
+program_vkey_hash=0x0059e3fc7ad252555e8ecbee192c1ed057d7519cd87e8f231b6b97dc333c8d23
+proof_file=proofs_out/uncr64_core.proof.bin
+proof_file_bytes=56377581
+proof_file_sha256=9fca590a99100575ae53ec787fbd7cafcd780121b88acf7e14fe3165bd285d72
+saved_proof_cold_loaded_and_verified=true
+mode=core_stark_proof
+core_shards=37
+setup_elapsed_ms=1305
+prove_elapsed_ms=2112169
+verify_elapsed_ms=3226
+verified_public_values=true
+verified_proof=true
+tampered_public_values_rejected_by_verifier=true
+tampered_proof_bytes_rejected_by_verifier=true
+wrong_program_vkey_hash=0x007118b51f5ad095a0c0ac22f39434646e19c7abf05c064fb7310c9a463310c9
+wrong_vkey_rejected_by_verifier=true
+public_file=proofs_out/uncr64_core_publics.bin
+proof_acceptance_controls_passed=true
+	Command being timed: "./target/release/zeebeam-uncr64-pose --mode core --witness fixtures/uncr64_row52_witness.bin --proof-out proofs_out/uncr64_core.proof.bin --public-out proofs_out/uncr64_core_publics.bin"
+	User time (seconds): 116240.84
+	System time (seconds): 24736.17
+	Percent of CPU this job got: 4802%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 48:55.44
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 113124780
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 309
+	Minor (reclaiming a frame) page faults: 618611176
+	Voluntary context switches: 163609734
+	Involuntary context switches: 1832007407
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

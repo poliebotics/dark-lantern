@@ -1,0 +1,23 @@
+	Command being timed: "<box path redacted> --mode groth16 --proof-out <box path redacted>"
+	User time (seconds): 797413.32
+	System time (seconds): 135608.03
+	Percent of CPU this job got: 6855%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 3:46:49
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 52695024
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 508787191
+	Voluntary context switches: 1047094117
+	Involuntary context switches: 12023603257
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 5560
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

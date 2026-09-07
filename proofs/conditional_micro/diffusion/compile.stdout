@@ -1,0 +1,12 @@
+[32mtemplate instances[0m: 87
+non-linear constraints: 2746
+linear constraints: 2120
+public inputs: 1
+private inputs: 225
+public outputs: 10
+wires: 4866
+labels: 7216
+[32mWritten successfully:[0m build/diffusion/diffusion.r1cs
+[32mWritten successfully:[0m build/diffusion/diffusion.sym
+[32mWritten successfully:[0m build/diffusion/diffusion_js/diffusion.wasm
+[32mEverything went okay[0m

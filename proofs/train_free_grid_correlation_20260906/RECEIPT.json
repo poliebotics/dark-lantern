@@ -1,0 +1,537 @@
+{
+ "schema": "n7-integer-positive-receipt/v1.1",
+ "created_utc": "2026-09-06T19:10:22Z",
+ "status": "retrospective engineering demonstration on public data; tau = 1/8 chosen after inspecting the two examples; not a calibration, generalisation, authenticity or liveness result",
+ "protocol": {
+  "statistic": "per-channel Pearson correlation of 4x4 RGB cell sums (each cell 512x288 pixels of the 2048x1152 pair image; equal areas so identical to cell-mean correlation), mean over channels",
+  "grid": {
+   "rows": 4,
+   "cols": 4,
+   "channels": 3,
+   "order": "row-major cells, interleaved RGB",
+   "cell_pixels": 147456,
+   "value_bits": 26,
+   "max_value": 37601280
+  },
+  "S": 65536,
+  "tau": "1/8",
+  "guards": {
+   "Q_matched_min": 24579,
+   "Q_mismatch_max": 24572,
+   "z_matched_min": 221187,
+   "z_mismatch_max": 221180
+  },
+  "error_bound": "|Q/(3S) - mean_rho| < 1/S",
+  "selection_rule": "lexicographically first target of each session in the seed-2026090601 random map; mismatch emission by inverting the map at that target",
+  "directed_map_interpretation": "recorded N7 edge E_donor -> B_target (map inverted at the target capture)",
+  "map_sha256": "255a21e8ad94bea1ed0b430b424ae35fe244f5c8dec76d8188c9b8e835b653e3",
+  "pairs_manifest_sha256": "e49476a1f0eee471b5d05d6cf9c1e69ef5eee50cb07401a1ebeddfbb5df30b18"
+ },
+ "examples": {
+  "d2": {
+   "target": "d2_005392.png",
+   "mismatch_emission": "d2_005980.png",
+   "sources": {
+    "capture": {
+     "file": "d2_005392.png",
+     "side": "test_B",
+     "png_sha256": "56ef84f285dd2f3f5e00f85b40176785c7e78d9cf6af0d2eb24f088a025a3369",
+     "pixels_sha256": "1af0339e81939f271a4ed03ac2338abef38476071eaec379fdfd09e6245ff82b"
+    },
+    "matched_emission": {
+     "file": "d2_005392.png",
+     "side": "test_A",
+     "png_sha256": "12510ff6f652d133c60d877903e680de89f0b25451e6519cfb4c489bc1394d07",
+     "pixels_sha256": "d4b984a6897fba961ac771e2a17b655d2187513280ab0e855ac5dfc92f35aceb"
+    },
+    "recorded_mismatch": {
+     "file": "d2_005980.png",
+     "side": "test_A",
+     "png_sha256": "678415495e18afba2ad648fe3a820f28457e6017c6994c4a81e9f2afcf89e9ba",
+     "pixels_sha256": "b68bc5bfea83f6689df37dc4b554f1ca788e512ccb7ecdbc74ae6e85ea4da0d2"
+    }
+   },
+   "grid_digests_uint32_le": {
+    "capture": "ff9b60f71696b04af4fdaf060a7b3cc7b4d290744d4dd27766a8c66e1c6f7b98",
+    "matched_emission": "12f55471038b44330e04ec2b178f59987349d509ae099e8abdc7cfada94bbec4",
+    "recorded_mismatch": "f532e60c41882ea3afdb474d5af01a5994f984d50940c76df4f03f02373725ff"
+   },
+   "expected": {
+    "signed_q_matched": [
+     4591,
+     28516,
+     13043
+    ],
+    "signed_q_mismatch": [
+     34294,
+     -5297,
+     -9068
+    ],
+    "q_matched": [
+     4591,
+     28516,
+     13043
+    ],
+    "q_mismatch": [
+     34294,
+     5297,
+     9068
+    ],
+    "z_matched": 242758,
+    "z_mismatch": 216537
+   },
+   "actual": {
+    "witness_q_matched": [
+     4591,
+     28516,
+     13043
+    ],
+    "witness_q_mismatch": [
+     34294,
+     5297,
+     9068
+    ],
+    "public_z_matched": 242758,
+    "public_z_mismatch": 216537
+   },
+   "commitments": {
+    "capture": "16819212185087051474297681743099317657454386612509731300315510789255449848357",
+    "matched_emission": "18624078274725578390315949722297924535346477921599752309772241725051420561550",
+    "recorded_mismatch": "16589008730158446614566725312371242169708708683930094326958320331162502432969"
+   },
+   "nonces_disclosed": [
+    "221071651121396211447738108237030327086",
+    "296402745926411333735037787553343290005",
+    "310565134727083918546496106646325692277"
+   ],
+   "public_signals": [
+    "16819212185087051474297681743099317657454386612509731300315510789255449848357",
+    "18624078274725578390315949722297924535346477921599752309772241725051420561550",
+    "16589008730158446614566725312371242169708708683930094326958320331162502432969",
+    "242758",
+    "216537",
+    "318229805555889942816925104099751919339",
+    "184340657488193157327576430847752688201"
+   ],
+   "public_signal_order": [
+    "C_capture",
+    "C_matched",
+    "C_mismatch",
+    "z_matched",
+    "z_mismatch",
+    "manifest_hi",
+    "manifest_lo"
+   ],
+   "verified": true,
+   "outputs_match": true,
+   "seconds_original_run": {
+    "witness": 0.11,
+    "check": 0.46,
+    "prove": 9.62,
+    "verify": 0.37
+   },
+   "proof_sha256": "0bd14cabf12b5f0ea085d1a724aae76d1d11cbfae8affc5e0df0506366900680",
+   "public_sha256": "b37d1ed347002c8b030d815d495517e878e12ac81b67202527a1555e8f4282d1",
+   "scores": {
+    "float32_program_matched": 0.2347564187183053,
+    "float32_program_recorded_edge_E_donor_B_target": 0.1013376488600008,
+    "exact_matched": 0.23473737683593834,
+    "exact_mismatch": 0.10136445974334495
+   }
+  },
+  "v10": {
+   "target": "v10_003368.png",
+   "mismatch_emission": "v10_003697.png",
+   "sources": {
+    "capture": {
+     "file": "v10_003368.png",
+     "side": "test_B",
+     "png_sha256": "6ebfeab778e71449b0d189fdb30e936e7cc7fc9aae3fa7a495bf0a489eebce74",
+     "pixels_sha256": "d7e06c8f08d3fc04601e86fd48346318a7eee0897ec5182c8ada59422852d7e4"
+    },
+    "matched_emission": {
+     "file": "v10_003368.png",
+     "side": "test_A",
+     "png_sha256": "c68ca681c59ad0117ddbf21ed71e33d05602c2417bc602831c76f9f59ce991ed",
+     "pixels_sha256": "df2052847892d806651fd7f5accdb541355308fabe32316c142c350bbbbbb017"
+    },
+    "recorded_mismatch": {
+     "file": "v10_003697.png",
+     "side": "test_A",
+     "png_sha256": "b4efd237027620f2c55d74351cc6cb945af6a311a560a718743e20c39e0a1735",
+     "pixels_sha256": "e1d894938a207130d718125d617933f1383da8d9fc6505591c7a4c63bf08a382"
+    }
+   },
+   "grid_digests_uint32_le": {
+    "capture": "f97f015c131eea26d12bd19ba52e8f2c0b7532add8167f5ced03e6823ed35413",
+    "matched_emission": "c0a9792fcd5d7650ad658ff5f8799ca6d47d8478246e8e6a158fcccf966e2660",
+    "recorded_mismatch": "c89c0b0d046c9bf0eb7bca71284772118f090eebe79db12d604708dc11da7015"
+   },
+   "expected": {
+    "signed_q_matched": [
+     -12955,
+     10764,
+     30572
+    ],
+    "signed_q_mismatch": [
+     27399,
+     -29075,
+     -12306
+    ],
+    "q_matched": [
+     12955,
+     10764,
+     30572
+    ],
+    "q_mismatch": [
+     27399,
+     29075,
+     12306
+    ],
+    "z_matched": 224989,
+    "z_mismatch": 182626
+   },
+   "actual": {
+    "witness_q_matched": [
+     12955,
+     10764,
+     30572
+    ],
+    "witness_q_mismatch": [
+     27399,
+     29075,
+     12306
+    ],
+    "public_z_matched": 224989,
+    "public_z_mismatch": 182626
+   },
+   "commitments": {
+    "capture": "639492307763107954581626530851983492910899682025265300812714361795991359248",
+    "matched_emission": "16995159324627424393322103233009190457707806647537708871747761190304501916023",
+    "recorded_mismatch": "10319329764659942452256240141555426321049948443196026302559994946687966655895"
+   },
+   "nonces_disclosed": [
+    "78639371056998458582151652192350571002",
+    "288481503745785887879927599507957076521",
+    "313670217278510062310199830763997296309"
+   ],
+   "public_signals": [
+    "639492307763107954581626530851983492910899682025265300812714361795991359248",
+    "16995159324627424393322103233009190457707806647537708871747761190304501916023",
+    "10319329764659942452256240141555426321049948443196026302559994946687966655895",
+    "224989",
+    "182626",
+    "318229805555889942816925104099751919339",
+    "184340657488193157327576430847752688201"
+   ],
+   "public_signal_order": [
+    "C_capture",
+    "C_matched",
+    "C_mismatch",
+    "z_matched",
+    "z_mismatch",
+    "manifest_hi",
+    "manifest_lo"
+   ],
+   "verified": true,
+   "outputs_match": true,
+   "seconds_original_run": {
+    "witness": 0.09,
+    "check": 0.47,
+    "prove": 9.78,
+    "verify": 0.39
+   },
+   "proof_sha256": "42a655a410ec31bbcd66be9e1e1a8cb43bb83bd617a7481d56f4c6b14b043910",
+   "public_sha256": "0cc28f654e1db557564d6e42f2715997da257a6900a55d97ff94610894b9742c",
+   "scores": {
+    "float32_program_matched": 0.14432814185461754,
+    "float32_program_recorded_edge_E_donor_B_target": -0.07110674382779816,
+    "exact_matched": 0.14435278713470445,
+    "exact_mismatch": -0.0711188116129753
+   }
+  }
+ },
+ "commitment": {
+  "hash": "Poseidon(11) from circomlib",
+  "tag_domain": "BOSUN_N7_G4_SUM_V1",
+  "roles": {
+   "capture": 0,
+   "matched_emission": 1,
+   "recorded_mismatch": 2
+  },
+  "packing": "nine 26-bit values per field word, 6 words (last holds 3)",
+  "inputs": "manifest_hi128, manifest_lo128, nonce_role, 48, tag_role, p0..p5"
+ },
+ "manifest_sha256": "ef68d4c7aa7feebb49fc3cb20e787eeb8aaeb81ef6777bdd6c539cd887bc5249",
+ "manifest_halves": {
+  "hi": "318229805555889942816925104099751919339",
+  "lo": "184340657488193157327576430847752688201"
+ },
+ "circuit": {
+  "source": "n7_triplet.circom",
+  "source_sha256": "bdb39301c025c248ff5378d729697f3b52bb04dc3bb4c964174149edf376777f",
+  "compiler": "circom 2.2.3",
+  "compiler_sha256": "85342c7ff332d948df7c0c50ecf201e6129349aef550ce873f3c811b79fe53a3",
+  "flags": "--r1cs --wasm --sym -l <node_modules root holding circomlib>",
+  "circomlib": {
+   "version": "2.0.5",
+   "package_json_sha256": "79ed553f89b67cce3aff5ae30027ce1683cbe8b3f8e822be4354ec25b5d7808a",
+   "files": {
+    "poseidon.circom": "2582464669b69827164bd08ee0337997e1957f2ab4f00cdd86d533ca5e9d9234",
+    "poseidon_constants.circom": "94c9e4b5ea891ab4d1ba626f1d719f8c661014d9b628f6096c803f75f39e3eee",
+    "bitify.circom": "688f121303a2dd0154ceeda8d2f53a9d2d26789d10a69a46acd534642725683e",
+    "comparators.circom": "fd0c7723ee56e1467df1861131157cbb108e156fe2d9ec64895c8e68de14db20"
+   }
+  },
+  "snarkjs": {
+   "version": "0.7.6",
+   "cli_sha256": "6d787e37a4d1a2c6dd6032dadca09c0b3b007d4d4578bb6232a98136555d051a"
+  },
+  "node": "v22.22.1",
+  "r1cs_sha256": "2dbfaa660729adf944c4bb7f959ba6a5bf9948fdbbcad1ed890bb11b31d9ecb7",
+  "r1cs_info": "\u001b[32;22m[INFO]  \u001b[39;1msnarkJS\u001b[0m: Curve: bn-128\n\u001b[32;22m[INFO]  \u001b[39;1msnarkJS\u001b[0m: # of Wires: 11776\n\u001b[32;22m[INFO]  \u001b[39;1msnarkJS\u001b[0m: # of Constraints: 11811\n\u001b[32;22m[INFO]  \u001b[39;1msnarkJS\u001b[0m: # of Private Inputs: 174\n\u001b[32;22m[INFO]  \u001b[39;1msnarkJS\u001b[0m: # of Public Inputs: 2\n\u001b[32;22m[INFO]  \u001b[39;1msnarkJS\u001b[0m: # of Labels: 15495\n\u001b[32;22m[INFO]  \u001b[39;1msnarkJS\u001b[0m: # of Outputs: 5",
+  "r1cs_constraints": 11811,
+  "nonlinear_constraints": 8635,
+  "linear_constraints": 3176,
+  "plonk_constraints": 23212,
+  "domain_power": 15,
+  "wasm_sha256": "b314a4d6faaf73ea8dc55b4f462f3186066f8bff2755e590c1f1b7502df37c64",
+  "sym_sha256": "405bcb83fd2530a895d282775dc2da42e5ca2e5f7d37bf92bd65a9a608b2626d",
+  "zkey_sha256": "725f8c9ca40ae421d5286aa398c64ada1f5951a456db9adb56ba7609850f9615",
+  "zkey_bytes": 81840628,
+  "verification_key_sha256": "ae7d719bb89bb17e4a52799eb9eb0e7fab3c5b652da880dac38c2b6db718278c",
+  "ptau": {
+   "file": "powersOfTau28_hez_final_15.ptau",
+   "sha256": "3ef2ecc5b75d687048cf2d59195119b42fb07c5af639c5f283d84bfa69829e7f",
+   "power": 15,
+   "shipped": false
+  },
+  "fresh_recompile": {
+   "when_utc": "2026-09-06T19:04:30Z",
+   "r1cs_sha256": "2dbfaa660729adf944c4bb7f959ba6a5bf9948fdbbcad1ed890bb11b31d9ecb7",
+   "wasm_sha256": "b314a4d6faaf73ea8dc55b4f462f3186066f8bff2755e590c1f1b7502df37c64",
+   "byte_identical_to_shipped": true,
+   "log": "logs/compile.log"
+  }
+ },
+ "timings": {
+  "original_run": {
+   "setup_seconds": 1.9,
+   "d2": {
+    "witness": 0.11,
+    "check": 0.46,
+    "prove": 9.62,
+    "verify": 0.37
+   },
+   "v10": {
+    "witness": 0.09,
+    "check": 0.47,
+    "prove": 9.78,
+    "verify": 0.39
+   },
+   "peak_memory": "not measured on the original run"
+  },
+  "reruns": {
+   "compile": {
+    "elapsed": "0:01.68",
+    "peak_rss_kbytes": 428192
+   },
+   "prove_d2": {
+    "elapsed": "0:14.25",
+    "peak_rss_kbytes": 1513892,
+    "verified": true,
+    "note": "re-proof of the d2 witness with the shipped proving key; measured with /usr/bin/time -v; labelled as a rerun"
+   }
+  },
+  "cpu": "AMD RYZEN AI MAX+ PRO 395 w/ Radeon 8060S",
+  "host": "laptop CPU; the RTX 5090 was not connected"
+ },
+ "controls": [
+  {
+   "control": "donor_in_matched_role",
+   "expectation": "matched guard fails (z_matched below 221187)",
+   "failure_layer": "witness",
+   "behaved_as_required": true,
+   "detail": "tor.js:141:14)\n    at WitnessCalculator.calculateWTNSBin (build/n7_triplet_js/witness_calculator.js:216:20)\n    at build/n7_triplet_js/generate_witness.js:16:38\n\nNode.js v22.22.1"
+  },
+  {
+   "control": "emissions_exchanged",
+   "expectation": "cannot satisfy both guards",
+   "failure_layer": "witness",
+   "behaved_as_required": true,
+   "detail": "tor.js:141:14)\n    at WitnessCalculator.calculateWTNSBin (build/n7_triplet_js/witness_calculator.js:216:20)\n    at build/n7_triplet_js/generate_witness.js:16:38\n\nNode.js v22.22.1"
+  },
+  {
+   "control": "constant_zero_grids_source",
+   "expectation": "no modular inverse of a zero variance",
+   "failure_layer": "source",
+   "behaved_as_required": true,
+   "detail": "AssertionError: "
+  },
+  {
+   "control": "constant_zero_grids_circuit",
+   "expectation": "nonzero-variance constraint v*vinv=1 fails in circuit",
+   "failure_layer": "witness",
+   "behaved_as_required": true,
+   "detail": "tor.js:141:14)\n    at WitnessCalculator.calculateWTNSBin (build/n7_triplet_js/witness_calculator.js:216:20)\n    at build/n7_triplet_js/generate_witness.js:16:38\n\nNode.js v22.22.1"
+  },
+  {
+   "control": "complement_matched_emission",
+   "expectation": "matched guard fails (sign flipped)",
+   "failure_layer": "witness",
+   "behaved_as_required": true,
+   "detail": "tor.js:141:14)\n    at WitnessCalculator.calculateWTNSBin (build/n7_triplet_js/witness_calculator.js:216:20)\n    at build/n7_triplet_js/generate_witness.js:16:38\n\nNode.js v22.22.1"
+  },
+  {
+   "control": "grid_value_changed_own_commitment",
+   "expectation": "valid proof under its own (different) commitments",
+   "failure_layer": "verified",
+   "behaved_as_required": true,
+   "detail": "\u001b[32;22m[INFO]  \u001b[39;1msnarkJS\u001b[0m: PLONK VERIFIER STARTED\n\u001b[32;22m[INFO]  \u001b[39;1msnarkJS\u001b[0m: OK!"
+  },
+  {
+   "control": "grid_value_changed_vs_pinned_public",
+   "expectation": "the new proof rejects against the pinned original public signals",
+   "failure_layer": "verify",
+   "behaved_as_required": true,
+   "detail": "\u001b[32;22m[INFO]  \u001b[39;1msnarkJS\u001b[0m: PLONK VERIFIER STARTED\n\u001b[33;22m[WARN]  \u001b[39;1msnarkJS\u001b[0m: Invalid Proof"
+  },
+  {
+   "control": "public_signal_mutations",
+   "expectation": "all 7 single-signal mutations reject",
+   "failure_layer": "verify",
+   "behaved_as_required": true,
+   "detail": "7/7 rejected"
+  },
+  {
+   "control": "quotient_witness_plus_one",
+   "expectation": "quotient slack decomposition fails",
+   "failure_layer": "witness",
+   "behaved_as_required": true,
+   "detail": "tor.js:141:14)\n    at WitnessCalculator.calculateWTNSBin (build/n7_triplet_js/witness_calculator.js:216:20)\n    at build/n7_triplet_js/generate_witness.js:16:38\n\nNode.js v22.22.1"
+  },
+  {
+   "control": "quotient_witness_minus_one",
+   "expectation": "quotient slack decomposition fails",
+   "failure_layer": "witness",
+   "behaved_as_required": true,
+   "detail": "tor.js:141:14)\n    at WitnessCalculator.calculateWTNSBin (build/n7_triplet_js/witness_calculator.js:216:20)\n    at build/n7_triplet_js/generate_witness.js:16:38\n\nNode.js v22.22.1"
+  },
+  {
+   "control": "synthetic_identical_and_complement_endpoints",
+   "expectation": "verifies with z_matched = 393216 (Q = 3S) and z_mismatch = 0 (Q = -3S)",
+   "failure_layer": "verified",
+   "behaved_as_required": true,
+   "detail": "\u001b[32;22m[INFO]  \u001b[39;1msnarkJS\u001b[0m: PLONK VERIFIER STARTED\n\u001b[32;22m[INFO]  \u001b[39;1msnarkJS\u001b[0m: OK!"
+  },
+  {
+   "control": "synthetic_endpoint_values",
+   "expectation": "z_matched 393216, z_mismatch 0",
+   "failure_layer": "verified",
+   "behaved_as_required": true,
+   "detail": "z 393216 0"
+  },
+  {
+   "control": "cross_example_proof_public",
+   "expectation": "v10 proof rejects against d2 publics",
+   "failure_layer": "verify",
+   "behaved_as_required": true,
+   "detail": "\u001b[32;22m[INFO]  \u001b[39;1msnarkJS\u001b[0m: PLONK VERIFIER STARTED\n\u001b[33;22m[WARN]  \u001b[39;1msnarkJS\u001b[0m: Invalid Proof"
+  }
+ ],
+ "controls_all_behaved": true,
+ "controls_detail": [
+  {
+   "control": "donor_in_matched_role",
+   "returncode": 1,
+   "assertion": "Error: Error: Assert Failed.",
+   "circuit_location": "Error in template N7IntegerTriplet_93 line: 198",
+   "stderr_tail": "                         ^\n\nError: Error: Assert Failed.\nError in template N7IntegerTriplet_93 line: 198\n\n    at build/n7_triplet_js/witness_calculator.js:166:27\n    at Array.forEach (<anonymous>)\n    at WitnessCalculator._doCalculateWitness (build/n7_triplet_js/witness_calculator.js:141:14)\n    at WitnessCalculator.calculateWTNSBin (build/n7_triplet_js/witness_calculator.js:216:20)\n    at build/n7_triplet_js/generate_witness.js:16:38\n\nNode.js v22.22.1",
+   "failed_at_witness": true
+  },
+  {
+   "control": "emissions_exchanged",
+   "returncode": 1,
+   "assertion": "Error: Error: Assert Failed.",
+   "circuit_location": "Error in template N7IntegerTriplet_93 line: 198",
+   "stderr_tail": "                         ^\n\nError: Error: Assert Failed.\nError in template N7IntegerTriplet_93 line: 198\n\n    at build/n7_triplet_js/witness_calculator.js:166:27\n    at Array.forEach (<anonymous>)\n    at WitnessCalculator._doCalculateWitness (build/n7_triplet_js/witness_calculator.js:141:14)\n    at WitnessCalculator.calculateWTNSBin (build/n7_triplet_js/witness_calculator.js:216:20)\n    at build/n7_triplet_js/generate_witness.js:16:38\n\nNode.js v22.22.1",
+   "failed_at_witness": true
+  },
+  {
+   "control": "complement_matched_emission",
+   "returncode": 1,
+   "assertion": "Error: Error: Assert Failed.",
+   "circuit_location": "Error in template N7IntegerTriplet_93 line: 198",
+   "stderr_tail": "                         ^\n\nError: Error: Assert Failed.\nError in template N7IntegerTriplet_93 line: 198\n\n    at build/n7_triplet_js/witness_calculator.js:166:27\n    at Array.forEach (<anonymous>)\n    at WitnessCalculator._doCalculateWitness (build/n7_triplet_js/witness_calculator.js:141:14)\n    at WitnessCalculator.calculateWTNSBin (build/n7_triplet_js/witness_calculator.js:216:20)\n    at build/n7_triplet_js/generate_witness.js:16:38\n\nNode.js v22.22.1",
+   "failed_at_witness": true
+  },
+  {
+   "control": "constant_zero_grids_circuit",
+   "returncode": 1,
+   "assertion": "Error: Error: Assert Failed.",
+   "circuit_location": "Error in template NonzeroInverse_80 line: 77",
+   "stderr_tail": "ert Failed.\nError in template NonzeroInverse_80 line: 77\nError in template N7IntegerTriplet_93 line: 180\n\n    at build/n7_triplet_js/witness_calculator.js:166:27\n    at Array.forEach (<anonymous>)\n    at WitnessCalculator._doCalculateWitness (build/n7_triplet_js/witness_calculator.js:141:14)\n    at WitnessCalculator.calculateWTNSBin (build/n7_triplet_js/witness_calculator.js:216:20)\n    at build/n7_triplet_js/generate_witness.js:16:38\n\nNode.js v22.22.1",
+   "failed_at_witness": true
+  },
+  {
+   "control": "quotient_witness_plus_one",
+   "returncode": 1,
+   "assertion": "Error: Error: Assert Failed.",
+   "circuit_location": "Error in template Num2Bits_86 line: 38",
+   "stderr_tail": "Bits_86 line: 38\nError in template ChannelQ_88 line: 110\nError in template N7IntegerTriplet_93 line: 183\n\n    at build/n7_triplet_js/witness_calculator.js:166:27\n    at Array.forEach (<anonymous>)\n    at WitnessCalculator._doCalculateWitness (build/n7_triplet_js/witness_calculator.js:141:14)\n    at WitnessCalculator.calculateWTNSBin (build/n7_triplet_js/witness_calculator.js:216:20)\n    at build/n7_triplet_js/generate_witness.js:16:38\n\nNode.js v22.22.1",
+   "failed_at_witness": true
+  },
+  {
+   "control": "quotient_witness_minus_one",
+   "returncode": 1,
+   "assertion": "Error: Error: Assert Failed.",
+   "circuit_location": "Error in template Num2Bits_87 line: 38",
+   "stderr_tail": "Bits_87 line: 38\nError in template ChannelQ_88 line: 113\nError in template N7IntegerTriplet_93 line: 183\n\n    at build/n7_triplet_js/witness_calculator.js:166:27\n    at Array.forEach (<anonymous>)\n    at WitnessCalculator._doCalculateWitness (build/n7_triplet_js/witness_calculator.js:141:14)\n    at WitnessCalculator.calculateWTNSBin (build/n7_triplet_js/witness_calculator.js:216:20)\n    at build/n7_triplet_js/generate_witness.js:16:38\n\nNode.js v22.22.1",
+   "failed_at_witness": true
+  },
+  {
+   "control": "grid_value_2_pow_26",
+   "returncode": 1,
+   "assertion": "Error: Error: Assert Failed.",
+   "circuit_location": "Error in template Num2Bits_1 line: 38",
+   "stderr_tail": "Bits_1 line: 38\nError in template GridCommit_76 line: 21\nError in template N7IntegerTriplet_93 line: 155\n\n    at build/n7_triplet_js/witness_calculator.js:166:27\n    at Array.forEach (<anonymous>)\n    at WitnessCalculator._doCalculateWitness (build/n7_triplet_js/witness_calculator.js:141:14)\n    at WitnessCalculator.calculateWTNSBin (build/n7_triplet_js/witness_calculator.js:216:20)\n    at build/n7_triplet_js/generate_witness.js:16:38\n\nNode.js v22.22.1",
+   "failed_at_witness": true
+  },
+  {
+   "control": "nonce_2_pow_128",
+   "returncode": 1,
+   "assertion": "Error: Error: Assert Failed.",
+   "circuit_location": "Error in template Num2Bits_0 line: 38",
+   "stderr_tail": "Bits_0 line: 38\nError in template GridCommit_76 line: 24\nError in template N7IntegerTriplet_93 line: 155\n\n    at build/n7_triplet_js/witness_calculator.js:166:27\n    at Array.forEach (<anonymous>)\n    at WitnessCalculator._doCalculateWitness (build/n7_triplet_js/witness_calculator.js:141:14)\n    at WitnessCalculator.calculateWTNSBin (build/n7_triplet_js/witness_calculator.js:216:20)\n    at build/n7_triplet_js/generate_witness.js:16:38\n\nNode.js v22.22.1",
+   "failed_at_witness": true
+  },
+  {
+   "control": "wrong_covariance_sign",
+   "returncode": 1,
+   "assertion": "Error: Error: Assert Failed.",
+   "circuit_location": "Error in template ChannelQ_88 line: 91",
+   "stderr_tail": "r: Assert Failed.\nError in template ChannelQ_88 line: 91\nError in template N7IntegerTriplet_93 line: 183\n\n    at build/n7_triplet_js/witness_calculator.js:166:27\n    at Array.forEach (<anonymous>)\n    at WitnessCalculator._doCalculateWitness (build/n7_triplet_js/witness_calculator.js:141:14)\n    at WitnessCalculator.calculateWTNSBin (build/n7_triplet_js/witness_calculator.js:216:20)\n    at build/n7_triplet_js/generate_witness.js:16:38\n\nNode.js v22.22.1",
+   "failed_at_witness": true
+  }
+ ],
+ "controls_detail_all_failed_at_witness": true,
+ "scripts_as_run": {
+  "reference.py": "5667dc40461f4136b8359c5ee1257353abd1ff7076b1d24790da22bfcbd94ab1",
+  "pipeline.py": "d27aac2637e47c8c5a2b804f7bec16b6d820162f2bac876a6c57325b42529228",
+  "controls.py": "d71642eccaf9916e29bcf6501d86c4268ed2f736bae9b8ab24a993052eb008bf",
+  "controls_detail.py": "6e7bb0ef5886d6ee41d415c73baf80648d5aae68a81dec0e2eb0663b96fddda1",
+  "independent_check.py": "76791bbcbe89cbad5168790544d27303ad25e49c61c80c41b1e0e79c3d2d841b",
+  "package.py": "f86ec251d5b600ffa59078afa2768197db32669a707283bc1491141c279d2f99"
+ },
+ "path_reduction": "workspace absolute paths reduced to package-relative form in every shipped text file; scripts_as_run holds the SHA-256 of the scripts as run",
+ "replay": "from the package root: SNARKJS=\"/path/to/node_modules/.bin/snarkjs\" python3 scripts/independent_check.py   (needs python3 with numpy and Pillow, node, and snarkjs 0.7.6); it checks the six fixture PNGs, the grids against the frozen openings, the quotients and z, the commitments reconstructed from the disclosed openings through the shipped witness generator, and both proofs",
+ "boundaries": [
+  "the proof starts at the committed integer grids; decoding the PNGs and summing the cells is host-side replay evidence (scripts/reference.py, scripts/independent_check.py), not in-circuit computation",
+  "the commitments were made on 6 September 2026, not at recording time; nothing here is a recorder-time commitment",
+  "the error theorem concerns exact mathematical Pearson correlation; the float32 program of the train-free package differs from exact-sum Pearson by up to about 2.7e-5 on these examples (all four threshold decisions agree)",
+  "public data with disclosed nonces: this demonstrates the proof system, not confidentiality",
+  "two examples chosen by a fixed rule; tau chosen after inspection; no claim about the other 973 pairs",
+  "the sealed 288-row take supplies no part of this work",
+  "a host check that compared only aggregate scores could not distinguish grids shifted by a constant per value; the shipped checker therefore compares the grids and digests themselves against the frozen openings"
+ ]
+}

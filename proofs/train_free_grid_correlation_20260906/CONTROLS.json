@@ -1,0 +1,98 @@
+{
+ "schema": "n7-integer-positive-controls/v1",
+ "run_utc": "2026-09-06T18:53:17Z",
+ "controls": [
+  {
+   "control": "donor_in_matched_role",
+   "expectation": "matched guard fails (z_matched below 221187)",
+   "failure_layer": "witness",
+   "behaved_as_required": true,
+   "detail": "tor.js:141:14)\n    at WitnessCalculator.calculateWTNSBin (build/n7_triplet_js/witness_calculator.js:216:20)\n    at build/n7_triplet_js/generate_witness.js:16:38\n\nNode.js v22.22.1"
+  },
+  {
+   "control": "emissions_exchanged",
+   "expectation": "cannot satisfy both guards",
+   "failure_layer": "witness",
+   "behaved_as_required": true,
+   "detail": "tor.js:141:14)\n    at WitnessCalculator.calculateWTNSBin (build/n7_triplet_js/witness_calculator.js:216:20)\n    at build/n7_triplet_js/generate_witness.js:16:38\n\nNode.js v22.22.1"
+  },
+  {
+   "control": "constant_zero_grids_source",
+   "expectation": "no modular inverse of a zero variance",
+   "failure_layer": "source",
+   "behaved_as_required": true,
+   "detail": "AssertionError: "
+  },
+  {
+   "control": "constant_zero_grids_circuit",
+   "expectation": "nonzero-variance constraint v*vinv=1 fails in circuit",
+   "failure_layer": "witness",
+   "behaved_as_required": true,
+   "detail": "tor.js:141:14)\n    at WitnessCalculator.calculateWTNSBin (build/n7_triplet_js/witness_calculator.js:216:20)\n    at build/n7_triplet_js/generate_witness.js:16:38\n\nNode.js v22.22.1"
+  },
+  {
+   "control": "complement_matched_emission",
+   "expectation": "matched guard fails (sign flipped)",
+   "failure_layer": "witness",
+   "behaved_as_required": true,
+   "detail": "tor.js:141:14)\n    at WitnessCalculator.calculateWTNSBin (build/n7_triplet_js/witness_calculator.js:216:20)\n    at build/n7_triplet_js/generate_witness.js:16:38\n\nNode.js v22.22.1"
+  },
+  {
+   "control": "grid_value_changed_own_commitment",
+   "expectation": "valid proof under its own (different) commitments",
+   "failure_layer": "verified",
+   "behaved_as_required": true,
+   "detail": "\u001b[32;22m[INFO]  \u001b[39;1msnarkJS\u001b[0m: PLONK VERIFIER STARTED\n\u001b[32;22m[INFO]  \u001b[39;1msnarkJS\u001b[0m: OK!"
+  },
+  {
+   "control": "grid_value_changed_vs_pinned_public",
+   "expectation": "the new proof rejects against the pinned original public signals",
+   "failure_layer": "verify",
+   "behaved_as_required": true,
+   "detail": "\u001b[32;22m[INFO]  \u001b[39;1msnarkJS\u001b[0m: PLONK VERIFIER STARTED\n\u001b[33;22m[WARN]  \u001b[39;1msnarkJS\u001b[0m: Invalid Proof"
+  },
+  {
+   "control": "public_signal_mutations",
+   "expectation": "all 7 single-signal mutations reject",
+   "failure_layer": "verify",
+   "behaved_as_required": true,
+   "detail": "7/7 rejected"
+  },
+  {
+   "control": "quotient_witness_plus_one",
+   "expectation": "quotient slack decomposition fails",
+   "failure_layer": "witness",
+   "behaved_as_required": true,
+   "detail": "tor.js:141:14)\n    at WitnessCalculator.calculateWTNSBin (build/n7_triplet_js/witness_calculator.js:216:20)\n    at build/n7_triplet_js/generate_witness.js:16:38\n\nNode.js v22.22.1"
+  },
+  {
+   "control": "quotient_witness_minus_one",
+   "expectation": "quotient slack decomposition fails",
+   "failure_layer": "witness",
+   "behaved_as_required": true,
+   "detail": "tor.js:141:14)\n    at WitnessCalculator.calculateWTNSBin (build/n7_triplet_js/witness_calculator.js:216:20)\n    at build/n7_triplet_js/generate_witness.js:16:38\n\nNode.js v22.22.1"
+  },
+  {
+   "control": "synthetic_identical_and_complement_endpoints",
+   "expectation": "verifies with z_matched = 393216 (Q = 3S) and z_mismatch = 0 (Q = -3S)",
+   "failure_layer": "verified",
+   "behaved_as_required": true,
+   "detail": "\u001b[32;22m[INFO]  \u001b[39;1msnarkJS\u001b[0m: PLONK VERIFIER STARTED\n\u001b[32;22m[INFO]  \u001b[39;1msnarkJS\u001b[0m: OK!"
+  },
+  {
+   "control": "synthetic_endpoint_values",
+   "expectation": "z_matched 393216, z_mismatch 0",
+   "failure_layer": "verified",
+   "behaved_as_required": true,
+   "detail": "z 393216 0"
+  },
+  {
+   "control": "cross_example_proof_public",
+   "expectation": "v10 proof rejects against d2 publics",
+   "failure_layer": "verify",
+   "behaved_as_required": true,
+   "detail": "\u001b[32;22m[INFO]  \u001b[39;1msnarkJS\u001b[0m: PLONK VERIFIER STARTED\n\u001b[33;22m[WARN]  \u001b[39;1msnarkJS\u001b[0m: Invalid Proof"
+  }
+ ],
+ "all_behaved": true
+}

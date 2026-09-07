@@ -1,0 +1,215 @@
+{
+ "schema": "n5-extract-checks/v1",
+ "run_utc": "2026-09-06T18:14:33Z",
+ "source": "scratch/zeebeam_zk_conditional_cheap_20260823/zeebeam-zk-conditional-cheap-20260823-v3",
+ "snarkjs": "snarkjs@0.7.6",
+ "circom": "circom compiler 2.2.3",
+ "margins": {
+  "discriminator": {
+   "aggregate_delta": 93980,
+   "first_direction_tt_minus_tu": -374704,
+   "second_direction_uu_minus_ut": 468684,
+   "public_delta": 93980,
+   "passed": 1
+  },
+  "diffusion": {
+   "matched_residual": 3479214655984,
+   "crossed_residual": 3923146435158,
+   "aggregate_margin": 443931779174,
+   "first_direction_tu_minus_tt": -49565405256,
+   "second_direction_ut_minus_uu": 493497184430,
+   "public_matched": 3479214655984,
+   "public_crossed": 3923146435158,
+   "public_margin": 443931779174,
+   "passed": 1
+  }
+ },
+ "checks": [
+  {
+   "name": "receipt sha256 matches the brief",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "training_result sha256 matches the brief",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "build manifest sha256 matches the brief",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "ceremony file sha256 matches the receipt",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "snarkjs version is the receipt backend",
+   "ok": true,
+   "detail": "snarkjs@0.7.6"
+  },
+  {
+   "name": "circom version is the receipt compiler",
+   "ok": true,
+   "detail": "circom compiler 2.2.3"
+  },
+  {
+   "name": "discriminator: all 10 receipt artefacts present with matching size and sha256",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "diffusion: all 10 receipt artefacts present with matching size and sha256",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "discriminator original proof verifies",
+   "ok": true,
+   "detail": "\u001b[32;22m[INFO]  \u001b[39;1msnarkJS\u001b[0m: PLONK VERIFIER STARTED\n\u001b[32;22m[INFO]  \u001b[39;1msnarkJS\u001b[0m: OK!"
+  },
+  {
+   "name": "discriminator repeat proof verifies",
+   "ok": true,
+   "detail": "\u001b[32;22m[INFO]  \u001b[39;1msnarkJS\u001b[0m: PLONK VERIFIER STARTED\n\u001b[32;22m[INFO]  \u001b[39;1msnarkJS\u001b[0m: OK!"
+  },
+  {
+   "name": "discriminator: repeated public signals identical",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "discriminator: original and repeat proof bytes differ (an inference about prover randomness, not evidence of entropy quality)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "discriminator: public.json equals the receipt public signals in the declared order",
+   "ok": true,
+   "detail": "9 signals"
+  },
+  {
+   "name": "discriminator retained tampered proof rejects",
+   "ok": true,
+   "detail": "\u001b[32;22m[INFO]  \u001b[39;1msnarkJS\u001b[0m: PLONK VERIFIER STARTED\n\u001b[31;22m[ERROR] \u001b[39;1msnarkJS\u001b[0m: Proof commitments are not valid."
+  },
+  {
+   "name": "discriminator retained tampered public rejects",
+   "ok": true,
+   "detail": "\u001b[32;22m[INFO]  \u001b[39;1msnarkJS\u001b[0m: PLONK VERIFIER STARTED\n\u001b[33;22m[WARN]  \u001b[39;1msnarkJS\u001b[0m: Invalid Proof"
+  },
+  {
+   "name": "discriminator: all 9 single-public-field mutations reject",
+   "ok": true,
+   "detail": "9/9"
+  },
+  {
+   "name": "diffusion original proof verifies",
+   "ok": true,
+   "detail": "\u001b[32;22m[INFO]  \u001b[39;1msnarkJS\u001b[0m: PLONK VERIFIER STARTED\n\u001b[32;22m[INFO]  \u001b[39;1msnarkJS\u001b[0m: OK!"
+  },
+  {
+   "name": "diffusion repeat proof verifies",
+   "ok": true,
+   "detail": "\u001b[32;22m[INFO]  \u001b[39;1msnarkJS\u001b[0m: PLONK VERIFIER STARTED\n\u001b[32;22m[INFO]  \u001b[39;1msnarkJS\u001b[0m: OK!"
+  },
+  {
+   "name": "diffusion: repeated public signals identical",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "diffusion: original and repeat proof bytes differ (an inference about prover randomness, not evidence of entropy quality)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "diffusion: public.json equals the receipt public signals in the declared order",
+   "ok": true,
+   "detail": "11 signals"
+  },
+  {
+   "name": "diffusion retained tampered proof rejects",
+   "ok": true,
+   "detail": "\u001b[32;22m[INFO]  \u001b[39;1msnarkJS\u001b[0m: PLONK VERIFIER STARTED\n\u001b[31;22m[ERROR] \u001b[39;1msnarkJS\u001b[0m: Proof commitments are not valid."
+  },
+  {
+   "name": "diffusion retained tampered public rejects",
+   "ok": true,
+   "detail": "\u001b[32;22m[INFO]  \u001b[39;1msnarkJS\u001b[0m: PLONK VERIFIER STARTED\n\u001b[33;22m[WARN]  \u001b[39;1msnarkJS\u001b[0m: Invalid Proof"
+  },
+  {
+   "name": "diffusion: all 11 single-public-field mutations reject",
+   "ok": true,
+   "detail": "11/11"
+  },
+  {
+   "name": "both proofs carry the same hidden-tensor commitment, model tag and context",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "discriminator aggregate delta recomputes to the public delta and is positive",
+   "ok": true,
+   "detail": "{'aggregate_delta': 93980, 'first_direction_tt_minus_tu': -374704, 'second_direction_uu_minus_ut': 468684, 'public_delta': 93980, 'passed': 1}"
+  },
+  {
+   "name": "diffusion matched, crossed and margin recompute to the public values and the margin is positive",
+   "ok": true,
+   "detail": "{'matched_residual': 3479214655984, 'crossed_residual': 3923146435158, 'aggregate_margin': 443931779174, 'first_direction_tu_minus_tt': -49565405256, 'second_direction_ut_minus_uu': 493497184430, 'public_matched': 3479214655984, 'public_crossed': 3923146435158, 'public_margin': 443931779174, 'passed': 1}"
+  },
+  {
+   "name": "DISCLOSED LIMITATION: discriminator first direction fails (tt < tu)",
+   "ok": true,
+   "detail": "-374704"
+  },
+  {
+   "name": "DISCLOSED LIMITATION: diffusion first direction fails (tu < tt)",
+   "ok": true,
+   "detail": "-49565405256"
+  },
+  {
+   "name": "discriminator: synthetic zero-margin witness REJECTS at the positivity constraint",
+   "ok": true,
+   "detail": "Error: Error: Assert Failed."
+  },
+  {
+   "name": "discriminator: retained positive witness_check.stdout reports WITNESS IS CORRECT (positive-witness evidence only)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "diffusion: synthetic zero-margin witness REJECTS at the positivity constraint",
+   "ok": true,
+   "detail": "Error: Error: Assert Failed."
+  },
+  {
+   "name": "diffusion: retained positive witness_check.stdout reports WITNESS IS CORRECT (positive-witness evidence only)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "package carries no workspace absolute paths (/home/c/...)",
+   "ok": true,
+   "detail": "[]"
+  }
+ ],
+ "all_ok": true,
+ "seconds": 11.4,
+ "zero_margin_tests": {
+  "discriminator": {
+   "input": "synthetic zero tensors, nonce 0, receipt context (fixed diffusion noise unchanged)",
+   "rejected": true,
+   "returncode": 1,
+   "message": "lator.calculateWTNSBin (build/discriminator/discriminator_js/witness_calculator.js:216:20)\n    at build/discriminator/discriminator_js/generate_witness.js:16:38\n\nNode.js v22.22.1"
+  },
+  "diffusion": {
+   "input": "synthetic zero tensors, nonce 0, receipt context (fixed diffusion noise unchanged)",
+   "rejected": true,
+   "returncode": 1,
+   "message": " at WitnessCalculator.calculateWTNSBin (build/diffusion/diffusion_js/witness_calculator.js:216:20)\n    at build/diffusion/diffusion_js/generate_witness.js:16:38\n\nNode.js v22.22.1"
+  }
+ }
+}

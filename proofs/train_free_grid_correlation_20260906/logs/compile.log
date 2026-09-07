@@ -1,0 +1,12 @@
+[32mtemplate instances[0m: 94
+non-linear constraints: 8635
+linear constraints: 3176
+public inputs: 2
+private inputs: 174
+public outputs: 5
+wires: 11776
+labels: 15495
+[32mWritten successfully:[0m build_fresh/n7_triplet.r1cs
+[32mWritten successfully:[0m build_fresh/n7_triplet.sym
+[32mWritten successfully:[0m build_fresh/n7_triplet_js/n7_triplet.wasm
+[32mEverything went okay[0m

@@ -1,0 +1,84 @@
+{
+ "schema": "n7-integer-positive-results/v1",
+ "manifest_sha256": "ef68d4c7aa7feebb49fc3cb20e787eeb8aaeb81ef6777bdd6c539cd887bc5249",
+ "setup_seconds": 1.9,
+ "r1cs_info": "\u001b[32;22m[INFO]  \u001b[39;1msnarkJS\u001b[0m: Curve: bn-128\n\u001b[32;22m[INFO]  \u001b[39;1msnarkJS\u001b[0m: # of Wires: 11776\n\u001b[32;22m[INFO]  \u001b[39;1msnarkJS\u001b[0m: # of Constraints: 11811\n\u001b[32;22m[INFO]  \u001b[39;1msnarkJS\u001b[0m: # of Private Inputs: 174\n\u001b[32;22m[INFO]  \u001b[39;1msnarkJS\u001b[0m: # of Public Inputs: 2\n\u001b[32;22m[INFO]  \u001b[39;1msnarkJS\u001b[0m: # of Labels: 15495\n\u001b[32;22m[INFO]  \u001b[39;1msnarkJS\u001b[0m: # of Outputs: 5",
+ "examples": {
+  "d2": {
+   "witness_check": true,
+   "prove_ok": true,
+   "verify_ok": true,
+   "public_signals": [
+    "16819212185087051474297681743099317657454386612509731300315510789255449848357",
+    "18624078274725578390315949722297924535346477921599752309772241725051420561550",
+    "16589008730158446614566725312371242169708708683930094326958320331162502432969",
+    "242758",
+    "216537",
+    "318229805555889942816925104099751919339",
+    "184340657488193157327576430847752688201"
+   ],
+   "public_signal_order": [
+    "C_capture",
+    "C_matched",
+    "C_mismatch",
+    "z_matched",
+    "z_mismatch",
+    "manifest_hi",
+    "manifest_lo"
+   ],
+   "outputs_match_expected": true,
+   "seconds": {
+    "witness": 0.11,
+    "check": 0.46,
+    "prove": 9.62,
+    "verify": 0.37
+   },
+   "proof_sha256": "0bd14cabf12b5f0ea085d1a724aae76d1d11cbfae8affc5e0df0506366900680",
+   "public_sha256": "b37d1ed347002c8b030d815d495517e878e12ac81b67202527a1555e8f4282d1",
+   "messages": {
+    "check": "---\n\u001b[32;22m[INFO]  \u001b[39;1msnarkJS\u001b[0m: > Checking witness correctness\n\u001b[32;22m[INFO]  \u001b[39;1msnarkJS\u001b[0m: WITNESS IS CORRECT\n\u001b[32;22m[INFO]  \u001b[39;1msnarkJS\u001b[0m: WITNESS CHECKING FINISHED SUCCESSFULLY",
+    "prove": "",
+    "verify": "\u001b[32;22m[INFO]  \u001b[39;1msnarkJS\u001b[0m: PLONK VERIFIER STARTED\n\u001b[32;22m[INFO]  \u001b[39;1msnarkJS\u001b[0m: OK!"
+   }
+  },
+  "v10": {
+   "witness_check": true,
+   "prove_ok": true,
+   "verify_ok": true,
+   "public_signals": [
+    "639492307763107954581626530851983492910899682025265300812714361795991359248",
+    "16995159324627424393322103233009190457707806647537708871747761190304501916023",
+    "10319329764659942452256240141555426321049948443196026302559994946687966655895",
+    "224989",
+    "182626",
+    "318229805555889942816925104099751919339",
+    "184340657488193157327576430847752688201"
+   ],
+   "public_signal_order": [
+    "C_capture",
+    "C_matched",
+    "C_mismatch",
+    "z_matched",
+    "z_mismatch",
+    "manifest_hi",
+    "manifest_lo"
+   ],
+   "outputs_match_expected": true,
+   "seconds": {
+    "witness": 0.09,
+    "check": 0.47,
+    "prove": 9.78,
+    "verify": 0.39
+   },
+   "proof_sha256": "42a655a410ec31bbcd66be9e1e1a8cb43bb83bd617a7481d56f4c6b14b043910",
+   "public_sha256": "0cc28f654e1db557564d6e42f2715997da257a6900a55d97ff94610894b9742c",
+   "messages": {
+    "check": "---\n\u001b[32;22m[INFO]  \u001b[39;1msnarkJS\u001b[0m: > Checking witness correctness\n\u001b[32;22m[INFO]  \u001b[39;1msnarkJS\u001b[0m: WITNESS IS CORRECT\n\u001b[32;22m[INFO]  \u001b[39;1msnarkJS\u001b[0m: WITNESS CHECKING FINISHED SUCCESSFULLY",
+    "prove": "",
+    "verify": "\u001b[32;22m[INFO]  \u001b[39;1msnarkJS\u001b[0m: PLONK VERIFIER STARTED\n\u001b[32;22m[INFO]  \u001b[39;1msnarkJS\u001b[0m: OK!"
+   }
+  }
+ },
+ "controls": [],
+ "seconds_total": 24.5
+}

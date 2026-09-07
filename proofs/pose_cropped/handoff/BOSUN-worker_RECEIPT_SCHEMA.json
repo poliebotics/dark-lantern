@@ -1,0 +1,229 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "zeebeam-trained-r32-pose-ptq-v2-sp1-bosun-worker-receipt-v1",
+  "title": "BOSUN-worker receipt for the joined pose Groth16 attempt",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "recorded_at",
+    "status",
+    "source",
+    "relation",
+    "measurement",
+    "limits",
+    "proof",
+    "checks",
+    "claim_boundary",
+    "authority"
+  ],
+  "properties": {
+    "schema": {
+      "const": "zeebeam-trained-r32-pose-ptq-v2-sp1-bosun-worker-receipt/v1"
+    },
+    "recorded_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "status": {
+      "enum": [
+        "GROTH16_PROOF_VERIFIED",
+        "FAILED_NO_PROOF",
+        "CGROUP_OOM_NO_PROOF",
+        "TIMEOUT_NO_PROOF",
+        "INTERRUPTED_NO_PROOF"
+      ]
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "bosun-worker_source_sha256sums_sha256",
+        "cargo_lock_sha256",
+        "model_blob_sha256",
+        "fixture_sha256",
+        "guest_elf_sha256",
+        "guest_elf_bytes"
+      ],
+      "properties": {
+        "bosun-worker_source_sha256sums_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "cargo_lock_sha256": {"const": "a227ff4c1e53f1ed587260665e8c8adf03a25724d704135e71dec2d4d64c0257"},
+        "model_blob_sha256": {"const": "c1f16af543f1140dc98944c0343955603fc38f25519784a33c8ff7c34f468d68"},
+        "fixture_sha256": {"const": "5b48ec93a73dfc7f2714cdbc4ba1af1f10fa04e588b10eff1a4deb450389e600"},
+        "guest_elf_sha256": {"const": "9c5f53522c588024c3c20068f49958e31fa0192d7647e9443f75dc25e8487525"},
+        "guest_elf_bytes": {"const": 236760}
+      }
+    },
+    "relation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sp1_version",
+        "typed_context_digest",
+        "typed_pair_root",
+        "integer_logits_q",
+        "predicted_class_id",
+        "saturation_count",
+        "public_values_bytes",
+        "execute_instruction_count"
+      ],
+      "properties": {
+        "sp1_version": {"const": "6.4.0"},
+        "typed_context_digest": {"const": "9d99a1f294eb4e7d1d8b87e21498cf1b598354a9f79b130a227fe6621d794789"},
+        "typed_pair_root": {"const": "efd35d054df639c3b07acff6ebab5d2ebec59a85ed0dcde5c0e99aa95006d395"},
+        "integer_logits_q": {
+          "const": [8403, 8677, 184, -1435, 6346, -4488, -1564, 2047, 2253, 413, 583]
+        },
+        "predicted_class_id": {"const": 1},
+        "saturation_count": {"const": 0},
+        "public_values_bytes": {"const": 490},
+        "execute_instruction_count": {"const": 16611240}
+      }
+    },
+    "measurement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "setup_elapsed_ms",
+        "prove_elapsed_ms",
+        "verify_elapsed_ms",
+        "cgroup_peak_bytes",
+        "cgroup_swap_peak_bytes",
+        "exit_code"
+      ],
+      "properties": {
+        "setup_elapsed_ms": {"type": ["integer", "null"], "minimum": 0},
+        "prove_elapsed_ms": {"type": ["integer", "null"], "minimum": 0},
+        "verify_elapsed_ms": {"type": ["integer", "null"], "minimum": 0},
+        "cgroup_peak_bytes": {"type": ["integer", "null"], "minimum": 0},
+        "cgroup_swap_peak_bytes": {"type": ["integer", "null"], "minimum": 0},
+        "exit_code": {"type": ["integer", "string", "null"]}
+      }
+    },
+    "limits": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["memory_max_bytes", "memory_swap_max_bytes", "runtime_max_seconds", "rayon_num_threads"],
+      "properties": {
+        "memory_max_bytes": {"const": 75161927680},
+        "memory_swap_max_bytes": {"const": 0},
+        "runtime_max_seconds": {"const": 5400},
+        "rayon_num_threads": {"const": 8}
+      }
+    },
+    "proof": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["generated", "verified", "onchain_proof_bytes", "envelope_bytes", "envelope_sha256", "verification_key_hash"],
+      "properties": {
+        "generated": {"type": "boolean"},
+        "verified": {"type": "boolean"},
+        "onchain_proof_bytes": {"type": ["integer", "null"], "minimum": 1},
+        "envelope_bytes": {"type": ["integer", "null"], "minimum": 1},
+        "envelope_sha256": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"},
+        "verification_key_hash": {"type": ["string", "null"], "pattern": "^0x[0-9a-f]{64}$"}
+      }
+    },
+    "checks": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_hashes_passed", "native_tests_passed", "host_tests_passed", "exact_public_values", "proof_verified", "tampered_public_values_rejected"],
+      "properties": {
+        "source_hashes_passed": {"type": "boolean"},
+        "native_tests_passed": {"type": "boolean"},
+        "host_tests_passed": {"type": "boolean"},
+        "exact_public_values": {"type": "boolean"},
+        "proof_verified": {"type": "boolean"},
+        "tampered_public_values_rejected": {"type": "boolean"}
+      }
+    },
+    "claim_boundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["proved", "not_proved"],
+      "properties": {
+        "proved": {
+          "const": "knowledge of private preprocessed camera pixels and emission leaf hashes consistent with the public typed pair root, with exact frozen pose-model logits and verdict over those camera pixels"
+        },
+        "not_proved": {
+          "const": [
+            "raw sensor origin",
+            "preprocessing correctness",
+            "row or session membership",
+            "capture time or chronology",
+            "physical pose ground truth",
+            "liveness"
+          ]
+        }
+      }
+    },
+    "authority": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["verification_open", "chain_transaction", "publication"],
+      "properties": {
+        "verification_open": {"const": false},
+        "chain_transaction": {"const": false},
+        "publication": {"const": false}
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"status": {"const": "GROTH16_PROOF_VERIFIED"}}},
+      "then": {
+        "properties": {
+          "proof": {
+            "properties": {
+              "generated": {"const": true},
+              "verified": {"const": true},
+              "onchain_proof_bytes": {"type": "integer", "minimum": 1},
+              "envelope_bytes": {"type": "integer", "minimum": 1},
+              "envelope_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+              "verification_key_hash": {"type": "string", "pattern": "^0x[0-9a-f]{64}$"}
+            }
+          },
+          "measurement": {
+            "properties": {
+              "setup_elapsed_ms": {"type": "integer", "minimum": 0},
+              "prove_elapsed_ms": {"type": "integer", "minimum": 0},
+              "verify_elapsed_ms": {"type": "integer", "minimum": 0},
+              "cgroup_peak_bytes": {"type": "integer", "minimum": 1},
+              "cgroup_swap_peak_bytes": {"const": 0},
+              "exit_code": {"const": 0}
+            }
+          },
+          "checks": {
+            "properties": {
+              "source_hashes_passed": {"const": true},
+              "native_tests_passed": {"const": true},
+              "host_tests_passed": {"const": true},
+              "exact_public_values": {"const": true},
+              "proof_verified": {"const": true},
+              "tampered_public_values_rejected": {"const": true}
+            }
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "proof": {
+            "properties": {
+              "generated": {"const": false},
+              "verified": {"const": false},
+              "onchain_proof_bytes": {"const": null},
+              "envelope_bytes": {"const": null},
+              "envelope_sha256": {"const": null},
+              "verification_key_hash": {"const": null}
+            }
+          },
+          "checks": {
+            "properties": {
+              "proof_verified": {"const": false}
+            }
+          }
+        }
+      }
+    }
+  ]
+}

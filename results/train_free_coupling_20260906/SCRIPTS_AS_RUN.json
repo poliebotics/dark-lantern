@@ -1,0 +1,33 @@
+{
+ "rule": "these are the SHA-256 of the files as run (scripts) and as written (records) in the working directory; the shipped copies have workspace absolute paths reduced to package-relative form, so their hashes differ and are the ones in SHA256SUMS",
+ "note": "the shipped n7_package.py is historical source: it reads the scripts from the working-directory root, not from scripts/",
+ "files": {
+  "fetch_heldout2.sh": {
+   "sha256_as_run": "df76aea7968d96e7e32365e2b49412c11d5d4c36e367d5f7c8804f31f113a988",
+   "bytes": 1783
+  },
+  "n7_prep_pairs.py": {
+   "sha256_as_run": "a287adf28e31906a9c7a1be5e80c9a539fecc378c7920e11b2d15013d30fe7dc",
+   "bytes": 4423
+  },
+  "n7_extension.py": {
+   "sha256_as_run": "206856771b25755e63f2bbdb14444c9686eb8ecdb5605c7666c2843ac44c2498",
+   "bytes": 13206
+  },
+  "n7_package.py": {
+   "sha256_as_run": "7994733c59bef3db65b91eab2c2c8f642e0807c0dead862592e54e82c777eedb",
+   "bytes": 15809
+  },
+  "coupling_stat.py": {
+   "sha256_as_run": "1ee0fb09f5557b312a503ac525b2f05eb9471c19c2cfef6eb5f4091e7a4b50e3",
+   "bytes": 3954,
+   "note": "the box script as run (hash pinned in results/REGISTRATION.json); in the shipped copy the two absolute default paths were reduced to their package-relative tails (pairs, results/coupling_stat.json), so its hash differs (SHA256SUMS)"
+  },
+  "results/REGISTRATION.json": {
+   "sha256_as_written": "4f7fe8dc28dd7cb27e3a4e1cc1be2abbeeae39728e2f9c7029e30651392a1d84"
+  },
+  "results/N7_RAW_v1_results.json": {
+   "sha256_as_written": "a9ea7f5abc31a9fea28210e55ba9a3a550e198b734376d06ea700da57709f80b"
+  }
+ }
+}

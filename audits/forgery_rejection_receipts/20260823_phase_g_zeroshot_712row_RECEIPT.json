@@ -1,0 +1,94 @@
+{
+ "label": "712-row exhaustive diagnostic, t=150, K=1; format-only closure, no inference in this step",
+ "raw_result_sha256": "34e1fd47777c4f7ebbd04f31505897623ce6ff6b5b3c78d51da78555f9a5320c",
+ "raw_result_note": "raw execution output is NOT strict JSON (bare NaN for absent boundary cells); retained as the execution record only; the strict artifact is the authoritative result",
+ "strict_result_sha256": "dc32b28c8d9d1a6d6b27db64685fd1cc857c8a701ccb415bdd7fc116ff174b4d",
+ "converter_sha256": "9c331993ff272da2a69875cac3a4f744fd8dcd2553764acdced705d2ee79ed44",
+ "script_sha256": "af3e1b67a5393790a1dff8c8ba12b37bb5c7ee31f413c7f9e73d5e4199ee1454",
+ "model_source_sha256": "f1241c1e4b7d042397d314207a45becd24066d9ed672ec759fbc14fd9e0c3beb",
+ "phase_g_init_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+ "checkpoint_sha256": "b9d93050bfeb1a5cdbf620c38210f3ab6c6fd7af1f61eb45cc17ac269341f055",
+ "checkpoint_load_mode": "torch_weights_only_true_fail_closed",
+ "development_take_root_blake3": "8db2dfc51396d763f7b89629745b3d6609c5d3290ada9f59e2eda9e2cadefc17",
+ "development_rows_present": 712,
+ "development_content_manifest": {
+  "path": "<repo>/scratch/zeebeam_sciencemaxxing_20260823/development_export_manifest.content-verified.json",
+  "sha256": "6f21f8b6437987102d528806d484cfc10ec06eecb415d4d118c371d84a0fbf4e",
+  "inventory_sha256_without_self": "c49ec1b0deef5d69258041a469b8006d335eced0a514884c5ecab1b309145891",
+  "status": "CONTENT_VERIFIED",
+  "entries": 712,
+  "ordered": true,
+  "note": "external content-verified manifest for the same take path; not evidence that the inference process hashed these bytes at runtime"
+ },
+ "verification_take_scope": "The v1 and v2 runners and this finaliser reference only the 712-row development path and do not enumerate, decode, hash, score or use any verification-take content. No bytes read from the verification tree were returned to any agent or pipeline; previously recorded local verification metadata did appear in retained output; process-level access remains UNKNOWN_POSSIBLE. No global claim that no process accessed the verification tree is made: see the separate local custody-incident report frozen by Codex on 2026-08-23 (an audit agent's unrestricted recursive search under [machine path redacted], disclosed at coord 17:01 UTC). The formal one-look was not claimed, opened or performed.",
+ "custody_incident_record": {
+  "json_path": "<repo>/scratch/zeebeam_sciencemaxxing_20260823/VERIFICATION_SEARCH_ACCESS_INCIDENT_20260823.json",
+  "json_sha256": "aeac750b0fb07eed3cd8b7932a6d47cfa12901cb99ae1a420d295d06e560c568",
+  "markdown_companion_sha256": "92639e7f506d195012d7a751c6dba30b6be47b7b3d9bf35eb49fa8703a82a4db",
+  "note": "Codex record of 2026-08-23. No bytes read from the verification tree were returned to any agent or pipeline; previously recorded local verification metadata did appear in retained output; process-level path and byte access remain UNKNOWN_POSSIBLE."
+ },
+ "arm_denominators": {
+  "correct": 712,
+  "wrong_-2": 710,
+  "wrong_+2": 710,
+  "wrong_-15": 697,
+  "wrong_+15": 697,
+  "wrong_+30": 682,
+  "uncond": 712
+ },
+ "recomputed": {
+  "conditions": {
+   "correct": 0.00683383464622259,
+   "wrong_-2": 0.009116805196595443,
+   "wrong_+2": 0.009117427203332034,
+   "wrong_-15": 0.009106576168800102,
+   "wrong_+15": 0.00912351772280001,
+   "wrong_+30": 0.00911671033434985,
+   "uncond": 0.0051480824189271066
+  },
+  "auroc": {
+   "correct_vs_wrong_avg": 1.0,
+   "correct_vs_wrong_-2": 1.0,
+   "correct_vs_wrong_+2": 1.0,
+   "correct_vs_wrong_-15": 1.0,
+   "correct_vs_wrong_+15": 1.0,
+   "correct_vs_wrong_+30": 1.0,
+   "correct_vs_uncond": 0.0
+  },
+  "paired_frac_correct_lt_wrong_avg": 1.0
+ },
+ "delta_wrong": {
+  "primary_blocks_100x7_plus_12": [
+   0.0022813374158308915,
+   0.0022271122735771217,
+   0.002339073996642654
+  ],
+  "sensitivity_blocks_89x8": [
+   0.0022813374158308915,
+   0.002232742638299713,
+   0.002342656596999987
+  ]
+ },
+ "delta_uncond": {
+  "primary_blocks_100x7_plus_12": [
+   -0.001685752227295483,
+   -0.0017465314312318711,
+   -0.001621721736669836
+  ],
+  "sensitivity_blocks_89x8": [
+   -0.001685752227295483,
+   -0.0017377999753938477,
+   -0.0016238781790971087
+  ]
+ },
+ "per_timestep_150": {
+  "correct": 0.00683383464622259,
+  "wrong": 0.009115172062053482,
+  "delta": 0.0022813374158308915,
+  "auroc": 1.0
+ },
+ "elapsed_s": 1502.4156861305237,
+ "device": "NVIDIA GeForce RTX 5090 Laptop GPU",
+ "torch": "2.11.0+cu130",
+ "claim_ceiling": "April verifier never fitted to this August take; coupling transfers to this take; uncond-below-correct has geometry or rig mismatch as a candidate explanation with August rig identity unconfirmed [confirm]; same person, same take, 712 dependent rows, descriptive."
+}
