@@ -9,7 +9,7 @@ record allows.
 Publication-subset notices identify omitted and non-rebuildable material.
 
 Historical notes preserve language current when written. Opening notices identify later supersession, and the ZeeBeam
-manuscript (v3.18, in the ZeeBeam repository) controls every current claim. Where a note's own status line says
+manuscript (v3.20, in the ZeeBeam repository) controls every current claim. Where a note's own status line says
 `historical`, `withdrawn` or `superseded`, read it as a record of what was thought at the time.
 
 ## What is here
@@ -18,7 +18,7 @@ manuscript (v3.18, in the ZeeBeam repository) controls every current claim. Wher
 |------|------|--------|
 | `notes/zeebeam_uncropped_pose_proof_20260901.md` | the uncropped pose Groth16 proof (2,094 B): a frozen-classifier verdict over supplied committed bytes | proof/result v1.0 audited PASS; post-audit prose additions withdrawn |
 | `notes/zeebeam_pose_proof_state_20260830.md` | the earlier cropped pose proof (2,184 B): ceiling and filed erratum; its section on a withdrawn discriminator line is held by a logged publication edit | historical standalone proof; ceiling and filed erratum remain current |
-| `notes/zeebeam_nocrop_diffusion_8seed_20260830.md` | uncropped conditional-diffusion row conditioning, eight seeds, two sessions | settled ML result; the v4 claim draft, not every broader interpretation in this note, received the PASS audit |
+| `notes/zeebeam_nocrop_diffusion_8seed_20260830.md` | uncropped conditional-diffusion row conditioning, eight seeds, two sessions | settled ML result; the claim text that passed the fourth audit round (`audits/diffusion_8seed_audit/CLAIM_DRAFT.md`, whose own heading still reads v3), not every broader interpretation in this note, received the PASS audit |
 | `notes/zeebeam_realness_study_prereg_20260828.md` | the realness study preregistration | historical frozen preregistration; premise corrected; execution deviated |
 | `notes/zeebeam_realness_results_20260901.md` | the exploratory realness measurement: one generator-based class; one generator-free diagnostic reported without preserved records; classes 2 and 4 unrun | exploratory |
 | `proofs/coupling/` (87 files) | the coupling Groth16 proof (2,038 B, verifies in 0.445 s) and PLONK proof, receipts and packet metadata | historical public subset of the frozen packet (51 of 64 manifested paths, 29 with their historical digest); see `proofs/PUBLICATION_SUBSET.md` |
