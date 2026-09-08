@@ -1,0 +1,64 @@
+driver=./build_reproducible.sh driver_sha256=09c46050c2debe1df9799c00a271722949a1a1d2e5ef6ae80a687b8024b5fd6e
+date_utc=20260907T212408Z host=development-workstation kernel=Linux 7.0.0-31-generic x86_64 glibc=ldd (Ubuntu GLIBC 2.43-2ubuntu2.3) 2.43
+cargo_config=source/armc-relation/.cargo/config.toml ([net]offline = true)
+== command
+cd source/armc-relation/script && touch ../program/src/main.rs && cargo build --release --offline --locked  --bin zkdiff-execute --bin zkdiff-ceremony --bin zkdiff-batch --bin zkdiff-verify
+== environment
+CUDA=0 features=<none> CARGO_NET_OFFLINE=true LC_ALL=C RUSTFLAGS=<unset> CARGO_HOME=[cargo home] CARGO_BUILD_JOBS=<default> SP1_CIRCUIT_VERSION_env=<unset>
+guest remap: --remap-path-prefix $CARGO_HOME=/cargo and source=/g2 (script/build.rs); guest --locked
+== toolchains
+host: rustc 1.98.0 (88d9e12ae 2026-08-18)
+host: binary: rustc
+host: commit-hash: 88d9e12ae178fab0fb5cc050a94da85685d449ea
+host: commit-date: 2026-08-18
+host: host: x86_64-unknown-linux-gnu
+host: release: 1.98.0
+host: LLVM version: 22.1.8
+host: cargo 1.98.0 (797e8a9bc 2026-08-05)
+succinct: rustc 1.94.0-dev
+succinct: binary: rustc
+succinct: commit-hash: unknown
+succinct: commit-date: unknown
+succinct: host: x86_64-unknown-linux-gnu
+succinct: release: 1.94.0-dev
+succinct: LLVM version: 21.1.8
+cargo-prove: cargo-prove sp1 (f66b4bf 2026-08-12T14:40:11.709680161Z)
+cargo_prove_sha256=d8835f80b386d5025420d6b09e73ad825b822ac143e8ed09312b2e08018ff106
+succinct_toolchain_tarball_sha256=12c94435d41bfe4e20131bbcce40b35abd32270ad792befc653af4e3fabc192f
+== prover server and circuit artefacts (when present on this box)
+sp1_gpu_server=absent
+circuit_dir=[sp1 home]/circuits/groth16/v6.1.0/ complete=yes
+circuit_groth16_vk_sha256=4388a21c687fdd5f218d7e3d13190cac4c5355818d3605fd5fb811df468ee696 bytes=492
+circuit_file=groth16_pk.bin bytes=5862173061 mtime=2026-04-10 00:31:21.000000000 +0100
+circuit_file=groth16_circuit.bin bytes=2437991441 mtime=2026-04-08 03:45:40.000000000 +0100
+circuit_file=constraints.json bytes=111997113 mtime=2026-04-08 03:31:17.000000000 +0100
+circuit_file=groth16_witness.json bytes=2802920 mtime=2026-04-08 03:31:17.000000000 +0100
+== lockfiles before
+eb391600a39644efa3393b27572a8b2816f0c4ae3cdfe8106110fb4d6f7f9db4  source/armc-relation/program/Cargo.lock
+3334b46f269f3d2bcab9839498bdfe55794cc998b1950f1729a6a12acebe73e6  source/armc-relation/script/Cargo.lock
+ffaf75d3c658cb38139101a700c948dcd5ee7af9a6bec5f683a091aec4363025  source/armc-relation/Cargo.lock
+78fa6498840a4d0bc0d552382999f5705fd1b9bc203fd076614b964ab16dceb2  source/armc-int/Cargo.lock
+== frozen source digests (every first-party file the guest and hosts are built from; LC_ALL=C sort)
+source_digest_list_sha256=d22c0086a499f8add4f90500227dcf6699e14ba73f484defc66f3fba92072736  -
+source_digest_list=source/armc-relation/runs/SOURCE_DIGESTS_20260907T212408Z.txt entries=54
+== build
+cargo_exit=0 full_log=source/armc-relation/runs/build_log_20260907T212408Z.txt
+warning: zkdiff-script@0.1.0: rustc +succinct --version: "rustc 1.94.0-dev\n"
+warning: zkdiff-script@0.1.0: zkdiff-guest built at 2026-09-07 22:24:11
+    Finished `release` profile [optimized] target(s) in 4.00s
+build wall=4.04 s maxrss=638020 KiB
+elf=../program/target/elf-compilation/riscv64im-succinct-zkvm-elf/release/zkdiff-guest
+guest_elf_bytes=654752 guest_elf_sha256=d36a30f21fdc429a50af1b75405d40764da464b86c4be5b52053b4876f30d459
+home_paths_in_elf=0
+sp1_vkey=0x00cb883e2e7e1473a6b2b74e3ce84cbc47583f238dc1ed12ab591609712e62b6
+sp1_circuit_version=v6.1.0 embedded_groth16_vk_sha256=4388a21c687fdd5f218d7e3d13190cac4c5355818d3605fd5fb811df468ee696 verifier_sees_elf_sha256=d36a30f21fdc429a50af1b75405d40764da464b86c4be5b52053b4876f30d459
+host_zkdiff-execute=ee1e8416bf6d616bc66e8986acb369f6a5fd004c665ec8c4644fe0fdea1ca4ac bytes=60322800 glibc_max=GLIBC_2.39
+host_zkdiff-ceremony=2757bfa9e40df0389762e71c77e3f0c9812b618de5da9dc9d8ff64a3ecb5f263 bytes=61944344 glibc_max=GLIBC_2.39
+host_zkdiff-batch=7f0ccef6b374035b843594d97971fc73eff59faef295aa7f6a8f8618b507ed0a bytes=62882952 glibc_max=GLIBC_2.39
+host_zkdiff-verify=b6f2a8421032aa0da742bdcae5570a8bab7b5a841cb0b8cfa3088c64720f32e1 bytes=58160904 glibc_max=GLIBC_2.39
+== lockfiles after
+eb391600a39644efa3393b27572a8b2816f0c4ae3cdfe8106110fb4d6f7f9db4  source/armc-relation/program/Cargo.lock
+3334b46f269f3d2bcab9839498bdfe55794cc998b1950f1729a6a12acebe73e6  source/armc-relation/script/Cargo.lock
+ffaf75d3c658cb38139101a700c948dcd5ee7af9a6bec5f683a091aec4363025  source/armc-relation/Cargo.lock
+78fa6498840a4d0bc0d552382999f5705fd1b9bc203fd076614b964ab16dceb2  source/armc-int/Cargo.lock
+PINS: EXPECT_ELF_SHA=d36a30f21fdc429a50af1b75405d40764da464b86c4be5b52053b4876f30d459 EXPECT_VKEY=0x00cb883e2e7e1473a6b2b74e3ce84cbc47583f238dc1ed12ab591609712e62b6 EXPECT_ELF_BYTES=654752

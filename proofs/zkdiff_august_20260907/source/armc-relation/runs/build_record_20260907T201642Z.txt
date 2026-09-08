@@ -1,0 +1,46 @@
+driver_sha256=0de119ba79e182c512c0494831ce033d17d7124de2273c3ddbf09956bb5bdb38
+date_utc=20260907T201642Z host=development-workstation cargo_config=source/armc-relation/.cargo/config.toml (# Inherited by every cargo invocation under armc-relation/, including sp1-build's own `cargo metadata` and the guest# `cargo +succinct build` it spawns from script/build.rs (Astra r4 item 7): nothing may reach the network during a# reproducible build. Registry and git sources must already be in $CARGO_HOME.[net]offline = true)
+== toolchains
+host: rustc 1.98.0 (88d9e12ae 2026-08-18)
+host: binary: rustc
+host: commit-hash: 88d9e12ae178fab0fb5cc050a94da85685d449ea
+host: commit-date: 2026-08-18
+host: host: x86_64-unknown-linux-gnu
+host: release: 1.98.0
+host: LLVM version: 22.1.8
+host: cargo 1.98.0 (797e8a9bc 2026-08-05)
+succinct: rustc 1.94.0-dev
+succinct: binary: rustc
+succinct: commit-hash: unknown
+succinct: commit-date: unknown
+succinct: host: x86_64-unknown-linux-gnu
+succinct: release: 1.94.0-dev
+succinct: LLVM version: 21.1.8
+cargo-prove: cargo-prove sp1 (f66b4bf 2026-08-12T14:40:11.709680161Z)
+cargo_prove_sha256=d8835f80b386d5025420d6b09e73ad825b822ac143e8ed09312b2e08018ff106
+succinct_toolchain_tarball_sha256=12c94435d41bfe4e20131bbcce40b35abd32270ad792befc653af4e3fabc192f
+== lockfiles before
+eb391600a39644efa3393b27572a8b2816f0c4ae3cdfe8106110fb4d6f7f9db4  source/armc-relation/program/Cargo.lock
+1b6d81d7177f715f2ff4b78d657fe9d57a1425992675dbfaeae0b82fe5898655  source/armc-relation/script/Cargo.lock
+ffaf75d3c658cb38139101a700c948dcd5ee7af9a6bec5f683a091aec4363025  source/armc-relation/Cargo.lock
+78fa6498840a4d0bc0d552382999f5705fd1b9bc203fd076614b964ab16dceb2  source/armc-int/Cargo.lock
+== frozen source digests (every first-party file the guest and hosts are built from)
+source_digest_list_sha256=224f8bc449ecd7874800ed2b53dfb7ba141e6c382d59edcb716ac8dabaaa771c  -
+== build
+warning: zkdiff-script@0.1.0: rustc +succinct --version: "rustc 1.94.0-dev\n"
+warning: zkdiff-script@0.1.0: zkdiff-guest built at 2026-09-07 21:16:44
+    Finished `release` profile [optimized] target(s) in 2.65s
+build wall=2.69 s maxrss=561180 KiB
+elf=../program/target/elf-compilation/riscv64im-succinct-zkvm-elf/release/zkdiff-guest
+guest_elf_bytes=654200 guest_elf_sha256=0f1fd5249d3e1e8c38b63ae96d6c6dbb9aa58957650be7170ea85ba7b265db9e
+home_paths_in_elf=0
+sp1_vkey=0x0009823f93cda8d383aef36fb97d4537bce515f339383343e15044c2bff38482
+host_zkdiff-execute=e4e3853504475ee686675a014d0cdba1a539644908f836d77aaab772e26cc1f7 bytes=60328880
+host_zkdiff-ceremony=b4d0fe82dc4efcda487eff75b405e6aeabc77e432862c94a8fbf58246ed354c4 bytes=61827384
+host_zkdiff-batch=164b11e43e6399d716b64d01fac63946dfe831011a3ec4ef0a900c169dae8146 bytes=62493928
+== lockfiles after
+eb391600a39644efa3393b27572a8b2816f0c4ae3cdfe8106110fb4d6f7f9db4  source/armc-relation/program/Cargo.lock
+1b6d81d7177f715f2ff4b78d657fe9d57a1425992675dbfaeae0b82fe5898655  source/armc-relation/script/Cargo.lock
+ffaf75d3c658cb38139101a700c948dcd5ee7af9a6bec5f683a091aec4363025  source/armc-relation/Cargo.lock
+78fa6498840a4d0bc0d552382999f5705fd1b9bc203fd076614b964ab16dceb2  source/armc-int/Cargo.lock
+BUILD_REPRODUCED_OK sha256=0f1fd5249d3e1e8c38b63ae96d6c6dbb9aa58957650be7170ea85ba7b265db9e vkey=0x0009823f93cda8d383aef36fb97d4537bce515f339383343e15044c2bff38482 bytes=654200

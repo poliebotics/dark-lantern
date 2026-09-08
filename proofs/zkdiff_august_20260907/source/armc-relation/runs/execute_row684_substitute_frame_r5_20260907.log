@@ -1,0 +1,42 @@
+mode=execute_only
+prover=local_cpu_explicit
+row=684
+raw=synthetic:a
+constants_blob=source/blobs/final_int16/constants_int16.blob constants_blob_bytes=3476866 constants_sha256=73310ddab603cab5588d05e9ac4deb7e56466a6fae4bbf89244c32f2bd1a8b92 spec_sha256=02872ec23ab5a503fa1a6b450d90511f83a59afb36457cacb161e1277b22073b
+guest_elf_bytes=396200 guest_elf_sha256=51b7bc3548d0a4fdb822aa8ed8c8982b5fe707900133d67d664fa3a732fc75cc
+stdout: denoiser_kind=1
+stderr: 
+stderr: thread '<unnamed>' (1) panicked at src/main.rs:41:66:
+stderr: diffusion relation rejected: proved row does not open to the committed ordered-session root
+stderr: stack backtrace:
+stderr: note: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.
+stderr: diffusion relation rejected: proved row does not open to the committed ordered-session root
+MISMATCH: public value length 0 differs from 752
+
+thread 'main' (929496) panicked at src/execute.rs:57:13:
+public values differ from the oracle
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+Command exited with non-zero status 101
+	Command being timed: "./target/release/zkdiff-execute --witness-dir source/armc-relation/runs/batch_prepare_g2d_20260907/row_000684/witness --raw synthetic:a --blob source/blobs/final_int16/constants_int16.blob"
+	User time (seconds): 400.11
+	System time (seconds): 6.07
+	Percent of CPU this job got: 352%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:55.18
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 12110712
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 6480594
+	Voluntary context switches: 24937
+	Involuntary context switches: 473273
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 16
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 101

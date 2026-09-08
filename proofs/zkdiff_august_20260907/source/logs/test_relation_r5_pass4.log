@@ -1,0 +1,140 @@
+   Compiling armc-relation v0.1.0 (source/armc-relation/relation)
+warning: fields `s_t`, `bayer_blake3`, and `meta` are never read
+   --> relation/tests/vectors.rs:571:5
+    |
+570 | struct LogRow {
+    |        ------ fields in this struct
+571 |     s_t: [u8; 32],
+    |     ^^^
+572 |     bayer_blake3: [u8; 32],
+    |     ^^^^^^^^^^^^
+573 |     meta: [u8; 28],
+    |     ^^^^
+    |
+    = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: `armc-relation` (test "vectors") generated 1 warning
+    Finished `release` profile [optimized] target(s) in 2.95s
+     Running unittests src/lib.rs (target/release/deps/armc_relation-e187e72fb3fe77b1)
+
+running 25 tests
+test fp::tests::bf16_known_values ... ok
+test fp::tests::f16_round_trips_and_known_values ... ok
+test fp::tests::g1_rshift_round_is_half_up_with_floor_shift ... ok
+test fp::tests::half_even_division_matches_python_round_on_fractions ... ok
+test frame::tests::raw_index_is_the_rggb_split ... ok
+test frame::tests::bins_are_torch_adaptive_bins ... ok
+test header::tests::round_trips_and_fails_closed ... ok
+test membership::tests::leaf_u_encoding_round_trips ... ok
+test membership::tests::frozen_row96_constants_reproduce ... ok
+test membership::tests::witness_round_trips_and_mutations_fail_closed ... ok
+test noise::tests::constants_are_g1s ... ok
+test hint::tests::coordinates_are_symmetric_and_span_q14 ... ok
+test rule::tests::generic_rule_fails_closed_on_other_sessions ... ok
+test rule::tests::all_112_august_assignments_follow_the_owner_rule ... ok
+test spec::tests::spec_digest_is_pinned ... ok
+test statement::tests::offset_rule_flag_parses ... ok
+test statement::tests::offsets_fail_closed ... ok
+test statement::tests::previous_record_round_trips ... ok
+test statement::tests::public_layout_round_trips_and_offsets_are_fixed ... ok
+test statement::tests::public_parse_enforces_the_offset_rule_on_the_public_fields ... ok
+test net::tests::stub_is_deterministic_and_hint_sensitive ... ok
+test noise::tests::noising_and_residual_small_cases ... ok
+test beacon::tests::real_quicknet_beacons_verify_and_bind ... ok
+test beacon::tests::wrong_round_wrong_value_and_bad_point_are_rejected ... ok
+test emission::tests::august_row_96_emission_digest_matches_the_chain_log ... ok
+
+test result: ok. 25 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.05s
+
+     Running tests/vectors.rs (target/release/deps/vectors-4d7c121f9da458e0)
+
+running 15 tests
+test float_conversions_match_numpy_and_torch_on_8192_vectors ... ok
+test torch_area_bins_match_the_python_reference ... ok
+test d2_row_1328_coordinates_hint_noise_and_ct_match_g1 ... ok
+test august_chain_log_walks_end_to_end ... ok
+test august_tree_builder_reproduces_the_frozen_siblings_and_root ... ok
+test august_rows_599_and_600_beacons_verify ... ok
+test d2_rows_1328_and_1330_hints_match_the_g1_vectors ... ok
+test synthetic_frame_a_random_bytes_reduces_bit_exactly ... ok
+test synthetic_frame_b_with_f16_subnormal_means_reduces_bit_exactly ... ok
+test august_row_600_needs_only_the_raw_frame ... ok
+test august_row_684_mirrored_minus_30_passes_the_offset_check_and_needs_only_its_frame ... ok
+test end_to_end_synthetic_statement_matches_the_python_oracle ... ok
+test august_rows_render_open_and_advance ... ok
+test end_to_end_negative_controls_fail_closed ... ok
+test synthetic_mirror40_session_admits_the_mirrored_minus_30_statement_and_refuses_its_relabellings ... ok
+
+test result: ok. 15 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.82s
+
+     Running unittests src/lib.rs (target/release/deps/zeebeam_b3xof_relation-efae1e58c4946caf)
+
+running 5 tests
+test tests::leaf_index_is_a_bijection_onto_the_leaf_order ... ok
+test tests::octave_layout_is_the_published_one ... ok
+test blake3p::tests::compression_counts_are_self_consistent ... ok
+test tests::taps_match_the_reference_table_construction ... ok
+test tests::merkle_paths_open_every_leaf ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/counts.rs (target/release/deps/counts-ff6fd46e7391dab7)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/crosscheck.rs (target/release/deps/crosscheck-d59180be0d9ac1df)
+
+running 7 tests
+test seed_derivation_matches_the_published_formula ... ok
+test digests_match_upstream_across_length_boundaries ... ok
+test expansion_matches_the_published_formula ... ok
+test xof_matches_upstream_at_protocol_lengths ... ok
+test open_mode_accepts_an_honest_path_for_every_octave ... ok
+test cell_render_agrees_with_full_row_render ... ok
+test august_row0_tile_digest_matches_the_published_commitment ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.05s
+
+     Running unittests src/lib.rs (target/release/deps/zkdiff_armc_adapter-10d49c2591813ebc)
+
+running 2 tests
+test tests::garbage_blob_is_rejected ... ok
+test tests::spec_digest_is_pinned ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/parity.rs (target/release/deps/parity-ca1a8a3daaa347b4)
+
+running 5 tests
+test adapter_refuses_foreign_coordinates_and_wrong_shapes ... ok
+test d2_row_1328_with_the_final_blob_reproduces_g1s_residual_sums ... ok
+test d2_row_1328_with_the_step12000_blob_reproduces_g1s_residual_sums ... ok
+test final_blob_through_the_adapter_reproduces_the_final_exports ... ok
+test final_vectors_layer_by_layer_parity_d2_1328_and_august_650 ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.82s
+
+   Doc-tests armc_relation
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests zeebeam_b3xof_relation
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests zkdiff_armc_adapter
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+real	0m6.785s
+user	0m19.770s
+sys	0m0.798s

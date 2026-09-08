@@ -1,0 +1,123 @@
+mode=prepare attempt_id=20260907T214510Z-development-workstation-929846 session=august_dev_712 rows=600..711 rule="one proof per held-out August row r in 600..=711; base = OFFSETS[(r - 600) mod 5], OFFSETS = [-2, +2, -15, +15, +30]; offset = base when 0 <= r + base < 712 (offset_rule = direct, public byte 11 = 0), else offset = -base (offset_rule = mirrored, byte 11 = 1; rows 684, 689, 694, 699, 704, 709 at +30 mirror to -30, 698, 703, 708 at +15 to -15, 711 at +2 to -2); u = r + offset; every outcome published, negative and zero differences included"
+guest_elf_bytes=396200 guest_elf_sha256=51b7bc3548d0a4fdb822aa8ed8c8982b5fe707900133d67d664fa3a732fc75cc sp1_circuit_version=v6.1.0 groth16_vk_sha256=4388a21c687fdd5f218d7e3d13190cac4c5355818d3605fd5fb811df468ee696
+constants_blob=source/blobs/final_int16/constants_int16.blob constants_blob_bytes=3476866 constants_sha256=73310ddab603cab5588d05e9ac4deb7e56466a6fae4bbf89244c32f2bd1a8b92 spec_sha256=02872ec23ab5a503fa1a6b450d90511f83a59afb36457cacb161e1277b22073b
+ordered_session_root=38a484b8793f3afadaf8fc5ba1c04d47e08cdbb4c07a39da09fb4149499a6572
+expected_identities=source/expected_identities_august.json sha256 6822cdcefa9a8833460287a3bb619fa63d0f3755d46dccc7db5418b261d6d613
+row=600 offset=-2 rule=direct wrong=598 status=prepared_native outcome=positive elapsed_ms=808
+row=601 offset=+2 rule=direct wrong=603 status=prepared_native outcome=positive elapsed_ms=804
+row=602 offset=-15 rule=direct wrong=587 status=prepared_native outcome=positive elapsed_ms=837
+row=603 offset=+15 rule=direct wrong=618 status=prepared_native outcome=positive elapsed_ms=887
+row=604 offset=+30 rule=direct wrong=634 status=pending_frame outcome=n/a elapsed_ms=207
+row=605 offset=-2 rule=direct wrong=603 status=pending_frame outcome=n/a elapsed_ms=209
+row=606 offset=+2 rule=direct wrong=608 status=pending_frame outcome=n/a elapsed_ms=204
+row=607 offset=-15 rule=direct wrong=592 status=pending_frame outcome=n/a elapsed_ms=206
+row=608 offset=+15 rule=direct wrong=623 status=pending_frame outcome=n/a elapsed_ms=206
+row=609 offset=+30 rule=direct wrong=639 status=pending_frame outcome=n/a elapsed_ms=206
+row=610 offset=-2 rule=direct wrong=608 status=pending_frame outcome=n/a elapsed_ms=207
+row=611 offset=+2 rule=direct wrong=613 status=pending_frame outcome=n/a elapsed_ms=198
+row=612 offset=-15 rule=direct wrong=597 status=pending_frame outcome=n/a elapsed_ms=199
+row=613 offset=+15 rule=direct wrong=628 status=pending_frame outcome=n/a elapsed_ms=199
+row=614 offset=+30 rule=direct wrong=644 status=pending_frame outcome=n/a elapsed_ms=198
+row=615 offset=-2 rule=direct wrong=613 status=pending_frame outcome=n/a elapsed_ms=202
+row=616 offset=+2 rule=direct wrong=618 status=pending_frame outcome=n/a elapsed_ms=198
+row=617 offset=-15 rule=direct wrong=602 status=pending_frame outcome=n/a elapsed_ms=198
+row=618 offset=+15 rule=direct wrong=633 status=pending_frame outcome=n/a elapsed_ms=200
+row=619 offset=+30 rule=direct wrong=649 status=pending_frame outcome=n/a elapsed_ms=195
+row=620 offset=-2 rule=direct wrong=618 status=pending_frame outcome=n/a elapsed_ms=194
+row=621 offset=+2 rule=direct wrong=623 status=pending_frame outcome=n/a elapsed_ms=194
+row=622 offset=-15 rule=direct wrong=607 status=pending_frame outcome=n/a elapsed_ms=194
+row=623 offset=+15 rule=direct wrong=638 status=pending_frame outcome=n/a elapsed_ms=198
+row=624 offset=+30 rule=direct wrong=654 status=pending_frame outcome=n/a elapsed_ms=182
+row=625 offset=-2 rule=direct wrong=623 status=pending_frame outcome=n/a elapsed_ms=199
+row=626 offset=+2 rule=direct wrong=628 status=pending_frame outcome=n/a elapsed_ms=190
+row=627 offset=-15 rule=direct wrong=612 status=pending_frame outcome=n/a elapsed_ms=194
+row=628 offset=+15 rule=direct wrong=643 status=pending_frame outcome=n/a elapsed_ms=194
+row=629 offset=+30 rule=direct wrong=659 status=pending_frame outcome=n/a elapsed_ms=194
+row=630 offset=-2 rule=direct wrong=628 status=pending_frame outcome=n/a elapsed_ms=194
+row=631 offset=+2 rule=direct wrong=633 status=pending_frame outcome=n/a elapsed_ms=194
+row=632 offset=-15 rule=direct wrong=617 status=pending_frame outcome=n/a elapsed_ms=195
+row=633 offset=+15 rule=direct wrong=648 status=pending_frame outcome=n/a elapsed_ms=194
+row=634 offset=+30 rule=direct wrong=664 status=pending_frame outcome=n/a elapsed_ms=196
+row=635 offset=-2 rule=direct wrong=633 status=pending_frame outcome=n/a elapsed_ms=198
+row=636 offset=+2 rule=direct wrong=638 status=pending_frame outcome=n/a elapsed_ms=194
+row=637 offset=-15 rule=direct wrong=622 status=pending_frame outcome=n/a elapsed_ms=196
+row=638 offset=+15 rule=direct wrong=653 status=pending_frame outcome=n/a elapsed_ms=192
+row=639 offset=+30 rule=direct wrong=669 status=pending_frame outcome=n/a elapsed_ms=196
+row=640 offset=-2 rule=direct wrong=638 status=pending_frame outcome=n/a elapsed_ms=198
+row=641 offset=+2 rule=direct wrong=643 status=pending_frame outcome=n/a elapsed_ms=199
+row=642 offset=-15 rule=direct wrong=627 status=pending_frame outcome=n/a elapsed_ms=201
+row=643 offset=+15 rule=direct wrong=658 status=pending_frame outcome=n/a elapsed_ms=188
+row=644 offset=+30 rule=direct wrong=674 status=pending_frame outcome=n/a elapsed_ms=202
+row=645 offset=-2 rule=direct wrong=643 status=pending_frame outcome=n/a elapsed_ms=200
+row=646 offset=+2 rule=direct wrong=648 status=pending_frame outcome=n/a elapsed_ms=200
+row=647 offset=-15 rule=direct wrong=632 status=pending_frame outcome=n/a elapsed_ms=201
+row=648 offset=+15 rule=direct wrong=663 status=pending_frame outcome=n/a elapsed_ms=207
+row=649 offset=+30 rule=direct wrong=679 status=pending_frame outcome=n/a elapsed_ms=207
+row=650 offset=-2 rule=direct wrong=648 status=pending_frame outcome=n/a elapsed_ms=201
+row=651 offset=+2 rule=direct wrong=653 status=pending_frame outcome=n/a elapsed_ms=194
+row=652 offset=-15 rule=direct wrong=637 status=pending_frame outcome=n/a elapsed_ms=199
+row=653 offset=+15 rule=direct wrong=668 status=pending_frame outcome=n/a elapsed_ms=186
+row=654 offset=+30 rule=direct wrong=684 status=pending_frame outcome=n/a elapsed_ms=185
+row=655 offset=-2 rule=direct wrong=653 status=pending_frame outcome=n/a elapsed_ms=176
+row=656 offset=+2 rule=direct wrong=658 status=pending_frame outcome=n/a elapsed_ms=173
+row=657 offset=-15 rule=direct wrong=642 status=pending_frame outcome=n/a elapsed_ms=194
+row=658 offset=+15 rule=direct wrong=673 status=pending_frame outcome=n/a elapsed_ms=197
+row=659 offset=+30 rule=direct wrong=689 status=pending_frame outcome=n/a elapsed_ms=199
+row=660 offset=-2 rule=direct wrong=658 status=pending_frame outcome=n/a elapsed_ms=197
+row=661 offset=+2 rule=direct wrong=663 status=pending_frame outcome=n/a elapsed_ms=196
+row=662 offset=-15 rule=direct wrong=647 status=pending_frame outcome=n/a elapsed_ms=198
+row=663 offset=+15 rule=direct wrong=678 status=pending_frame outcome=n/a elapsed_ms=188
+row=664 offset=+30 rule=direct wrong=694 status=pending_frame outcome=n/a elapsed_ms=194
+row=665 offset=-2 rule=direct wrong=663 status=pending_frame outcome=n/a elapsed_ms=195
+row=666 offset=+2 rule=direct wrong=668 status=pending_frame outcome=n/a elapsed_ms=195
+row=667 offset=-15 rule=direct wrong=652 status=pending_frame outcome=n/a elapsed_ms=194
+row=668 offset=+15 rule=direct wrong=683 status=pending_frame outcome=n/a elapsed_ms=195
+row=669 offset=+30 rule=direct wrong=699 status=pending_frame outcome=n/a elapsed_ms=194
+row=670 offset=-2 rule=direct wrong=668 status=pending_frame outcome=n/a elapsed_ms=198
+row=671 offset=+2 rule=direct wrong=673 status=pending_frame outcome=n/a elapsed_ms=204
+row=672 offset=-15 rule=direct wrong=657 status=pending_frame outcome=n/a elapsed_ms=201
+row=673 offset=+15 rule=direct wrong=688 status=pending_frame outcome=n/a elapsed_ms=204
+row=674 offset=+30 rule=direct wrong=704 status=pending_frame outcome=n/a elapsed_ms=200
+row=675 offset=-2 rule=direct wrong=673 status=pending_frame outcome=n/a elapsed_ms=204
+row=676 offset=+2 rule=direct wrong=678 status=pending_frame outcome=n/a elapsed_ms=194
+row=677 offset=-15 rule=direct wrong=662 status=pending_frame outcome=n/a elapsed_ms=202
+row=678 offset=+15 rule=direct wrong=693 status=pending_frame outcome=n/a elapsed_ms=202
+row=679 offset=+30 rule=direct wrong=709 status=pending_frame outcome=n/a elapsed_ms=206
+row=680 offset=-2 rule=direct wrong=678 status=pending_frame outcome=n/a elapsed_ms=158
+row=681 offset=+2 rule=direct wrong=683 status=pending_frame outcome=n/a elapsed_ms=158
+row=682 offset=-15 rule=direct wrong=667 status=pending_frame outcome=n/a elapsed_ms=167
+row=683 offset=+15 rule=direct wrong=698 status=pending_frame outcome=n/a elapsed_ms=170
+row=684 offset=-30 rule=mirrored wrong=654 status=pending_frame outcome=n/a elapsed_ms=187
+row=685 offset=-2 rule=direct wrong=683 status=pending_frame outcome=n/a elapsed_ms=176
+row=686 offset=+2 rule=direct wrong=688 status=pending_frame outcome=n/a elapsed_ms=178
+row=687 offset=-15 rule=direct wrong=672 status=pending_frame outcome=n/a elapsed_ms=190
+row=688 offset=+15 rule=direct wrong=703 status=pending_frame outcome=n/a elapsed_ms=189
+row=689 offset=-30 rule=mirrored wrong=659 status=pending_frame outcome=n/a elapsed_ms=189
+row=690 offset=-2 rule=direct wrong=688 status=pending_frame outcome=n/a elapsed_ms=188
+row=691 offset=+2 rule=direct wrong=693 status=pending_frame outcome=n/a elapsed_ms=188
+row=692 offset=-15 rule=direct wrong=677 status=pending_frame outcome=n/a elapsed_ms=188
+row=693 offset=+15 rule=direct wrong=708 status=pending_frame outcome=n/a elapsed_ms=190
+row=694 offset=-30 rule=mirrored wrong=664 status=pending_frame outcome=n/a elapsed_ms=188
+row=695 offset=-2 rule=direct wrong=693 status=pending_frame outcome=n/a elapsed_ms=187
+row=696 offset=+2 rule=direct wrong=698 status=pending_frame outcome=n/a elapsed_ms=196
+row=697 offset=-15 rule=direct wrong=682 status=pending_frame outcome=n/a elapsed_ms=196
+row=698 offset=-15 rule=mirrored wrong=683 status=pending_frame outcome=n/a elapsed_ms=202
+row=699 offset=-30 rule=mirrored wrong=669 status=pending_frame outcome=n/a elapsed_ms=203
+row=700 offset=-2 rule=direct wrong=698 status=pending_frame outcome=n/a elapsed_ms=205
+row=701 offset=+2 rule=direct wrong=703 status=pending_frame outcome=n/a elapsed_ms=203
+row=702 offset=-15 rule=direct wrong=687 status=pending_frame outcome=n/a elapsed_ms=201
+row=703 offset=-15 rule=mirrored wrong=688 status=pending_frame outcome=n/a elapsed_ms=206
+row=704 offset=-30 rule=mirrored wrong=674 status=pending_frame outcome=n/a elapsed_ms=207
+row=705 offset=-2 rule=direct wrong=703 status=pending_frame outcome=n/a elapsed_ms=202
+row=706 offset=+2 rule=direct wrong=708 status=pending_frame outcome=n/a elapsed_ms=202
+row=707 offset=-15 rule=direct wrong=692 status=pending_frame outcome=n/a elapsed_ms=202
+row=708 offset=-15 rule=mirrored wrong=693 status=pending_frame outcome=n/a elapsed_ms=200
+row=709 offset=-30 rule=mirrored wrong=679 status=pending_frame outcome=n/a elapsed_ms=202
+row=710 offset=-2 rule=direct wrong=708 status=pending_frame outcome=n/a elapsed_ms=202
+row=711 offset=-2 rule=mirrored wrong=709 status=pending_frame outcome=n/a elapsed_ms=202
+batch_manifest=source/armc-relation/runs/batch_prepare_r5_20260907/BATCH_MANIFEST.json
+complete=false rows_done_ok=4 rows_required=112 status_counts={"pending_frame":108,"prepared_native":4} outcome_counts={"positive":4}
+
+real	0m48.425s
+user	4m15.883s
+sys	0m6.443s

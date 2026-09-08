@@ -1,0 +1,94 @@
+mode=execute_only
+prover=local_cpu_explicit
+row=5
+raw=synthetic:a
+constants_blob=../../blobs/final_int16/constants_int16.blob constants_blob_bytes=3476866 constants_sha256=73310ddab603cab5588d05e9ac4deb7e56466a6fae4bbf89244c32f2bd1a8b92 spec_sha256=02872ec23ab5a503fa1a6b450d90511f83a59afb36457cacb161e1277b22073b
+guest_elf_bytes=654200 guest_elf_sha256=0f1fd5249d3e1e8c38b63ae96d6c6dbb9aa58957650be7170ea85ba7b265db9e
+2026-09-07T20:17:24.131583Z  INFO initializing cpu prover
+2026-09-07T20:17:43.306901Z  INFO ┌╴private_input
+2026-09-07T20:17:43.344224Z  INFO └╴603 cycles
+2026-09-07T20:17:43.344272Z  INFO ┌╴constants_blob
+2026-09-07T20:17:46.201199Z  INFO └╴252,852,645 cycles
+stdout: denoiser_kind=1
+2026-09-07T20:17:46.201260Z  INFO ┌╴zbdiff_relation
+2026-09-07T20:17:46.201269Z  INFO │ ┌╴parse_witness
+2026-09-07T20:17:46.201340Z  INFO │ └╴4,357 cycles
+2026-09-07T20:17:46.201345Z  INFO │ ┌╴constants
+2026-09-07T20:17:46.204258Z  INFO │ └╴260,158 cycles
+2026-09-07T20:17:46.204264Z  INFO │ ┌╴drand_verify
+2026-09-07T20:17:46.418913Z  INFO │ └╴4,904,524 cycles
+2026-09-07T20:17:46.418939Z  INFO │ ┌╴raw_blake3_24MB
+2026-09-07T20:17:54.993863Z  INFO │ └╴697,810,935 cycles
+2026-09-07T20:17:54.994033Z  INFO │ ┌╴previous_advance_leg
+2026-09-07T20:17:55.239219Z  INFO │ └╴4,912,895 cycles
+2026-09-07T20:17:55.239252Z  INFO │ ┌╴emission_render_r
+2026-09-07T20:18:25.023236Z  INFO │ └╴2,143,613,548 cycles
+2026-09-07T20:18:25.023285Z  INFO │ ┌╴emission_render_u
+2026-09-07T20:18:57.752613Z  INFO │ └╴2,143,615,648 cycles
+2026-09-07T20:18:57.752648Z  INFO │ ┌╴ordered_session_membership
+2026-09-07T20:18:57.754417Z  INFO │ └╴120,034 cycles
+2026-09-07T20:18:57.754427Z  INFO │ ┌╴frame_reduce
+2026-09-07T20:19:19.738064Z  INFO │ └╴1,974,597,155 cycles
+2026-09-07T20:19:19.738105Z  INFO │ ┌╴hints
+2026-09-07T20:19:22.972708Z  INFO │ └╴257,106,344 cycles
+2026-09-07T20:19:22.972756Z  INFO │ ┌╴noise
+2026-09-07T20:19:23.023374Z  INFO │ └╴3,657,239 cycles
+2026-09-07T20:19:23.023389Z  INFO │ ┌╴denoiser_correct
+2026-09-07T20:20:14.310591Z  INFO │ └╴3,455,562,213 cycles
+2026-09-07T20:20:14.310639Z  INFO │ ┌╴denoiser_wrong
+2026-09-07T20:21:03.101400Z  INFO │ └╴3,455,560,292 cycles
+2026-09-07T20:21:03.101634Z  INFO └╴14,141,748,740 cycles
+2026-09-07T20:21:03.101643Z  INFO ┌╴public_commitment
+2026-09-07T20:21:03.102224Z  INFO └╴42,387 cycles
+2026-09-07T20:21:03.114650Z  INFO public_value_stream: [90, 66, 68, 73, 70, 70, 48, 49, 1, 9, 1, 0, 240, 2, 0, 0, 5, 0, 0, 0, 7, 0, 0, 0, 2, 0, 0, 0, 16, 0, 0, 0, 4, 0, 24, 0, 90, 66, 68, 73, 70, 70, 95, 83, 89, 78, 84, 72, 69, 84, 73, 67, 95, 69, 50, 69, 95, 48, 48, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 176, 66, 178, 164, 233, 31, 127, 234, 155, 91, 218, 173, 254, 199, 212, 93, 2, 215, 76, 208, 106, 49, 115, 194, 212, 184, 110, 105, 41, 10, 32, 181, 177, 218, 195, 115, 10, 178, 97, 239, 188, 110, 236, 62, 101, 83, 151, 174, 212, 176, 100, 251, 9, 89, 27, 30, 59, 219, 65, 205, 10, 218, 118, 181, 52, 179, 239, 245, 244, 246, 74, 164, 22, 172, 84, 143, 137, 90, 215, 63, 130, 57, 11, 89, 85, 182, 184, 199, 7, 211, 229, 141, 229, 240, 153, 42, 139, 148, 60, 254, 209, 140, 87, 101, 98, 157, 162, 226, 79, 145, 216, 232, 26, 63, 60, 46, 149, 125, 152, 217, 242, 229, 11, 104, 92, 237, 99, 162, 9, 132, 156, 253, 81, 169, 164, 69, 179, 254, 12, 15, 143, 135, 234, 32, 90, 30, 237, 185, 227, 199, 10, 193, 157, 81, 17, 94, 205, 37, 25, 109, 69, 172, 182, 99, 243, 37, 100, 182, 70, 4, 21, 210, 64, 230, 155, 124, 196, 72, 128, 136, 22, 217, 236, 234, 115, 0, 68, 174, 84, 153, 230, 172, 58, 175, 182, 209, 116, 213, 186, 88, 184, 239, 86, 4, 171, 27, 143, 228, 44, 63, 113, 134, 182, 223, 132, 152, 219, 101, 122, 96, 192, 133, 192, 195, 194, 96, 134, 133, 120, 212, 133, 71, 231, 171, 198, 38, 162, 46, 175, 226, 230, 126, 247, 39, 8, 71, 203, 81, 136, 200, 224, 156, 159, 103, 144, 26, 28, 218, 58, 138, 73, 40, 170, 183, 27, 40, 148, 103, 27, 215, 99, 9, 231, 66, 35, 109, 111, 108, 139, 95, 116, 167, 23, 141, 201, 188, 86, 214, 191, 238, 234, 150, 209, 184, 38, 227, 136, 51, 65, 207, 158, 122, 78, 189, 242, 56, 228, 252, 56, 104, 239, 130, 222, 56, 60, 169, 220, 115, 156, 89, 168, 186, 111, 129, 66, 142, 235, 87, 60, 30, 65, 244, 106, 66, 243, 88, 177, 47, 111, 211, 158, 83, 155, 166, 159, 19, 106, 4, 142, 207, 39, 42, 0, 0, 0, 0, 1, 224, 251, 154, 0, 0, 0, 0, 1, 224, 251, 154, 77, 37, 33, 152, 43, 15, 183, 250, 247, 174, 235, 41, 170, 161, 110, 105, 125, 254, 37, 206, 44, 14, 8, 238, 108, 145, 193, 75, 66, 57, 192, 33, 115, 49, 13, 218, 182, 3, 202, 181, 88, 141, 5, 233, 172, 77, 235, 126, 86, 70, 106, 111, 174, 75, 191, 137, 36, 76, 50, 242, 189, 26, 139, 146, 2, 135, 46, 194, 58, 181, 165, 3, 250, 26, 107, 69, 13, 144, 81, 31, 131, 165, 154, 251, 54, 69, 124, 172, 177, 97, 225, 39, 123, 34, 7, 59, 2, 93, 224, 112, 152, 84, 52, 254, 250, 234, 84, 119, 69, 225, 137, 131, 255, 210, 28, 80, 236, 102, 227, 18, 107, 207, 255, 200, 175, 88, 244, 165, 73, 61, 146, 157, 53, 223, 240, 213, 66, 235, 72, 118, 131, 122, 50, 235, 200, 125, 66, 58, 97, 46, 165, 129, 98, 170, 12, 158, 236, 154, 44, 200, 150, 0, 0, 0, 52, 248, 0, 0, 0, 0, 0, 0, 181, 62, 0, 0, 0, 0, 0, 0, 16, 12, 14, 12, 19, 201, 144, 56, 18, 1, 0, 0, 107, 116, 5, 81, 18, 1, 0, 0, 88, 171, 116, 24, 0, 0, 0, 0, 0, 0, 0, 0, 168, 0, 0, 0, 1, 0, 0, 0]
+2026-09-07T20:21:09.940042Z  INFO execute_program: close time.busy=10.7ms time.idle=207s
+oracle=native_reexecution+python_oracle_binding_fields checked=651 circuit_derived=0
+oracle_note=python oracle (gen_vectors.py, stub network) agrees on all 651 binding bytes; the 101 network-determined bytes (kind, constants/spec digests, residual tail) are checked by the native re-execution only
+oracle_note=row 5 wrong 7 offset 2 offset_rule 0 kind 1 constants_sha256 73310ddab603cab5588d05e9ac4deb7e56466a6fae4bbf89244c32f2bd1a8b92 R_correct 1177770051859 R_wrong 1178180351083 D 410299224 sign 1 clip_events 0
+public_values_hex=5a4244494646303101090100f002000005000000070000000200000010000000040018005a42444946465f53594e5448455449435f4532455f3030310000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000b042b2a4e91f7fea9b5bdaadfec7d45d02d74cd06a3173c2d4b86e69290a20b5b1dac3730ab261efbc6eec3e655397aed4b064fb09591b1e3bdb41cd0ada76b534b3eff5f4f64aa416ac548f895ad73f82390b5955b6b8c707d3e58de5f0992a8b943cfed18c5765629da2e24f91d8e81a3f3c2e957d98d9f2e50b685ced63a209849cfd51a9a445b3fe0c0f8f87ea205a1eedb9e3c70ac19d51115ecd25196d45acb663f32564b6460415d240e69b7cc448808816d9ecea730044ae5499e6ac3aafb6d174d5ba58b8ef5604ab1b8fe42c3f7186b6df8498db657a60c085c0c3c260868578d48547e7abc626a22eafe2e67ef7270847cb5188c8e09c9f67901a1cda3a8a4928aab71b2894671bd76309e742236d6f6c8b5f74a7178dc9bc56d6bfeeea96d1b826e3883341cf9e7a4ebdf238e4fc3868ef82de383ca9dc739c59a8ba6f81428eeb573c1e41f46a42f358b12f6fd39e539ba69f136a048ecf272a0000000001e0fb9a0000000001e0fb9a4d2521982b0fb7faf7aeeb29aaa16e697dfe25ce2c0e08ee6c91c14b4239c02173310ddab603cab5588d05e9ac4deb7e56466a6fae4bbf89244c32f2bd1a8b9202872ec23ab5a503fa1a6b450d90511f83a59afb36457cacb161e1277b22073b025de070985434fefaea547745e18983ffd21c50ec66e3126bcfffc8af58f4a5493d929d35dff0d542eb4876837a32ebc87d423a612ea58162aa0c9eec9a2cc89600000034f8000000000000b53e000000000000100c0e0c13c99038120100006b7405511201000058ab74180000000000000000a800000001000000
+verified_public_values=true
+public_values_bytes=752
+total_instruction_count=14394768783
+total_syscall_count=269904
+CYCLE_REGION zbdiff_relation = 14141748740
+CYCLE_REGION denoiser_correct = 3455562213
+CYCLE_REGION denoiser_wrong = 3455560292
+CYCLE_REGION emission_render_u = 2143615648
+CYCLE_REGION emission_render_r = 2143613548
+CYCLE_REGION frame_reduce = 1974597155
+CYCLE_REGION raw_blake3_24MB = 697810935
+CYCLE_REGION hints = 257106344
+CYCLE_REGION constants_blob = 252852645
+CYCLE_REGION previous_advance_leg = 4912895
+CYCLE_REGION drand_verify = 4904524
+CYCLE_REGION noise = 3657239
+CYCLE_REGION constants = 260158
+CYCLE_REGION ordered_session_membership = 120034
+CYCLE_REGION public_commitment = 42387
+CYCLE_REGION parse_witness = 4357
+CYCLE_REGION private_input = 603
+host_elapsed_ms=207163
+proof_generated=false
+	Command being timed: "./target/release/zkdiff-execute --witness-dir ../../vectors_relation/e2e --raw synthetic:a --blob ../../blobs/final_int16/constants_int16.blob --expected ../../vectors_relation/e2e/expected_public_zbdiff01.bin"
+	User time (seconds): 670.24
+	System time (seconds): 10.61
+	Percent of CPU this job got: 300%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 3:46.90
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 15587312
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 13347128
+	Voluntary context switches: 20783
+	Involuntary context switches: 340724
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 56
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

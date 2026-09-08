@@ -1,0 +1,22 @@
+{
+  "context_digest": "f4ce0daefe32f7679b9bad6fdb33c186a37b529fc19cd0e1b1b0be27d01184ed",
+  "executor": "zkdiff-execute --witness-dir vectors_relation/synthetic_mirror40 --raw <raw> --blob blobs/final_int16/constants_int16.blob",
+  "noise": "noise_august/noise_000684.i16 (the normative noise of the real -30 row 684)",
+  "noise_blake3": "ea4ac2f60b7322a77674e60c0e38e52c0c7e7ac4aa713761aa6c59d6fddf9eea",
+  "noise_sha256": "87260cb9318a60dd5a7e3796840372f0fa1a785e0e69f31738453bda779217f7",
+  "offset": -30,
+  "offset_rule": "mirrored",
+  "ordered_session_root": "0592d4b7c6220097bf3f813184f604fd20bf6563be5b3f88e3be76d08d48e20f",
+  "r": 39,
+  "raw": "source/frames_august/frame_000600.raw",
+  "raw_blake3": "9d4a0745dd0990b12ab8c94d524430dd3b3559face4d7d4d621c481a72087d4a",
+  "raw_sha256": "5c8e785610872115a5a67f90ae14b7b3b35cf3e1da8f5762c2d48386f7be211c",
+  "rows": 40,
+  "session_id": "ZBDIFF_SYNTHETIC_MIRROR40_001",
+  "stub_public_sha256": "6547a18f3de36bcef050bab5e9d00c4c5ac44816d73933fff333451f2093b7eb",
+  "stub_r_correct": 411474828633,
+  "stub_r_wrong": 412039420597,
+  "tree_depth": 6,
+  "u": 9,
+  "what": "synthetic 40-row session built by relation/tests/vectors.rs (build_mirror40): real quicknet beacons of August rows 600..639, arbitrary states advanced by the v9 rule, every emission rendered, golden padding tree; row 39 commits the frame below and claims the mirrored -30 offset (base OFFSETS[39 mod 5] = +30 -> 69 outside), u = 9"
+}

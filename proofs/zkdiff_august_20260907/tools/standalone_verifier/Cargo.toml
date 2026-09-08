@@ -1,0 +1,12 @@
+[package]
+name = "zeebeam-standalone-verifier"
+version = "0.1.0"
+edition = "2021"
+publish = false
+description = "Verifies a ZeeBeam one-proof Groth16 artifact with sp1-verifier (plus sha2 for printing digests): no SP1 SDK, no ELF, no prover."
+
+[dependencies]
+sp1-verifier = "=6.4.0"
+sha2 = "0.10"
+
+[workspace]

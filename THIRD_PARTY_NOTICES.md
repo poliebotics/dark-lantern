@@ -1,6 +1,6 @@
 ---
-version: 1.5
-date: 2026-09-06
+version: 1.6
+date: 2026-09-08
 status: third-party-notices
 author: BOSUN
 ---
@@ -18,15 +18,20 @@ author: BOSUN
 | Cargo manifests and lockfile inside the coupling source archive, naming the crates the coupling program depends on | `proofs/coupling/packet_v1/stage/source/*.tar` | the crates themselves are not distributed; their licences are their authors', as declared in their manifests |
 | Compiled WebAssembly witness generators: `discriminator.wasm`, `diffusion.wasm` (`proofs/conditional_micro/{discriminator,diffusion}/`) and `n7_triplet.wasm` (`proofs/train_free_grid_correlation_20260906/build/n7_triplet_js/`), compiled by Circom 2.2.3 from this tree's own circuit sources (the `.circom` files beside them) together with templates from circomlib 2.0.5 (Poseidon, Num2Bits, LessEqThan) | the directories named | circomlib is GPL-3.0 (iden3, `github.com/iden3/circomlib`, version 2.0.5; component file hashes in the packages' receipts); the compiled generators are derivative works and are distributed under GPL-3.0, text in `licenses/GPL-3.0.txt`; the corresponding source is this tree's circuit files plus circomlib at the pinned version; the tree licence does not restrict these components |
 | `generate_witness.js` and `witness_calculator.js` beside each wasm | the same directories | JavaScript helpers emitted by the Circom compiler (iden3, GPL-3.0) from its embedded templates, reproduced as emitted; text in `licenses/GPL-3.0.txt` |
+| the three statically linked x86-64 Linux executables of the zkdiff August package, `zkdiff-verify` (SHA-256 `8f74012f19b06ea733c6bf2944a9f2bcf705421781505c3a95dc3c2f8f39eed9`), `zeebeam-standalone-verifier` (`f5995796f3dc265e78c5da7bace364eb35b904f2055e1e9843a5d4bd3be76d07`) and `reexecute/zkdiff-batch` (`005c2665fe4175bf52bc792cf1fdd4078904556a093dc500d420ffad9c02f2a0`), compiled from that package's own Rust sources together with the Rust crates they depend on (522 and 209 packages, listed with their declared licences in its `capsule/THIRD_PARTY_CRATES_zkdiff-verify.tsv` and `capsule/THIRD_PARTY_CRATES_standalone_verifier.tsv`) and the GNU C Library 2.43 | `proofs/zkdiff_august_20260907/capsule/` and `capsule/reexecute/` | the crates under their declared licences, each used under its first permissive option where it offers a choice: MIT (`licenses/MIT.txt`), Apache-2.0 (`licenses/Apache-2.0.txt`; three crates with the LLVM exception), BSD-2-Clause, BSD-3-Clause, ISC, Zlib, Unicode-3.0, MPL-2.0, Unlicense, CC0-1.0 and CDLA-Permissive-2.0 (texts in `licenses/` under those names); each crate's own copyright notice travels with its source in the package's offline build kit on the data layer; glibc under the LGPL-2.1-or-later (`licenses/LGPL-2.1.txt`), statically linked and relinkable by rebuilding from the published source, lockfiles and pinned toolchain as the package's `capsule/README.md` and `capsule/THIRD_PARTY_NOTICES.md` describe |
+| `groth16_vk.bin`, the SP1 v6.1.0 Groth16 verifying key artefact, a second copy | `proofs/zkdiff_august_20260907/capsule/groth16_vk.bin` | MIT or Apache-2.0 at your option, per the `succinctlabs/sp1` repository; texts in `licenses/MIT-Succinct-Labs.txt` and `licenses/Apache-2.0-Succinct-Labs.txt` |
 
 Runtime dependencies of the scripts (NumPy, PyTorch, Pillow, OpenCV, scikit-learn, SP1 tooling, snarkjs 0.7.6 and node) are
 imported or invoked at run time and not redistributed here; snarkjs (GPL-3.0) is not shipped, only its outputs (proofs,
-public signals, keys) are. The only compiled code in this tree is the three WebAssembly witness generators listed above,
-compiled from this tree's own circuit sources together with circomlib templates; the one guest program binary of the
-coupling packet was removed (`proofs/PUBLICATION_SUBSET.md`). No font files or glyph subsets ship.
+public signals, keys) are. The compiled code in this tree is the three WebAssembly witness generators listed above, compiled from this tree's own
+circuit sources together with circomlib templates, and the three statically linked verification and re-execution executables
+of `proofs/zkdiff_august_20260907/capsule/`, compiled from that package's published Rust sources and lockfiles with the
+pinned toolchain (its `capsule/README.md` gives the rebuild); the one guest program binary of the coupling packet was removed
+(`proofs/PUBLICATION_SUBSET.md`). No font files or glyph subsets ship.
 
 ## Log
 
+- 1.6 (2026-09-08, BOSUN): the zkdiff August package (`proofs/zkdiff_august_20260907/`): rows for its three statically linked executables with their crate licence lists and glibc, and for the second copy of `groth16_vk.bin`; 12 licence texts added under `licenses/`; the compiled-code sentence corrected.
 - 1.5 (2026-09-06, BOSUN) — thirteenth build: the circomlib-derived WebAssembly witness generators and the Circom-emitted JavaScript helpers of the three added packages, under GPL-3.0; runtime tools named.
 - 1.4 (2026-09-05, BOSUN) — sixth build: no change of substance; regenerated.
 - 1.3 (2026-09-05, BOSUN) — fifth build: no change of substance; regenerated.

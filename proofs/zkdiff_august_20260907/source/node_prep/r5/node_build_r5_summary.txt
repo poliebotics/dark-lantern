@@ -1,0 +1,32 @@
+# node g2_guest_r5 build summaries, copied from the ssh output on the development machine (7 Sep 2026); full records live on the node under
+# source/{node_build_r5_attempt1_unstripped_FAILED_pin.log,node_build_r5.log,armc-relation/runs/build_record_*.txt}
+
+## attempt 1 (interim unstripped ELF pinned d36a30f2..., tree at a different absolute path than the development machine's)
+source_digest_list_sha256=99b440728557810567aade10e15740f86c3834ba817eb3f915d834575043a29e (equal to the development machine's)
+guest_elf_bytes=654752 guest_elf_sha256=ed08fa78797b6c31ccd294a6e0c222d8feedd45d2f3ec3410779b0172e624bd3 (the development machine: d36a30f21fdc429a50af1b75405d40764da464b86c4be5b52053b4876f30d459)
+home_paths_in_elf=0
+sp1_vkey=0x00cb883e2e7e1473a6b2b74e3ce84cbc47583f238dc1ed12ab591609712e62b6 (equal to the development machine's)
+BUILD_FAILED: ELF sha256 ed08fa78... != expected d36a30f2...  -> cause: cargo -C metadata hashes of path deps outside the guest workspace root include the absolute path; symbol names differ; fixed by -Cstrip=symbols
+
+## attempt 2 (stripped ELF pinned 51b7bc35...)
+BUILD_REPRODUCED_OK sha256=51b7bc3548d0a4fdb822aa8ed8c8982b5fe707900133d67d664fa3a732fc75cc vkey=0x00f0189431f373a5a931f1db0c6abd9673e4176e653e0f84f97724d302fda027 bytes=396200 groth16_vk_sha256=4388a21c687fdd5f218d7e3d13190cac4c5355818d3605fd5fb811df468ee696 circuit=v6.1.0
+date_utc=20260907T214346Z host=prover-node kernel=Linux 6.8.0-60-generic x86_64 glibc=ldd (Ubuntu GLIBC 2.35-0ubuntu3.10) 2.35
+source_digest_list_sha256=d86b75adcf6c50ef28f51531ccb0235ee2ac9ed0181cc2c40719f6c16cdc6735  -
+cargo_exit=0 full_log=source/armc-relation/runs/build_log_20260907T214346Z.txt
+build wall=19.40 s maxrss=560640 KiB
+guest_elf_bytes=396200 guest_elf_sha256=51b7bc3548d0a4fdb822aa8ed8c8982b5fe707900133d67d664fa3a732fc75cc
+home_paths_in_elf=0
+sp1_vkey=0x00f0189431f373a5a931f1db0c6abd9673e4176e653e0f84f97724d302fda027
+host_zkdiff-execute=5b634e5e77cf3ff497fea7ad6feb69cb308ca8b132f1497f3ff615458ca57c5c bytes=59910784 glibc_max=GLIBC_2.34
+host_zkdiff-ceremony=5c225f4a2c64873f49859483f588924e01a10dc6e8df2aa101f0a7467f66112e bytes=62345144 glibc_max=GLIBC_2.34
+host_zkdiff-batch=098ad91c8c1db41df4286e717bf2d97114a035c894c1a20106a0657444d32e23 bytes=63268712 glibc_max=GLIBC_2.34
+host_zkdiff-verify=a65bc03ae2293d3d25c1ff096cdb900443fdf5d7fa5122b467cac23fb68672a3 bytes=57782496 glibc_max=GLIBC_2.34
+
+
+## attempt 3 (final sources: host-only counter fix, docs, checksums; 21:58:55Z)
+PAYLOAD OK on the node (sha256sum -c SHA256SUMS_G2D, 1418 files)
+date_utc=20260907T215855Z host=prover-node
+source_digest_list_sha256=235dd832f342c3cc1a8d5980a9c2b3121ca1762aa5327d5fac47ce53ddee81bd (equal to the development machine's build_record_20260907T214737Z)
+guest_elf_bytes=396200 guest_elf_sha256=51b7bc3548d0a4fdb822aa8ed8c8982b5fe707900133d67d664fa3a732fc75cc home_paths_in_elf=0
+sp1_vkey=0x00f0189431f373a5a931f1db0c6abd9673e4176e653e0f84f97724d302fda027
+BUILD_REPRODUCED_OK; record g2_guest_r5/armc-relation/runs/build_record_20260907T215855Z.txt; host zkdiff-batch 80f24aac63943fd9a7a25ff4328a34a364b46ace82d47ca9029f34dd3c900fa7 (GLIBC_2.34)

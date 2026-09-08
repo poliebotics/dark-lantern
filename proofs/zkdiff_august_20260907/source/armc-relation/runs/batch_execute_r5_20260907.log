@@ -1,0 +1,38 @@
+mode=execute attempt_id=20260907T214449Z-development-workstation-929495 session=august_dev_712 rows=600..603 rule="one proof per held-out August row r in 600..=711; base = OFFSETS[(r - 600) mod 5], OFFSETS = [-2, +2, -15, +15, +30]; offset = base when 0 <= r + base < 712 (offset_rule = direct, public byte 11 = 0), else offset = -base (offset_rule = mirrored, byte 11 = 1; rows 684, 689, 694, 699, 704, 709 at +30 mirror to -30, 698, 703, 708 at +15 to -15, 711 at +2 to -2); u = r + offset; every outcome published, negative and zero differences included"
+guest_elf_bytes=396200 guest_elf_sha256=51b7bc3548d0a4fdb822aa8ed8c8982b5fe707900133d67d664fa3a732fc75cc sp1_circuit_version=v6.1.0 groth16_vk_sha256=4388a21c687fdd5f218d7e3d13190cac4c5355818d3605fd5fb811df468ee696
+constants_blob=source/blobs/final_int16/constants_int16.blob constants_blob_bytes=3476866 constants_sha256=73310ddab603cab5588d05e9ac4deb7e56466a6fae4bbf89244c32f2bd1a8b92 spec_sha256=02872ec23ab5a503fa1a6b450d90511f83a59afb36457cacb161e1277b22073b
+ordered_session_root=38a484b8793f3afadaf8fc5ba1c04d47e08cdbb4c07a39da09fb4149499a6572
+expected_identities=source/expected_identities_august.json sha256 6822cdcefa9a8833460287a3bb619fa63d0f3755d46dccc7db5418b261d6d613
+stdout: denoiser_kind=1
+row=600 offset=-2 rule=direct wrong=598 status=executed outcome=positive elapsed_ms=219150
+stdout: denoiser_kind=1
+row=601 offset=+2 rule=direct wrong=603 status=executed outcome=positive elapsed_ms=185552
+stdout: denoiser_kind=1
+row=602 offset=-15 rule=direct wrong=587 status=executed outcome=positive elapsed_ms=185884
+stdout: denoiser_kind=1
+row=603 offset=+15 rule=direct wrong=618 status=executed outcome=positive elapsed_ms=181754
+batch_manifest=source/armc-relation/runs/batch_execute_r5_20260907/BATCH_MANIFEST.json
+complete=false rows_done_ok=4 rows_required=4 status_counts={"executed":4} outcome_counts={"positive":4}
+	Command being timed: "./target/release/zkdiff-batch execute --chain-log source/vectors_relation/august/chain_log.csv --rows 600..603 --frames-dir source/frames_august --noise-dir source/noise_august --blob source/blobs/final_int16/constants_int16.blob --expect source/expected_identities_august.json --build-record source/armc-relation/runs/build_record_20260907T214246Z.txt --out source/armc-relation/runs/batch_execute_r5_20260907"
+	User time (seconds): 1832.95
+	System time (seconds): 46.68
+	Percent of CPU this job got: 234%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 13:19.91
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 15592988
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 46170354
+	Voluntary context switches: 25382
+	Involuntary context switches: 516519
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 1704
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

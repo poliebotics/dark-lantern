@@ -1,0 +1,80 @@
+   Compiling armc-relation v0.1.0 (source/armc-relation/relation)
+   Compiling zkdiff-armc-adapter v0.1.0 (source/armc-relation/adapter)
+warning: fields `s_t`, `bayer_blake3`, and `meta` are never read
+   --> relation/tests/vectors.rs:571:5
+    |
+570 | struct LogRow {
+    |        ------ fields in this struct
+571 |     s_t: [u8; 32],
+    |     ^^^
+572 |     bayer_blake3: [u8; 32],
+    |     ^^^^^^^^^^^^
+573 |     meta: [u8; 28],
+    |     ^^^^
+    |
+    = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: `armc-relation` (test "vectors") generated 1 warning
+    Finished `release` profile [optimized] target(s) in 3.90s
+     Running unittests src/lib.rs (target/release/deps/armc_relation-e187e72fb3fe77b1)
+
+running 25 tests
+test fp::tests::bf16_known_values ... ok
+test fp::tests::f16_round_trips_and_known_values ... ok
+test fp::tests::g1_rshift_round_is_half_up_with_floor_shift ... ok
+test frame::tests::raw_index_is_the_rggb_split ... ok
+test fp::tests::half_even_division_matches_python_round_on_fractions ... ok
+test frame::tests::bins_are_torch_adaptive_bins ... ok
+test header::tests::round_trips_and_fails_closed ... ok
+test membership::tests::frozen_row96_constants_reproduce ... ok
+test membership::tests::leaf_u_encoding_round_trips ... ok
+test membership::tests::witness_round_trips_and_mutations_fail_closed ... ok
+test hint::tests::coordinates_are_symmetric_and_span_q14 ... ok
+test noise::tests::constants_are_g1s ... ok
+test spec::tests::spec_digest_is_pinned ... ok
+test rule::tests::generic_rule_fails_closed_on_other_sessions ... FAILED
+test rule::tests::all_112_august_assignments_follow_the_owner_rule ... FAILED
+test statement::tests::offsets_fail_closed ... ok
+test statement::tests::offset_rule_flag_parses ... ok
+test statement::tests::previous_record_round_trips ... ok
+test statement::tests::public_layout_round_trips_and_offsets_are_fixed ... FAILED
+test statement::tests::public_parse_enforces_the_offset_rule_on_the_public_fields ... ok
+test net::tests::stub_is_deterministic_and_hint_sensitive ... ok
+test noise::tests::noising_and_residual_small_cases ... ok
+test beacon::tests::real_quicknet_beacons_verify_and_bind ... ok
+test beacon::tests::wrong_round_wrong_value_and_bad_point_are_rejected ... ok
+test emission::tests::august_row_96_emission_digest_matches_the_chain_log ... ok
+
+failures:
+
+---- rule::tests::generic_rule_fails_closed_on_other_sessions stdout ----
+
+thread 'rule::tests::generic_rule_fails_closed_on_other_sessions' (906831) panicked at relation/src/rule.rs:173:9:
+assertion `left == right` failed
+  left: (-2, -2, false, 33)
+ right: (30, -30, true, 5)
+
+---- rule::tests::all_112_august_assignments_follow_the_owner_rule stdout ----
+
+thread 'rule::tests::all_112_august_assignments_follow_the_owner_rule' (906830) panicked at relation/src/rule.rs:143:17:
+row 697: the flipped flag must be refused generically
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- statement::tests::public_layout_round_trips_and_offsets_are_fixed stdout ----
+
+thread 'statement::tests::public_layout_round_trips_and_offsets_are_fixed' (906836) panicked at relation/src/statement.rs:568:45:
+called `Result::unwrap()` on an `Err` value: RelationError("mirrored offset claimed although the direct wrong row lies inside the session")
+
+
+failures:
+    rule::tests::all_112_august_assignments_follow_the_owner_rule
+    rule::tests::generic_rule_fails_closed_on_other_sessions
+    statement::tests::public_layout_round_trips_and_offsets_are_fixed
+
+test result: FAILED. 22 passed; 3 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.05s
+
+error: test failed, to rerun pass `-p armc-relation --lib`
+
+real	0m3.973s
+user	0m48.491s
+sys	0m1.523s

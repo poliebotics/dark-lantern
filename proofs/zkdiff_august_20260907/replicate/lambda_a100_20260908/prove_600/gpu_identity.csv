@@ -1,0 +1,2 @@
+index, uuid, name, driver_version, memory.total [MiB], memory.used [MiB]
+0, GPU-54def825-67ad-1d7d-19d2-84ee7fd4fbb9, NVIDIA A100-SXM4-40GB, 570.148.08, 40960 MiB, 0 MiB

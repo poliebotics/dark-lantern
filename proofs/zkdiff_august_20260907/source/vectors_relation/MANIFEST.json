@@ -1,0 +1,573 @@
+{
+ "files": {
+  "conv/f32_in.bin": {
+   "bytes": 32768,
+   "sha256": "eecac3e83c9975ad12396057fea312f815e70f45ca0a924b1b22f786fa518a9d",
+   "dtype": "float32_le",
+   "shape": [
+    8192
+   ]
+  },
+  "conv/f16_bits.bin": {
+   "bytes": 16384,
+   "sha256": "fcdc20b21848f653a055aee5dc8395c52e0e4e6744d1c95ada9863ddc64f3ae8",
+   "dtype": "uint16_le",
+   "shape": [
+    8192
+   ]
+  },
+  "conv/bf16_bits.bin": {
+   "bytes": 16384,
+   "sha256": "3f2253da7fd5c50d0a3c8618df2c007cb67cb9889d98404115ebda6c49723acd",
+   "dtype": "uint16_le",
+   "shape": [
+    8192
+   ]
+  },
+  "conv/f16_back_f32.bin": {
+   "bytes": 32768,
+   "sha256": "cfeb8c47a1aa6a8484ee970ed943ddf5b1f87cfea1b6b2bf6f1be2af0b2a65b1",
+   "dtype": "float32_le",
+   "shape": [
+    8192
+   ]
+  },
+  "conv/cache_q12.bin": {
+   "bytes": 16384,
+   "sha256": "e5019a7d88da1c74cce8fd25e9a707a6aaf02f6964b3b10a3955e565b2f2d25c",
+   "dtype": "int16_le",
+   "shape": [
+    8192
+   ],
+   "note": "rint(bf16(f16(x)) * 2^12) clipped, the cache path quantisation"
+  },
+  "synthetic/frame_a_area_f32.bin": {
+   "bytes": 172032,
+   "sha256": "be85c497b26b73fcbebc99b72174e1fbe6c5f035aa65ac80aca6581a4cd1c667",
+   "dtype": "float32_le",
+   "shape": [
+    4,
+    96,
+    112
+   ],
+   "note": "F.interpolate(mode='area') output on RGGB/255 float32, 4x96x112"
+  },
+  "synthetic/frame_a_c_q12_torchpath.bin": {
+   "bytes": 86016,
+   "sha256": "558e1ddb7fb68d369f82c4c28b4e97cfd6dfcfddce89258a901c3981bbb64a6f",
+   "dtype": "int16_le",
+   "shape": [
+    4,
+    96,
+    112
+   ],
+   "note": "rint(bf16(f16(area)) * 2^12): the pipeline's C_int"
+  },
+  "synthetic/frame_a_sums.bin": {
+   "bytes": 172032,
+   "sha256": "086139c5655f472bdfe2f84f114511836b6a2edce1b1b92b002caf54410639a3",
+   "dtype": "uint32_le",
+   "shape": [
+    4,
+    96,
+    112
+   ],
+   "note": "exact integer bin sums (4x96x112)"
+  },
+  "synthetic/frame_a_counts.bin": {
+   "bytes": 43008,
+   "sha256": "9e97f94eb7b6becb71c464f66777d341df1220822442d51cba55bec1aa5ff6be",
+   "dtype": "uint32_le",
+   "shape": [
+    96,
+    112
+   ],
+   "note": "bin element counts (96x112)"
+  },
+  "synthetic/frame_a_c_q12_exact.bin": {
+   "bytes": 86016,
+   "sha256": "a766217ceb634ae89f27370d9daa74671d6102fab2acd517e8e97fb6d1c8935f",
+   "dtype": "int16_le",
+   "shape": [
+    4,
+    96,
+    112
+   ],
+   "note": "round_half_even(sum * 2^12 / (255*count))"
+  },
+  "synthetic/frame_b_area_f32.bin": {
+   "bytes": 172032,
+   "sha256": "9acdabcd5de5e91637708d6c6c7f7e19e87217fd46d06b0eaf47695779951a41",
+   "dtype": "float32_le",
+   "shape": [
+    4,
+    96,
+    112
+   ],
+   "note": "F.interpolate(mode='area') output on RGGB/255 float32, 4x96x112"
+  },
+  "synthetic/frame_b_c_q12_torchpath.bin": {
+   "bytes": 86016,
+   "sha256": "a2cc70110ac8375314c02c85bb562831a91c4dc4124f950545a1c51aee7519e3",
+   "dtype": "int16_le",
+   "shape": [
+    4,
+    96,
+    112
+   ],
+   "note": "rint(bf16(f16(area)) * 2^12): the pipeline's C_int"
+  },
+  "synthetic/frame_b_sums.bin": {
+   "bytes": 172032,
+   "sha256": "12ba53f10e51b1f12af38853fb07bfdc1a4942036f66c655e8622b1dcb4816db",
+   "dtype": "uint32_le",
+   "shape": [
+    4,
+    96,
+    112
+   ],
+   "note": "exact integer bin sums (4x96x112)"
+  },
+  "synthetic/frame_b_counts.bin": {
+   "bytes": 43008,
+   "sha256": "9e97f94eb7b6becb71c464f66777d341df1220822442d51cba55bec1aa5ff6be",
+   "dtype": "uint32_le",
+   "shape": [
+    96,
+    112
+   ],
+   "note": "bin element counts (96x112)"
+  },
+  "synthetic/frame_b_c_q12_exact.bin": {
+   "bytes": 86016,
+   "sha256": "049a0f1e8c07455eaf7831567ce069c5214cde53582f7a86da50dff53a516194",
+   "dtype": "int16_le",
+   "shape": [
+    4,
+    96,
+    112
+   ],
+   "note": "round_half_even(sum * 2^12 / (255*count))"
+  },
+  "synthetic/area_bins.json": {
+   "bytes": 26935,
+   "sha256": "5d491d4d4cf97788cab4702d4b54a4894c84c7112cc7c430af51ea4a847e03d1",
+   "kind": "json"
+  },
+  "d2/row_001328_E_q14_torchpath.bin": {
+   "bytes": 258048,
+   "sha256": "26f2fedf7b7795bbff827915f65b6bb9d21de380be0aec10979f138ba0152de6",
+   "dtype": "int16_le",
+   "shape": [
+    12,
+    96,
+    112
+   ],
+   "note": "E_int: 12 octave channels area-resized, cache/bf16 path, rint(*2^14)"
+  },
+  "d2/row_001328_E_area_f32.bin": {
+   "bytes": 516096,
+   "sha256": "b548bdba42ba1fcc8e2ade908ad5388377bb15fbae39db0a8565de39a1bff84e",
+   "dtype": "float32_le",
+   "shape": [
+    12,
+    96,
+    112
+   ]
+  },
+  "d2/row_001328_E_q14_exact.bin": {
+   "bytes": 258048,
+   "sha256": "328045093675964f764c2bba6eb3d821528421ccbecdace6cd8480073edab9f5",
+   "dtype": "int16_le",
+   "shape": [
+    12,
+    96,
+    112
+   ]
+  },
+  "d2/row_001330_E_q14_torchpath.bin": {
+   "bytes": 258048,
+   "sha256": "7ab0ee868f3c227b78d8e17f6fba8a5f2d14a2b8c9dd2cc70ca0a9029ff72484",
+   "dtype": "int16_le",
+   "shape": [
+    12,
+    96,
+    112
+   ],
+   "note": "E_int: 12 octave channels area-resized, cache/bf16 path, rint(*2^14)"
+  },
+  "d2/row_001330_E_area_f32.bin": {
+   "bytes": 516096,
+   "sha256": "60727a5a418681c743db2ec53dc93bf470b23e305494db9de80b5cc6e14534ba",
+   "dtype": "float32_le",
+   "shape": [
+    12,
+    96,
+    112
+   ]
+  },
+  "d2/row_001330_E_q14_exact.bin": {
+   "bytes": 258048,
+   "sha256": "b4604c4f5b44f7130c5716b3d995b0db9b7f78a5500d6e1e43479fb26f8e5f2b",
+   "dtype": "int16_le",
+   "shape": [
+    12,
+    96,
+    112
+   ]
+  },
+  "d2/row_001328_C_q12_cache.bin": {
+   "bytes": 86016,
+   "sha256": "9baf878a31ac8604c383b29b7cb3fadfc86c4edc419d911402c367876871626f",
+   "dtype": "int16_le",
+   "shape": [
+    4,
+    96,
+    112
+   ],
+   "note": "C_int from the node's float16 cache -> bf16 -> rint(*2^12)"
+  },
+  "d2/row_001328_noise_q12.bin": {
+   "bytes": 86016,
+   "sha256": "37198a3df5111736b49a68206895669aa64bccaeb567ab018967b3be3a07b112",
+   "dtype": "int16_le",
+   "shape": [
+    4,
+    96,
+    112
+   ],
+   "note": "protocol noise (session generator seed 20260823, index 30) via g1 randn_cuda_emul, rint(*2^12)"
+  },
+  "d2/row_001328_Ct_q12.bin": {
+   "bytes": 86016,
+   "sha256": "4050eb3fa3b4500fb678027da5220421bdb1abfa0faccc7c7f28f00a80697937",
+   "dtype": "int16_le",
+   "shape": [
+    4,
+    96,
+    112
+   ]
+  },
+  "d2/row_001328_hint14_q14.bin": {
+   "bytes": 301056,
+   "sha256": "b4e00b6acf621b974b5beb688f53a7fd65f5b56f47af31ced12116322c314cc3",
+   "dtype": "int16_le",
+   "shape": [
+    14,
+    96,
+    112
+   ],
+   "note": "cat(E_int, coord_int): the 14-channel hint the network consumes"
+  },
+  "d2/coord_q14.bin": {
+   "bytes": 43008,
+   "sha256": "8418418425e7198b0b53469918956091101477d541cedb6720400944a16b1f18",
+   "dtype": "int16_le",
+   "shape": [
+    2,
+    96,
+    112
+   ],
+   "note": "channel 0 = x (width), channel 1 = y (height); rint(linspace(-1,1) * 2^14)"
+  },
+  "d2/d2_rows.json": {
+   "bytes": 930,
+   "sha256": "371e87ffa749bae5acbb1f83651b543bc4720b0bd6bcdb04c1c6222d0ba1351e",
+   "kind": "json"
+  },
+  "august/chain_log.csv": {
+   "bytes": 367429,
+   "sha256": "5d9af297ae37119df15412f516a4543ee9f54b6aa66186abe478512fe9a1ff48",
+   "note": "the August session chain log, blake3 754e5716... (frozen CHAIN_LOG constant)"
+  },
+  "august/row_000585_E_q14_torchpath.bin": {
+   "bytes": 258048,
+   "sha256": "521cb2a99c867903683987e5ac2a2b47866787335566845b9a3c63024422eecd",
+   "dtype": "int16_le",
+   "shape": [
+    12,
+    96,
+    112
+   ]
+  },
+  "august/row_000598_E_q14_torchpath.bin": {
+   "bytes": 258048,
+   "sha256": "11b173e07e8eebd3411f29f68b2c384611f0e2ea61e4b17f0a8c86c80ebef166",
+   "dtype": "int16_le",
+   "shape": [
+    12,
+    96,
+    112
+   ]
+  },
+  "august/row_000599_E_q14_torchpath.bin": {
+   "bytes": 258048,
+   "sha256": "321914e1e4b70d32344e742fc46d2a0d8b11655e992d937e8a2ccad6e0139a30",
+   "dtype": "int16_le",
+   "shape": [
+    12,
+    96,
+    112
+   ]
+  },
+  "august/row_000600_E_q14_torchpath.bin": {
+   "bytes": 258048,
+   "sha256": "468568a95ffc51dfff04fc8d6d07ff38076ab5922a4f3a33b9a5da72fd1a3ab6",
+   "dtype": "int16_le",
+   "shape": [
+    12,
+    96,
+    112
+   ]
+  },
+  "august/row_000602_E_q14_torchpath.bin": {
+   "bytes": 258048,
+   "sha256": "18ad8ba89f81b5a73b8e2400203bd30d64e76ae285ec8be4f3e6456cc1f3d991",
+   "dtype": "int16_le",
+   "shape": [
+    12,
+    96,
+    112
+   ]
+  },
+  "august/row_000615_E_q14_torchpath.bin": {
+   "bytes": 258048,
+   "sha256": "bd7c1db741e8242660eb1153ee2cd221b6b4d8263955b1f6b1167f84f580f874",
+   "dtype": "int16_le",
+   "shape": [
+    12,
+    96,
+    112
+   ]
+  },
+  "august/row_000630_E_q14_torchpath.bin": {
+   "bytes": 258048,
+   "sha256": "84d85a3d08489fbc4aa620870375bb0ff81a0a84fc1735ca91485f366a5defb1",
+   "dtype": "int16_le",
+   "shape": [
+    12,
+    96,
+    112
+   ]
+  },
+  "august/august_rows.json": {
+   "bytes": 14418,
+   "sha256": "4093c6ffa122591a40d5d28e159830920a74d94e1f3a4cb2c9105317015ee16d",
+   "kind": "json"
+  },
+  "august/row_000600_membership_zbosm001.bin": {
+   "bytes": 555,
+   "sha256": "535d933ae68e582472b841314e2ba70b5ba17c21958ba313eebd7164eaece682"
+  },
+  "august/row_000600_header_zbroww01.bin": {
+   "bytes": 120,
+   "sha256": "c23aaee46bac2ba3c29234164c87619f67d9507676774e9882fed2380b19953f"
+  },
+  "august/row_000600_sig_r.bin": {
+   "bytes": 48,
+   "sha256": "987019d2a47a17b5d410460441ae5312ea1785ac8c41e1dcef4b0762124c45f1"
+  },
+  "august/row_000600_prev_zbdprv01.bin": {
+   "bytes": 188,
+   "sha256": "d2132d5427a348ae6e2c6ff3ed9f6536fff1d2d8967f941d9fa31a3efbc5d2c6"
+  },
+  "august/row_000600_offset_-2_leaf_u_zbdlfu01.bin": {
+   "bytes": 208,
+   "sha256": "68ceabeaa20f1c35469a8d32d62070f6ba5c861c6adcbd016e6683cb41f4a1ce"
+  },
+  "august/row_000600_offset_-2_siblings_u.bin": {
+   "bytes": 320,
+   "sha256": "953584958201e8fa650d97b6166139421e07edec10c092cff280e4b20ce79029"
+  },
+  "august/row_000600_offset_+2_leaf_u_zbdlfu01.bin": {
+   "bytes": 208,
+   "sha256": "ba7bceb4ffdb1904f96b8001f256a88eb722b82ecd6f8a5a85eee0bacde945c1"
+  },
+  "august/row_000600_offset_+2_siblings_u.bin": {
+   "bytes": 320,
+   "sha256": "c935cd5b87f86d145fedadcaf33db8774700cb7c9c3074560bfc5d008a09b853"
+  },
+  "august/row_000600_offset_-15_leaf_u_zbdlfu01.bin": {
+   "bytes": 208,
+   "sha256": "725934983ff901786caecf83a44a024abc747bc311fc8445aca7c66231411200"
+  },
+  "august/row_000600_offset_-15_siblings_u.bin": {
+   "bytes": 320,
+   "sha256": "7b8a02464da69724b3874beeb9e9d7494f2882a31500911fa61e223dfd0841aa"
+  },
+  "august/row_000600_offset_+15_leaf_u_zbdlfu01.bin": {
+   "bytes": 208,
+   "sha256": "b5ec0d3c4c19212aeb6746a2998e35654da478e85c750343776818913542977f"
+  },
+  "august/row_000600_offset_+15_siblings_u.bin": {
+   "bytes": 320,
+   "sha256": "4289296d3e584b3a480678762d4fc18d87ac8d7be9ae6f2bc1299d71068ee35d"
+  },
+  "august/row_000600_offset_+30_leaf_u_zbdlfu01.bin": {
+   "bytes": 208,
+   "sha256": "e32baeb1f0140acd28beff27f803193d4ee2f439a3a42855f68a396b6c2ccba8"
+  },
+  "august/row_000600_offset_+30_siblings_u.bin": {
+   "bytes": 320,
+   "sha256": "6a3935a6f3e2a2a6c0f2265a47bc596e7689f8bb3af481fc88f718b306036fd2"
+  },
+  "e2e/header_r.bin": {
+   "bytes": 120,
+   "sha256": "cd3673c82d05f297531adf441c5956a24263c54a1ee459ac6acb8daa5de3088d"
+  },
+  "e2e/membership_r_zbosm001.bin": {
+   "bytes": 336,
+   "sha256": "b16bc57ab0de6530a24270f0921654340720e1113852b216172918f46b854fa0"
+  },
+  "e2e/sig_r.bin": {
+   "bytes": 48,
+   "sha256": "987019d2a47a17b5d410460441ae5312ea1785ac8c41e1dcef4b0762124c45f1"
+  },
+  "e2e/prev_zbdprv01.bin": {
+   "bytes": 188,
+   "sha256": "476d7832b53d321a5a560d36c09026450faa2c3fe6e2dca098e2d10749e5d8f4"
+  },
+  "e2e/leaf_u_zbdlfu01.bin": {
+   "bytes": 208,
+   "sha256": "114cb039141aaadda1775acbd51ff0c4e39ed9192594cd7c2eff89f653584c29"
+  },
+  "e2e/siblings_u.bin": {
+   "bytes": 128,
+   "sha256": "cb891a84d560ef77c25b7472495c3fc21feee71f5f8cd36482f17c3f67da1856"
+  },
+  "e2e/noise_q12.bin": {
+   "bytes": 86016,
+   "sha256": "6af44b0c562bc33cd84fbb882359e73ff1ee1318cbe01e97191bd86f3a651089",
+   "dtype": "int16_le",
+   "shape": [
+    4,
+    96,
+    112
+   ]
+  },
+  "e2e/offset.bin": {
+   "bytes": 4,
+   "sha256": "26b25d457597a7b0463f9620f666dd10aa2c4373a505967c7c8d70922a2d6ece"
+  },
+  "e2e/expected_public_zbdiff01.bin": {
+   "bytes": 752,
+   "sha256": "d7690e4c87d9eb3f603e663265bcfd4fbbb45640478ca6d6ebaa78ae2299db07",
+   "note": "bytes 628..660 (preprocess spec sha) are zero here; the Rust test substitutes its compiled constant before comparing"
+  },
+  "e2e/C_q12.bin": {
+   "bytes": 86016,
+   "sha256": "558e1ddb7fb68d369f82c4c28b4e97cfd6dfcfddce89258a901c3981bbb64a6f",
+   "dtype": "int16_le",
+   "shape": [
+    4,
+    96,
+    112
+   ]
+  },
+  "e2e/Ct_q12.bin": {
+   "bytes": 86016,
+   "sha256": "c10d16a10b547e53c34a383edd5e94bfc32849857328875f207de45e1d6d0375",
+   "dtype": "int16_le",
+   "shape": [
+    4,
+    96,
+    112
+   ]
+  },
+  "e2e/hint_r_q14.bin": {
+   "bytes": 301056,
+   "sha256": "568776a823b819de524f92fce69994d90eae896cc762376b9bad93cff1dbd170",
+   "dtype": "int16_le",
+   "shape": [
+    14,
+    96,
+    112
+   ]
+  },
+  "e2e/hint_u_q14.bin": {
+   "bytes": 301056,
+   "sha256": "031851e2d12c6fc23889ba272ae9c44efdc24a6e3f9fd38d474c7d901dccb7a3",
+   "dtype": "int16_le",
+   "shape": [
+    14,
+    96,
+    112
+   ]
+  },
+  "e2e/e2e.json": {
+   "bytes": 1076,
+   "sha256": "9a13be691b3077a3611b27f10d7e2939b55b020c0cd538826db1ac96dffe26ca",
+   "kind": "json"
+  }
+ },
+ "notes": {
+  "conv": "numpy astype(float16) and torch .to(bfloat16) are both round-to-nearest-even; ties injected at [0,1024) (f16) and [1024,2048) (bf16)",
+  "synthetic_frame_a": {
+   "seed_hex": "0xa5a50001",
+   "bytes": 24472000,
+   "sha256": "94e188691d7dae573224d42c31354846145a35a247e43cf53d1d4ce1f3675b97",
+   "generator": "splitmix64 closed form: out_i = mix(seed + (i+1)*0x9E3779B97F4A7C15), bytes = LE words; frame b: x<1000 -> (byte==255), 1000<=x<2000 -> byte&3"
+  },
+  "synthetic_frame_a_stats": {
+   "torchpath_vs_exact_q12_mismatch": 39077,
+   "area_f32_vs_exact_mean_f32_bit_mismatch": 38934,
+   "distinct_bin_counts": [
+    576,
+    600,
+    625
+   ],
+   "f16_subnormal_means": 0,
+   "zero_means": 0
+  },
+  "synthetic_frame_b": {
+   "seed_hex": "0xa5a50002",
+   "bytes": 24472000,
+   "sha256": "e7d09e5c5d81e7f77008cf759c17a25740e92043134ada997b942472a7f8d266",
+   "generator": "splitmix64 closed form: out_i = mix(seed + (i+1)*0x9E3779B97F4A7C15), bytes = LE words; frame b: x<1000 -> (byte==255), 1000<=x<2000 -> byte&3"
+  },
+  "synthetic_frame_b_stats": {
+   "torchpath_vs_exact_q12_mismatch": 24962,
+   "area_f32_vs_exact_mean_f32_bit_mismatch": 34173,
+   "distinct_bin_counts": [
+    576,
+    600,
+    625
+   ],
+   "f16_subnormal_means": 7313,
+   "zero_means": 751
+  },
+  "august_chain_walk": {
+   "advances_reproduced": 711,
+   "of": 711,
+   "final_advance_equals_S_N": true
+  }
+ },
+ "environment": {
+  "torch": "2.11.0+cu130",
+  "numpy": "2.3.5",
+  "python": "3.14.4",
+  "torch_threads": 8
+ },
+ "sources": {
+  "d2_chain_log": {
+   "path": "[truthbeam verification run]/d2/chain_log.csv",
+   "sha256": "d0f97ac986ba9cfa1f47d62661307d59d0227beb9fdb2a0557a516ebe81e47fd"
+  },
+  "august_chain_log": {
+   "path": "[zeebeam repository clone]/bundle/proofs_20260902/final_relation/chain/chain_log.csv",
+   "blake3": "754e5716e65a065e5ad3146131609a1fd12e8310d966fb6bf2d3de6c568e7f8b"
+  },
+  "g1_cache_C_001328": {
+   "path": "oracle/rows[preprocessed-row cache]/d2/C_001328.npy",
+   "sha256": "b9f6584834646f6d62c02ea7dec5e8677d5946a5ae4b16f813eada831240fe47"
+  },
+  "tile_cpu": {
+   "path": "[truthbeam repository clone]/code/recording/protocol/tile_cpu.py",
+   "sha256": "b1d5d3e942cf3dc4c55ee25e9c8050dff2983b42e8be493bf3209cdbe475fe88"
+  },
+  "xof_generation": {
+   "path": "oracle/trainer/data/xof_generation.py",
+   "sha256": "a51da1e9ba9850d9dadb2da9df0983971210fe7dbd8f2eddf2ef8551da0a037a"
+  }
+ }
+}

@@ -1,0 +1,26 @@
+{
+ "session_id": "ZBDIFF_SYNTHETIC_E2E_001",
+ "rows": 16,
+ "depth": 4,
+ "r": 5,
+ "u": 7,
+ "offset": 2,
+ "raw_frame": "synthetic frame a (regenerate from the PRNG; sha256 in notes.synthetic_frame_a)",
+ "raw_blake3": "1cda3a8a4928aab71b2894671bd76309e742236d6f6c8b5f74a7178dc9bc56d6",
+ "context": "09849cfd51a9a445b3fe0c0f8f87ea205a1eedb9e3c70ac19d51115ecd25196d",
+ "root": "45acb663f32564b6460415d240e69b7cc448808816d9ecea730044ae5499e6ac",
+ "leaf_r": "3aafb6d174d5ba58b8ef5604ab1b8fe42c3f7186b6df8498db657a60c085c0c3",
+ "leaf_u": "c260868578d48547e7abc626a22eafe2e67ef7270847cb5188c8e09c9f67901a",
+ "emission_r": "bfeeea96d1b826e3883341cf9e7a4ebdf238e4fc3868ef82de383ca9dc739c59",
+ "emission_u": "a8ba6f81428eeb573c1e41f46a42f358b12f6fd39e539ba69f136a048ecf272a",
+ "beacons_borrowed_from_august_rows": [
+  595,
+  610
+ ],
+ "prev_round": 31521690,
+ "own_round": 31521690,
+ "R_correct_stub": 2299766655042,
+ "R_wrong_stub": 2299231487935,
+ "D_stub": -535167107,
+ "denoiser": "StubDenoiser (kind 0): eps[c] = clamp16(Ct[c] - (hint[3c] >> 4)); the network is NOT exercised here"
+}

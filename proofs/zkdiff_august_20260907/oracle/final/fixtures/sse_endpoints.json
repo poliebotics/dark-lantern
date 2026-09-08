@@ -1,0 +1,27 @@
+{
+ "fixture": "sse_endpoints",
+ "kernel": "score_int",
+ "params": {
+  "rule": "sum (eps_int - noise_int)^2 over 4x96x112, exact; f = 12",
+  "elements": 43008
+ },
+ "notes": "both endpoint combinations and a half/half mix; values are decimal strings",
+ "inputs": {
+  "cases": [
+   "eps=-32768,noise=32767",
+   "eps=32767,noise=-32768",
+   "half/half",
+   "eps=noise=-32768"
+  ]
+ },
+ "expected": {
+  "sse": [
+   "184712316364800",
+   "184712316364800",
+   "184712316364800",
+   "0"
+  ],
+  "sse_bound": "184712316364800"
+ },
+ "counters": {}
+}

@@ -1,0 +1,14 @@
+[package]
+name = "zeebeam-b3xof-relation"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+default = []
+# Host-only: counts BLAKE3 compression-function calls. Never enabled in the guest.
+count = []
+
+[dependencies]
+
+[dev-dependencies]
+blake3 = "=1.8.1"

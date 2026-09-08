@@ -1,0 +1,8 @@
+# the development machine build artefacts, for the record; the node rebuilds them and build_reproducible.sh asserts the ELF/vkey pins
+51b7bc3548d0a4fdb822aa8ed8c8982b5fe707900133d67d664fa3a732fc75cc  armc-relation/program/target/elf-compilation/riscv64im-succinct-zkvm-elf/release/zkdiff-guest
+guest_elf_bytes=396200
+66b46573b81e2fea87e5e8ffc5adf8923e1a7dc6adc35cc17665bd580f8f3d20  armc-relation/script/target/release/zkdiff-execute  bytes=60060656 glibc_max=GLIBC_2.39
+2d70f5aab6f58f6faaf44ebf17a87adf727a01cfde5c4f5a85f56782e5b6a5fe  armc-relation/script/target/release/zkdiff-ceremony  bytes=61686296 glibc_max=GLIBC_2.39
+919f49bbedaf6f0ff15e7bf06c268030d4eee0bbc20239442b3c8028a1356df7  armc-relation/script/target/release/zkdiff-batch  bytes=62624784 glibc_max=GLIBC_2.39
+ef69af4c4ea82d10f94bdae241294593dc700ae01884c196205d877acfe6d623  armc-relation/script/target/release/zkdiff-verify  bytes=57902856 glibc_max=GLIBC_2.39
+generated_utc=20260907T215833Z host=development-workstation

@@ -1,0 +1,2 @@
+[int8] calibrated on 15 rows (7 august) in 3.3s; scale map 188 tensors (15 inherited); bounds i64-safe: True
+wrote oracle/final/agreement_int8_august.json (6s, 5 new conditions)

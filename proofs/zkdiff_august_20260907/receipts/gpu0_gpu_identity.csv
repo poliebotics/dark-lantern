@@ -1,0 +1,2 @@
+index, uuid, name, driver_version, memory.total [MiB], pci.bus_id
+0, GPU-266e93a8-688f-6569-cc45-04a1d2712b60, NVIDIA A100-SXM4-80GB, 570.148.08, 81920 MiB, 00000000:07:00.0

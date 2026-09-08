@@ -1,0 +1,45 @@
+> Public audit copy, 8 September 2026. Personal identifiers, private instructions and development infrastructure have been
+> redacted; scientific findings are preserved. Findings describe the revision reviewed at the time and may be superseded; see
+> AUDIT_TRAIL.md.
+> Paths are package-relative where the file is in this package and marked (on-box) or (repository root) where it is not; line
+> numbers are as at audit time and may have moved.
+
+1. **REVISE, r6 finding 11 remains open: 033’s landed checker never runs.** At 033:120 (on-box: `033_zkdiff_r2_bundle.sh` line 120), `<<<"$UPLOAD_FILES"` overrides the Python-source heredoc. Reproduction produces `NameError`, so even a complete upload ends as uncertain without a success receipt. Remove that redirection. The checker body and post-upload exit-2 handling otherwise work.
+
+2. **REVISE: 032 breaks the published capsule’s executable permissions.** 032:125 (on-box: `032_zkdiff_darklantern_commit.sh` line 125) makes every file `0644`, restoring execution only for `.sh` and `.py`. All three static binaries would enter Git as `100644`; the capsule invokes them directly. Preserve their executable modes and check the prepared commit’s modes.
+
+3. **REVISE, r6 finding 12 partly closed.** Both payloads now snapshot before validation, and 032 rechecks the consumed package. However, it hashes the live README patch at 032:55 (on-box: `032_zkdiff_darklantern_commit.sh` line 55), then rereads that live file at line 131. Snapshot and validate the patch too; concurrent edits can still enter the prepared commit.
+
+4. **REVISE: the frame-index pin is stale.** `PINS.json` line 3374 pins `frames/FRAMES.json` as `eea81f67…`; its actual SHA-256 is `5350e485c2f58dc36a721461a8fbb1625cf1361f044e55d5ff0385b9210a493e`. The bundle manifest correctly records the latter. Correct PINS and regenerate dependent freezes.
+
+5. **REVISE, r6 finding 8 partly closed.** Oracle imports and the missing-August guard are repaired. The advertised full-regeneration wrapper still hardcodes nonexistent `oracle/ckpt/final/…` inputs at `oracle/final/run_final.sh` line 7. Point it to the published `model/` layout or supply the explicit working invocation; retain its unrehearsed status.
+
+6. **REVISE, r6 finding 6 substantially repaired but not fully closed.** Commands are anchored, and protobuf/includes, time and binutils are documented. However, `VERIFY.md` line 37 says no `[confirm]` remains while lines 360, 420 and 473 retain unrehearsed steps. Its blanket rehearsal claim needs chronological qualification, and “Requirements, complete” still omits the C compiler/linker required by the replication kit.
+
+7. **REVISE, r6 finding 10 partly closed.** Count interpolation, commit-body placeholders, patch dimensions and embedded hashes are repaired. Actual previews remain malformed: 032 preview:65 (on-box: `032_zkdiff_darklantern_commit.preview.md` line 65) contains “in the tree.md` states”; 033 preview:25 (on-box: `033_zkdiff_r2_bundle.preview.md` line 25) retains **2,500 / 331,123,075 bytes**, instead of **4,664 / 633,315,259**, followed by broken replacement text at line 31. Regenerate and inspect both previews.
+
+8. **PASS, r6 findings 2 and 14 closed.** Recomputed framed sizes are **2,444×1, 2,445×12, 2,446×59, 2,447×40**; raw proofs and statements remain 356 and 752 bytes. Median wrong/correct and margin/correct ratios are **2.32026 and 1.32026**. Eight processes, **15.29972 hours**, and median **64.65657 minutes** reproduce. Contention is correctly labelled an interpretation. `RESULTS.md` line 324
+
+9. **PASS, r6 finding 4 closed.** The allowlist classifies **2,146 collection files: 843 allowed, 1,303 excluded, none unknown**. Published collection files match their originals; destructor backtraces and excluded incident logs are absent from both payloads. Retained rejection-control evidence is appropriate. This was the requested exclusion check, without duplicating the privacy sweep. evidence_allowlist.py:64 (on-box: `evidence_allowlist.py` line 64)
+
+10. **PASS, r6 findings 5 and 7 closed.** The published final node record hashes to `513eed8d…174f`, matching all 112 receipts; its build pins reconcile. The three vendored verifier files match the stated ZeeBeam commit byte-for-byte. Node build:52 (`source/node_prep/r5/build_record_20260907T215855Z.txt` line 52), `tools/standalone_verifier/VENDORED.md` line 3
+
+11. **PASS, r6 findings 9 and 13 closed.** Root-ledger generation now occurs outside the tree. Freeze `ea642db4…` verifies all **3,092 entries**, without extras. Bundle manifest `1ea3f5d8…` reconciles **5,639 payload objects / 3,392,041,842 bytes**; including controls, **5,643 / 3,395,931,400**. Ledger coverage and external control pins are now described correctly. 032:150 (on-box: `032_zkdiff_darklantern_commit.sh` line 150), R2 README:17 (on-box: `README.md` line 17)
+
+12. **PASS: the published frames and tensors reconcile.** All **112 actual frames** match FRAMES.md, FRAMES.json, chain BLAKE3, statement digests and receipt SHA-256. All **672 tensor-array hashes**, **336 cache-to-integer comparisons**, normative-noise bindings, noising calculations and **224 expected residual sums** match. The separate JSON-file pin defect is finding 4 above. `FRAMES.md` line 25, August manifest:1099 (`oracle/final/august_inputs/manifest.json` line 1099)
+
+13. **PASS: capsule verification and recorded re-execution evidence.** Fresh read-only execution of the capsule’s core checks gave **112/112 accepted, 112/112 standalone VERIFIED, 18/18 controls** without network or Rust. All three static-binary hashes match their records. Fresh frame reduction and Python arithmetic reproduced rows 600 and 684; archived full re-execution outputs equal the current 752-byte statements. The file-writing full re-execution scripts were not rerun. `capsule/verify_offline.sh` line 21, capsule README:95 (`capsule/README.md` line 95)
+
+14. **REVISE: capsule execution and build descriptions.** “Natively (no zkVM)” is false: execution runs the SP1 guest on CPU and compares against native evaluation, without proving. The static-link record also says glibc **2.39**, while the binaries and build record identify **2.43**. Correct both descriptions. Re-execution README:5 (`capsule/reexecute/README.md` line 5), `capsule/STATIC_LINK_RECORD.txt` line 8
+
+15. **PASS: drand counts and predecessor wording.** Recount gives **646/711 shared consecutive pairs, 66 distinct rounds, 10 proof-set rounds and 103/112 duplicated predecessor rounds**. All nine exceptions and all statements match. The wording correctly describes the predecessor advance, repeated signature verification and absence of circuit monotonicity/freshness checks. `STATEMENT.md` line 45
+
+16. **PASS in the three requested documents: quick-screen correction.** RESULTS, CLAIM_BOUNDARY and FAQ consistently identify **606, 630, 654, 678** as the four proof rows among 28 screen rows. The trainer reproduces that set. This changes the disclosure, not the recorded screen scores, proof outcomes or residuals. `RESULTS.md` line 40, `CLAIM_BOUNDARY.md` line 28, `FAQ.md` line 144
+
+17. **REVISE: remaining prose inconsistencies, including r6 finding 15.** GLOSSARY still says frames are never published and all 28 screen rows were held out; FAQ:109, HASHES:41/53/66 and VERIFY:298 retain held-data wording. FAQ:193 lists hint **585 instead of 598**, although 507 remains correct. [Editorial style finding redacted as private editorial policy; the two corrections it asked for were applied.] `GLOSSARY.md` line 35, `FAQ.md` line 193, replicate README:87 (`replicate/README.md` line 87)
+
+18. **REVISE presentation; PASS audit-history substance.** All 15 copied texts match the declared transformations and recorded hashes. However, trimming leaves an empty root reference and unusable links such as `RESULTS.md:311` inside `audits/astra/`. Repair navigation while preserving historical line labels. AUDIT_TRAIL correctly distinguishes the reviewed revisions and says the augmented freeze had not yet received this confirmation audit. Claude audit:8 (on-box: `audits/agents/claude_r1.md` line 8), r6 verdict:8 (`audits/astra/r6_verdict.md` line 8), `AUDIT_TRAIL.md` line 150
+
+19. **REVISE before firing: root notices must accompany the commit.** Add the three static binaries, their dependencies including glibc, and the copied verifying-key location; replace the false “only compiled code” sentence. Extend 032’s permitted root changes accordingly. The d2/v10 frame locator and publication of release tooling may follow: their absence is disclosed and does not prevent verification or August re-execution. Root notices:24 (repository root: `THIRD_PARTY_NOTICES.md` line 24), 032:169 (on-box: `032_zkdiff_darklantern_commit.sh` line 169), OPEN_ITEMS.md:71 (on-box: `OPEN_ITEMS.md` line 71)
+
+VERDICT: REVISE: fix 033’s overriding stdin redirection so landed-object verification actually executes before any upload is attempted.

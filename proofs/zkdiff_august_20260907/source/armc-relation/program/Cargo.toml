@@ -1,0 +1,24 @@
+[package]
+name = "zkdiff-guest"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+# Its own workspace root, as the proved guest (rust/row_binding_join_membership_sp1_candidate/program/Cargo.toml).
+[workspace]
+
+[dependencies]
+sp1-zkvm = { version = "=6.4.0" }
+armc-relation = { path = "../relation", default-features = false, features = ["bls"] }
+zkdiff-armc-adapter = { path = "../adapter" }
+
+[profile.release]
+lto = "thin"
+overflow-checks = true
+
+[patch.crates-io]
+# The two sp1-patches forks the proved guest pins (its Cargo.lock: bls12_381 at 9e4e2ae4780d3d69cecbec000f5e814df2392468,
+# sha2 at 0b1945eea7d9a776fd6e50ffd5fc51f0c5e6f155). They route the BLS field arithmetic and SHA-256 through the SP1
+# precompiles; the proved row's beacon verification cost 4.9 M instructions with them.
+bls12_381 = { git = "https://github.com/sp1-patches/bls12_381", tag = "patch-0.8.0-sp1-6.2.0" }
+sha2 = { git = "https://github.com/sp1-patches/RustCrypto-hashes", package = "sha2", tag = "patch-sha2-0.10.9-sp1-4.0.0" }

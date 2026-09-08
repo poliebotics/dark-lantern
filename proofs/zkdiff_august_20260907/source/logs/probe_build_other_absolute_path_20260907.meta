@@ -1,0 +1,3 @@
+probe_path=[alternate build root]
+probe_tree=[alternate build root]/g2_guest_r5
+probe_target_dir=[alternate build root]/target (copy of the development machine's script target for cached registry crates; first-party crates and the guest rebuilt from source there)

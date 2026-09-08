@@ -1,0 +1,61 @@
+   Compiling armc-int v0.1.0 (source/armc-int)
+    Finished `release` profile [optimized] target(s) in 2.66s
+     Running unittests src/lib.rs (target/release/deps/armc_int-e930eb4c94fe2c5e)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/armc_blob.rs (target/release/deps/armc_blob-e10f1275cd4a2b51)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/fixtures.rs (target/release/deps/fixtures-7d11b9e843213a07)
+
+running 13 tests
+test add_and_concat_saturation ... ok
+test isqrt_perfect_squares ... ok
+test domain_endpoints_clamp16 ... ok
+test noising_saturation ... ok
+test fixtures_manifest_is_the_final_one ... ok
+test pooling_and_bilinear_fixtures ... ok
+test rounding_fixtures ... ok
+test convolution_impulses_and_tails ... ok
+test groupnorm_fixtures ... ok
+test convolution_requantisation_random_and_saturation ... ok
+test sse_endpoints ... ok
+test attention_fixtures ... ok
+test lut_all_indices_and_masks ... ok
+
+test result: ok. 13 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/parity.rs (target/release/deps/parity-2a49738abe4ca43e)
+
+running 12 tests
+test full_int16_domain_is_admitted_and_every_clip_is_counted ... ok
+test left_shifts_are_checked_for_representability ... ok
+test fast_conv_paths_equal_the_generic_definition ... ok
+test rounding_helpers_follow_python_semantics ... ok
+test lut_hits_on_clipped_entries_are_counted ... ok
+test table_and_constant_hashes_match_the_manifest ... ok
+test blob_round_trip_and_constants_identical_across_conditions ... ok
+test noising_and_hint_match_the_exported_inputs ... ok
+test tester_detects_a_corrupted_constant ... ok
+test final_artifact_pins ... ok
+test parity_chained_all_sets ... ok
+test kernels_isolated_all_sets ... ok
+
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.02s
+
+   Doc-tests armc_int
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+real	0m4.754s
+user	0m14.208s
+sys	0m0.678s

@@ -1,0 +1,502 @@
+{
+ "source": "oracle/final/fixtures",
+ "manifest_sha256": "52ab243cfa38873eb9f0197de3856420da1aa590398210164f2308fad0b1efaf",
+ "checkpoint_sha256": "c6955192067c8df1f46960f4803b32eac1c037b84a0f40de3b265b739d85fab8",
+ "fixtures": {
+  "rounding_shifts_ties": {
+   "json_sha256": "e905be6c6b7d852dbf0f7181d246f2a77f4a7ad8f2a3965ee0732e15f8a686ff",
+   "kernel": "rshift_round",
+   "arrays": {}
+  },
+  "rounding_shifts_zero_negative": {
+   "json_sha256": "749f05231c24a7c5e283da7a6d483b69c8087a1dcfcd6b44c30916a22e108824",
+   "kernel": "rshift_round",
+   "arrays": {}
+  },
+  "rounding_divisors_ties": {
+   "json_sha256": "0ce5949ca1943541a14489749466b287d0e640687eb050e3a8e987d4a7fb3245",
+   "kernel": "round_div",
+   "arrays": {}
+  },
+  "domain_endpoints_clamp16": {
+   "json_sha256": "d1522830e821727acbcd5bab368979fda0454451dd9f4633ba2e0dc203a24534",
+   "kernel": "clamp16",
+   "arrays": {}
+  },
+  "noising_saturation": {
+   "json_sha256": "20cbf388b99c60a5d08a5f94e48a18b6bed0895d8fab9b08538c48d56b1f9d27",
+   "kernel": "noise_Ct",
+   "arrays": {}
+  },
+  "conv3x3_impulses_s1_w20": {
+   "json_sha256": "c9cce0b1047c731a7abbe6f5da32764c68f22f8a56190d9f71f6bd98174966d5",
+   "kernel": "conv2d_acc",
+   "arrays": {}
+  },
+  "conv3x3_impulses_s2_w20": {
+   "json_sha256": "6e74a44d96f785fd824654a5212caae64c87b2e98af0a3479e0f4412a74c6f2c",
+   "kernel": "conv2d_acc",
+   "arrays": {}
+  },
+  "conv3x3_impulses_s2_w21": {
+   "json_sha256": "6815875ace8df30f3e1d9a5b76cdf47d82256675e3b6a3de27ec9004367a2f13",
+   "kernel": "conv2d_acc",
+   "arrays": {}
+  },
+  "conv_requant_saturation_S30": {
+   "json_sha256": "28e1a0d20d1602c541ef66be98085bed3de56cd2ae5e42c29d29384dd97f3810",
+   "kernel": "conv2d_acc+requant",
+   "arrays": {}
+  },
+  "conv_requant_saturation_S43": {
+   "json_sha256": "f65cdb088af39e8d0ffd7ad67960be609a7a81a21f0579ae344660e81a78f627",
+   "kernel": "conv2d_acc+requant",
+   "arrays": {}
+  },
+  "conv_requant_saturation_S8": {
+   "json_sha256": "3a77fe6c051459d9788fdc7090b83f3162b417561e3edb9864f95fa520b57974",
+   "kernel": "conv2d_acc+requant",
+   "arrays": {}
+  },
+  "conv3x3_random_int16_s1_w24": {
+   "json_sha256": "24ff7c147a7b5c0ab042ab61daa03ac03a7ff72d5046318fa97372576dca8ae2",
+   "kernel": "conv2d_acc+requant",
+   "arrays": {}
+  },
+  "conv3x3_random_int16_s2_w24": {
+   "json_sha256": "f2d9379d5c5de47c629cb329aa6df598ea9aa18f9a8c61aa2da1120ceba07f31",
+   "kernel": "conv2d_acc+requant",
+   "arrays": {}
+  },
+  "conv3x3_random_int8_s1_w24": {
+   "json_sha256": "e8e419aa96fe644ca1c164b2c225e0193b4e39960d01d4645e01691a3a0e5d71",
+   "kernel": "conv2d_acc+requant",
+   "arrays": {}
+  },
+  "conv3x3_random_int8_s2_w24": {
+   "json_sha256": "c815664dfd46489b7440e731347da5b2175a0ab5955abf9a9628b7c6d89cd61b",
+   "kernel": "conv2d_acc+requant",
+   "arrays": {}
+  },
+  "add_saturation_rescale": {
+   "json_sha256": "87f31f25b8ffc5b9151fa2cd8e3d772d8075c9bba183897db557b3b2a4a9b26c",
+   "kernel": "add",
+   "arrays": {}
+  },
+  "concat_saturation_rescale": {
+   "json_sha256": "7c1e407b9f8b502bbfd944012490f3329d0c9344cbc536755569711022fc4d59",
+   "kernel": "cat",
+   "arrays": {}
+  },
+  "groupnorm_constant_group": {
+   "json_sha256": "ed1676d009f3299d7bdcdfde8aeaa9adf92511b3814aa7f8844c03e57293942e",
+   "kernel": "groupnorm_int",
+   "arrays": {}
+  },
+  "groupnorm_nearly_constant_group": {
+   "json_sha256": "a0ed39ccab61c17ebe3eabe3ae9c27cad85623a97a742deadb3a5770fbd6ac45",
+   "kernel": "groupnorm_int",
+   "arrays": {}
+  },
+  "groupnorm_endpoints_n84": {
+   "json_sha256": "98a290686c5cb254b911add110e9a30798f41852190c88e28a3e9c5ce95c74f9",
+   "kernel": "groupnorm_int",
+   "arrays": {}
+  },
+  "groupnorm_balanced_endpoints_n32256": {
+   "json_sha256": "3b9b59f8a3f476e8b97af815638d97e378c982ed35c2d6388e4e358e8353cd95",
+   "kernel": "groupnorm_int",
+   "arrays": {
+    "x": {
+     "file": "groupnorm_balanced_endpoints_n32256__x.bin",
+     "dtype": "i16",
+     "shape": [
+      3,
+      96,
+      112
+     ],
+     "sha256": "673b4329f0fa5ffeffcc18063b446bbec432592335d86524ad4d5a4a2dce0a66"
+    },
+    "y": {
+     "file": "groupnorm_balanced_endpoints_n32256__y.bin",
+     "dtype": "i16",
+     "shape": [
+      3,
+      96,
+      112
+     ],
+     "sha256": "49941bd527cb9128b8a738057b768368f9cbf2fa3e8f39b2ec10ea822cb96f0e"
+    }
+   }
+  },
+  "groupnorm_saturation_both_signs": {
+   "json_sha256": "dc86434da49bb1c851cec979bc7c4c5327e1474386fe26fd2f5df3aa993764a4",
+   "kernel": "groupnorm_int",
+   "arrays": {}
+  },
+  "groupnorm_zero_gamma": {
+   "json_sha256": "a5d6e3ee00b7b0172837cd935170495da0ad89848effb871a3e4c71e7e0be8dd",
+   "kernel": "groupnorm_int",
+   "arrays": {}
+  },
+  "isqrt_perfect_squares": {
+   "json_sha256": "918575fdf37030c9a770aae769e2b354abd637d49dddbf2163d22f3a81d21bfd",
+   "kernel": "isqrt",
+   "arrays": {}
+  },
+  "avgpool2_ties": {
+   "json_sha256": "83d3e3690b2bb1a8899c205f5bb5e59c9e8e78bb2768db06b311d9da7c56cf02",
+   "kernel": "avgpool2_int",
+   "arrays": {}
+  },
+  "bilinear_up2_border_1x1": {
+   "json_sha256": "c19786063b0d9b7babce6d7af7b616b029bcd72ea2b608da317848c69a4fc49d",
+   "kernel": "bilinear_up2_int",
+   "arrays": {}
+  },
+  "bilinear_up2_border_2x2": {
+   "json_sha256": "3ba072eb788917f55f3243b348b5272f48ebdbf0d66a5b25fdbeafe89597cce4",
+   "kernel": "bilinear_up2_int",
+   "arrays": {}
+  },
+  "bilinear_up2_border_2x3": {
+   "json_sha256": "d202e6166845f90b7b7a913bda0a6ce96c4e4d9d2f9298850d3d82060d219672",
+   "kernel": "bilinear_up2_int",
+   "arrays": {}
+  },
+  "bilinear_up2_border_3x3": {
+   "json_sha256": "9a256a7bf5e2c203be61cdc7777e579428dce4634d56ee2efb944c8d0716afe8",
+   "kernel": "bilinear_up2_int",
+   "arrays": {}
+  },
+  "lut_all_indices_gelu_11_11": {
+   "json_sha256": "af514092f52df41a90f4638ebb40687dce7a651f3e41c4e4be969ec527ec5394",
+   "kernel": "lut_apply",
+   "arrays": {
+    "x": {
+     "file": "lut_all_indices_gelu_11_11__x.bin",
+     "dtype": "i16",
+     "shape": [
+      65536
+     ],
+     "sha256": "697df5e3231fd569f25e5826e4aab08fe4526bb6730a7489aabeb4708e6efe5d"
+    },
+    "table": {
+     "file": "lut_all_indices_gelu_11_11__table.bin",
+     "dtype": "i16",
+     "shape": [
+      65536
+     ],
+     "sha256": "c3fec073d79028f3d5940cff20cb7694b1736ed7a57716a18c86e8e44d172624"
+    },
+    "mask": {
+     "file": "lut_all_indices_gelu_11_11__mask.bin",
+     "dtype": "u8",
+     "shape": [
+      65536
+     ],
+     "sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+    },
+    "y": {
+     "file": "lut_all_indices_gelu_11_11__y.bin",
+     "dtype": "i16",
+     "shape": [
+      65536
+     ],
+     "sha256": "c3fec073d79028f3d5940cff20cb7694b1736ed7a57716a18c86e8e44d172624"
+    }
+   }
+  },
+  "lut_all_indices_silu_10_10": {
+   "json_sha256": "9ac079075011e9c001a65b824a57669515cafd5e5d213b504a1de59a92c8472b",
+   "kernel": "lut_apply",
+   "arrays": {
+    "x": {
+     "file": "lut_all_indices_silu_10_10__x.bin",
+     "dtype": "i16",
+     "shape": [
+      65536
+     ],
+     "sha256": "697df5e3231fd569f25e5826e4aab08fe4526bb6730a7489aabeb4708e6efe5d"
+    },
+    "table": {
+     "file": "lut_all_indices_silu_10_10__table.bin",
+     "dtype": "i16",
+     "shape": [
+      65536
+     ],
+     "sha256": "e34c89266abe9c073b790122f24b76ab226054e57f7b24f032e21a6b5f30f107"
+    },
+    "mask": {
+     "file": "lut_all_indices_silu_10_10__mask.bin",
+     "dtype": "u8",
+     "shape": [
+      65536
+     ],
+     "sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+    },
+    "y": {
+     "file": "lut_all_indices_silu_10_10__y.bin",
+     "dtype": "i16",
+     "shape": [
+      65536
+     ],
+     "sha256": "e34c89266abe9c073b790122f24b76ab226054e57f7b24f032e21a6b5f30f107"
+    }
+   }
+  },
+  "lut_all_indices_silu_10_11": {
+   "json_sha256": "874ea2e4148d6c8c63e7f4f079c8d85a9f0990691ee7a9017131bdf6e026bbc4",
+   "kernel": "lut_apply",
+   "arrays": {
+    "x": {
+     "file": "lut_all_indices_silu_10_11__x.bin",
+     "dtype": "i16",
+     "shape": [
+      65536
+     ],
+     "sha256": "697df5e3231fd569f25e5826e4aab08fe4526bb6730a7489aabeb4708e6efe5d"
+    },
+    "table": {
+     "file": "lut_all_indices_silu_10_11__table.bin",
+     "dtype": "i16",
+     "shape": [
+      65536
+     ],
+     "sha256": "2848881707ce89fac15fea8647c048e32c199e57dd25ba29d8ce33c323ff8413"
+    },
+    "mask": {
+     "file": "lut_all_indices_silu_10_11__mask.bin",
+     "dtype": "u8",
+     "shape": [
+      65536
+     ],
+     "sha256": "6ecf773ce2ce5eb1857b23f3f7ac5838d40c005b41d3ea1971a5de82e9f7467f"
+    },
+    "y": {
+     "file": "lut_all_indices_silu_10_11__y.bin",
+     "dtype": "i16",
+     "shape": [
+      65536
+     ],
+     "sha256": "2848881707ce89fac15fea8647c048e32c199e57dd25ba29d8ce33c323ff8413"
+    }
+   }
+  },
+  "lut_all_indices_silu_11_11": {
+   "json_sha256": "edf241099f4f7d0f665a524dec0f275aba7fc2a36731a7e15e33879495bfcee1",
+   "kernel": "lut_apply",
+   "arrays": {
+    "x": {
+     "file": "lut_all_indices_silu_11_11__x.bin",
+     "dtype": "i16",
+     "shape": [
+      65536
+     ],
+     "sha256": "697df5e3231fd569f25e5826e4aab08fe4526bb6730a7489aabeb4708e6efe5d"
+    },
+    "table": {
+     "file": "lut_all_indices_silu_11_11__table.bin",
+     "dtype": "i16",
+     "shape": [
+      65536
+     ],
+     "sha256": "dddc859491a7ad82bad38e0403ffa14a08c1baeface3ad4532f99e3eed920601"
+    },
+    "mask": {
+     "file": "lut_all_indices_silu_11_11__mask.bin",
+     "dtype": "u8",
+     "shape": [
+      65536
+     ],
+     "sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+    },
+    "y": {
+     "file": "lut_all_indices_silu_11_11__y.bin",
+     "dtype": "i16",
+     "shape": [
+      65536
+     ],
+     "sha256": "dddc859491a7ad82bad38e0403ffa14a08c1baeface3ad4532f99e3eed920601"
+    }
+   }
+  },
+  "lut_all_indices_silu_11_12": {
+   "json_sha256": "3bc90dc4077b2b725b3a8f6665b8b55be65ad06b502973d83d4e1cc249bb339b",
+   "kernel": "lut_apply",
+   "arrays": {
+    "x": {
+     "file": "lut_all_indices_silu_11_12__x.bin",
+     "dtype": "i16",
+     "shape": [
+      65536
+     ],
+     "sha256": "697df5e3231fd569f25e5826e4aab08fe4526bb6730a7489aabeb4708e6efe5d"
+    },
+    "table": {
+     "file": "lut_all_indices_silu_11_12__table.bin",
+     "dtype": "i16",
+     "shape": [
+      65536
+     ],
+     "sha256": "66720d47de9c1208f397ad4877c9b5e2c3209b945868067be557a8252f30b137"
+    },
+    "mask": {
+     "file": "lut_all_indices_silu_11_12__mask.bin",
+     "dtype": "u8",
+     "shape": [
+      65536
+     ],
+     "sha256": "3258be5abd6807290666a842740fb05fa4987e04767c8d512dd81f4b1afea312"
+    },
+    "y": {
+     "file": "lut_all_indices_silu_11_12__y.bin",
+     "dtype": "i16",
+     "shape": [
+      65536
+     ],
+     "sha256": "66720d47de9c1208f397ad4877c9b5e2c3209b945868067be557a8252f30b137"
+    }
+   }
+  },
+  "lut_all_indices_silu_12_12": {
+   "json_sha256": "3ebc9467a337b520849d73be1f1d36c5f61b0dbc7621bbdfbc43dd613e909a4f",
+   "kernel": "lut_apply",
+   "arrays": {
+    "x": {
+     "file": "lut_all_indices_silu_12_12__x.bin",
+     "dtype": "i16",
+     "shape": [
+      65536
+     ],
+     "sha256": "697df5e3231fd569f25e5826e4aab08fe4526bb6730a7489aabeb4708e6efe5d"
+    },
+    "table": {
+     "file": "lut_all_indices_silu_12_12__table.bin",
+     "dtype": "i16",
+     "shape": [
+      65536
+     ],
+     "sha256": "1e680284d464d9ffe4e44e65b3a6be8bed454c8705a12998c4b07b4e913c972a"
+    },
+    "mask": {
+     "file": "lut_all_indices_silu_12_12__mask.bin",
+     "dtype": "u8",
+     "shape": [
+      65536
+     ],
+     "sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+    },
+    "y": {
+     "file": "lut_all_indices_silu_12_12__y.bin",
+     "dtype": "i16",
+     "shape": [
+      65536
+     ],
+     "sha256": "1e680284d464d9ffe4e44e65b3a6be8bed454c8705a12998c4b07b4e913c972a"
+    }
+   }
+  },
+  "lut_all_indices_silu_9_10": {
+   "json_sha256": "d3e21203d46ed3888a7c18c696abefe43ca641436d416921444c4732be546a3a",
+   "kernel": "lut_apply",
+   "arrays": {
+    "x": {
+     "file": "lut_all_indices_silu_9_10__x.bin",
+     "dtype": "i16",
+     "shape": [
+      65536
+     ],
+     "sha256": "697df5e3231fd569f25e5826e4aab08fe4526bb6730a7489aabeb4708e6efe5d"
+    },
+    "table": {
+     "file": "lut_all_indices_silu_9_10__table.bin",
+     "dtype": "i16",
+     "shape": [
+      65536
+     ],
+     "sha256": "8c7290f77ad936538519eff2ad40ee05ee413c4d586284934d5cbe58d66a4544"
+    },
+    "mask": {
+     "file": "lut_all_indices_silu_9_10__mask.bin",
+     "dtype": "u8",
+     "shape": [
+      65536
+     ],
+     "sha256": "6ecf773ce2ce5eb1857b23f3f7ac5838d40c005b41d3ea1971a5de82e9f7467f"
+    },
+    "y": {
+     "file": "lut_all_indices_silu_9_10__y.bin",
+     "dtype": "i16",
+     "shape": [
+      65536
+     ],
+     "sha256": "8c7290f77ad936538519eff2ad40ee05ee413c4d586284934d5cbe58d66a4544"
+    }
+   }
+  },
+  "lut_all_indices_silu_9_9": {
+   "json_sha256": "0c733427b1fc1684962b0089a4a2e0cca39480fc7cc0cb6d6e083fd57f86cd42",
+   "kernel": "lut_apply",
+   "arrays": {
+    "x": {
+     "file": "lut_all_indices_silu_9_9__x.bin",
+     "dtype": "i16",
+     "shape": [
+      65536
+     ],
+     "sha256": "697df5e3231fd569f25e5826e4aab08fe4526bb6730a7489aabeb4708e6efe5d"
+    },
+    "table": {
+     "file": "lut_all_indices_silu_9_9__table.bin",
+     "dtype": "i16",
+     "shape": [
+      65536
+     ],
+     "sha256": "9401d06a5134bf02c58d8eeaa8722580facbfd49317924a9351d32e3efcbf983"
+    },
+    "mask": {
+     "file": "lut_all_indices_silu_9_9__mask.bin",
+     "dtype": "u8",
+     "shape": [
+      65536
+     ],
+     "sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+    },
+    "y": {
+     "file": "lut_all_indices_silu_9_9__y.bin",
+     "dtype": "i16",
+     "shape": [
+      65536
+     ],
+     "sha256": "9401d06a5134bf02c58d8eeaa8722580facbfd49317924a9351d32e3efcbf983"
+    }
+   }
+  },
+  "attention_equal_scores": {
+   "json_sha256": "744331d9701fe197aa66a8753d9be442013b5db998405ee9d638da94a700ef6a",
+   "kernel": "attention_int",
+   "arrays": {}
+  },
+  "attention_exponent_clamp_boundary": {
+   "json_sha256": "2f331babb295cd1ec51d3b6a903b92b4a561328eaabde34dfe917c8a340554e2",
+   "kernel": "attention_int",
+   "arrays": {}
+  },
+  "attention_signed_weighted_average": {
+   "json_sha256": "977d42a3c33d6ff6fbf055a5d70e276fb360cf8289694057e401bc048573425a",
+   "kernel": "attention_int",
+   "arrays": {}
+  },
+  "attention_head_dim12_multiplier": {
+   "json_sha256": "ab01c282dba8f57ecbd371ce11c5ce9a43168901ea48cacd3bab3ac185c9ea8d",
+   "kernel": "attention_int",
+   "arrays": {}
+  },
+  "sse_endpoints": {
+   "json_sha256": "72e86691952d391d935e9e8fc2644a8b26203a34ca8a15d4eb07a6edd72a6de7",
+   "kernel": "score_int",
+   "arrays": {}
+  }
+ }
+}

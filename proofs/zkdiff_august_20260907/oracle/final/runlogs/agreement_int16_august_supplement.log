@@ -1,0 +1,2 @@
+[int16] calibrated on 15 rows (7 august) in 3.7s; scale map 188 tensors (15 inherited); bounds i64-safe: True
+wrote oracle/final/agreement_int16_august.json (7s, 6 new conditions)

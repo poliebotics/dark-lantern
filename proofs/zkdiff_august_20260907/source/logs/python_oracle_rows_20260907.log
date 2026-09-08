@@ -1,0 +1,8 @@
+[int16] calibrated on 15 rows (7 august) in 3.1s; scale map 188 tensors (15 inherited); bounds i64-safe: True
+positive control d2 1328 correct: 8764459045 == 8764459045, clips {}
+positive control d2 1328 wrong_p2: 22311372969 == 22311372969, clips {}
+row 600 offset -2 (direct) wrong 598: R_correct 4435539299 R_wrong 11254163581 D 6818624282 clips {} {}  E_wrong from g1 august_inputs E_wrong (row 598, rint(E_bf16 2^14))
+row 601 offset +2 (direct) wrong 603: R_correct 4823951305 R_wrong 11932687322 D 7108736017 clips {} {}  E_wrong from g1 august_inputs E_wrong (row 603, rint(E_bf16 2^14))
+row 602 offset -15 (direct) wrong 587: R_correct 4590007358 R_wrong 12130484180 D 7540476822 clips {} {}  E_wrong from g1 august_inputs E_wrong (row 587, rint(E_bf16 2^14))
+row 603 offset +15 (direct) wrong 618: R_correct 5122027412 R_wrong 10802701224 D 5680673812 clips {} {}  E_wrong from g1 august_inputs E_wrong (row 618, rint(E_bf16 2^14))
+wrote source/runs/python_oracle_rows_20260907T194614Z.json

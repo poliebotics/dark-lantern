@@ -1,0 +1,51 @@
+{
+ "fixture": "bilinear_up2_border_1x1",
+ "kernel": "bilinear_up2_int",
+ "params": {
+  "rule": "per axis out[2k] = in[max(k-1,0)] + 3 in[k], out[2k+1] = 3 in[k] + in[min(k+1,n-1)] (x4 each axis), then (sum + 8) >> 4 once",
+  "in_shape": [
+   1,
+   1,
+   1
+  ]
+ },
+ "notes": "1x1 input: all four outputs equal the input",
+ "inputs": {
+  "x": [
+   [
+    [
+     5
+    ]
+   ]
+  ]
+ },
+ "expected": {
+  "y": [
+   [
+    [
+     5,
+     5
+    ],
+    [
+     5,
+     5
+    ]
+   ]
+  ],
+  "sum_x16": [
+   [
+    [
+     80,
+     80
+    ],
+    [
+     80,
+     80
+    ]
+   ]
+  ]
+ },
+ "counters": {
+  "clip_events": 0
+ }
+}

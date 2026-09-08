@@ -1,0 +1,23 @@
+   Compiling zeebeam-b3xof-relation v0.1.0 ([alternate build root]/g2_guest_r5/armc-relation/b3xof)
+   Compiling armc-int v0.1.0 ([alternate build root]/g2_guest_r5/armc-int)
+   Compiling zkdiff-script v0.1.0 ([alternate build root]/g2_guest_r5/armc-relation/script)
+   Compiling armc-relation v0.1.0 ([alternate build root]/g2_guest_r5/armc-relation/relation)
+   Compiling zkdiff-armc-adapter v0.1.0 ([alternate build root]/g2_guest_r5/armc-relation/adapter)
+warning: zkdiff-script@0.1.0: rustc +succinct --version: "rustc 1.94.0-dev\n"
+warning: zkdiff-script@0.1.0: zkdiff-guest built at 2026-09-07 22:38:44
+    Finished `release` profile [optimized] target(s) in 11.87s
+warning: the following packages contain code that will be rejected by a future version of Rust: proc-macro-error2 v2.0.1
+note: to see what the problems were, use the option `--future-incompat-report`, or run `cargo report future-incompatibilities --id 1`
+cargo_exit=0
+{
+  "groth16_vk_bytes": 492,
+  "groth16_vk_sha256": "4388a21c687fdd5f218d7e3d13190cac4c5355818d3605fd5fb811df468ee696",
+  "guest_elf_bytes": 396200,
+  "guest_elf_sha256": "51b7bc3548d0a4fdb822aa8ed8c8982b5fe707900133d67d664fa3a732fc75cc",
+  "sp1_circuit_version": "v6.1.0",
+  "verifier_binary_sha256": "602cdd5734bc504fd76d00a435129e4b90194f032360b4227991e06b62be248d",
+  "vk_root": "002f850ee998974d6cc00e50cd0814b098c05bfade466d28573240d057f25352"
+}
+guest_elf_bytes=396200 guest_elf_sha256=51b7bc3548d0a4fdb822aa8ed8c8982b5fe707900133d67d664fa3a732fc75cc
+sp1_vkey=0x00f0189431f373a5a931f1db0c6abd9673e4176e653e0f84f97724d302fda027
+sp1_circuit_version=v6.1.0 groth16_vk_sha256=4388a21c687fdd5f218d7e3d13190cac4c5355818d3605fd5fb811df468ee696

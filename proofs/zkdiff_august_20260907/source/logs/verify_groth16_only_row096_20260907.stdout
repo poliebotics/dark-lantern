@@ -1,0 +1,129 @@
+{
+  "artifact": "[private development path]",
+  "artifact_bytes": 2779,
+  "artifact_sha256": "62f113eca2c59970b54890bc6857ac527ecfde94487b4fba7263c325db32f936",
+  "artifact_sp1_version": "v6.1.0",
+  "controls": [
+    {
+      "actual": "Groth16 verification failed under the pinned keys: ProofVerificationFailed",
+      "behaved_as_expected": true,
+      "control": "public.kind_byte_10",
+      "expected_failure_stage": "groth16.verify (public-input hash differs)",
+      "layer": "relation",
+      "mutated_artefact_sha256": "96e3ee48fe5f716e7e17077f5e2cf20923be3f7f3b7d1e157e3c41e33b4c40d6",
+      "mutation": "public byte 10 (denoiser kind) ^= 1"
+    },
+    {
+      "actual": "Groth16 verification failed under the pinned keys: ProofVerificationFailed",
+      "behaved_as_expected": true,
+      "control": "public.offset_rule_byte_11",
+      "expected_failure_stage": "groth16.verify (public-input hash differs)",
+      "layer": "relation",
+      "mutated_artefact_sha256": "9d8f1d89310de2c7ce3de360e7d0ed8cd6622eb09cf8e0d1966dcedbbc280863",
+      "mutation": "public byte 11 (offset-rule flag) ^= 1"
+    },
+    {
+      "actual": "Groth16 verification failed under the pinned keys: ProofVerificationFailed",
+      "behaved_as_expected": true,
+      "control": "public.row_u_20",
+      "expected_failure_stage": "groth16.verify (public-input hash differs)",
+      "layer": "relation",
+      "mutated_artefact_sha256": "0692e8bdd11c8a814b7661a1f170e8dd408e0479c7d6ab1ee18fa886bb256591",
+      "mutation": "public u (bytes 20..24) + 1"
+    },
+    {
+      "actual": "Groth16 verification failed under the pinned keys: ProofVerificationFailed",
+      "behaved_as_expected": true,
+      "control": "public.offset_24",
+      "expected_failure_stage": "groth16.verify (public-input hash differs)",
+      "layer": "relation",
+      "mutated_artefact_sha256": "0938c36ed165153678a0dad8d2f907107f23abd7b16c78edd321b6e3925815ba",
+      "mutation": "public offset d (bytes 24..28) negated"
+    },
+    {
+      "actual": "Groth16 verification failed under the pinned keys: ProofVerificationFailed",
+      "behaved_as_expected": true,
+      "control": "public.constants_sha256_564",
+      "expected_failure_stage": "groth16.verify (public-input hash differs)",
+      "layer": "relation",
+      "mutated_artefact_sha256": "79d298c2902bac241c0d651366ca762a0bc1a513aa2f14bc511283eb1d468735",
+      "mutation": "public constants_sha256 byte 564 ^= 1"
+    },
+    {
+      "actual": "Groth16 verification failed under the pinned keys: ProofVerificationFailed",
+      "behaved_as_expected": true,
+      "control": "public.noise_blake3_660",
+      "expected_failure_stage": "groth16.verify (public-input hash differs)",
+      "layer": "relation",
+      "mutated_artefact_sha256": "bc7a8be535b4410d9c129f2f487a52cf96f35328ec863b90c9176cb620a2c3d9",
+      "mutation": "public noise BLAKE3 byte 660 ^= 1"
+    },
+    {
+      "actual": "Groth16 verification failed under the pinned keys: ProofVerificationFailed",
+      "behaved_as_expected": true,
+      "control": "public.r_correct_716",
+      "expected_failure_stage": "groth16.verify (public-input hash differs)",
+      "layer": "relation",
+      "mutated_artefact_sha256": "af9fca78655d94ce438a0bd036788b6c6148a45e3551842f07db1e14fcf766d9",
+      "mutation": "public R_correct byte 716 ^= 1"
+    },
+    {
+      "actual": "Groth16 verification failed under the pinned keys: ProofVerificationFailed",
+      "behaved_as_expected": true,
+      "control": "public.clip_count_750",
+      "expected_failure_stage": "groth16.verify (public-input hash differs)",
+      "layer": "relation",
+      "mutated_artefact_sha256": "8d9905fb4aeb17bc9b44cb7495afd0957f4eb0e5764c156828a068dce4e0d53f",
+      "mutation": "public clip-event count byte 750 ^= 1 (and flag 749 made consistent)"
+    },
+    {
+      "actual": "Groth16 verification failed under the pinned keys: GeneralError(Group(NotOnCurve))",
+      "behaved_as_expected": true,
+      "control": "proof.byte_110",
+      "expected_failure_stage": "groth16.verify (pairing check fails)",
+      "layer": "relation",
+      "mutated_artefact_sha256": "277cc2ae753fc8c741a8b078d07a29d7cfd92f7e05f77c894ef017f002517380",
+      "mutation": "proof byte 110 (inside the Groth16 proof, after the key prefix and exit/root/nonce header) ^= 1"
+    },
+    {
+      "actual": "Groth16 verification failed under the pinned keys: Groth16VkeyHashMismatch",
+      "behaved_as_expected": true,
+      "control": "proof.circuit_key_prefix",
+      "expected_failure_stage": "groth16.verify (Groth16VkeyHashMismatch)",
+      "layer": "relation",
+      "mutated_artefact_sha256": "24f032b0128402da3dcf4a8130eecbaaac6263c47560ccd0897a84db8addc26d",
+      "mutation": "proof byte 0 (circuit verifier key prefix) ^= 1"
+    },
+    {
+      "actual": "Groth16 verification failed under the pinned keys: GeneralError(InvalidData)",
+      "behaved_as_expected": true,
+      "control": "proof.truncated",
+      "expected_failure_stage": "groth16.verify (decode fails)",
+      "layer": "relation",
+      "mutated_artefact_sha256": "0766183ce93b2f9716acfe89c3ed89704421c99a3f3661aacdc5061fdac8d886",
+      "mutation": "proof bytes truncated by one byte"
+    },
+    {
+      "actual": "Groth16 verification failed under the pinned keys: ProofVerificationFailed",
+      "behaved_as_expected": true,
+      "control": "program.vkey",
+      "expected_failure_stage": "groth16.verify (vkey public input differs)",
+      "layer": "relation",
+      "mutated_artefact_sha256": "7a256e7ee329290a9fa8caf1b36eedc270d6ebbdacb7f38c14e7326920e23121",
+      "mutation": "program vkey nibble 10 changed: 0x0092cba2077fe7fc426bb539add5d0365e4edea340c2f3c040da9bd73cf9a82c"
+    }
+  ],
+  "controls_all_behaved": true,
+  "error": null,
+  "groth16_vk_sha256": "4388a21c687fdd5f218d7e3d13190cac4c5355818d3605fd5fb811df468ee696",
+  "mode": "groth16_only",
+  "ok": true,
+  "program_vkey": "0x0092cba2c77fe7fc426bb539add5d0365e4edea340c2f3c040da9bd73cf9a82c",
+  "proof_bytes": 356,
+  "proof_bytes_sha256": "defbe6b6a8651692df662dd8a48608d59915d221408116fe1b89cb58f1ba9db4",
+  "public_values_bytes": 1085,
+  "public_values_sha256": "4a75159f7807e05fce1b908299d54d482a81abd765d6f6cdea5d8811aa72ef69",
+  "verified": true,
+  "verifier_sp1_circuit_version": "v6.1.0"
+}
+verified_and_accepted=true

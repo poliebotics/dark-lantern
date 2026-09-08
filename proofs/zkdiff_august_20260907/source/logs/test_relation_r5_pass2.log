@@ -1,0 +1,89 @@
+   Compiling armc-relation v0.1.0 (source/armc-relation/relation)
+   Compiling zkdiff-armc-adapter v0.1.0 (source/armc-relation/adapter)
+warning: fields `s_t`, `bayer_blake3`, and `meta` are never read
+   --> relation/tests/vectors.rs:571:5
+    |
+570 | struct LogRow {
+    |        ------ fields in this struct
+571 |     s_t: [u8; 32],
+    |     ^^^
+572 |     bayer_blake3: [u8; 32],
+    |     ^^^^^^^^^^^^
+573 |     meta: [u8; 28],
+    |     ^^^^
+    |
+    = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: `armc-relation` (test "vectors") generated 1 warning
+    Finished `release` profile [optimized] target(s) in 3.87s
+     Running unittests src/lib.rs (target/release/deps/armc_relation-e187e72fb3fe77b1)
+
+running 25 tests
+test fp::tests::bf16_known_values ... ok
+test fp::tests::f16_round_trips_and_known_values ... ok
+test fp::tests::half_even_division_matches_python_round_on_fractions ... ok
+test fp::tests::g1_rshift_round_is_half_up_with_floor_shift ... ok
+test frame::tests::raw_index_is_the_rggb_split ... ok
+test frame::tests::bins_are_torch_adaptive_bins ... ok
+test header::tests::round_trips_and_fails_closed ... ok
+test membership::tests::frozen_row96_constants_reproduce ... ok
+test membership::tests::leaf_u_encoding_round_trips ... ok
+test hint::tests::coordinates_are_symmetric_and_span_q14 ... ok
+test membership::tests::witness_round_trips_and_mutations_fail_closed ... ok
+test noise::tests::constants_are_g1s ... ok
+test rule::tests::all_112_august_assignments_follow_the_owner_rule ... ok
+test rule::tests::generic_rule_fails_closed_on_other_sessions ... ok
+test spec::tests::spec_digest_is_pinned ... ok
+test statement::tests::offsets_fail_closed ... ok
+test statement::tests::offset_rule_flag_parses ... ok
+test statement::tests::previous_record_round_trips ... ok
+test statement::tests::public_layout_round_trips_and_offsets_are_fixed ... ok
+test statement::tests::public_parse_enforces_the_offset_rule_on_the_public_fields ... ok
+test net::tests::stub_is_deterministic_and_hint_sensitive ... ok
+test noise::tests::noising_and_residual_small_cases ... ok
+test beacon::tests::wrong_round_wrong_value_and_bad_point_are_rejected ... ok
+test beacon::tests::real_quicknet_beacons_verify_and_bind ... ok
+test emission::tests::august_row_96_emission_digest_matches_the_chain_log ... ok
+
+test result: ok. 25 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.05s
+
+     Running tests/vectors.rs (target/release/deps/vectors-4d7c121f9da458e0)
+
+running 15 tests
+test float_conversions_match_numpy_and_torch_on_8192_vectors ... ok
+test torch_area_bins_match_the_python_reference ... ok
+test august_chain_log_walks_end_to_end ... ok
+test d2_row_1328_coordinates_hint_noise_and_ct_match_g1 ... ok
+test august_tree_builder_reproduces_the_frozen_siblings_and_root ... ok
+test august_rows_599_and_600_beacons_verify ... ok
+test d2_rows_1328_and_1330_hints_match_the_g1_vectors ... ok
+test synthetic_frame_a_random_bytes_reduces_bit_exactly ... ok
+test synthetic_frame_b_with_f16_subnormal_means_reduces_bit_exactly ... ok
+test august_row_600_needs_only_the_raw_frame ... ok
+test august_row_684_mirrored_minus_30_passes_the_offset_check_and_needs_only_its_frame ... ok
+test end_to_end_synthetic_statement_matches_the_python_oracle ... ok
+test august_rows_render_open_and_advance ... ok
+test end_to_end_negative_controls_fail_closed ... ok
+test synthetic_mirror40_session_admits_the_mirrored_minus_30_statement_and_refuses_its_relabellings ... FAILED
+
+failures:
+
+---- synthetic_mirror40_session_admits_the_mirrored_minus_30_statement_and_refuses_its_relabellings stdout ----
+
+thread 'synthetic_mirror40_session_admits_the_mirrored_minus_30_statement_and_refuses_its_relabellings' (907742) panicked at relation/tests/vectors.rs:754:5:
+assertion `left == right` failed
+  left: "declared wrong row is outside the committed session"
+ right: "mirrored offset claimed although the direct wrong row lies inside the session"
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    synthetic_mirror40_session_admits_the_mirrored_minus_30_statement_and_refuses_its_relabellings
+
+test result: FAILED. 14 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.49s
+
+error: test failed, to rerun pass `-p armc-relation --test vectors`
+
+real	0m6.433s
+user	0m53.101s
+sys	0m1.658s

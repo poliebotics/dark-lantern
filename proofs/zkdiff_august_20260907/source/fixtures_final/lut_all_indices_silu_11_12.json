@@ -1,0 +1,56 @@
+{
+ "fixture": "lut_all_indices_silu_11_12",
+ "kernel": "lut_apply",
+ "params": {
+  "kind": "silu",
+  "f_in": 11,
+  "f_out": 12,
+  "index": "x_int16 + 32768",
+  "table_sha256_int16_le": "66720d47de9c1208f397ad4877c9b5e2c3209b945868067be557a8252f30b137",
+  "mask_sha256_uint8": "3258be5abd6807290666a842740fb05fa4987e04767c8d512dd81f4b1afea312"
+ },
+ "notes": "every int16 input once: expected output is the table itself; expected clip events = number of indexed entries with mask 1 (all of them here)",
+ "inputs": {
+  "x": {
+   "npz_key": "x",
+   "shape": [
+    65536
+   ],
+   "dtype": "<i2",
+   "sha256": "697df5e3231fd569f25e5826e4aab08fe4526bb6730a7489aabeb4708e6efe5d"
+  },
+  "table": {
+   "npz_key": "table",
+   "shape": [
+    65536
+   ],
+   "dtype": "<i2",
+   "sha256": "66720d47de9c1208f397ad4877c9b5e2c3209b945868067be557a8252f30b137"
+  },
+  "mask": {
+   "npz_key": "mask",
+   "shape": [
+    65536
+   ],
+   "dtype": "u1",
+   "sha256": "3258be5abd6807290666a842740fb05fa4987e04767c8d512dd81f4b1afea312"
+  }
+ },
+ "expected": {
+  "y": {
+   "npz_key": "y",
+   "shape": [
+    65536
+   ],
+   "dtype": "<i2",
+   "sha256": "66720d47de9c1208f397ad4877c9b5e2c3209b945868067be557a8252f30b137"
+  },
+  "clipped_entries": 16378,
+  "first_clipped_index_int16": 16390,
+  "hit_for_input_32767": 1
+ },
+ "counters": {
+  "lut_clipped_hits": 16378
+ },
+ "npz": "lut_all_indices_silu_11_12.npz"
+}

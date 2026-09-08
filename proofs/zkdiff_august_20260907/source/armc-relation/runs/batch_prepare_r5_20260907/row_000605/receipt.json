@@ -1,0 +1,78 @@
+{
+  "attempt_id": "20260907T214510Z-development-workstation-929846",
+  "attempt_started_utc": "20260907T214531Z",
+  "attempts": [
+    {
+      "attempt_id": "20260907T212744Z-development-workstation-919299",
+      "attempt_started_utc": "20260907T212804Z",
+      "elapsed_ms": 201,
+      "error": null,
+      "outcome_class": null,
+      "proof_sha256": null,
+      "public_values_sha256": null,
+      "receipt_sha256": "b5e1a730e008925dd34fb3d797895eb8f022e2975c4a916d2e944a3188e65d7b",
+      "status": "pending_frame"
+    }
+  ],
+  "base_offset": -2,
+  "binary_sha256": "b2326282f027fbc05ac939b00317b02ec4074752dd3148b761d2e943f01e2729",
+  "build_record": {
+    "bytes": 5662,
+    "path": "source/armc-relation/runs/build_record_20260907T214246Z.txt",
+    "sha256": "f09c8daea6814460efeb88d2194a18369583745d7cc7e74597f923d605094f2c"
+  },
+  "chain_log_blake3": "754e5716e65a065e5ad3146131609a1fd12e8310d966fb6bf2d3de6c568e7f8b",
+  "command": [
+    "./target/release/zkdiff-batch",
+    "prepare",
+    "--chain-log",
+    "source/vectors_relation/august/chain_log.csv",
+    "--rows",
+    "600..711",
+    "--frames-dir",
+    "source/frames_august",
+    "--noise-dir",
+    "source/noise_august",
+    "--blob",
+    "source/blobs/final_int16/constants_int16.blob",
+    "--expect",
+    "source/expected_identities_august.json",
+    "--build-record",
+    "source/armc-relation/runs/build_record_20260907T214246Z.txt",
+    "--out",
+    "source/armc-relation/runs/batch_prepare_r5_20260907"
+  ],
+  "constants_sha256": "73310ddab603cab5588d05e9ac4deb7e56466a6fae4bbf89244c32f2bd1a8b92",
+  "elapsed_ms": 200,
+  "expected_identities": {
+    "path": "source/expected_identities_august.json",
+    "sha256": "6822cdcefa9a8833460287a3bb619fa63d0f3755d46dccc7db5418b261d6d613"
+  },
+  "frame": "source/frames_august/frame_000605.raw",
+  "groth16_vk_sha256": "4388a21c687fdd5f218d7e3d13190cac4c5355818d3605fd5fb811df468ee696",
+  "guest_elf_bytes": 396200,
+  "guest_elf_sha256": "51b7bc3548d0a4fdb822aa8ed8c8982b5fe707900133d67d664fa3a732fc75cc",
+  "host": "the development machine",
+  "leaf_r": "0cbfbe931acbf22f442eb44737197d6e041d02655ab8c0242d7e59bfc4e31dcd",
+  "leaf_u": "2fce732cbe48189d9e021cffdc3b32746944e9d7ec4b2b8ed565a591e8e2ffbb",
+  "mode": "prepare",
+  "noise": "source/noise_august/noise_000605.i16",
+  "noise_blake3": "df909d68974210ccdf48e06cd38b16fac52b79fc976a36b84292de1ac38944dd",
+  "noise_sha256": "132e8d6ec7e88fb883d300e12954faa542dad376ab4e1e523d8fcc59b614b58e",
+  "notes": [
+    "beacons 31521691 and 31521691 verify and bind",
+    "both patterns render to the chain log's digests",
+    "leaf_r 0cbfbe931acbf22f442eb44737197d6e041d02655ab8c0242d7e59bfc4e31dcd and leaf_u 2fce732cbe48189d9e021cffdc3b32746944e9d7ec4b2b8ed565a591e8e2ffbb open to the committed root",
+    "noise BLAKE3 equals the frozen normative table entry"
+  ],
+  "offset": -2,
+  "offset_rule": "direct",
+  "raw_blake3_expected": "18bc4f775052d4f21408c91fba512a0cdcf641437cd33f9da5166c7bb4e085d8",
+  "row": 605,
+  "schema": "zbdiff-row-receipt/v3",
+  "sp1_circuit_version": "v6.1.0",
+  "spec_sha256": "02872ec23ab5a503fa1a6b450d90511f83a59afb36457cacb161e1277b22073b",
+  "status": "pending_frame",
+  "witness_dir": "source/armc-relation/runs/batch_prepare_r5_20260907/row_000605/witness",
+  "wrong_row": 603
+}

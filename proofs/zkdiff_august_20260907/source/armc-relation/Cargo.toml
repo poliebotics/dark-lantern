@@ -1,0 +1,19 @@
+[workspace]
+members = ["b3xof", "relation", "adapter"]
+resolver = "2"
+
+# The SP1 guest (`program/`) and the host (`script/`) are their own workspace roots, as in the proved
+# tree (rust/row_binding_join_membership_sp1_candidate/{program,script}/Cargo.toml, `[workspace]`).
+
+[profile.release]
+lto = "thin"
+overflow-checks = true
+
+[profile.test]
+opt-level = 3
+overflow-checks = true
+
+[patch.crates-io]
+# Same fork and tag as the proved guest (program/Cargo.toml of the proved tree, pinned in its Cargo.lock at
+# commit 9e4e2ae4780d3d69cecbec000f5e814df2392468). On the host it compiles as plain Rust.
+bls12_381 = { git = "https://github.com/sp1-patches/bls12_381", tag = "patch-0.8.0-sp1-6.2.0" }

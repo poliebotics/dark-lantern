@@ -1,0 +1,58 @@
+driver=./build_reproducible.sh driver_sha256=911baa0c210268e4db05533df7e987a9abd4ea2a4841436047f51b1ef3453ac8
+date_utc=20260908T170538Z host=replication-box kernel=Linux 6.8.0-60-generic x86_64 glibc=ldd (Ubuntu GLIBC 2.35-0ubuntu3.10) 2.35
+cargo_config=[package copy]/source/armc-relation/.cargo/config.toml ([net]offline = true)
+== command
+cd [package copy]/source/armc-relation/script && touch ../program/src/main.rs && cargo build --release --offline --locked  --bin zkdiff-execute --bin zkdiff-ceremony --bin zkdiff-batch --bin zkdiff-verify
+== environment
+CUDA=0 features=<none> CARGO_NET_OFFLINE=true LC_ALL=C RUSTFLAGS=<unset> CARGO_HOME=[cargo home] CARGO_BUILD_JOBS=<default> SP1_CIRCUIT_VERSION_env=<unset>
+guest remap: --remap-path-prefix $CARGO_HOME=/cargo and [package copy]/source=/g2 (script/build.rs); guest --locked
+== toolchains
+host: rustc 1.98.0 (88d9e12ae 2026-08-18)
+host: binary: rustc
+host: commit-hash: 88d9e12ae178fab0fb5cc050a94da85685d449ea
+host: commit-date: 2026-08-18
+host: host: x86_64-unknown-linux-gnu
+host: release: 1.98.0
+host: LLVM version: 22.1.8
+host: cargo 1.98.0 (797e8a9bc 2026-08-05)
+succinct: rustc 1.94.0-dev
+succinct: binary: rustc
+succinct: commit-hash: unknown
+succinct: commit-date: unknown
+succinct: host: x86_64-unknown-linux-gnu
+succinct: release: 1.94.0-dev
+succinct: LLVM version: 21.1.8
+cargo-prove: cargo-prove sp1 (f66b4bf 2026-08-12T14:40:11.709680161Z)
+cargo_prove_sha256=d8835f80b386d5025420d6b09e73ad825b822ac143e8ed09312b2e08018ff106
+succinct_toolchain_tarball_sha256=12c94435d41bfe4e20131bbcce40b35abd32270ad792befc653af4e3fabc192f
+== prover server and circuit artefacts (when present on this box)
+sp1_gpu_server=absent
+== lockfiles before
+eb391600a39644efa3393b27572a8b2816f0c4ae3cdfe8106110fb4d6f7f9db4  [package copy]/source/armc-relation/program/Cargo.lock
+3334b46f269f3d2bcab9839498bdfe55794cc998b1950f1729a6a12acebe73e6  [package copy]/source/armc-relation/script/Cargo.lock
+ffaf75d3c658cb38139101a700c948dcd5ee7af9a6bec5f683a091aec4363025  [package copy]/source/armc-relation/Cargo.lock
+78fa6498840a4d0bc0d552382999f5705fd1b9bc203fd076614b964ab16dceb2  [package copy]/source/armc-int/Cargo.lock
+== frozen source digests (every first-party file the guest and hosts are built from; LC_ALL=C sort)
+source_digest_list_sha256=5f6a10439fbd84d7ed02d0a2b4f185c1ad2a051267bce9faf5620ae1238b573d  -
+source_digest_list=[package copy]/source/armc-relation/runs/SOURCE_DIGESTS_20260908T170538Z.txt entries=54
+== build
+cargo_exit=0 full_log=[package copy]/source/armc-relation/runs/build_log_20260908T170538Z.txt
+warning: zkdiff-script@0.1.0: rustc +succinct --version: "rustc 1.94.0-dev\n"
+warning: zkdiff-script@0.1.0: zkdiff-guest built at 2026-09-08 17:06:16
+    Finished `release` profile [optimized] target(s) in 2m 09s
+build wall=129.90 s maxrss=3001344 KiB
+elf=../program/target/elf-compilation/riscv64im-succinct-zkvm-elf/release/zkdiff-guest
+guest_elf_bytes=396200 guest_elf_sha256=51b7bc3548d0a4fdb822aa8ed8c8982b5fe707900133d67d664fa3a732fc75cc
+home_paths_in_elf=0
+sp1_vkey=0x00f0189431f373a5a931f1db0c6abd9673e4176e653e0f84f97724d302fda027
+sp1_circuit_version=v6.1.0 embedded_groth16_vk_sha256=4388a21c687fdd5f218d7e3d13190cac4c5355818d3605fd5fb811df468ee696 verifier_sees_elf_sha256=51b7bc3548d0a4fdb822aa8ed8c8982b5fe707900133d67d664fa3a732fc75cc
+host_zkdiff-execute=bf57aa06a3431de8e4b342f202ec4dd38ba1206c11b771017328e1f6b0250a59 bytes=60059560 glibc_max=GLIBC_2.34
+host_zkdiff-ceremony=d234ca64a1e7795ce7bca122c0dc8bdd9b29475a62c2643a1842f6bf86c018f6 bytes=61681192 glibc_max=GLIBC_2.34
+host_zkdiff-batch=2aca95b4474fca8e98070eb6beccca9d1438fda0f6e6e69db550d31cd1f5724f bytes=62619400 glibc_max=GLIBC_2.34
+host_zkdiff-verify=fe6e005a749fed668421c7eb654e10ae2061d6f5df0b375284929b1710bef859 bytes=57897576 glibc_max=GLIBC_2.34
+== lockfiles after
+eb391600a39644efa3393b27572a8b2816f0c4ae3cdfe8106110fb4d6f7f9db4  [package copy]/source/armc-relation/program/Cargo.lock
+3334b46f269f3d2bcab9839498bdfe55794cc998b1950f1729a6a12acebe73e6  [package copy]/source/armc-relation/script/Cargo.lock
+ffaf75d3c658cb38139101a700c948dcd5ee7af9a6bec5f683a091aec4363025  [package copy]/source/armc-relation/Cargo.lock
+78fa6498840a4d0bc0d552382999f5705fd1b9bc203fd076614b964ab16dceb2  [package copy]/source/armc-int/Cargo.lock
+BUILD_REPRODUCED_OK sha256=51b7bc3548d0a4fdb822aa8ed8c8982b5fe707900133d67d664fa3a732fc75cc vkey=0x00f0189431f373a5a931f1db0c6abd9673e4176e653e0f84f97724d302fda027 bytes=396200 groth16_vk_sha256=4388a21c687fdd5f218d7e3d13190cac4c5355818d3605fd5fb811df468ee696 circuit=v6.1.0

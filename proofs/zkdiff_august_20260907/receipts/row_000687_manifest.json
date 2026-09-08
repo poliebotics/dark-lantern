@@ -1,0 +1,263 @@
+{
+  "acceptance": {
+    "accepted": true,
+    "checks": [
+      {
+        "check": "circuit.groth16_vk_sha256",
+        "detail": "4388a21c687fdd5f218d7e3d13190cac4c5355818d3605fd5fb811df468ee696 (492 bytes, sp1-verifier v6.1.0)",
+        "status": "PASS"
+      },
+      {
+        "check": "groth16.verify",
+        "detail": "standalone sp1-verifier, program vkey 0x00f0189431f373a5a931f1db0c6abd9673e4176e653e0f84f97724d302fda027, vk root 002f850ee998974d6cc00e50cd0814b098c05bfade466d28573240d057f25352, exit code 0",
+        "status": "PASS"
+      },
+      {
+        "check": "layout.parse",
+        "detail": "magic, ABI, protocol, length, session-id padding, fixed noising constants, D, denominator, sign, clip flag, offset rule on its face, u = r + d",
+        "status": "PASS"
+      },
+      {
+        "check": "layout.fixed_constants",
+        "detail": "timestep 150, SA 63540, SO 16053, shift 16, F_CT 12, F_HINT 14, F_EPS 12, denominator 721554505728",
+        "status": "PASS"
+      },
+      {
+        "check": "layout.difference",
+        "detail": "R_correct 4963242017 R_wrong 11551274827 D 6588032810 sign 1 clip_flag 0 clip_events 0",
+        "status": "PASS"
+      },
+      {
+        "check": "program.denoiser_kind",
+        "detail": "1",
+        "status": "PASS"
+      },
+      {
+        "check": "program.constants_sha256",
+        "detail": "73310ddab603cab5588d05e9ac4deb7e56466a6fae4bbf89244c32f2bd1a8b92",
+        "status": "PASS"
+      },
+      {
+        "check": "program.spec_sha256",
+        "detail": "02872ec23ab5a503fa1a6b450d90511f83a59afb36457cacb161e1277b22073b",
+        "status": "PASS"
+      },
+      {
+        "check": "program.preprocess_spec_sha256",
+        "detail": "025de070985434fefaea547745e18983ffd21c50ec66e3126bcfffc8af58f4a5",
+        "status": "PASS"
+      },
+      {
+        "check": "session.id",
+        "detail": "ZEEBEAM_MAINNET_BLOCKING_TRAINING_300S_20260822_001",
+        "status": "PASS"
+      },
+      {
+        "check": "session.row_count",
+        "detail": "712",
+        "status": "PASS"
+      },
+      {
+        "check": "session.tree_depth",
+        "detail": "10",
+        "status": "PASS"
+      },
+      {
+        "check": "session.s_0",
+        "detail": "74e3a131e1aaadd98e18c5f2a5f28ffaf59b8cd738e10216586efa2a893f384c",
+        "status": "PASS"
+      },
+      {
+        "check": "session.s_n",
+        "detail": "aeea9f4d6a55ebecd900eae187ea70dce05696551f96ae976c9a5243b3a4398e",
+        "status": "PASS"
+      },
+      {
+        "check": "session.authority_manifest_sha256",
+        "detail": "740d752d27b70cb63c9501a470562a52616f4a445a7a9c0fb300844f61c7d783",
+        "status": "PASS"
+      },
+      {
+        "check": "session.chain_log_blake3",
+        "detail": "754e5716e65a065e5ad3146131609a1fd12e8310d966fb6bf2d3de6c568e7f8b",
+        "status": "PASS"
+      },
+      {
+        "check": "session.context_digest",
+        "detail": "f5eba65f4a3604bee08207b4af571b97813cbd4dd3f919c110f6c5125ab21ee0",
+        "status": "PASS"
+      },
+      {
+        "check": "session.ordered_session_root",
+        "detail": "38a484b8793f3afadaf8fc5ba1c04d47e08cdbb4c07a39da09fb4149499a6572",
+        "status": "PASS"
+      },
+      {
+        "check": "rule.range",
+        "detail": "row 687 in 600..=711",
+        "status": "PASS"
+      },
+      {
+        "check": "rule.assignment",
+        "detail": "row 687 base -15 -> offset -15 (direct, byte 11 = 0), u = 672",
+        "status": "PASS"
+      },
+      {
+        "check": "row.table",
+        "detail": "row 687 present",
+        "status": "PASS"
+      },
+      {
+        "check": "row.wrong_row",
+        "detail": "672",
+        "status": "PASS"
+      },
+      {
+        "check": "row.offset",
+        "detail": "-15",
+        "status": "PASS"
+      },
+      {
+        "check": "row.offset_rule",
+        "detail": "direct",
+        "status": "PASS"
+      },
+      {
+        "check": "row.noise_blake3",
+        "detail": "baba5881f94a7a20280564bf34e945075451e045c8f1596fed7fe6815fb7663d",
+        "status": "PASS"
+      },
+      {
+        "check": "row.raw_blake3",
+        "detail": "367b88298921be64189070418901048bda846d6060beba35efc598e4b84ea32a",
+        "status": "PASS"
+      },
+      {
+        "check": "row.emission_blake3_r",
+        "detail": "dc11bae952847a7d50d2db30c6c31575d7e21cc1d406ad8d0870877022cedbbd",
+        "status": "PASS"
+      },
+      {
+        "check": "row.emission_blake3_u",
+        "detail": "7d0953049b9498207f84e073d12add115a4d4863dee4087fba6d966e5044deba",
+        "status": "PASS"
+      },
+      {
+        "check": "row.own_drand_round",
+        "detail": "31521701",
+        "status": "PASS"
+      },
+      {
+        "check": "row.prev_drand_round",
+        "detail": "31521701",
+        "status": "PASS"
+      },
+      {
+        "check": "row.leaf_r",
+        "detail": "858f2383f4956163fcc8295905996289105c189017c0bf637216576306dbf2f4",
+        "status": "PASS"
+      },
+      {
+        "check": "row.leaf_u",
+        "detail": "ddea3f1000a55ca13c7a364bdfa536a607b795e2033419bd6462a6484f0ff0ef",
+        "status": "PASS"
+      },
+      {
+        "check": "oracle.r_correct",
+        "detail": "4963242017",
+        "status": "PASS"
+      },
+      {
+        "check": "oracle.r_wrong",
+        "detail": "11551274827",
+        "status": "PASS"
+      },
+      {
+        "check": "outcome.class",
+        "detail": "positive (D = 6588032810); clip_events 0",
+        "status": "PASS"
+      }
+    ],
+    "failed_check": null,
+    "outcome_class": "positive",
+    "proof_bytes_sha256": "cf54121987f3f07f08ab25c2b5923e777b74544e5ab9371eeb5289d109104fc6",
+    "public_values_sha256": "971a66b5a6e29c03950160dd2cee8b1913fab4503206f49aeaa1d2a12b51de44"
+  },
+  "acceptance_elapsed_ms": 458,
+  "clip_events": 0,
+  "clip_flag": 0,
+  "constants_sha256": "73310ddab603cab5588d05e9ac4deb7e56466a6fae4bbf89244c32f2bd1a8b92",
+  "cycle_limit_note": "enforced by the CPU executor/prover; the pinned sp1-cuda 6.4.0 client does not forward it to the GPU server (Astra r5 finding 8)",
+  "cycle_limit_requested": 200000000000,
+  "denoiser_kind": 1,
+  "difference": 6588032810,
+  "difference_sign_positive": true,
+  "groth16_vk_sha256": "4388a21c687fdd5f218d7e3d13190cac4c5355818d3605fd5fb811df468ee696",
+  "guest_elf_bytes": 396200,
+  "guest_elf_sha256": "51b7bc3548d0a4fdb822aa8ed8c8982b5fe707900133d67d664fa3a732fc75cc",
+  "host_peak_rss_kib": 7171376,
+  "host_peak_rss_note": "VmHWM of this client process only; the sp1-gpu-server and any executor runner are separate processes (sidecar)",
+  "noise_blake3": "baba5881f94a7a20280564bf34e945075451e045c8f1596fed7fe6815fb7663d",
+  "noise_sha256": "d8516e6f3954b8941d86a120d4807dc7b54672898648498f069911dd62e90ecb",
+  "offset": -15,
+  "offset_rule": "direct",
+  "oracle_mode": "native_reexecution",
+  "oracle_notes": [
+    "row 687 wrong 672 offset -15 offset_rule 0 kind 1 constants_sha256 73310ddab603cab5588d05e9ac4deb7e56466a6fae4bbf89244c32f2bd1a8b92 R_correct 4963242017 R_wrong 11551274827 D 6588032810 sign 1 clip_events 0"
+  ],
+  "outcome_class": "positive",
+  "proof_bytes": 2447,
+  "proof_file": "row_000687_groth16.bin",
+  "proof_raw_bytes": 356,
+  "proof_raw_bytes_file": "row_000687_proof_bytes.bin",
+  "proof_raw_bytes_sha256": "cf54121987f3f07f08ab25c2b5923e777b74544e5ab9371eeb5289d109104fc6",
+  "proof_sha256": "dc4b96e0a931ac330d98b62e86fc9e47a3ff18147fffffe4140ffe021268c388",
+  "prove_elapsed_ms": 3881696,
+  "prover": "local_cuda_explicit_device6",
+  "public_values_bytes": 752,
+  "public_values_file": "row_000687_public_values.bin",
+  "public_values_hex": "5a4244494646303101090100f0020000af020000a0020000f1ffffffc80200000a0033005a45454245414d5f4d41494e4e45545f424c4f434b494e475f545241494e494e475f333030535f32303236303832325f303031000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000074e3a131e1aaadd98e18c5f2a5f28ffaf59b8cd738e10216586efa2a893f384caeea9f4d6a55ebecd900eae187ea70dce05696551f96ae976c9a5243b3a4398e740d752d27b70cb63c9501a470562a52616f4a445a7a9c0fb300844f61c7d783754e5716e65a065e5ad3146131609a1fd12e8310d966fb6bf2d3de6c568e7f8bf5eba65f4a3604bee08207b4af571b97813cbd4dd3f919c110f6c5125ab21ee038a484b8793f3afadaf8fc5ba1c04d47e08cdbb4c07a39da09fb4149499a6572858f2383f4956163fcc8295905996289105c189017c0bf637216576306dbf2f4ddea3f1000a55ca13c7a364bdfa536a607b795e2033419bd6462a6484f0ff0ef367b88298921be64189070418901048bda846d6060beba35efc598e4b84ea32adc11bae952847a7d50d2db30c6c31575d7e21cc1d406ad8d0870877022cedbbd7d0953049b9498207f84e073d12add115a4d4863dee4087fba6d966e5044deba0000000001e0fba50000000001e0fba565888790f3d3531c81cb5403fedb376a3c710431577fac03268b48c429636b9873310ddab603cab5588d05e9ac4deb7e56466a6fae4bbf89244c32f2bd1a8b9202872ec23ab5a503fa1a6b450d90511f83a59afb36457cacb161e1277b22073b025de070985434fefaea547745e18983ffd21c50ec66e3126bcfffc8af58f4a5baba5881f94a7a20280564bf34e945075451e045c8f1596fed7fe6815fb7663d9600000034f8000000000000b53e000000000000100c0e0c2110d527010000004b7782b0020000002a67ad880100000000000000a800000001000000",
+  "public_values_sha256": "971a66b5a6e29c03950160dd2cee8b1913fab4503206f49aeaa1d2a12b51de44",
+  "r_correct": 4963242017,
+  "r_wrong": 11551274827,
+  "raw_frame_blake3": "367b88298921be64189070418901048bda846d6060beba35efc598e4b84ea32a",
+  "raw_frame_sha256": "5813ef0893a7ff532931a2c9fa2c36211341ec3237e3e74e0d804bc43f9597b3",
+  "row": 687,
+  "schema": "zbdiff-ceremony/v2",
+  "sdk_tamper_controls": [
+    {
+      "actual": "Groth16 verification error: the public values in the sp1 proof do not match the public values in the inner groth16\nbn254 proof",
+      "behaved_as_expected": true,
+      "control": "sdk.public_byte_716",
+      "expected_failure_stage": "sdk verify (committed value digest differs)",
+      "layer": "relation",
+      "mutated_artefact_sha256": "24071383861f0630955aa40cb1161970ae6ecb5ab77f6ec296f6feb619485182",
+      "mutation": "public byte 716 (R_correct) ^= 1"
+    },
+    {
+      "actual": "Groth16 verification error: encoded_proof metadata does not match public inputs",
+      "behaved_as_expected": true,
+      "control": "sdk.proof_nibble_96",
+      "expected_failure_stage": "sdk verify (pairing check fails)",
+      "layer": "relation",
+      "mutated_artefact_sha256": "ac3b4495336a029e45c45a6e314c2092ee751f3d5ed6aa2bbbf5f9b6fa51adbf",
+      "mutation": "groth16 encoded-proof hex nibble 96 flipped"
+    },
+    {
+      "actual": "Groth16 verification error: the verifying key does not match the inner groth16 bn254 proof's committed verifying\nkey",
+      "behaved_as_expected": true,
+      "control": "sdk.wrong_vkey",
+      "expected_failure_stage": "sdk verify (vkey hash public input differs)",
+      "layer": "relation",
+      "mutated_artefact_sha256": "d270edbb74c10c0619882cd438ea679f85e44370a9e7619445d0b0681e3499cd",
+      "mutation": "verifying key preprocessed commitment rotated: 0x007fb8c7d97dfbfd9fb9e957b7c38d0959d65964c2cebf55463d7d70490fb0b6"
+    }
+  ],
+  "setup_elapsed_ms": 2900,
+  "sp1_circuit_version_compiled": "v6.1.0",
+  "sp1_version": "v6.1.0",
+  "sp1_vkey": "0x00f0189431f373a5a931f1db0c6abd9673e4176e653e0f84f97724d302fda027",
+  "spec_sha256": "02872ec23ab5a503fa1a6b450d90511f83a59afb36457cacb161e1277b22073b",
+  "verify_and_tamper_elapsed_ms": 443,
+  "wrong_row": 672
+}

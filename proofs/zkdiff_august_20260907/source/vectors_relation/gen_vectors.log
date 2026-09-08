@@ -1,0 +1,44 @@
+{
+ "conv": "numpy astype(float16) and torch .to(bfloat16) are both round-to-nearest-even; ties injected at [0,1024) (f16) and [1024,2048) (bf16)",
+ "synthetic_frame_a": {
+  "seed_hex": "0xa5a50001",
+  "bytes": 24472000,
+  "sha256": "94e188691d7dae573224d42c31354846145a35a247e43cf53d1d4ce1f3675b97",
+  "generator": "splitmix64 closed form: out_i = mix(seed + (i+1)*0x9E3779B97F4A7C15), bytes = LE words; frame b: x<1000 -> (byte==255), 1000<=x<2000 -> byte&3"
+ },
+ "synthetic_frame_a_stats": {
+  "torchpath_vs_exact_q12_mismatch": 39077,
+  "area_f32_vs_exact_mean_f32_bit_mismatch": 38934,
+  "distinct_bin_counts": [
+   576,
+   600,
+   625
+  ],
+  "f16_subnormal_means": 0,
+  "zero_means": 0
+ },
+ "synthetic_frame_b": {
+  "seed_hex": "0xa5a50002",
+  "bytes": 24472000,
+  "sha256": "e7d09e5c5d81e7f77008cf759c17a25740e92043134ada997b942472a7f8d266",
+  "generator": "splitmix64 closed form: out_i = mix(seed + (i+1)*0x9E3779B97F4A7C15), bytes = LE words; frame b: x<1000 -> (byte==255), 1000<=x<2000 -> byte&3"
+ },
+ "synthetic_frame_b_stats": {
+  "torchpath_vs_exact_q12_mismatch": 24962,
+  "area_f32_vs_exact_mean_f32_bit_mismatch": 34173,
+  "distinct_bin_counts": [
+   576,
+   600,
+   625
+  ],
+  "f16_subnormal_means": 7313,
+  "zero_means": 751
+ },
+ "august_chain_walk": {
+  "advances_reproduced": 711,
+  "of": 711,
+  "final_advance_equals_S_N": true
+ }
+}
+wrote 65 files
+exit=0

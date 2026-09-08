@@ -1,0 +1,5 @@
+# Inherited by every cargo invocation under armc-relation/, including sp1-build's own `cargo metadata` and the guest
+# `cargo +succinct build` it spawns from script/build.rs (Astra r4 item 7): nothing may reach the network during a
+# reproducible build. Registry and git sources must already be in $CARGO_HOME.
+[net]
+offline = true

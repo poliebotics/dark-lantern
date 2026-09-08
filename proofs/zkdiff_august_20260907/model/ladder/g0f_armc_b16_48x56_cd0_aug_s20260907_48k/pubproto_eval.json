@@ -1,0 +1,148 @@
+{
+ "checkpoint": "experiments/zk_lean_20260907/g0f_armc_b16_48x56_cd0_aug_s20260907_48k/latest.pt",
+ "checkpoint_sha256": "d131764f19475c9fc7c59af069c0b3221d8947286c7018d44aa8a056e15244c3",
+ "checkpoint_step": 48000,
+ "crop_id": "UNCROPPED_FULL_FRAME_20260825",
+ "out_size": "48,56",
+ "arch": {
+  "kind": "armc",
+  "base_ch": 16,
+  "mults": [
+   1,
+   2,
+   4,
+   4
+  ],
+  "hint_in_ch": 14,
+  "params": 1114500
+ },
+ "preprocessing": "ARM-C: NO crop; full sensor frame area-resized to out_size; emission resized not cropped",
+ "protocol": {
+  "t": 150,
+  "offsets": [
+   -2,
+   2,
+   -15,
+   15,
+   30
+  ],
+  "stride": 1,
+  "seed": 20260823,
+  "sub_blocks": 40,
+  "noise_rule": "one generator per session, manual_seed(EVAL_SEED), one draw per row in row order",
+  "statistics": "published protocol statistics; one-stream scoring RNG seeded once per session with the protocol seed"
+ },
+ "sessions": {
+  "d2": {
+   "n_rows": 1200,
+   "contiguous_eval_blocks": [
+    400,
+    400,
+    400
+   ],
+   "blocks_used": [
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40
+   ],
+   "conditions": {
+    "correct": 0.012062459924879173,
+    "wrong_-2": 0.03629086551722139,
+    "wrong_+2": 0.03624330504176517,
+    "wrong_-15": 0.03610697762264559,
+    "wrong_+15": 0.036142774155984325,
+    "wrong_+30": 0.036189729414569834
+   },
+   "delta_wrong_mean": {
+    "mean": 0.02413227042555809,
+    "ci95": [
+     0.023949221515841786,
+     0.024317964449563686
+    ]
+   },
+   "paired_fraction_correct_lower": 1.0,
+   "auroc": {
+    "correct_vs_wrong_avg": 1.0,
+    "correct_vs_wrong_-2": 1.0,
+    "correct_vs_wrong_+2": 1.0,
+    "correct_vs_wrong_-15": 1.0,
+    "correct_vs_wrong_+15": 1.0,
+    "correct_vs_wrong_+30": 1.0
+   },
+   "raw_scores": "experiments/zk_lean_20260907/g0f_armc_b16_48x56_cd0_aug_s20260907_48k/pubproto_raw.npz_d2.npz"
+  },
+  "v10": {
+   "n_rows": 500,
+   "contiguous_eval_blocks": [
+    250,
+    250
+   ],
+   "blocks_used": [
+    42,
+    42,
+    42,
+    42,
+    41,
+    41,
+    42,
+    42,
+    42,
+    42,
+    41,
+    41
+   ],
+   "conditions": {
+    "correct": 0.013918059211224318,
+    "wrong_-2": 0.03982830317318439,
+    "wrong_+2": 0.03984335369616747,
+    "wrong_-15": 0.03996415895596146,
+    "wrong_+15": 0.03998772171884775,
+    "wrong_+30": 0.039946299828588966
+   },
+   "delta_wrong_mean": {
+    "mean": 0.02599590826332569,
+    "ci95": [
+     0.025831239788967127,
+     0.026190305645960216
+    ]
+   },
+   "paired_fraction_correct_lower": 1.0,
+   "auroc": {
+    "correct_vs_wrong_avg": 1.0,
+    "correct_vs_wrong_-2": 1.0,
+    "correct_vs_wrong_+2": 1.0,
+    "correct_vs_wrong_-15": 1.0,
+    "correct_vs_wrong_+15": 1.0,
+    "correct_vs_wrong_+30": 1.0
+   },
+   "raw_scores": "experiments/zk_lean_20260907/g0f_armc_b16_48x56_cd0_aug_s20260907_48k/pubproto_raw.npz_v10.npz"
+  }
+ }
+}

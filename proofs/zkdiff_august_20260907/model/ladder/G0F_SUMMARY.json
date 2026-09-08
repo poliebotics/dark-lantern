@@ -1,0 +1,74 @@
+[
+ {
+  "variant": "g0f_armc_b12_48x56_cd0_aug_s20260907_48k",
+  "params": 629092,
+  "step": 48000,
+  "cells": [
+   "d2: AUROC 1.000000 paired 1.0000 delta 1.562e-02",
+   "v10: AUROC 1.000000 paired 1.0000 delta 1.597e-02"
+  ]
+ },
+ {
+  "variant": "g0f_armc_b12_96x112_cd0_aug_s20260907_48k",
+  "params": 629092,
+  "step": 48000,
+  "cells": [
+   "d2: AUROC 1.000000 paired 1.0000 delta 1.992e-02",
+   "v10: AUROC 1.000000 paired 1.0000 delta 2.033e-02"
+  ]
+ },
+ {
+  "variant": "g0f_armc_b12_96x112_cd0_aug_s20260909_24k",
+  "params": 629092,
+  "step": 24000,
+  "cells": [
+   "d2: AUROC 0.999999 paired 1.0000 delta 6.949e-03",
+   "v10: AUROC 0.999936 paired 1.0000 delta 6.535e-03"
+  ]
+ },
+ {
+  "variant": "g0f_armc_b16_48x56_cd0_aug_s20260907_48k",
+  "params": 1114500,
+  "step": 48000,
+  "cells": [
+   "d2: AUROC 1.000000 paired 1.0000 delta 2.413e-02",
+   "v10: AUROC 1.000000 paired 1.0000 delta 2.600e-02"
+  ]
+ },
+ {
+  "variant": "g0f_armc_b16_96x112_cd0_aug_s20260907_96k",
+  "params": 1114500,
+  "step": 96000,
+  "cells": [
+   "d2: AUROC 1.000000 paired 1.0000 delta 3.328e-02",
+   "v10: AUROC 1.000000 paired 1.0000 delta 3.625e-02"
+  ]
+ },
+ {
+  "variant": "g0f_armc_b8_48x56_cd0_aug_s20260907_96k",
+  "params": 281540,
+  "step": 96000,
+  "cells": [
+   "d2: AUROC 1.000000 paired 1.0000 delta 1.748e-02",
+   "v10: AUROC 1.000000 paired 1.0000 delta 1.838e-02"
+  ]
+ },
+ {
+  "variant": "g0f_armc_b8_96x112_cd0_aug_s20260907_48k",
+  "params": 281540,
+  "step": 48000,
+  "cells": [
+   "d2: AUROC 1.000000 paired 1.0000 delta 1.331e-02",
+   "v10: AUROC 1.000000 paired 1.0000 delta 1.306e-02"
+  ]
+ },
+ {
+  "variant": "g0f_armc_b8_96x112_cd0_aug_s20260907_96k",
+  "params": 281540,
+  "step": 96000,
+  "cells": [
+   "d2: AUROC 1.000000 paired 1.0000 delta 2.109e-02",
+   "v10: AUROC 1.000000 paired 1.0000 delta 2.208e-02"
+  ]
+ }
+]

@@ -1,0 +1,56 @@
+mode=execute_only
+prover=local_cpu_explicit
+row=39
+raw=source/frames_august/frame_000600.raw
+constants_blob=source/blobs/final_int16/constants_int16.blob constants_blob_bytes=3476866 constants_sha256=73310ddab603cab5588d05e9ac4deb7e56466a6fae4bbf89244c32f2bd1a8b92 spec_sha256=02872ec23ab5a503fa1a6b450d90511f83a59afb36457cacb161e1277b22073b
+guest_elf_bytes=396200 guest_elf_sha256=51b7bc3548d0a4fdb822aa8ed8c8982b5fe707900133d67d664fa3a732fc75cc
+stdout: denoiser_kind=1
+oracle=native_reexecution checked=752 circuit_derived=0
+oracle_note=row 39 wrong 9 offset -30 offset_rule 1 kind 1 constants_sha256 73310ddab603cab5588d05e9ac4deb7e56466a6fae4bbf89244c32f2bd1a8b92 R_correct 11009821022 R_wrong 10383892790 D -625928232 sign 0 clip_events 0
+public_values_hex=5a4244494646303101090101f00200002700000009000000e2ffffff2800000006001d005a42444946465f53594e5448455449435f4d4952524f5234305f30303100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000072d53804a715d3ddfa97a8bd267437764376fcb89ca319ead23196aa4934eeee14710ee417f3d925758619d3828716ddaced4d4145153ce70216125d0b8c19e2848d37601c2eab165676ec5d91d0f0954bb7fc7a15727faa29c972d73c0f7aa3bb197b83a8252250996fc0146e9e712ca250ed09cc735cad028c2a3452129b09f4ce0daefe32f7679b9bad6fdb33c186a37b529fc19cd0e1b1b0be27d01184ed0592d4b7c6220097bf3f813184f604fd20bf6563be5b3f88e3be76d08d48e20fe96721e9e9554a6d81f5c88f8a3389242e95bc101a5e705725c5b0e40537cf869a02a087f9c234a11379f3cffe7a8c3debe2f5e965a8b5ac0cd918a4596315449d4a0745dd0990b12ab8c94d524430dd3b3559face4d7d4d621c481a72087d4aefe1fc9892da933f8584cb741a715d4a2cd7b0e4fbfc37b5c6679aa2f20ec80e73209337ed8f8238e15c596769f242ac419fae89cd7531f4834b4bf9da3deb3b0000000001e0fb9f0000000001e0fb9f4b3f922851464bf3d9b745ac0acfc0ca1274b293d7930badca224585e780e06573310ddab603cab5588d05e9ac4deb7e56466a6fae4bbf89244c32f2bd1a8b9202872ec23ab5a503fa1a6b450d90511f83a59afb36457cacb161e1277b22073b025de070985434fefaea547745e18983ffd21c50ec66e3126bcfffc8af58f4a5ea4ac2f60b7322a77674e60c0e38e52c0c7e7ac4aa713761aa6c59d6fddf9eea9600000034f8000000000000b53e000000000000100c0e0c5e893c900200000036a1ed6a02000000d817b1daffffffff00000000a800000000000000
+verified_public_values=true
+public_values_bytes=752
+total_instruction_count=14400234352
+total_syscall_count=269904
+CYCLE_REGION zbdiff_relation = 14147214309
+CYCLE_REGION denoiser_correct = 3455561731
+CYCLE_REGION denoiser_wrong = 3455560702
+CYCLE_REGION emission_render_r = 2143608240
+CYCLE_REGION emission_render_u = 2143607829
+CYCLE_REGION frame_reduce = 1980085474
+CYCLE_REGION raw_blake3_24MB = 697810935
+CYCLE_REGION hints = 257062531
+CYCLE_REGION constants_blob = 252852645
+CYCLE_REGION previous_advance_leg = 4912904
+CYCLE_REGION drand_verify = 4904530
+CYCLE_REGION noise = 3657240
+CYCLE_REGION constants = 260149
+CYCLE_REGION ordered_session_membership = 153595
+CYCLE_REGION public_commitment = 42387
+CYCLE_REGION parse_witness = 5051
+CYCLE_REGION private_input = 603
+host_elapsed_ms=219124
+proof_generated=false
+	Command being timed: "./target/release/zkdiff-execute --witness-dir source/vectors_relation/synthetic_mirror40 --raw source/frames_august/frame_000600.raw --blob source/blobs/final_int16/constants_int16.blob"
+	User time (seconds): 685.99
+	System time (seconds): 12.58
+	Percent of CPU this job got: 283%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 4:06.39
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 15576768
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 13337623
+	Voluntary context switches: 23718
+	Involuntary context switches: 449695
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 16
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

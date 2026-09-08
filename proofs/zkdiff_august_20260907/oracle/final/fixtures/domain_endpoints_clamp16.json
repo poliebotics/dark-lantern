@@ -1,0 +1,63 @@
+{
+ "fixture": "domain_endpoints_clamp16",
+ "kernel": "clamp16",
+ "params": {
+  "domain": [
+   -32768,
+   32767
+  ]
+ },
+ "notes": "both endpoints admitted; values outside saturate and each is one clip event",
+ "inputs": {
+  "v": [
+   -1099511627776,
+   -39795,
+   -32769,
+   -32768,
+   -32767,
+   -1,
+   0,
+   1,
+   32766,
+   32767,
+   32768,
+   39795,
+   1099511627776
+  ]
+ },
+ "expected": {
+  "clamp16": [
+   -32768,
+   -32768,
+   -32768,
+   -32768,
+   -32767,
+   -1,
+   0,
+   1,
+   32766,
+   32767,
+   32767,
+   32767,
+   32767
+  ],
+  "clip_flag": [
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   1,
+   1,
+   1
+  ]
+ },
+ "counters": {
+  "clip_events": 6
+ }
+}

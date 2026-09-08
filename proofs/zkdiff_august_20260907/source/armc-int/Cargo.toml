@@ -1,0 +1,31 @@
+[package]
+name = "armc-int"
+version = "0.1.0"
+edition = "2021"
+publish = false
+description = "Bit-exact integer inference of the ARM-C lean denoiser (G1 fixed-point scheme), no_std-capable"
+
+[workspace]
+
+[features]
+# `std` carries the host-side oracle loader, blob writer and hashing used by the tests and the
+# `armc-blob` tool. The SP1 guest depends on this crate with `default-features = false`.
+default = ["std"]
+std = ["dep:serde", "dep:serde_json", "dep:sha2"]
+
+[dependencies]
+serde = { version = "1", features = ["derive"], optional = true }
+serde_json = { version = "1", optional = true }
+sha2 = { version = "0.10", optional = true }
+
+[[bin]]
+name = "armc-blob"
+path = "src/bin/armc_blob.rs"
+required-features = ["std"]
+
+[profile.release]
+overflow-checks = true
+
+[profile.test]
+opt-level = 3
+overflow-checks = true

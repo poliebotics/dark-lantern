@@ -1,0 +1,24 @@
+{
+ "chain_log_sha256": "d0f97ac986ba9cfa1f47d62661307d59d0227beb9fdb2a0557a516ebe81e47fd",
+ "rows": {
+  "1328": {
+   "S_t_hex": "c6184ba16dad655bc401636903b54a0e7547c292d77069852d74051f93ac94fe",
+   "E_int_sha256_g1": "26f2fedf7b7795bbff827915f65b6bb9d21de380be0aec10979f138ba0152de6",
+   "torchpath_vs_exact_q14_mismatch": 124727
+  },
+  "1330": {
+   "S_t_hex": "3b84e08b80da4751f5c91e10765086c394091d0571f95e7bb4e365eb297d39ed",
+   "E_int_sha256_g1": "7ab0ee868f3c227b78d8e17f6fba8a5f2d14a2b8c9dd2cc70ca0a9029ff72484",
+   "torchpath_vs_exact_q14_mismatch": 124809
+  }
+ },
+ "g1_manifest_sha256": {
+  "vectors_int16_correct.json": "9fbd289aef40b9f9ed39c471a576c885eeba8383b382f3b0c65fb6fbdf1a5e19",
+  "vectors_int16_wrong_p2.json": "3909f881eeccbd7472f9a2c9a94fd49d62fc043846223840b60f94373f277cfc"
+ },
+ "row_1328_inputs_match_g1": true,
+ "residual_sums_g1_int16": {
+  "correct_1328": 12775807457,
+  "wrong_1330": 15569339266
+ }
+}

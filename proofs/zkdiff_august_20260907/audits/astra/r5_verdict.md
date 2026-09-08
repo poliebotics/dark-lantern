@@ -1,0 +1,69 @@
+> Public audit copy, 8 September 2026. Personal identifiers, private instructions and development infrastructure have been
+> redacted; scientific findings are preserved. Findings describe the revision reviewed at the time and may be superseded; see
+> AUDIT_TRAIL.md.
+> Paths are package-relative where the file is in this package and marked (on-box) or (repository root) where it is not; line
+> numbers are as at audit time and may have moved.
+
+**Revise before the pilot.** The main binding and arithmetic work holds, but the shipped guest rejects six required rows.
+
+1. **REVISE: the mirrored-offset implementation is incomplete.** `parse_offset` accepts only `[-2,2,-15,15,30]`, so it rejects the **−30** required by rows **684, 689, 694, 699, 704 and 709**, before checking the mirror flag. I reproduced this rejection with the shipped ELF and prepared row-684 witness, using substitute raw bytes because rejection precedes frame hashing. Preparation missed it because missing frames return before `evaluate`.
+
+   Validate direct and mirrored offsets together, regression-test all 112 assignments and a successful complete-guest −30 case, update the specification, then regenerate ELF/vkey pins. Merely adding −30 indiscriminately would weaken the declared direct-offset rule. `source/armc-relation/relation/src/statement.rs` line 283, `source/armc-relation/script/src/batch.rs` line 225.
+
+2. **ACCEPT: the remaining computation is bound, conditional on checking the expected public identities.** The guest hashes the complete raw frame, derives its whole-frame reduction through the specified float32/FP16/BF16 path, derives both XOF hints and emission renders from authenticated states, opens both row leaves under one session root, verifies both required quicknet beacons, and checks the predecessor advance into `S_r`. It computes `C_t` once and uses the same noise target in both passes. The adapter hashes the actual constants blob and consumes the already-noised frame directly.
+
+   I found no host-supplied thumbnail, hint, score or second noise input bypass. The predecessor leg proves the specified advance into the committed state; it does not prove an entire session history or physical capture. `source/armc-relation/relation/src/statement.rs` line 352, `source/armc-relation/relation/src/frame.rs` line 55, adapter/lib.rs:73 (`source/armc-relation/adapter/src/lib.rs` line 73).
+
+3. **ACCEPT the 752-byte layout; REVISE the verifier’s acceptance checks.** The layout contains enough information. Its mixed endianness, signed `D`, positive-only flag and capped clip count are unambiguous when decoded as specified. Additional `C_t` or hint hashes are unnecessary because the approved guest derives them.
+
+   Beyond successful Groth16 verification, require the approved full program vkey and circuit verifier key; kind 1; expected constants, network-spec and preprocessing digests; expected August session/context/root; and the frozen per-row noise BLAKE3. Enforce `600≤r≤711`, row count 712, the exact modulo rule and mirror flag, and `u=r+d`. Check framing, padding, fixed noising constants, `D=R_wrong−R_correct`, denominator **721,554,505,728**, sign and clip consistency.
+
+   Current cold verification derives a key from whichever ELF it receives and prints success without these expected-identity checks. Likewise, the batch driver hashes whichever noise file it reads. **A different noise tensor can produce a valid proof of a different statement.** All 112 currently exported noise files independently match the normative manifests, but that mapping must be enforced during acceptance. Standalone verification should use the pinned verifier with proof bytes, public bytes, program key and circuit key. `source/armc-relation/relation/src/statement.rs` line 221, `source/armc-relation/script/src/ceremony.rs` line 75, [SP1 verifier API](https://docs.rs/sp1-verifier/latest/sp1_verifier/struct.Groth16Verifier.html).
+
+4. **ACCEPT: r4 saturation semantics and accounting match the FINAL artifact.** Independent runs passed **12 parity tests and 13 fixture tests covering 42 fixtures**; the staged FINAL arrays and fixture hashes also verified. Full int16 endpoints, counted clamps, LUT masked hits and shift checks are present. The relation counts noising once plus both network passes.
+
+   Publish every nonzero count. **65535 means “at least 65535.”** Count zero covers the counted runtime sites, not off-circuit input conversion. Replace “outside the proven regime” with “outside the zero-clipping regime covered by the reported validation”: a proof remains valid for the specified saturating computation. `source/armc-int/src/kernels.rs` line 95, `source/armc-relation/relation/src/statement.rs` line 424, `source/FULL_GUEST.md` line 74.
+
+5. **REVISE: reproducibility evidence is substantial, but the driver is not fail-closed.** ELF and host hashes match the reported pins; all 51 current source-list entries match the final build snapshot. However, the Cargo pipeline ends with **`|| true`**. A rebuilt guest followed by failed host compilation can leave stale host binaries that pass subsequent checks.
+
+   Preserve Cargo’s failure status and establish fresh host outputs. Before proving, retain the successful node rebuild log, exact commands/features/environment, installed compiler identities, lock and source hashes, server/circuit hashes, and asserted new ELF/vkey. Cite the final source list, `T201642Z`, whose digest is `224f8bc449ecd7874800ed2b53dfb7ba141e6c382d59edcb716ac8dabaaa771c`; FULL_GUEST currently cites the earlier list. `source/armc-relation/build_reproducible.sh` line 42, build record:28 (`source/armc-relation/runs/build_record_20260907T201642Z.txt` line 28).
+
+6. **REVISE: the transfer and node runbook need concrete repairs.** The rsync example loses the nested `blobs/final_int16` and `vectors_relation/august` tree shape and excludes files expected by the checksum generator. `SHA256SUMS_G2D` was absent at inspection. The build branch subsequently invokes `./target/release/zkdiff-ceremony` from `$G2`, although it lives under `$S`.
+
+   Preserve the transfer tree, checksum the actual payload, fix the executable path, and propagate every build, merge and cold-verifier failure. The current `set -u` and verification pipelines can continue packaging after failure. `source/FULL_GUEST.md` line 275, `source/node_prep/G2D_NODE_RUNBOOK.sh` line 29, `source/node_prep/G2D_NODE_RUNBOOK.sh` line 68.
+
+7. **ACCEPT the pilot-first plan; REVISE its instrumentation before sizing eight provers.** Record cold startup and CPU/CUDA setup separately, complete `.groth16()` elapsed time, proving phases, verification time, actual shard/chunk counts and configuration, peak VRAM with sampling method, and aggregate client/server/executor memory. Include CPU utilisation, temporary-disk/shared-memory use, GPU UUID/model, driver/runtime and server/circuit identities.
+
+   `host_peak_rss_kib` currently measures only the client’s lifetime `VmHWM`; it excludes the separate GPU server. Thirty-second GPU samples are sampled maxima. Receipt setup timing also omits server startup and CUDA setup.
+
+   Eight devices have separate sockets and `CUDA_VISIBLE_DEVICES` assignments, but share CPU, RAM, storage and the server installation. Use one prover per device, prevalidate the shared binary/circuits, stagger startup, and perform a limited concurrency check after the pilot. Eight times executor RSS does not establish eight-prover capacity. `source/armc-relation/script/src/ceremony_core.rs` line 33, `source/armc-relation/script/src/batch.rs` line 129, CUDA client:125 (on-box: `client.rs` line 125), CUDA server:36 (on-box: `server.rs` line 36).
+
+8. **REVISE: the requested 200G cycle limit is not enforced by this CUDA path.** The application supplies it, but pinned `sp1-cuda` serialises only the proof nonce from the execution context; its proof request carries no cycle limit. Treat the receipt field as requested metadata unless enforcement is added. Establish execution counts beforehand and use an independent operational deadline/resource bound. `source/armc-relation/script/src/ceremony_core.rs` line 213, CUDA client:53 (on-box: `client.rs` line 53).
+
+9. **REVISE: receipts must support independently checked batch completeness.** Preserve each row’s exact public bytes/hash, decoded identities, both residuals, signed difference, clip flag/count, proof bytes/hash, ELF/vkey/circuit identity, oracle comparisons and verification results. Add attempt/status identifiers and links to input hashes, exact commands, build provenance and resource logs. A shared frozen release manifest can carry checkpoint/export/calibration provenance, specifications and the normative noise mapping.
+
+   The batch manifest must account for exactly **112 unique target rows**, retain failed attempts and retries, and distinguish positive, zero and negative outcomes. Mark completion only after every required proof and expected statement verifies. The merger currently accepts incomplete collections and inherits stale first-input metadata. Write recoverable progress incrementally. FULL_GUEST’s blanket “fsynced” claim also needs correction: the proof is fsynced; ordinary receipts and sidecars are not. `source/armc-relation/script/src/ceremony_core.rs` line 153, `source/tools/merge_batch_manifests.py` line 25, `source/armc-relation/script/src/batch.rs` line 318.
+
+10. **REVISE: negative controls must distinguish relation rejection from policy rejection.** Existing witness controls use the native stub network; existing proof controls correctly mutate a residual byte, proof encoding and vkey. Retain those and record final-ELF controls for raw/header/state, predecessor/beacon, membership, constants and conditioning-identity mutations, plus valid and invalid mirrors.
+
+    A coherent alternative offset may satisfy the generic relation but must fail the owner-rule check. Mutated noise may likewise remain relation-valid but must fail the normative-noise check. Hints are derived internally, so “swapped hints” must identify the actual state/row substitution or public relabelling tested. Mutate representative public identity, offset, noise and clip fields against the pilot proof. Record mutation, expected failure stage, actual error and artifact identity. `source/armc-relation/relation/tests/vectors.rs` line 470, `source/armc-relation/script/src/ceremony_core.rs` line 101.
+
+11. **REVISE the held-out description; use this claim boundary after successful verification.** Weight-training exclusion is supported. However, quantisation calibration used August targets **600,616,632,648,664,680,696**, each with its own and +15 conditioning. Thus seven raw targets and fourteen conditioning identities influenced the integer scales. Preserve the complete proof set and disclose this; “untouched test set” would be false. `oracle/final/README_FINAL.md` line 14, `oracle/final/constants_int16.json` line 818, `oracle/int_ref.py` line 477.
+
+    > We publish one independently verified Groth16 proof for each August target row 600–711, including every signed outcome and any clipping. Each proof establishes execution binding of an integer diffusion evaluator adapted from the frozen ARM-C protocol: whole-frame preprocessing of a committed raw frame, authenticated conditioning from the declared row states, and two evaluations at timestep 150 sharing one noisy frame and one hash-bound normative noise target. The comparison uses the published single-offset rule, including its boundary mirrors.
+    >
+    > Model weights were trained on August rows 0–599 plus the d2/v10 training blocks. August rows 600–711 were held out from weight training; quantisation calibration used seven targets from this set and their own/+15 hints, listed in the release manifest. The repeatedly consulted d2/v10 evaluation blocks are development validation.
+    >
+    > These proofs establish the specified integer computations and bindings. They establish no physical-capture, realness, liveness, illumination-causality, adversarial-resistance or unseen-session-generalisation claim. They do not reproduce the original published checkpoint, five-offset aggregate, eight-seed AUROC or full diffusion sampling. Noise generation remains external provenance; the proof binds the normative bytes and computes forward noising.
+
+    Also correct G1’s stale statement that `C_t` is supplied and both hashes are public SHA-256: this guest derives `C_t` and publishes noise **BLAKE3**. `oracle/final/README_FINAL.md` line 225.
+
+12. **REVISE FULL_GUEST’s numbers; ACCEPT the now-completed four-row r4 execution evidence.** At the final check, **20:30 UTC**, all four receipts and the batch manifest existed, with matching recorded Python residuals and zero clips. R4 instruction counts for rows 600–603 are **14,400,363,229; 14,400,345,372; 14,400,313,933; 14,400,340,097**. Both run-2 placeholders still need filling.
+
+    Row 600 comprises **6,911,114,851** instructions for the two network passes, **252,852,645** for the blob region, and **7,236,395,733** remaining. Its RSS is **15.93 GB / 14.84 GiB**, not 15.5 GB. Listed workspace test components sum to **54, not 59**. At the stipulated historical rate, the revised total gives **43.68–55.20 minutes per row** and **10.19–12.88 hours for 112/8**; these remain extrapolations. row-600 receipt:5 (on-box: `source/armc-relation/runs/batch_execute_r4_20260907/row_000600/receipt.json` line 5), row-603 receipt:104 (on-box: `source/armc-relation/runs/batch_execute_r4_20260907/row_000603/receipt.json` line 104), `source/FULL_GUEST.md` line 39, `source/FULL_GUEST.md` line 207.
+
+Read-only audit; no files edited or proofs generated.
+
+— BOSUN ⚓
+
+VERDICT: REVISE: fix and regression-test the complete mirrored-offset rule, including −30, then freeze the rebuilt ELF and vkey before the pilot proof.

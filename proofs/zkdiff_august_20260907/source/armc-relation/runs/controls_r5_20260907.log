@@ -1,0 +1,32 @@
+mode=controls attempt_id=20260907T214559Z-development-workstation-930107 session=august_dev_712 rows=600..711 rule="one proof per held-out August row r in 600..=711; base = OFFSETS[(r - 600) mod 5], OFFSETS = [-2, +2, -15, +15, +30]; offset = base when 0 <= r + base < 712 (offset_rule = direct, public byte 11 = 0), else offset = -base (offset_rule = mirrored, byte 11 = 1; rows 684, 689, 694, 699, 704, 709 at +30 mirror to -30, 698, 703, 708 at +15 to -15, 711 at +2 to -2); u = r + offset; every outcome published, negative and zero differences included"
+guest_elf_bytes=396200 guest_elf_sha256=51b7bc3548d0a4fdb822aa8ed8c8982b5fe707900133d67d664fa3a732fc75cc sp1_circuit_version=v6.1.0 groth16_vk_sha256=4388a21c687fdd5f218d7e3d13190cac4c5355818d3605fd5fb811df468ee696
+constants_blob=source/blobs/final_int16/constants_int16.blob constants_blob_bytes=3476866 constants_sha256=73310ddab603cab5588d05e9ac4deb7e56466a6fae4bbf89244c32f2bd1a8b92 spec_sha256=02872ec23ab5a503fa1a6b450d90511f83a59afb36457cacb161e1277b22073b
+ordered_session_root=38a484b8793f3afadaf8fc5ba1c04d47e08cdbb4c07a39da09fb4149499a6572
+expected_identities=source/expected_identities_august.json sha256 6822cdcefa9a8833460287a3bb619fa63d0f3755d46dccc7db5418b261d6d613
+control=raw.byte_12345 layer_expected=relation behaved=true actual=relation: proved row does not open to the committed ordered-session root
+control=header.s_r_byte_16 layer_expected=relation behaved=true actual=relation: previous row's advance does not produce the proved row's S_t
+control=header.drand_round_byte_76 layer_expected=relation behaved=true actual=relation: drand quicknet signature does not verify
+control=beacon.sig_r_bit layer_expected=relation behaved=true actual=relation: drand signature is not a valid G1 point
+control=predecessor.s_prev_byte_8 layer_expected=relation behaved=true actual=relation: previous row's advance does not produce the proved row's S_t
+control=predecessor.sig_prev_byte_140 layer_expected=relation behaved=true actual=relation: drand signature is not a valid G1 point
+control=state.leaf_u_s_u_byte_12 layer_expected=relation behaved=true actual=relation: declared wrong row's pattern does not render to its leaf's emission digest
+control=membership.sibling_r_last_byte layer_expected=relation behaved=true actual=relation: proved row does not open to the committed ordered-session root
+control=membership.sibling_u_byte_0 layer_expected=relation behaved=true actual=relation: declared wrong row does not open to the committed ordered-session root
+control=conditioning.leaf_of_other_row layer_expected=relation behaved=true actual=relation: wrong-row leaf witness does not carry row r + offset
+control=conditioning.coherent_alternative_offset layer_expected=policy behaved=true actual=RELATION ACCEPTED a statement (public sha256 90a57757c2d43460918602f78d3aa7befcae25bbbeff845aa7528ec880feb8d5); acceptance verifier: FAIL at rule.assignment
+control=noise.byte_0 layer_expected=policy behaved=true actual=RELATION ACCEPTED a statement (public sha256 1c99ff9941cc68311a27d049f933ac0687b39e88ec47e0cf4c65a2522c36f70a); acceptance verifier: FAIL at row.noise_blake3
+control=constants.blob_header_byte_8 layer_expected=relation behaved=true actual=constants_blob (adapter parse): armc-int constants blob rejected by the parser
+control=constants.blob_byte_mid layer_expected=relation_or_policy behaved=true actual=RELATION ACCEPTED a statement (public sha256 3a5acac8f90e2a76a922d0f441323ec7f8e44fcfd4fd9d6241277367954403c7); acceptance verifier: FAIL at program.constants_s
+control=mirror.flag_on_direct_row layer_expected=relation behaved=true actual=relation: mirrored offset claimed although the direct wrong row lies inside the session
+control=mirror.minus30_direct_on_this_row layer_expected=relation behaved=true actual=relation: declared offset must be a nonzero protocol offset
+control=mirror.plus30_mirrored_on_this_row layer_expected=relation behaved=true actual=relation: mirrored offset must be the mirror of a protocol offset
+control=mirror.valid_row_684_minus30 layer_expected=pending_frame behaved=true actual=relation: proved row does not open to the committed ordered-session root
+control=mirror.invalid_row_684_minus30_direct layer_expected=relation behaved=true actual=relation: declared offset must be a nonzero protocol offset
+control=mirror.invalid_row_684_plus30_mirrored layer_expected=relation behaved=true actual=relation: mirrored offset must be the mirror of a protocol offset
+control=mirror.invalid_row_684_plus30_direct layer_expected=relation behaved=true actual=relation: declared wrong row is outside the committed session
+control=mirror.policy_only_row_698_minus15_direct layer_expected=pending_frame behaved=true actual=relation: proved row does not open to the committed ordered-session root
+controls_report=source/armc-relation/runs/controls_r5_20260907/CONTROLS.json all_behaved=true
+
+real	0m4.303s
+user	0m4.167s
+sys	0m0.124s

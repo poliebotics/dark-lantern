@@ -1,0 +1,23 @@
+> Public audit copy, 8 September 2026. Personal identifiers, private instructions and development infrastructure have been
+> redacted; scientific findings are preserved. Findings describe the revision reviewed at the time and may be superseded; see
+> AUDIT_TRAIL.md.
+> Paths are package-relative where the file is in this package and marked (on-box) or (repository root) where it is not; line
+> numbers are as at audit time and may have moved.
+
+# Astra brief r9: confirmation read of the zkdiff August package as re-frozen after rounds 7 and 8 (BOSUN, 2026-09-08T18:53:28Z)
+
+Read-only. Your round-8 verdict (astra_r8/ASTRA_VERDICT_confirm_r8.md) was REVISE with 19 findings and your round-7 privacy verdict (astra_r7/ASTRA_VERDICT_privacy_r7.md) was STOP with 133 dispositions. Both were applied and the package was re-frozen; the fix records are: (on-box) PRIVACY_SWEEP_APPLIED.md (on-box) ASTRA_R6_APPLIED.md
+Also folded in: the outside-agent round 2 reports (agent_audit/{claude,codex,grok}_r2.md) and an offline build kit inside the data-layer bundle.
+
+Frozen bytes under review (recompute these yourself before reading; if any differs, stop and say so):
+- Repository package: the package root (SHA256SUMS sha256 ca86faa01f3883d55fc120669cdec0846673cb1d35cd9b1fb0429349452d1a7c, 3128 entries; PINS.json sha256 7b9f745b9b34b2cb6487b730f1a6ce679d690324abb4a3d07aab5f96b0e18921)
+- Data-layer bundle: (on-box) publish_package (MANIFEST.jsonl sha256 f3757f7de7fe8fcb1063940325fb405673ef5b0c92e5d41ac11f9c7414f444cf, 5669 objects)
+- Transmit items: (on-box) 032_zkdiff_darklantern_commit.{sh,body.md,preview.md} (script sha256 41a53cf8f0e149c74d9652f9f22b07464ac17a1e2fea91a8bdf9425b94335aaf, body sha256 5a9313dedcf1f0e4991082d1900a9ce89ffe7596b228a1f54515adcc747f7a68) and (on-box) 033_zkdiff_r2_bundle.{sh,body.md,preview.md} (script sha256 6e784d21b55e1fd2cbc5795b601163f16c9c3e6e065cdd79f1f12f171692cb90, body sha256 9d0e350fa0cedf2bd4a373b946baaf680130a2db591af7f53084bfca225bbb89)
+
+Questions, in priority order:
+1. Privacy, the STOP condition of round 7: is every one of the 133 dispositions applied in the shipped bytes? Check the bytes, not the record: the three static binaries and the offline kit's binaries carry no compiled-in home or build paths (strings on each; the rebuild used --remap-path-prefix), the copied audit briefs and verdicts carry no on-box paths, spending figures, desk instructions, standing-order or owner-ruling text, private IP addresses or rented-box hostnames, the previews and the commit body are clean, the frames disclosure describes the depicted participant as the round-7 finding required, and no former-owner names appear anywhere. Run the final residual grep yourself over both payloads and the transmit items for the round-7 private-identifier literals (home and node paths, the private corpus path, address prefixes, desk-document names and the principal's handle). Report every hit with file and line.
+2. Round-8 findings 1 to 19: each closed in the bytes? In particular 033's stdin redirection (the landed-object checker must actually run), 032's file-mode handling for the three static binaries (must enter Git executable), 032's snapshot-then-validate of the README patch, the FRAMES.json pin, the held-data wording in GLOSSARY.md, FAQ.md, HASHES.md and VERIFY.md, the hint index at FAQ (598, not 585), the reintroduced preposition endings in the replication prose, the audits/ navigation repair, and the root THIRD_PARTY_NOTICES.md row with 032's permitted-root-changes list extended to match.
+3. The offline build kit: does the bundle describe it truthfully, does its manifest agree with MANIFEST.jsonl, and can a reader with no network rebuild the ELF to the pinned sha256 51b7bc3548d0a4fdb822aa8ed8c8982b5fe707900133d67d664fa3a732fc75cc from it as claimed? If the claim is not verifiable from the bytes, say what is missing.
+4. Do SHA256SUMS, PINS.json, HASHES.md, the 032 ledger, the 033 upload list and MANIFEST.jsonl agree with each other after the re-freeze (no stale pins, no objects listed that are absent, none present that are unlisted)?
+5. Any regression introduced by the fix round: broken links, a renamed file still referenced under its old name, a preview that no longer matches the bytes it previews, a claim in RESULTS.md or STATEMENT.md that changed meaning.
+Do not repeat findings already closed unless the bytes show them open. Answer with numbered findings, each with a verdict and file/line, then one line: VERDICT: CLEAN / REVISE / STOP with the single most important change. CLEAN means both items may be published as they stand.

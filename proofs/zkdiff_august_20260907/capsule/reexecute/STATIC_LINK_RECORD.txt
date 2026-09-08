@@ -1,0 +1,24 @@
+# Static relink record for the capsule binaries (agent audits round 1; rebuilt under a path remap after the privacy sweep, Astra round 7)
+
+rebuild: build_record_20260908T172135Z.txt (BUILD_RECORD.txt, published with the development machine's paths and hostname redacted: private sha256 4a1b55ccdde8e1958af95104a2060bd21d015f97d772550e92c478da392bb5bf,
+  published 2522dfbdd10f4be6ffda692991c48cbc90d57e9768d7a424b7b391d533af117f; the fail-closed driver source/armc-relation/build_reproducible.sh on a copy of the published source/,
+  ELF 51b7bc3548d0a4fdb822aa8ed8c8982b5fe707900133d67d664fa3a732fc75cc, vkey 0x00f0189431f373a5a931f1db0c6abd9673e4176e653e0f84f97724d302fda027, circuit key 4388a21c687fdd5f218d7e3d13190cac4c5355818d3605fd5fb811df468ee696, BUILD_REPRODUCED_OK)
+  with RUSTFLAGS=--remap-path-prefix=[cargo home]=/cargo --remap-path-prefix=[the source copy]=/src for the host build, so every dependency's
+  panic-location and debug strings carry /cargo/... and /src/... rather than machine paths (the guest ELF has its own remap in script/build.rs
+  and reproduced the pin under these flags); verified with strings(1): no /home, /lambda or staging path in any of the three binaries
+relink: in the same target directory, cargo rustc --release --offline --locked --bin <name> -- -C target-feature=+crt-static -C strip=symbols
+  (the static-linking and strip flags reach the final crate only; the SDK's nested executor-runner build inherits the remap alone);
+  standalone verifier: cargo build then cargo rustc --release --offline --locked -- <same flags> on a copy of tools/standalone_verifier
+toolchain: rustc 1.98.0 (88d9e12ae 2026-08-18), cargo 1.98.0 (797e8a9bc 2026-08-05); glibc 2.43 (Ubuntu GLIBC 2.43-2ubuntu2.3, Ubuntu 26.04 development
+  machine) objects linked statically; the highest versioned glibc symbol the dynamically linked host binaries of the same build reference is GLIBC_2.39
+  (the glibc_max field of the build records); the licence terms of the statically linked material are in THIRD_PARTY_NOTICES.md
+expected identities: the capsule's copy is the published source/expected_identities_august.json, sha256 182870aa06f11e246a76f8c94c5a1c40aed7b3ad4b3537420422f426dcd46eb2; the file as frozen on 7 September,
+  which every receipt and acceptance report names, hashed 6822cdcefa9a8833460287a3bb619fa63d0f3755d46dccc7db5418b261d6d613; the two differ only in the redacted provenance paths of the sources block
+
+zkdiff-verify: sha256 8f74012f19b06ea733c6bf2944a9f2bcf705421781505c3a95dc3c2f8f39eed9 bytes 44203592; file(1): ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), static-pie linked, for GNU/Linux 3.2.0, BuildID[sha1]=7f15f1d629f565712f5a099a130bdaf8a21894a9, stripped
+zeebeam-standalone-verifier: sha256 f5995796f3dc265e78c5da7bace364eb35b904f2055e1e9843a5d4bd3be76d07 bytes 1623408; file(1): ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), static-pie linked, for GNU/Linux 3.2.0, BuildID[sha1]=caefce11877879e3763f387c32e4c3d0225cad07, stripped
+
+zkdiff-verify --identity: {"groth16_vk_bytes": 492, "groth16_vk_sha256": "4388a21c687fdd5f218d7e3d13190cac4c5355818d3605fd5fb811df468ee696", "guest_elf_bytes": 396200, "guest_elf_sha256": "51b7bc3548d0a4fdb822aa8ed8c8982b5fe707900133d67d664fa3a732fc75cc", "sp1_circuit_version": "v6.1.0", "verifier_binary_sha256": "8f74012f19b06ea733c6bf2944a9f2bcf705421781505c3a95dc3c2f8f39eed9", "vk_root": "002f850ee998974d6cc00e50cd0814b098c05bfade466d28573240d057f25352"}
+zkdiff-batch: sha256 005c2665fe4175bf52bc792cf1fdd4078904556a093dc500d420ffad9c02f2a0 bytes 47789192; file(1): ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), static-pie linked, for GNU/Linux 3.2.0, BuildID[sha1]=63cc34d2b30b47d3a6b435a452afae94a833104a, stripped
+frame_000600.raw: sha256 5c8e785610872115a5a67f90ae14b7b3b35cf3e1da8f5762c2d48386f7be211c (the receipt's raw_sha256), BLAKE3 9d4a0745dd0990b12ab8c94d524430dd3b3559face4d7d4d621c481a72087d4a (the chain log's bayer_blake3_hex of row 600), 24,472,000 bytes
+row_000600.npz: sha256 25cc926bc1f2b78decd326394768d9714c1d5cfa4b69cb44cd025ae105195276 (PINS.json oracle_g1_final.large_files_sha256_data_layer_or_held august_inputs/row_000600.npz)

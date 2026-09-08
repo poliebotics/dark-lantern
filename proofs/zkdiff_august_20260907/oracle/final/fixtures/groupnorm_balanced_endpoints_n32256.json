@@ -1,0 +1,54 @@
+{
+ "fixture": "groupnorm_balanced_endpoints_n32256",
+ "kernel": "groupnorm_int",
+ "params": {
+  "groups": 1,
+  "eps_int": 168,
+  "T": 30,
+  "f_out": 9,
+  "gamma_bits": 12,
+  "n": 32256
+ },
+ "notes": "maximum group size n = 32256 (3 channels x 96 x 112), half -32768 half 32767: S2 = n*2^30 (45 bits), N near 2^60, X^2 99 bits, gamma_q 32767 saturates",
+ "inputs": {
+  "x": {
+   "npz_key": "x",
+   "shape": [
+    3,
+    96,
+    112
+   ],
+   "dtype": "<i2",
+   "sha256": "673b4329f0fa5ffeffcc18063b446bbec432592335d86524ad4d5a4a2dce0a66"
+  },
+  "gamma_q": [
+   4096,
+   -4096,
+   32767
+  ],
+  "beta_q": [
+   0,
+   0,
+   0
+  ]
+ },
+ "expected": {
+  "y": {
+   "npz_key": "y",
+   "shape": [
+    3,
+    96,
+    112
+   ],
+   "dtype": "<i2",
+   "sha256": "49941bd527cb9128b8a738057b768368f9cbf2fa3e8f39b2ec10ea822cb96f0e"
+  },
+  "Q_per_group": [
+   262147
+  ]
+ },
+ "counters": {
+  "clip_events": 0
+ },
+ "npz": "groupnorm_balanced_endpoints_n32256.npz"
+}

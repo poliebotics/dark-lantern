@@ -1,0 +1,12 @@
+kernels selftest PASS
+[int8] calibrated on 15 rows (7 august) in 3.5s; scale map 188 tensors (15 inherited); bounds i64-safe: True
+float64 mirror vs torch fp32 on d2 1328: max|diff| 1.149e-05 (rel to max|eps| 2.47e-06)
+[int8] integer forward 1.0s; eps int vs float64 RMS diff 2.102e-02; score f64 0.012132 int 0.012482 rel +2.881e-02; clip events {}
+  scale histogram {7: 1, 8: 1, 9: 22, 10: 26, 11: 89, 12: 38, 13: 6, 14: 5}; sources {'calibration': 171, 'fixed': 2, 'inherited': 15}
+  bounds: conv acc max 1368850432 (31 bits), requant max 22661745809484953 (55 bits), GN n max 32256, N bits 60, X^2 bits 99, affine bits 50, attention div bits 44, SSE 184712316364800
+  op count: total 0.82985 GMAC (attention QK^T+AV 7.451 MMAC, tokens {'down_attns.3': 168, 'mid_attn': 42, 'up_attns.0': 168}); GN elements 3.285M, act elements 3.261M
+  vectors d2 1328 correct: residual_sum_int 9006417833 (0.012482), clip events {}
+  vectors d2 1328 wrong_p2: residual_sum_int 22578064838 (0.031291), clip events {}
+  vectors august 650 correct: residual_sum_int 5661729244 (0.007847), clip events {}
+  vectors august 650 wrong_p2: residual_sum_int 12505149149 (0.017331), clip events {}
+wrote oracle/final/constants_int8.json
