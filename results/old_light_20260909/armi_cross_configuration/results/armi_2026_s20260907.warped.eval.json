@@ -1,0 +1,1457 @@
+{
+ "checkpoint": "armi/checkpoints/armi_2026_s20260907/latest.pt",
+ "checkpoint_sha256": "73700322a32e83f91450db68586e3a83067988b042d15c631ea9a8d77f222d8a",
+ "checkpoint_step": 24000,
+ "crop_id": "UNCROPPED_FULL_FRAME_20260825",
+ "out_size": "96,112",
+ "conditioning": "ARM-I: rendered emission image (3 ch) + coord (2)",
+ "train_args": {
+  "sessions": "d2,v10,august",
+  "august_train_rows": 600,
+  "seed": 20260907,
+  "max_steps": 24000,
+  "cond_drop": 0.0,
+  "base_ch": 16,
+  "lr": 0.0002,
+  "bs": 8,
+  "accum": 1,
+  "emission_image": true,
+  "monitor_sessions": "20241219_050046,1682718815"
+ },
+ "arch": {
+  "kind": "armi",
+  "base_ch": 16,
+  "mults": [
+   1,
+   2,
+   4,
+   4
+  ],
+  "hint_in_ch": 5,
+  "params": 1113204
+ },
+ "preprocessing": {
+  "C": "whole frame, no crop: 2026 the raw RGGB Bayer frame packed to 4 planes; 2024/2023 the stored demosaiced frame re-mosaiced onto the RGGB grid (R top-left, G top-right and bottom-left, B bottom-right of each 2x2 cell; 2024 recordings are stored BGR, 2023 reports RGB); planes /255, area-resized to out_size",
+  "E": "the rendered emission image as displayed, RGB in [0,1], area-resized to out_size (2026 tile PNG 1920x1080; 2024 HDF5 emissions 1920x1080 RGB; 2023 npy 1024x1024 float 0..255 stored BGR through OpenCV, reversed to RGB and clipped)"
+ },
+ "protocol": {
+  "t": 150,
+  "offsets": [
+   -2,
+   2,
+   -15,
+   15,
+   30
+  ],
+  "stride": 1,
+  "seed": 20260823,
+  "sub_blocks": 40,
+  "n_boot": 1000,
+  "noise_rule": "one generator per session, manual_seed(EVAL_SEED), one draw per row in row order",
+  "primary": "pooled AUROC of correct residual vs per-row mean of the available wrong-offset residuals; paired fraction P(correct < wrong-mean)",
+  "secondary": "single wrong row, offset OFFSETS[row mod 5] mirrored at the session ends (the zkdiff proof-row rule)",
+  "claim_boundary": "emission-recording correspondence under a change of rig, camera, alignment and emission family; no realness, liveness or capture claim"
+ },
+ "sessions": {
+  "20241219_044052": {
+   "era": "2024",
+   "kind": "h5_2024",
+   "note": "unseen configuration (2024), every row",
+   "n_rows": 64,
+   "contiguous_eval_blocks": [
+    64
+   ],
+   "blocks_used": [
+    32,
+    32
+   ],
+   "conditions": {
+    "correct": 0.07408086262876168,
+    "wrong_-2": 0.07425259630526265,
+    "wrong_+2": 0.07398320698449688,
+    "wrong_-15": 0.07188339782308559,
+    "wrong_+15": 0.07483733262942761,
+    "wrong_+30": 0.07929334701860652,
+    "single_wrong": 0.07427998376078904,
+    "shift_-1": 0.07399394611517589,
+    "shift_+1": 0.07409527259213584
+   },
+   "delta_wrong_mean": {
+    "mean": 0.00018949856942829994,
+    "ci95_block_bootstrap": [
+     3.9344773783038045e-05,
+     0.00033965236507356184
+    ],
+    "relative": 0.002557996258465917
+   },
+   "paired_fraction_correct_lower": 0.578125,
+   "auroc": {
+    "correct_vs_wrong_avg": 0.5107421875,
+    "correct_vs_wrong_-2": 0.5137877211238293,
+    "correct_vs_wrong_+2": 0.509105098855359,
+    "correct_vs_wrong_-15": 0.5147855060391504,
+    "correct_vs_wrong_+15": 0.49854227405247814,
+    "correct_vs_wrong_+30": 0.5224913494809689
+   },
+   "row_bootstrap": {
+    "auroc": 0.5107421875,
+    "auroc_ci95": [
+     0.497796630859375,
+     0.526123046875
+    ],
+    "paired": 0.578125,
+    "paired_ci95": [
+     0.453125,
+     0.6875
+    ],
+    "n": 64,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "secondary_single_wrong_mod5_mirrored": {
+    "auroc": 0.509765625,
+    "auroc_ci95": [
+     0.49609375,
+     0.5244140625
+    ],
+    "paired": 0.53125,
+    "paired_ci95": [
+     0.40625,
+     0.640625
+    ],
+    "n": 64,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "raw_scores": "armi/per_row_scores/armi_2026_s20260907.warped.raw_20241219_044052.npz",
+   "pairing_check": {
+    "shift_-1": {
+     "mean_residual": 0.07399394611517589,
+     "auroc_correct_vs_shift": 0.5028974552784077,
+     "fraction_correct_lower": 0.6190476190476191
+    },
+    "shift_+1": {
+     "mean_residual": 0.07409527259213584,
+     "auroc_correct_vs_shift": 0.5039052658100277,
+     "fraction_correct_lower": 0.47619047619047616
+    },
+    "reading": "the declared pairing is right when the correct residual sits below both one-row shifts"
+   }
+  },
+  "20241219_044529": {
+   "era": "2024",
+   "kind": "h5_2024",
+   "note": "unseen configuration (2024), every row",
+   "n_rows": 64,
+   "contiguous_eval_blocks": [
+    64
+   ],
+   "blocks_used": [
+    32,
+    32
+   ],
+   "conditions": {
+    "correct": 0.0697812520666048,
+    "wrong_-2": 0.07032611996175782,
+    "wrong_+2": 0.06988951551818079,
+    "wrong_-15": 0.06974503473967922,
+    "wrong_+15": 0.06850714943542772,
+    "wrong_+30": 0.0679682040696635,
+    "single_wrong": 0.0700942090479657,
+    "shift_-1": 0.07001072966626712,
+    "shift_+1": 0.07005298799938625
+   },
+   "delta_wrong_mean": {
+    "mean": 0.0002160483204837264,
+    "ci95_block_bootstrap": [
+     0.00011122156089792587,
+     0.00032087508006952694
+    ],
+    "relative": 0.0030960797361089575
+   },
+   "paired_fraction_correct_lower": 0.609375,
+   "auroc": {
+    "correct_vs_wrong_avg": 0.50830078125,
+    "correct_vs_wrong_-2": 0.5013007284079084,
+    "correct_vs_wrong_+2": 0.5093652445369407,
+    "correct_vs_wrong_-15": 0.5052061640982923,
+    "correct_vs_wrong_+15": 0.5052061640982923,
+    "correct_vs_wrong_+30": 0.509515570934256
+   },
+   "row_bootstrap": {
+    "auroc": 0.50830078125,
+    "auroc_ci95": [
+     0.495599365234375,
+     0.524658203125
+    ],
+    "paired": 0.609375,
+    "paired_ci95": [
+     0.5,
+     0.71875
+    ],
+    "n": 64,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "secondary_single_wrong_mod5_mirrored": {
+    "auroc": 0.509033203125,
+    "auroc_ci95": [
+     0.493646240234375,
+     0.527117919921875
+    ],
+    "paired": 0.59375,
+    "paired_ci95": [
+     0.483984375,
+     0.71875
+    ],
+    "n": 64,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "raw_scores": "armi/per_row_scores/armi_2026_s20260907.warped.raw_20241219_044529.npz",
+   "pairing_check": {
+    "shift_-1": {
+     "mean_residual": 0.07001072966626712,
+     "auroc_correct_vs_shift": 0.5023935500125977,
+     "fraction_correct_lower": 0.5396825396825397
+    },
+    "shift_+1": {
+     "mean_residual": 0.07005298799938625,
+     "auroc_correct_vs_shift": 0.5081884605694129,
+     "fraction_correct_lower": 0.5396825396825397
+    },
+    "reading": "the declared pairing is right when the correct residual sits below both one-row shifts"
+   }
+  },
+  "20241219_050046": {
+   "era": "2024",
+   "kind": "h5_2024",
+   "note": "unseen configuration (2024), every row",
+   "n_rows": 64,
+   "contiguous_eval_blocks": [
+    64
+   ],
+   "blocks_used": [
+    32,
+    32
+   ],
+   "conditions": {
+    "correct": 0.07072109635919333,
+    "wrong_-2": 0.07083415906996496,
+    "wrong_+2": 0.07085804863562507,
+    "wrong_-15": 0.07040198382978537,
+    "wrong_+15": 0.06965633648998883,
+    "wrong_+30": 0.07146755299147438,
+    "single_wrong": 0.07088572636712343,
+    "shift_-1": 0.07085267761870036,
+    "shift_+1": 0.07091430580568692
+   },
+   "delta_wrong_mean": {
+    "mean": 0.00015693343884777328,
+    "ci95_block_bootstrap": [
+     5.752182720849966e-05,
+     0.0002563450504870469
+    ],
+    "relative": 0.0022190470301917606
+   },
+   "paired_fraction_correct_lower": 0.625,
+   "auroc": {
+    "correct_vs_wrong_avg": 0.5048828125,
+    "correct_vs_wrong_-2": 0.5026014568158168,
+    "correct_vs_wrong_+2": 0.5010405827263268,
+    "correct_vs_wrong_-15": 0.5010412328196585,
+    "correct_vs_wrong_+15": 0.502707205331112,
+    "correct_vs_wrong_+30": 0.5190311418685121
+   },
+   "row_bootstrap": {
+    "auroc": 0.5048828125,
+    "auroc_ci95": [
+     0.490960693359375,
+     0.52076416015625
+    ],
+    "paired": 0.625,
+    "paired_ci95": [
+     0.5,
+     0.734375
+    ],
+    "n": 64,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "secondary_single_wrong_mod5_mirrored": {
+    "auroc": 0.503173828125,
+    "auroc_ci95": [
+     0.48486328125,
+     0.521728515625
+    ],
+    "paired": 0.5625,
+    "paired_ci95": [
+     0.4375,
+     0.6875
+    ],
+    "n": 64,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "raw_scores": "armi/per_row_scores/armi_2026_s20260907.warped.raw_20241219_050046.npz",
+   "pairing_check": {
+    "shift_-1": {
+     "mean_residual": 0.07085267761870036,
+     "auroc_correct_vs_shift": 0.5006298815822625,
+     "fraction_correct_lower": 0.5714285714285714
+    },
+    "shift_+1": {
+     "mean_residual": 0.07091430580568692,
+     "auroc_correct_vs_shift": 0.5074326026706979,
+     "fraction_correct_lower": 0.5555555555555556
+    },
+    "reading": "the declared pairing is right when the correct residual sits below both one-row shifts"
+   }
+  },
+  "20241219_050648": {
+   "era": "2024",
+   "kind": "h5_2024",
+   "note": "unseen configuration (2024), every row",
+   "n_rows": 64,
+   "contiguous_eval_blocks": [
+    64
+   ],
+   "blocks_used": [
+    32,
+    32
+   ],
+   "conditions": {
+    "correct": 0.06956017384072766,
+    "wrong_-2": 0.0699591119323046,
+    "wrong_+2": 0.07005463684758832,
+    "wrong_-15": 0.07083430757023851,
+    "wrong_+15": 0.06904177671792555,
+    "wrong_+30": 0.06827157439992708,
+    "single_wrong": 0.06992059655021876,
+    "shift_-1": 0.06997361152418076,
+    "shift_+1": 0.07000337807195527
+   },
+   "delta_wrong_mean": {
+    "mean": 0.00027983313387570236,
+    "ci95_block_bootstrap": [
+     0.00023367134854197476,
+     0.00032599491920942995
+    ],
+    "relative": 0.004022892963385025
+   },
+   "paired_fraction_correct_lower": 0.65625,
+   "auroc": {
+    "correct_vs_wrong_avg": 0.512451171875,
+    "correct_vs_wrong_-2": 0.5135275754422477,
+    "correct_vs_wrong_+2": 0.5067637877211238,
+    "correct_vs_wrong_-15": 0.5164514785506039,
+    "correct_vs_wrong_+15": 0.5077051228654728,
+    "correct_vs_wrong_+30": 0.5077854671280276
+   },
+   "row_bootstrap": {
+    "auroc": 0.512451171875,
+    "auroc_ci95": [
+     0.50146484375,
+     0.529052734375
+    ],
+    "paired": 0.65625,
+    "paired_ci95": [
+     0.546484375,
+     0.78125
+    ],
+    "n": 64,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "secondary_single_wrong_mod5_mirrored": {
+    "auroc": 0.515625,
+    "auroc_ci95": [
+     0.50048828125,
+     0.536138916015625
+    ],
+    "paired": 0.640625,
+    "paired_ci95": [
+     0.515625,
+     0.75
+    ],
+    "n": 64,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "raw_scores": "armi/per_row_scores/armi_2026_s20260907.warped.raw_20241219_050648.npz",
+   "pairing_check": {
+    "shift_-1": {
+     "mean_residual": 0.06997361152418076,
+     "auroc_correct_vs_shift": 0.5167548500881834,
+     "fraction_correct_lower": 0.6666666666666666
+    },
+    "shift_+1": {
+     "mean_residual": 0.07000337807195527,
+     "auroc_correct_vs_shift": 0.5086923658352229,
+     "fraction_correct_lower": 0.5396825396825397
+    },
+    "reading": "the declared pairing is right when the correct residual sits below both one-row shifts"
+   }
+  },
+  "20241219_051150": {
+   "era": "2024",
+   "kind": "h5_2024",
+   "note": "unseen configuration (2024), every row",
+   "n_rows": 64,
+   "contiguous_eval_blocks": [
+    64
+   ],
+   "blocks_used": [
+    32,
+    32
+   ],
+   "conditions": {
+    "correct": 0.07418506330577657,
+    "wrong_-2": 0.07419758812794762,
+    "wrong_+2": 0.07457911992265333,
+    "wrong_-15": 0.07387192083560691,
+    "wrong_+15": 0.07570252423079646,
+    "wrong_+30": 0.0754407694672837,
+    "single_wrong": 0.07462923310231417,
+    "shift_-1": 0.0743339250958155,
+    "shift_+1": 0.07447346932594738
+   },
+   "delta_wrong_mean": {
+    "mean": 0.0002483087999280543,
+    "ci95_block_bootstrap": [
+     0.0002193859351488452,
+     0.00027723166470726337
+    ],
+    "relative": 0.003347153575977595
+   },
+   "paired_fraction_correct_lower": 0.671875,
+   "auroc": {
+    "correct_vs_wrong_avg": 0.51123046875,
+    "correct_vs_wrong_-2": 0.5130072840790842,
+    "correct_vs_wrong_+2": 0.5052029136316337,
+    "correct_vs_wrong_-15": 0.5177009579341941,
+    "correct_vs_wrong_+15": 0.5085381091211995,
+    "correct_vs_wrong_+30": 0.513840830449827
+   },
+   "row_bootstrap": {
+    "auroc": 0.51123046875,
+    "auroc_ci95": [
+     0.50146484375,
+     0.52587890625
+    ],
+    "paired": 0.671875,
+    "paired_ci95": [
+     0.5625,
+     0.78125
+    ],
+    "n": 64,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "secondary_single_wrong_mod5_mirrored": {
+    "auroc": 0.517578125,
+    "auroc_ci95": [
+     0.503173828125,
+     0.537353515625
+    ],
+    "paired": 0.65625,
+    "paired_ci95": [
+     0.546875,
+     0.765625
+    ],
+    "n": 64,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "raw_scores": "armi/per_row_scores/armi_2026_s20260907.warped.raw_20241219_051150.npz",
+   "pairing_check": {
+    "shift_-1": {
+     "mean_residual": 0.0743339250958155,
+     "auroc_correct_vs_shift": 0.509196271101033,
+     "fraction_correct_lower": 0.5714285714285714
+    },
+    "shift_+1": {
+     "mean_residual": 0.07447346932594738,
+     "auroc_correct_vs_shift": 0.5028974552784077,
+     "fraction_correct_lower": 0.5238095238095238
+    },
+    "reading": "the declared pairing is right when the correct residual sits below both one-row shifts"
+   }
+  },
+  "20241219_051629": {
+   "era": "2024",
+   "kind": "h5_2024",
+   "note": "unseen configuration (2024), every row",
+   "n_rows": 64,
+   "contiguous_eval_blocks": [
+    64
+   ],
+   "blocks_used": [
+    32,
+    32
+   ],
+   "conditions": {
+    "correct": 0.07720389729365706,
+    "wrong_-2": 0.0776616848043857,
+    "wrong_+2": 0.07759250015501053,
+    "wrong_-15": 0.07813321008365981,
+    "wrong_+15": 0.07812078205906615,
+    "wrong_+30": 0.07745965351076688,
+    "single_wrong": 0.07776971289422363,
+    "shift_-1": 0.07763175701811201,
+    "shift_+1": 0.07751156176839556
+   },
+   "delta_wrong_mean": {
+    "mean": 0.00045897695623959103,
+    "ci95_block_bootstrap": [
+     0.00024966875401635997,
+     0.0006682851584628221
+    ],
+    "relative": 0.005944997238854414
+   },
+   "paired_fraction_correct_lower": 0.6875,
+   "auroc": {
+    "correct_vs_wrong_avg": 0.520751953125,
+    "correct_vs_wrong_-2": 0.5163891779396462,
+    "correct_vs_wrong_+2": 0.5226326742976066,
+    "correct_vs_wrong_-15": 0.5210329029571013,
+    "correct_vs_wrong_+15": 0.523948354852145,
+    "correct_vs_wrong_+30": 0.5294117647058824
+   },
+   "row_bootstrap": {
+    "auroc": 0.520751953125,
+    "auroc_ci95": [
+     0.50732421875,
+     0.541021728515625
+    ],
+    "paired": 0.6875,
+    "paired_ci95": [
+     0.577734375,
+     0.796875
+    ],
+    "n": 64,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "secondary_single_wrong_mod5_mirrored": {
+    "auroc": 0.527099609375,
+    "auroc_ci95": [
+     0.505126953125,
+     0.55224609375
+    ],
+    "paired": 0.625,
+    "paired_ci95": [
+     0.5,
+     0.734375
+    ],
+    "n": 64,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "raw_scores": "armi/per_row_scores/armi_2026_s20260907.warped.raw_20241219_051629.npz",
+   "pairing_check": {
+    "shift_-1": {
+     "mean_residual": 0.07763175701811201,
+     "auroc_correct_vs_shift": 0.5127236079617032,
+     "fraction_correct_lower": 0.5396825396825397
+    },
+    "shift_+1": {
+     "mean_residual": 0.07751156176839556,
+     "auroc_correct_vs_shift": 0.5122197026958931,
+     "fraction_correct_lower": 0.5873015873015873
+    },
+    "reading": "the declared pairing is right when the correct residual sits below both one-row shifts"
+   }
+  },
+  "20241219_052040": {
+   "era": "2024",
+   "kind": "h5_2024",
+   "note": "unseen configuration (2024), every row",
+   "n_rows": 64,
+   "contiguous_eval_blocks": [
+    64
+   ],
+   "blocks_used": [
+    32,
+    32
+   ],
+   "conditions": {
+    "correct": 0.07432442874414846,
+    "wrong_-2": 0.07458071410655975,
+    "wrong_+2": 0.07490117655646417,
+    "wrong_-15": 0.0737259996940895,
+    "wrong_+15": 0.07657958072971324,
+    "wrong_+30": 0.07845815325922825,
+    "single_wrong": 0.07478504866594449,
+    "shift_-1": 0.07452922219794894,
+    "shift_+1": 0.07487298648745294
+   },
+   "delta_wrong_mean": {
+    "mean": 0.00026918785297311797,
+    "ci95_block_bootstrap": [
+     0.0002614155062474299,
+     0.000276960199698806
+    ],
+    "relative": 0.0036217951153013207
+   },
+   "paired_fraction_correct_lower": 0.625,
+   "auroc": {
+    "correct_vs_wrong_avg": 0.51416015625,
+    "correct_vs_wrong_-2": 0.513267429760666,
+    "correct_vs_wrong_+2": 0.5130072840790842,
+    "correct_vs_wrong_-15": 0.5135360266555602,
+    "correct_vs_wrong_+15": 0.5231153685964182,
+    "correct_vs_wrong_+30": 0.5164359861591695
+   },
+   "row_bootstrap": {
+    "auroc": 0.51416015625,
+    "auroc_ci95": [
+     0.501458740234375,
+     0.531982421875
+    ],
+    "paired": 0.625,
+    "paired_ci95": [
+     0.5,
+     0.7347656249999996
+    ],
+    "n": 64,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "secondary_single_wrong_mod5_mirrored": {
+    "auroc": 0.51611328125,
+    "auroc_ci95": [
+     0.499017333984375,
+     0.535662841796875
+    ],
+    "paired": 0.625,
+    "paired_ci95": [
+     0.5,
+     0.734375
+    ],
+    "n": 64,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "raw_scores": "armi/per_row_scores/armi_2026_s20260907.warped.raw_20241219_052040.npz",
+   "pairing_check": {
+    "shift_-1": {
+     "mean_residual": 0.07452922219794894,
+     "auroc_correct_vs_shift": 0.5132275132275133,
+     "fraction_correct_lower": 0.5238095238095238
+    },
+    "shift_+1": {
+     "mean_residual": 0.07487298648745294,
+     "auroc_correct_vs_shift": 0.5165028974552784,
+     "fraction_correct_lower": 0.6507936507936508
+    },
+    "reading": "the declared pairing is right when the correct residual sits below both one-row shifts"
+   }
+  },
+  "1680410249": {
+   "era": "2023",
+   "kind": "npy_2023",
+   "note": "unseen configuration (2023), every row",
+   "n_rows": 10,
+   "contiguous_eval_blocks": [
+    10
+   ],
+   "blocks_used": [
+    10
+   ],
+   "conditions": {
+    "correct": 0.10059943050146103,
+    "wrong_-2": 0.10313940607011318,
+    "wrong_+2": 0.10175920464098454,
+    "wrong_-15": NaN,
+    "wrong_+15": NaN,
+    "wrong_+30": NaN,
+    "single_wrong": 0.09961612522602081,
+    "shift_-1": 0.10260858055618075,
+    "shift_+1": 0.10170434912045796
+   },
+   "delta_wrong_mean": {
+    "mean": 0.0014710400253534317,
+    "ci95_block_bootstrap": [
+     0.0014710400253534317,
+     0.0014710400253534317
+    ],
+    "relative": 0.014622747047579631
+   },
+   "paired_fraction_correct_lower": 0.8,
+   "auroc": {
+    "correct_vs_wrong_avg": 0.66,
+    "correct_vs_wrong_-2": 0.71875,
+    "correct_vs_wrong_+2": 0.609375
+   },
+   "row_bootstrap": {
+    "auroc": 0.66,
+    "auroc_ci95": [
+     0.53,
+     0.79
+    ],
+    "paired": 0.8,
+    "paired_ci95": [
+     0.5,
+     1.0
+    ],
+    "n": 10,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "secondary_single_wrong_mod5_mirrored": {
+    "auroc": 0.625,
+    "auroc_ci95": [
+     0.25,
+     1.0
+    ],
+    "paired": 0.75,
+    "paired_ci95": [
+     0.25,
+     1.0
+    ],
+    "n": 4,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "raw_scores": "armi/per_row_scores/armi_2026_s20260907.warped.raw_1680410249.npz",
+   "pairing_check": {
+    "shift_-1": {
+     "mean_residual": 0.10260858055618075,
+     "auroc_correct_vs_shift": 0.654320987654321,
+     "fraction_correct_lower": 0.8888888888888888
+    },
+    "shift_+1": {
+     "mean_residual": 0.10170434912045796,
+     "auroc_correct_vs_shift": 0.6049382716049383,
+     "fraction_correct_lower": 0.7777777777777778
+    },
+    "reading": "the declared pairing is right when the correct residual sits below both one-row shifts"
+   }
+  },
+  "1680410569": {
+   "era": "2023",
+   "kind": "npy_2023",
+   "note": "unseen configuration (2023), every row",
+   "n_rows": 10,
+   "contiguous_eval_blocks": [
+    10
+   ],
+   "blocks_used": [
+    10
+   ],
+   "conditions": {
+    "correct": 0.09804645106196404,
+    "wrong_-2": 0.09847017098218203,
+    "wrong_+2": 0.10031784977763891,
+    "wrong_-15": NaN,
+    "wrong_+15": NaN,
+    "wrong_+30": NaN,
+    "single_wrong": 0.10123354941606522,
+    "shift_-1": 0.0992361671394772,
+    "shift_+1": 0.0999104811085595
+   },
+   "delta_wrong_mean": {
+    "mean": 0.0013549655675888061,
+    "ci95_block_bootstrap": [
+     0.0013549655675888061,
+     0.0013549655675888061
+    ],
+    "relative": 0.013819628889295402
+   },
+   "paired_fraction_correct_lower": 0.9,
+   "auroc": {
+    "correct_vs_wrong_avg": 0.58,
+    "correct_vs_wrong_-2": 0.59375,
+    "correct_vs_wrong_+2": 0.578125
+   },
+   "row_bootstrap": {
+    "auroc": 0.58,
+    "auroc_ci95": [
+     0.52,
+     0.71
+    ],
+    "paired": 0.9,
+    "paired_ci95": [
+     0.7,
+     1.0
+    ],
+    "n": 10,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "secondary_single_wrong_mod5_mirrored": {
+    "auroc": 0.6875,
+    "auroc_ci95": [
+     0.6875,
+     1.0
+    ],
+    "paired": 1.0,
+    "paired_ci95": [
+     1.0,
+     1.0
+    ],
+    "n": 4,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "raw_scores": "armi/per_row_scores/armi_2026_s20260907.warped.raw_1680410569.npz",
+   "pairing_check": {
+    "shift_-1": {
+     "mean_residual": 0.0992361671394772,
+     "auroc_correct_vs_shift": 0.5432098765432098,
+     "fraction_correct_lower": 0.7777777777777778
+    },
+    "shift_+1": {
+     "mean_residual": 0.0999104811085595,
+     "auroc_correct_vs_shift": 0.5679012345679012,
+     "fraction_correct_lower": 0.8888888888888888
+    },
+    "reading": "the declared pairing is right when the correct residual sits below both one-row shifts"
+   }
+  },
+  "1680412337": {
+   "era": "2023",
+   "kind": "npy_2023",
+   "note": "unseen configuration (2023), every row",
+   "n_rows": 777,
+   "contiguous_eval_blocks": [
+    777
+   ],
+   "blocks_used": [
+    41,
+    41,
+    41,
+    41,
+    41,
+    41,
+    41,
+    41,
+    41,
+    41,
+    41,
+    41,
+    41,
+    41,
+    41,
+    41,
+    41,
+    40,
+    40
+   ],
+   "conditions": {
+    "correct": 0.07369827014062089,
+    "wrong_-2": 0.07497846822104147,
+    "wrong_+2": 0.07498362772887752,
+    "wrong_-15": 0.07506523051560707,
+    "wrong_+15": 0.07502102674891943,
+    "wrong_+30": 0.07505457713661423,
+    "single_wrong": 0.07504598582535023,
+    "shift_-1": 0.07497697067206975,
+    "shift_+1": 0.0749790454187344
+   },
+   "delta_wrong_mean": {
+    "mean": 0.0012925211587902408,
+    "ci95_block_bootstrap": [
+     0.0012227661558887842,
+     0.0013624679842980385
+    ],
+    "relative": 0.017538012172117878
+   },
+   "paired_fraction_correct_lower": 0.9420849420849421,
+   "auroc": {
+    "correct_vs_wrong_avg": 0.5766726461707157,
+    "correct_vs_wrong_-2": 0.5759084287200833,
+    "correct_vs_wrong_+2": 0.5751059313215401,
+    "correct_vs_wrong_-15": 0.5774536549073098,
+    "correct_vs_wrong_+15": 0.5741865928176301,
+    "correct_vs_wrong_+30": 0.5760104227709589
+   },
+   "row_bootstrap": {
+    "auroc": 0.5766726461707157,
+    "auroc_ci95": [
+     0.5718662678122137,
+     0.5823524296497269
+    ],
+    "paired": 0.9420849420849421,
+    "paired_ci95": [
+     0.9253539253539254,
+     0.9575289575289575
+    ],
+    "n": 777,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "secondary_single_wrong_mod5_mirrored": {
+    "auroc": 0.5788971541867295,
+    "auroc_ci95": [
+     0.5735112525653067,
+     0.5853874834569815
+    ],
+    "paired": 0.8996138996138996,
+    "paired_ci95": [
+     0.878989703989704,
+     0.9202059202059202
+    ],
+    "n": 777,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "raw_scores": "armi/per_row_scores/armi_2026_s20260907.warped.raw_1680412337.npz",
+   "pairing_check": {
+    "shift_-1": {
+     "mean_residual": 0.07497697067206975,
+     "auroc_correct_vs_shift": 0.5748120150919332,
+     "fraction_correct_lower": 0.8724226804123711
+    },
+    "shift_+1": {
+     "mean_residual": 0.0749790454187344,
+     "auroc_correct_vs_shift": 0.5750569600914018,
+     "fraction_correct_lower": 0.8814432989690721
+    },
+    "reading": "the declared pairing is right when the correct residual sits below both one-row shifts"
+   }
+  },
+  "1681945334": {
+   "era": "2023",
+   "kind": "npy_2023",
+   "note": "unseen configuration (2023), every row",
+   "n_rows": 777,
+   "contiguous_eval_blocks": [
+    777
+   ],
+   "blocks_used": [
+    41,
+    41,
+    41,
+    41,
+    41,
+    41,
+    41,
+    41,
+    41,
+    41,
+    41,
+    41,
+    41,
+    41,
+    41,
+    41,
+    41,
+    40,
+    40
+   ],
+   "conditions": {
+    "correct": 0.08969274758717267,
+    "wrong_-2": 0.09141044444614842,
+    "wrong_+2": 0.09140440982195638,
+    "wrong_-15": 0.09136047220136237,
+    "wrong_+15": 0.09157646736839,
+    "wrong_+30": 0.09166254527078894,
+    "single_wrong": 0.09145528557524564,
+    "shift_-1": 0.09146647345389902,
+    "shift_+1": 0.09149200423169382
+   },
+   "delta_wrong_mean": {
+    "mean": 0.0017187725217211456,
+    "ci95_block_bootstrap": [
+     0.0016472251685324699,
+     0.001792207782151572
+    ],
+    "relative": 0.01916289296468106
+   },
+   "paired_fraction_correct_lower": 0.9395109395109396,
+   "auroc": {
+    "correct_vs_wrong_avg": 0.5899252810449722,
+    "correct_vs_wrong_-2": 0.5898705515088449,
+    "correct_vs_wrong_+2": 0.5866655567117586,
+    "correct_vs_wrong_-15": 0.5888358443383553,
+    "correct_vs_wrong_+15": 0.5916534055290332,
+    "correct_vs_wrong_+30": 0.5919080158205333
+   },
+   "row_bootstrap": {
+    "auroc": 0.5899252810449722,
+    "auroc_ci95": [
+     0.5836992673865261,
+     0.596666964813683
+    ],
+    "paired": 0.9395109395109396,
+    "paired_ci95": [
+     0.9227799227799228,
+     0.954954954954955
+    ],
+    "n": 777,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "secondary_single_wrong_mod5_mirrored": {
+    "auroc": 0.5915319621883328,
+    "auroc_ci95": [
+     0.584662696342233,
+     0.5994988231474717
+    ],
+    "paired": 0.8815958815958816,
+    "paired_ci95": [
+     0.8584298584298584,
+     0.9034749034749034
+    ],
+    "n": 777,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "raw_scores": "armi/per_row_scores/armi_2026_s20260907.warped.raw_1681945334.npz",
+   "pairing_check": {
+    "shift_-1": {
+     "mean_residual": 0.09146647345389902,
+     "auroc_correct_vs_shift": 0.5944673982357317,
+     "fraction_correct_lower": 0.875
+    },
+    "shift_+1": {
+     "mean_residual": 0.09149200423169382,
+     "auroc_correct_vs_shift": 0.5941286268466363,
+     "fraction_correct_lower": 0.8788659793814433
+    },
+    "reading": "the declared pairing is right when the correct residual sits below both one-row shifts"
+   }
+  },
+  "1682013847": {
+   "era": "2023",
+   "kind": "npy_2023",
+   "note": "unseen configuration (2023), every row",
+   "n_rows": 118,
+   "contiguous_eval_blocks": [
+    118
+   ],
+   "blocks_used": [
+    40,
+    39,
+    39
+   ],
+   "conditions": {
+    "correct": 0.08956998649795177,
+    "wrong_-2": 0.09126394858648038,
+    "wrong_+2": 0.09120012228858881,
+    "wrong_-15": 0.09133295454446552,
+    "wrong_+15": 0.09120202780637926,
+    "wrong_+30": 0.0910166564651511,
+    "single_wrong": 0.09121878786107242,
+    "shift_-1": 0.09106797973314922,
+    "shift_+1": 0.09121272400913076
+   },
+   "delta_wrong_mean": {
+    "mean": 0.001587415183499708,
+    "ci95_block_bootstrap": [
+     0.0014130896482712181,
+     0.0017925918878366552
+    ],
+    "relative": 0.01772262390076399
+   },
+   "paired_fraction_correct_lower": 0.9067796610169492,
+   "auroc": {
+    "correct_vs_wrong_avg": 0.605214018960069,
+    "correct_vs_wrong_-2": 0.601218787158145,
+    "correct_vs_wrong_+2": 0.6006985731272295,
+    "correct_vs_wrong_-15": 0.6067489867093977,
+    "correct_vs_wrong_+15": 0.6124988217551136,
+    "correct_vs_wrong_+30": 0.6009814049586777
+   },
+   "row_bootstrap": {
+    "auroc": 0.605214018960069,
+    "auroc_ci95": [
+     0.5852449008905486,
+     0.6337977592645792
+    ],
+    "paired": 0.9067796610169492,
+    "paired_ci95": [
+     0.847457627118644,
+     0.9576271186440678
+    ],
+    "n": 118,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "secondary_single_wrong_mod5_mirrored": {
+    "auroc": 0.6074403906923298,
+    "auroc_ci95": [
+     0.5848893995978167,
+     0.6361767451881642
+    ],
+    "paired": 0.8559322033898306,
+    "paired_ci95": [
+     0.788135593220339,
+     0.9152542372881356
+    ],
+    "n": 118,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "raw_scores": "armi/per_row_scores/armi_2026_s20260907.warped.raw_1682013847.npz",
+   "pairing_check": {
+    "shift_-1": {
+     "mean_residual": 0.09106797973314922,
+     "auroc_correct_vs_shift": 0.5944919278252612,
+     "fraction_correct_lower": 0.8034188034188035
+    },
+    "shift_+1": {
+     "mean_residual": 0.09121272400913076,
+     "auroc_correct_vs_shift": 0.6101249178172256,
+     "fraction_correct_lower": 0.8461538461538461
+    },
+    "reading": "the declared pairing is right when the correct residual sits below both one-row shifts"
+   }
+  },
+  "1682014432": {
+   "era": "2023",
+   "kind": "npy_2023",
+   "note": "unseen configuration (2023), every row",
+   "n_rows": 113,
+   "contiguous_eval_blocks": [
+    113
+   ],
+   "blocks_used": [
+    38,
+    38,
+    37
+   ],
+   "conditions": {
+    "correct": 0.08201697066558146,
+    "wrong_-2": 0.0836917982847841,
+    "wrong_+2": 0.08361764641495438,
+    "wrong_-15": 0.08369628332403241,
+    "wrong_+15": 0.08393247820893113,
+    "wrong_+30": 0.08383836884455509,
+    "single_wrong": 0.08366516489634472,
+    "shift_-1": 0.0836170372952308,
+    "shift_+1": 0.08357771239908678
+   },
+   "delta_wrong_mean": {
+    "mean": 0.0016250759308229156,
+    "ci95_block_bootstrap": [
+     0.0014888980278843329,
+     0.0017438584653375394
+    ],
+    "relative": 0.019813898485095856
+   },
+   "paired_fraction_correct_lower": 0.9557522123893806,
+   "auroc": {
+    "correct_vs_wrong_avg": 0.6165713838201895,
+    "correct_vs_wrong_-2": 0.609690771852934,
+    "correct_vs_wrong_+2": 0.6119633146660174,
+    "correct_vs_wrong_-15": 0.6064139941690962,
+    "correct_vs_wrong_+15": 0.6206788837984173,
+    "correct_vs_wrong_+30": 0.633763971548846
+   },
+   "row_bootstrap": {
+    "auroc": 0.6165713838201895,
+    "auroc_ci95": [
+     0.5972237450074399,
+     0.6432766857232359
+    ],
+    "paired": 0.9557522123893806,
+    "paired_ci95": [
+     0.911504424778761,
+     0.9911504424778761
+    ],
+    "n": 113,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "secondary_single_wrong_mod5_mirrored": {
+    "auroc": 0.613986999765056,
+    "auroc_ci95": [
+     0.5933882841256167,
+     0.6432022867883155
+    ],
+    "paired": 0.8938053097345132,
+    "paired_ci95": [
+     0.831858407079646,
+     0.9469026548672567
+    ],
+    "n": 113,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "raw_scores": "armi/per_row_scores/armi_2026_s20260907.warped.raw_1682014432.npz",
+   "pairing_check": {
+    "shift_-1": {
+     "mean_residual": 0.0836170372952308,
+     "auroc_correct_vs_shift": 0.6140784438775511,
+     "fraction_correct_lower": 0.8392857142857143
+    },
+    "shift_+1": {
+     "mean_residual": 0.08357771239908678,
+     "auroc_correct_vs_shift": 0.6112882653061225,
+     "fraction_correct_lower": 0.8839285714285714
+    },
+    "reading": "the declared pairing is right when the correct residual sits below both one-row shifts"
+   }
+  },
+  "1682712156": {
+   "era": "2023",
+   "kind": "npy_2023",
+   "note": "unseen configuration (2023), every row",
+   "n_rows": 777,
+   "contiguous_eval_blocks": [
+    777
+   ],
+   "blocks_used": [
+    41,
+    41,
+    41,
+    41,
+    41,
+    41,
+    41,
+    41,
+    41,
+    41,
+    41,
+    41,
+    41,
+    41,
+    41,
+    41,
+    41,
+    40,
+    40
+   ],
+   "conditions": {
+    "correct": 0.09340010047380835,
+    "wrong_-2": 0.09520384588549215,
+    "wrong_+2": 0.09521975973921437,
+    "wrong_-15": 0.09519788304104267,
+    "wrong_+15": 0.09511238870423609,
+    "wrong_+30": 0.09501782442671228,
+    "single_wrong": 0.09518488125451283,
+    "shift_-1": 0.09525225973044782,
+    "shift_+1": 0.09518589242601518
+   },
+   "delta_wrong_mean": {
+    "mean": 0.0017976284832567785,
+    "ci95_block_bootstrap": [
+     0.0017210009615171045,
+     0.0018732470909367752
+    ],
+    "relative": 0.019246536932375966
+   },
+   "paired_fraction_correct_lower": 0.9433719433719434,
+   "auroc": {
+    "correct_vs_wrong_avg": 0.5828061928448028,
+    "correct_vs_wrong_-2": 0.5835021852237253,
+    "correct_vs_wrong_+2": 0.5828228928199792,
+    "correct_vs_wrong_-15": 0.5800344100688202,
+    "correct_vs_wrong_+15": 0.5812132735376582,
+    "correct_vs_wrong_+30": 0.5811286197892865
+   },
+   "row_bootstrap": {
+    "auroc": 0.5828061928448028,
+    "auroc_ci95": [
+     0.5776223272362269,
+     0.589166414069889
+    ],
+    "paired": 0.9433719433719434,
+    "paired_ci95": [
+     0.9279279279279279,
+     0.9601029601029601
+    ],
+    "n": 777,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "secondary_single_wrong_mod5_mirrored": {
+    "auroc": 0.5803332289818777,
+    "auroc_ci95": [
+     0.5742476342862444,
+     0.587422626708341
+    ],
+    "paired": 0.8777348777348777,
+    "paired_ci95": [
+     0.8545688545688546,
+     0.9009009009009009
+    ],
+    "n": 777,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "raw_scores": "armi/per_row_scores/armi_2026_s20260907.warped.raw_1682712156.npz",
+   "pairing_check": {
+    "shift_-1": {
+     "mean_residual": 0.09525225973044782,
+     "auroc_correct_vs_shift": 0.5851711127643745,
+     "fraction_correct_lower": 0.8827319587628866
+    },
+    "shift_+1": {
+     "mean_residual": 0.09518589242601518,
+     "auroc_correct_vs_shift": 0.5815210171112765,
+     "fraction_correct_lower": 0.8853092783505154
+    },
+    "reading": "the declared pairing is right when the correct residual sits below both one-row shifts"
+   }
+  },
+  "1682718815": {
+   "era": "2023",
+   "kind": "npy_2023",
+   "note": "unseen configuration (2023), every row",
+   "n_rows": 777,
+   "contiguous_eval_blocks": [
+    777
+   ],
+   "blocks_used": [
+    41,
+    41,
+    41,
+    41,
+    41,
+    41,
+    41,
+    41,
+    41,
+    41,
+    41,
+    41,
+    41,
+    41,
+    41,
+    41,
+    41,
+    40,
+    40
+   ],
+   "conditions": {
+    "correct": 0.0933767028124176,
+    "wrong_-2": 0.09511249858525492,
+    "wrong_+2": 0.09516276572019823,
+    "wrong_-15": 0.09516747649807943,
+    "wrong_+15": 0.0951418120638905,
+    "wrong_+30": 0.0949684543961502,
+    "single_wrong": 0.09512967998917038,
+    "shift_-1": 0.09511422934298663,
+    "shift_+1": 0.09512311506286725
+   },
+   "delta_wrong_mean": {
+    "mean": 0.0017612397653166188,
+    "ci95_block_bootstrap": [
+     0.0016751904117645864,
+     0.0018531051977110956
+    ],
+    "relative": 0.018861661552290347
+   },
+   "paired_fraction_correct_lower": 0.9279279279279279,
+   "auroc": {
+    "correct_vs_wrong_avg": 0.5924727816619708,
+    "correct_vs_wrong_-2": 0.5890772112382935,
+    "correct_vs_wrong_+2": 0.5927334027055151,
+    "correct_vs_wrong_-15": 0.5922889068000359,
+    "correct_vs_wrong_+15": 0.5919410172153677,
+    "correct_vs_wrong_+30": 0.5905263176758798
+   },
+   "row_bootstrap": {
+    "auroc": 0.5924727816619708,
+    "auroc_ci95": [
+     0.586230991057246,
+     0.6002894924709596
+    ],
+    "paired": 0.9279279279279279,
+    "paired_ci95": [
+     0.9099099099099099,
+     0.9472329472329473
+    ],
+    "n": 777,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "secondary_single_wrong_mod5_mirrored": {
+    "auroc": 0.5907973610676314,
+    "auroc_ci95": [
+     0.58386680944596,
+     0.599173987832289
+    ],
+    "paired": 0.8545688545688546,
+    "paired_ci95": [
+     0.8300836550836551,
+     0.8803088803088803
+    ],
+    "n": 777,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "raw_scores": "armi/per_row_scores/armi_2026_s20260907.warped.raw_1682718815.npz",
+   "pairing_check": {
+    "shift_-1": {
+     "mean_residual": 0.09511422934298663,
+     "auroc_correct_vs_shift": 0.5896581730258263,
+     "fraction_correct_lower": 0.8672680412371134
+    },
+    "shift_+1": {
+     "mean_residual": 0.09512311506286725,
+     "auroc_correct_vs_shift": 0.5907209852269104,
+     "fraction_correct_lower": 0.8634020618556701
+    },
+    "reading": "the declared pairing is right when the correct residual sits below both one-row shifts"
+   }
+  }
+ },
+ "eras": {
+  "2024": {
+   "sessions": [
+    "20241219_044052",
+    "20241219_044529",
+    "20241219_050046",
+    "20241219_050648",
+    "20241219_051150",
+    "20241219_051629",
+    "20241219_052040"
+   ],
+   "n_rows": 448,
+   "auroc": 0.5094019052933674,
+   "auroc_ci95_row_bootstrap": [
+    0.5061428770727041,
+    0.5136530662069515
+   ],
+   "auroc_ci95_session_cluster_bootstrap": [
+    0.5069486656967475,
+    0.5132832429846939
+   ],
+   "paired": 0.6361607142857143,
+   "paired_ci95_row_bootstrap": [
+    0.5892857142857143,
+    0.6830357142857143
+   ],
+   "delta_wrong_mean": 0.00025982672453946646,
+   "mean_correct": 0.07283668203412422,
+   "mean_wrong": 0.07309650875866369,
+   "note": "august (same session as training) excluded from the 2026 pool"
+  },
+  "2023": {
+   "sessions": [
+    "1680410249",
+    "1680410569",
+    "1680412337",
+    "1681945334",
+    "1682013847",
+    "1682014432",
+    "1682712156",
+    "1682718815"
+   ],
+   "n_rows": 3359,
+   "auroc": 0.5532842188090081,
+   "auroc_ci95_row_bootstrap": [
+    0.5512408289159481,
+    0.5556629397225762
+   ],
+   "auroc_ci95_session_cluster_bootstrap": [
+    0.5418394786014867,
+    0.5862953398124968
+   ],
+   "paired": 0.9371836856207204,
+   "paired_ci95_row_bootstrap": [
+    0.9288478713902947,
+    0.9455194998511461
+   ],
+   "delta_wrong_mean": 0.0016386497310700368,
+   "mean_correct": 0.08749747896263663,
+   "mean_wrong": 0.08913612869370667,
+   "note": "august (same session as training) excluded from the 2026 pool"
+  }
+ }
+}

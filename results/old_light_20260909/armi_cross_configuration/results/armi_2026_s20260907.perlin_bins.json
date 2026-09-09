@@ -1,0 +1,80 @@
+{
+ "arm": "armi_2026_s20260907",
+ "n_rows": 448,
+ "period_definition": "mean over RGB of 1/scale (px on the 1920x1080 display); camera px = 2.40 x",
+ "bins": [
+  {
+   "lo": 40.0,
+   "hi": 60.0,
+   "n": 97,
+   "auroc": 0.6317355723243703,
+   "auroc_ci95": [
+    0.6167499202890849,
+    0.6583085343819747
+   ],
+   "paired": 1.0,
+   "paired_ci95": [
+    1.0,
+    1.0
+   ],
+   "resamples": 1000,
+   "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED",
+   "mean_delta": 0.0019667357737614523
+  },
+  {
+   "lo": 60.0,
+   "hi": 80.0,
+   "n": 143,
+   "auroc": 0.6251650447454643,
+   "auroc_ci95": [
+    0.6072619688004304,
+    0.6484938138784293
+   ],
+   "paired": 0.958041958041958,
+   "paired_ci95": [
+    0.9230769230769231,
+    0.986013986013986
+   ],
+   "resamples": 1000,
+   "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED",
+   "mean_delta": 0.0017953658815134655
+  },
+  {
+   "lo": 80.0,
+   "hi": 110.0,
+   "n": 157,
+   "auroc": 0.6435555194936914,
+   "auroc_ci95": [
+    0.6263063410280336,
+    0.6671274696742261
+   ],
+   "paired": 0.9872611464968153,
+   "paired_ci95": [
+    0.9681528662420382,
+    1.0
+   ],
+   "resamples": 1000,
+   "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED",
+   "mean_delta": 0.0020710550311897466
+  },
+  {
+   "lo": 110.0,
+   "hi": 200.0,
+   "n": 51,
+   "auroc": 0.7220299884659747,
+   "auroc_ci95": [
+    0.6789600153787005,
+    0.7896962706651288
+   ],
+   "paired": 1.0,
+   "paired_ci95": [
+    1.0,
+    1.0
+   ],
+   "resamples": 1000,
+   "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED",
+   "mean_delta": 0.0028289442248885925
+  }
+ ],
+ "spearman_period_vs_delta": 0.21057967850149578
+}

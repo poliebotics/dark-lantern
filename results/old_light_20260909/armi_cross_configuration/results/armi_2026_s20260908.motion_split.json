@@ -1,0 +1,42 @@
+{
+ "arm": "armi_2026_s20260908",
+ "threshold": 0.04,
+ "metric": "leave-one-out gain/offset residual fraction of the beam (data-look desk)",
+ "strata": {
+  "static, <= 4 %": {
+   "auroc": 0.6692089491285969,
+   "auroc_ci95": [
+    0.6557184799284776,
+    0.6863870155958544
+   ],
+   "paired": 1.0,
+   "paired_ci95": [
+    1.0,
+    1.0
+   ],
+   "n": 301,
+   "resamples": 1000,
+   "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED",
+   "mean_delta": 0.0024734237989367447,
+   "mean_correct": 0.0391115900624135
+  },
+  "person or motion, > 4 %": {
+   "auroc": 0.7052616965153409,
+   "auroc_ci95": [
+    0.6825859595538896,
+    0.7340217039196631
+   ],
+   "paired": 0.9931972789115646,
+   "paired_ci95": [
+    0.9795918367346939,
+    1.0
+   ],
+   "n": 147,
+   "resamples": 1000,
+   "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED",
+   "mean_delta": 0.002370158080307264,
+   "mean_correct": 0.043537856263368306
+  }
+ },
+ "spearman_change_vs_delta": -0.07977792879457278
+}

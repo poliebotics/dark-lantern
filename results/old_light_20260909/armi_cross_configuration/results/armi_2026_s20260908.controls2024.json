@@ -1,0 +1,852 @@
+{
+ "checkpoint": "armi/checkpoints/armi_2026_s20260908/latest.pt",
+ "checkpoint_step": 24000,
+ "sessions": {
+  "20241219_044052": {
+   "n_rows": 64,
+   "prescribed_offsets": {
+    "auroc": 0.65087890625,
+    "auroc_ci95": [
+     0.629132080078125,
+     0.688970947265625
+    ],
+    "paired": 1.0,
+    "paired_ci95": [
+     1.0,
+     1.0
+    ],
+    "n": 64,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "random_negatives": {
+    "auroc": 0.655029296875,
+    "auroc_ci95": [
+     0.632568359375,
+     0.696295166015625
+    ],
+    "paired": 1.0,
+    "paired_ci95": [
+     1.0,
+     1.0
+    ],
+    "n": 64,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "exhaustive_mean_of_63": {
+    "auroc": 0.651611328125,
+    "auroc_ci95": [
+     0.63037109375,
+     0.691900634765625
+    ],
+    "paired": 1.0,
+    "paired_ci95": [
+     1.0,
+     1.0
+    ],
+    "n": 64,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "exhaustive_pooled_auroc_correct_vs_all_wrong": 0.6484375,
+   "fraction_beating_every_negative": 0.625,
+   "fraction_beating_single_selected_wrong": 0.953125,
+   "matched_period_negative": {
+    "auroc": 0.654052734375,
+    "auroc_ci95": [
+     0.624755859375,
+     0.701171875
+    ],
+    "paired": 0.953125,
+    "paired_ci95": [
+     0.890625,
+     1.0
+    ],
+    "n": 64,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "matched_period_gap_px_mean": 0.8348290529311965,
+   "shuffled_correct": {
+    "auroc": 0.525146484375,
+    "auroc_ci95": [
+     0.50439453125,
+     0.54931640625
+    ],
+    "paired": 0.625,
+    "paired_ci95": [
+     0.5,
+     0.734375
+    ],
+    "n": 64,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "colour_matched_wrong": {
+    "auroc": 0.638671875,
+    "auroc_ci95": [
+     0.616937255859375,
+     0.674072265625
+    ],
+    "paired": 0.96875,
+    "paired_ci95": [
+     0.921875,
+     1.0
+    ],
+    "n": 64,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "means": {
+    "correct": 0.041640583192929626,
+    "prescribed": 0.04370786775155769,
+    "random": 0.043777597486041486,
+    "exhaustive": 0.04373031286504268,
+    "matched": 0.043753829784691334,
+    "shuffled": 0.042054610850755125,
+    "colourmatch": 0.043518431135453284
+   }
+  },
+  "20241219_044529": {
+   "n_rows": 64,
+   "prescribed_offsets": {
+    "auroc": 0.64404296875,
+    "auroc_ci95": [
+     0.621337890625,
+     0.68115234375
+    ],
+    "paired": 1.0,
+    "paired_ci95": [
+     1.0,
+     1.0
+    ],
+    "n": 64,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "random_negatives": {
+    "auroc": 0.646484375,
+    "auroc_ci95": [
+     0.622796630859375,
+     0.686767578125
+    ],
+    "paired": 0.984375,
+    "paired_ci95": [
+     0.953125,
+     1.0
+    ],
+    "n": 64,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "exhaustive_mean_of_63": {
+    "auroc": 0.64501953125,
+    "auroc_ci95": [
+     0.62451171875,
+     0.684820556640625
+    ],
+    "paired": 1.0,
+    "paired_ci95": [
+     1.0,
+     1.0
+    ],
+    "n": 64,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "exhaustive_pooled_auroc_correct_vs_all_wrong": 0.6426769438244048,
+   "fraction_beating_every_negative": 0.609375,
+   "fraction_beating_single_selected_wrong": 0.984375,
+   "matched_period_negative": {
+    "auroc": 0.64990234375,
+    "auroc_ci95": [
+     0.620355224609375,
+     0.692633056640625
+    ],
+    "paired": 0.96875,
+    "paired_ci95": [
+     0.921875,
+     1.0
+    ],
+    "n": 64,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "matched_period_gap_px_mean": 0.7547422948209231,
+   "shuffled_correct": {
+    "auroc": 0.548095703125,
+    "auroc_ci95": [
+     0.531243896484375,
+     0.57470703125
+    ],
+    "paired": 0.765625,
+    "paired_ci95": [
+     0.65625,
+     0.859375
+    ],
+    "n": 64,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "colour_matched_wrong": {
+    "auroc": 0.645751953125,
+    "auroc_ci95": [
+     0.623046875,
+     0.6875
+    ],
+    "paired": 0.984375,
+    "paired_ci95": [
+     0.953125,
+     1.0
+    ],
+    "n": 64,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "means": {
+    "correct": 0.039691180689260364,
+    "prescribed": 0.04193695405847393,
+    "random": 0.04197374817449599,
+    "exhaustive": 0.04193453356486908,
+    "matched": 0.041948192403651774,
+    "shuffled": 0.04034110275097191,
+    "colourmatch": 0.04194452374940738
+   }
+  },
+  "20241219_050046": {
+   "n_rows": 64,
+   "prescribed_offsets": {
+    "auroc": 0.638916015625,
+    "auroc_ci95": [
+     0.616455078125,
+     0.674822998046875
+    ],
+    "paired": 1.0,
+    "paired_ci95": [
+     1.0,
+     1.0
+    ],
+    "n": 64,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "random_negatives": {
+    "auroc": 0.635498046875,
+    "auroc_ci95": [
+     0.616455078125,
+     0.665777587890625
+    ],
+    "paired": 1.0,
+    "paired_ci95": [
+     1.0,
+     1.0
+    ],
+    "n": 64,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "exhaustive_mean_of_63": {
+    "auroc": 0.64013671875,
+    "auroc_ci95": [
+     0.6181640625,
+     0.67481689453125
+    ],
+    "paired": 1.0,
+    "paired_ci95": [
+     1.0,
+     1.0
+    ],
+    "n": 64,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "exhaustive_pooled_auroc_correct_vs_all_wrong": 0.6369396391369048,
+   "fraction_beating_every_negative": 0.75,
+   "fraction_beating_single_selected_wrong": 0.984375,
+   "matched_period_negative": {
+    "auroc": 0.6357421875,
+    "auroc_ci95": [
+     0.607904052734375,
+     0.676031494140625
+    ],
+    "paired": 0.96875,
+    "paired_ci95": [
+     0.921875,
+     1.0
+    ],
+    "n": 64,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "matched_period_gap_px_mean": 1.1107739531453371,
+   "shuffled_correct": {
+    "auroc": 0.54541015625,
+    "auroc_ci95": [
+     0.532708740234375,
+     0.568853759765625
+    ],
+    "paired": 0.8125,
+    "paired_ci95": [
+     0.71875,
+     0.90625
+    ],
+    "n": 64,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "colour_matched_wrong": {
+    "auroc": 0.628173828125,
+    "auroc_ci95": [
+     0.606201171875,
+     0.6606689453125
+    ],
+    "paired": 0.984375,
+    "paired_ci95": [
+     0.953125,
+     1.0
+    ],
+    "n": 64,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "means": {
+    "correct": 0.038690752553520724,
+    "prescribed": 0.04106399143541542,
+    "random": 0.04099940459709615,
+    "exhaustive": 0.04104388422251398,
+    "matched": 0.0409563765861094,
+    "shuffled": 0.0393466834211722,
+    "colourmatch": 0.04088507129927166
+   }
+  },
+  "20241219_050648": {
+   "n_rows": 64,
+   "prescribed_offsets": {
+    "auroc": 0.68408203125,
+    "auroc_ci95": [
+     0.654541015625,
+     0.727301025390625
+    ],
+    "paired": 1.0,
+    "paired_ci95": [
+     1.0,
+     1.0
+    ],
+    "n": 64,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "random_negatives": {
+    "auroc": 0.693359375,
+    "auroc_ci95": [
+     0.66307373046875,
+     0.733660888671875
+    ],
+    "paired": 1.0,
+    "paired_ci95": [
+     1.0,
+     1.0
+    ],
+    "n": 64,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "exhaustive_mean_of_63": {
+    "auroc": 0.691162109375,
+    "auroc_ci95": [
+     0.662841796875,
+     0.73193359375
+    ],
+    "paired": 1.0,
+    "paired_ci95": [
+     1.0,
+     1.0
+    ],
+    "n": 64,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "exhaustive_pooled_auroc_correct_vs_all_wrong": 0.6870465959821429,
+   "fraction_beating_every_negative": 0.796875,
+   "fraction_beating_single_selected_wrong": 0.984375,
+   "matched_period_negative": {
+    "auroc": 0.69482421875,
+    "auroc_ci95": [
+     0.658685302734375,
+     0.744158935546875
+    ],
+    "paired": 1.0,
+    "paired_ci95": [
+     1.0,
+     1.0
+    ],
+    "n": 64,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "matched_period_gap_px_mean": 0.6097341750109772,
+   "shuffled_correct": {
+    "auroc": 0.56591796875,
+    "auroc_ci95": [
+     0.548822021484375,
+     0.59521484375
+    ],
+    "paired": 0.875,
+    "paired_ci95": [
+     0.796875,
+     0.953125
+    ],
+    "n": 64,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "colour_matched_wrong": {
+    "auroc": 0.680908203125,
+    "auroc_ci95": [
+     0.651116943359375,
+     0.72486572265625
+    ],
+    "paired": 1.0,
+    "paired_ci95": [
+     1.0,
+     1.0
+    ],
+    "n": 64,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "means": {
+    "correct": 0.03864962136140093,
+    "prescribed": 0.041354229826053295,
+    "random": 0.04143113546306268,
+    "exhaustive": 0.04143425224382165,
+    "matched": 0.04145135584985837,
+    "shuffled": 0.03952402278082445,
+    "colourmatch": 0.04121804685564712
+   }
+  },
+  "20241219_051150": {
+   "n_rows": 64,
+   "prescribed_offsets": {
+    "auroc": 0.68603515625,
+    "auroc_ci95": [
+     0.661614990234375,
+     0.728533935546875
+    ],
+    "paired": 1.0,
+    "paired_ci95": [
+     1.0,
+     1.0
+    ],
+    "n": 64,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "random_negatives": {
+    "auroc": 0.688720703125,
+    "auroc_ci95": [
+     0.664794921875,
+     0.7275390625
+    ],
+    "paired": 1.0,
+    "paired_ci95": [
+     1.0,
+     1.0
+    ],
+    "n": 64,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "exhaustive_mean_of_63": {
+    "auroc": 0.685302734375,
+    "auroc_ci95": [
+     0.663330078125,
+     0.725103759765625
+    ],
+    "paired": 1.0,
+    "paired_ci95": [
+     1.0,
+     1.0
+    ],
+    "n": 64,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "exhaustive_pooled_auroc_correct_vs_all_wrong": 0.684357173859127,
+   "fraction_beating_every_negative": 0.671875,
+   "fraction_beating_single_selected_wrong": 0.984375,
+   "matched_period_negative": {
+    "auroc": 0.68017578125,
+    "auroc_ci95": [
+     0.651605224609375,
+     0.720965576171875
+    ],
+    "paired": 0.984375,
+    "paired_ci95": [
+     0.953125,
+     1.0
+    ],
+    "n": 64,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "matched_period_gap_px_mean": 0.765080788552469,
+   "shuffled_correct": {
+    "auroc": 0.557373046875,
+    "auroc_ci95": [
+     0.538330078125,
+     0.58642578125
+    ],
+    "paired": 0.8125,
+    "paired_ci95": [
+     0.71875,
+     0.90625
+    ],
+    "n": 64,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "colour_matched_wrong": {
+    "auroc": 0.68017578125,
+    "auroc_ci95": [
+     0.654046630859375,
+     0.722418212890625
+    ],
+    "paired": 1.0,
+    "paired_ci95": [
+     1.0,
+     1.0
+    ],
+    "n": 64,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "means": {
+    "correct": 0.041486493428237736,
+    "prescribed": 0.04397504957256994,
+    "random": 0.044026329205371445,
+    "exhaustive": 0.043989022878656484,
+    "matched": 0.04393923428142443,
+    "shuffled": 0.042209396488033235,
+    "colourmatch": 0.043897128489334136
+   }
+  },
+  "20241219_051629": {
+   "n_rows": 64,
+   "prescribed_offsets": {
+    "auroc": 0.7021484375,
+    "auroc_ci95": [
+     0.672607421875,
+     0.7485595703125
+    ],
+    "paired": 0.984375,
+    "paired_ci95": [
+     0.953125,
+     1.0
+    ],
+    "n": 64,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "random_negatives": {
+    "auroc": 0.70068359375,
+    "auroc_ci95": [
+     0.674554443359375,
+     0.74317626953125
+    ],
+    "paired": 1.0,
+    "paired_ci95": [
+     1.0,
+     1.0
+    ],
+    "n": 64,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "exhaustive_mean_of_63": {
+    "auroc": 0.696533203125,
+    "auroc_ci95": [
+     0.671624755859375,
+     0.736572265625
+    ],
+    "paired": 1.0,
+    "paired_ci95": [
+     1.0,
+     1.0
+    ],
+    "n": 64,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "exhaustive_pooled_auroc_correct_vs_all_wrong": 0.6876395089285714,
+   "fraction_beating_every_negative": 0.5625,
+   "fraction_beating_single_selected_wrong": 0.9375,
+   "matched_period_negative": {
+    "auroc": 0.6689453125,
+    "auroc_ci95": [
+     0.634027099609375,
+     0.719256591796875
+    ],
+    "paired": 0.9375,
+    "paired_ci95": [
+     0.875,
+     0.984375
+    ],
+    "n": 64,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "matched_period_gap_px_mean": 0.9410100787734124,
+   "shuffled_correct": {
+    "auroc": 0.543212890625,
+    "auroc_ci95": [
+     0.520263671875,
+     0.572271728515625
+    ],
+    "paired": 0.6875,
+    "paired_ci95": [
+     0.578125,
+     0.796875
+    ],
+    "n": 64,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "colour_matched_wrong": {
+    "auroc": 0.683349609375,
+    "auroc_ci95": [
+     0.6494140625,
+     0.734625244140625
+    ],
+    "paired": 0.96875,
+    "paired_ci95": [
+     0.921875,
+     1.0
+    ],
+    "n": 64,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "means": {
+    "correct": 0.042755305767059326,
+    "prescribed": 0.04514076963047652,
+    "random": 0.04519700803793967,
+    "exhaustive": 0.04507756773530254,
+    "matched": 0.04483613604679704,
+    "shuffled": 0.04319995560217649,
+    "colourmatch": 0.045097439317032695
+   }
+  },
+  "20241219_052040": {
+   "n_rows": 64,
+   "prescribed_offsets": {
+    "auroc": 0.687255859375,
+    "auroc_ci95": [
+     0.66357421875,
+     0.72828369140625
+    ],
+    "paired": 1.0,
+    "paired_ci95": [
+     1.0,
+     1.0
+    ],
+    "n": 64,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "random_negatives": {
+    "auroc": 0.67626953125,
+    "auroc_ci95": [
+     0.6513671875,
+     0.719000244140625
+    ],
+    "paired": 1.0,
+    "paired_ci95": [
+     1.0,
+     1.0
+    ],
+    "n": 64,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "exhaustive_mean_of_63": {
+    "auroc": 0.68115234375,
+    "auroc_ci95": [
+     0.656488037109375,
+     0.721453857421875
+    ],
+    "paired": 1.0,
+    "paired_ci95": [
+     1.0,
+     1.0
+    ],
+    "n": 64,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "exhaustive_pooled_auroc_correct_vs_all_wrong": 0.6793619791666666,
+   "fraction_beating_every_negative": 0.765625,
+   "fraction_beating_single_selected_wrong": 1.0,
+   "matched_period_negative": {
+    "auroc": 0.676025390625,
+    "auroc_ci95": [
+     0.646728515625,
+     0.71998291015625
+    ],
+    "paired": 1.0,
+    "paired_ci95": [
+     1.0,
+     1.0
+    ],
+    "n": 64,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "matched_period_gap_px_mean": 1.1618840774499701,
+   "shuffled_correct": {
+    "auroc": 0.554931640625,
+    "auroc_ci95": [
+     0.53831787109375,
+     0.582275390625
+    ],
+    "paired": 0.828125,
+    "paired_ci95": [
+     0.734375,
+     0.921875
+    ],
+    "n": 64,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "colour_matched_wrong": {
+    "auroc": 0.679931640625,
+    "auroc_ci95": [
+     0.65283203125,
+     0.722906494140625
+    ],
+    "paired": 0.984375,
+    "paired_ci95": [
+     0.953125,
+     1.0
+    ],
+    "n": 64,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "means": {
+    "correct": 0.04103377362480387,
+    "prescribed": 0.0438456264877459,
+    "random": 0.04372069508535788,
+    "exhaustive": 0.04382115671418548,
+    "matched": 0.04373823432251811,
+    "shuffled": 0.041842421574983746,
+    "colourmatch": 0.04384515044512227
+   }
+  }
+ },
+ "pooled": {
+  "prescribed": {
+   "auroc": 0.6569425621811225,
+   "auroc_ci95": [
+    0.6463941924426021,
+    0.6687691824776786
+   ],
+   "paired": 0.9977678571428571,
+   "paired_ci95": [
+    0.9933035714285714,
+    1.0
+   ],
+   "n": 448,
+   "resamples": 1000,
+   "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+  },
+  "random": {
+   "auroc": 0.6579041772959183,
+   "auroc_ci95": [
+    0.647425686583227,
+    0.6702250577965562
+   ],
+   "paired": 0.9977678571428571,
+   "paired_ci95": [
+    0.9933035714285714,
+    1.0
+   ],
+   "n": 448,
+   "resamples": 1000,
+   "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+  },
+  "exhaustive_mean": {
+   "auroc": 0.6580187739158163,
+   "auroc_ci95": [
+    0.648336106903699,
+    0.67031212631537
+   ],
+   "paired": 1.0,
+   "paired_ci95": [
+    1.0,
+    1.0
+   ],
+   "n": 448,
+   "resamples": 1000,
+   "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+  },
+  "matched": {
+   "auroc": 0.6532356106505102,
+   "auroc_ci95": [
+    0.6413701271524235,
+    0.6674758599728954
+   ],
+   "paired": 0.9732142857142857,
+   "paired_ci95": [
+    0.9575892857142857,
+    0.9866071428571429
+   ],
+   "n": 448,
+   "resamples": 1000,
+   "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+  },
+  "shuffled": {
+   "auroc": 0.5435815927933674,
+   "auroc_ci95": [
+    0.5373231226084184,
+    0.5511056082589285
+   ],
+   "paired": 0.7723214285714286,
+   "paired_ci95": [
+    0.7321428571428571,
+    0.8102678571428571
+   ],
+   "n": 448,
+   "resamples": 1000,
+   "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+  },
+  "colourmatch": {
+   "auroc": 0.6489706234056123,
+   "auroc_ci95": [
+    0.6383674465880103,
+    0.6608607700892857
+   ],
+   "paired": 0.984375,
+   "paired_ci95": [
+    0.9732142857142857,
+    0.9955357142857143
+   ],
+   "n": 448,
+   "resamples": 1000,
+   "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+  },
+  "exhaustive_pooled_auroc_correct_vs_all_wrong": 0.6547522957285593,
+  "n_rows": 448,
+  "beats_every_negative": 306,
+  "beats_single_selected_wrong": 437
+ },
+ "rules": {
+  "noise": "one generator per session, manual_seed(EVAL_SEED), one draw per row in row order (as eval_xcfg.py)",
+  "t": 150,
+  "random": "5 within-session negatives per row, numpy RandomState(EVAL_SEED + row) choice without replacement, per-row mean",
+  "matched": "the other row of the session with the closest Perlin period (mean over RGB of 1/scale; ties -> lower row)",
+  "shuffled": "the correct emission with its TH*TW pixel positions permuted by numpy RandomState(EVAL_SEED + 1000 + row), same permutation on all three channels",
+  "colourmatch": "the prescribed +2 wrong emission (-2 at the end), per channel rescaled to the correct emission's mean and std, clipped to [0,1]"
+ }
+}

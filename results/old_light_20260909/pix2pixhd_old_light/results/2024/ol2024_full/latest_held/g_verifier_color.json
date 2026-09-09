@@ -1,0 +1,1160 @@
+{
+ "schema": "oldlight-g-verifier/1",
+ "color": true,
+ "fake": "oldlight/records/results/2024/ol2024_full/latest_held/fake",
+ "real": "[local disk work area]/pairs2024/heldsession_B",
+ "frames": 64,
+ "size": "512x288",
+ "seed": 20260909,
+ "mean_source": {
+  "s050046": "no training captures of this session: global mean of 200 training captures"
+ },
+ "results": {
+  "full_corr_s050046": {
+   "n": 64,
+   "auroc": 0.722412109375,
+   "paired_win": 0.734375,
+   "matched_mean": 0.22049223153487196,
+   "mismatched_mean": 0.15785256659643465
+  },
+  "full_corr_all": {
+   "n": 64,
+   "auroc": 0.722412109375,
+   "paired_win": 0.734375,
+   "matched_mean": 0.22049223153487196,
+   "mismatched_mean": 0.15785256659643465
+  },
+  "full_psnr_s050046": {
+   "n": 64,
+   "auroc": 0.645263671875,
+   "paired_win": 0.703125,
+   "matched_mean": 19.217214043335964,
+   "mismatched_mean": 18.900037643164712
+  },
+  "full_psnr_all": {
+   "n": 64,
+   "auroc": 0.645263671875,
+   "paired_win": 0.703125,
+   "matched_mean": 19.217214043335964,
+   "mismatched_mean": 18.900037643164712
+  },
+  "residual_corr_s050046": {
+   "n": 64,
+   "auroc": 0.80224609375,
+   "paired_win": 0.890625,
+   "matched_mean": 0.08988308773164008,
+   "mismatched_mean": 0.004597449667938089
+  },
+  "residual_corr_all": {
+   "n": 64,
+   "auroc": 0.80224609375,
+   "paired_win": 0.890625,
+   "matched_mean": 0.08988308773164008,
+   "mismatched_mean": 0.004597449667938089
+  },
+  "residual_psnr_s050046": {
+   "n": 64,
+   "auroc": 0.645263671875,
+   "paired_win": 0.703125,
+   "matched_mean": 19.217214043335964,
+   "mismatched_mean": 18.900037643164712
+  },
+  "residual_psnr_all": {
+   "n": 64,
+   "auroc": 0.645263671875,
+   "paired_win": 0.703125,
+   "matched_mean": 19.217214043335964,
+   "mismatched_mean": 18.900037643164712
+  }
+ },
+ "per_frame": [
+  {
+   "name": "s050046_000000.png",
+   "session": "s050046",
+   "partner": "s050046_000006.png",
+   "full": {
+    "corr_matched": 0.27183822276406594,
+    "psnr_matched": 19.7970192768258,
+    "corr_mismatched": 0.11036595222778008,
+    "psnr_mismatched": 18.61752555349193
+   },
+   "residual": {
+    "corr_matched": 0.059321030728969826,
+    "psnr_matched": 19.7970192768258,
+    "corr_mismatched": -0.01711839144486355,
+    "psnr_mismatched": 18.61752555349193
+   }
+  },
+  {
+   "name": "s050046_000001.png",
+   "session": "s050046",
+   "partner": "s050046_000005.png",
+   "full": {
+    "corr_matched": 0.13285096007590083,
+    "psnr_matched": 18.683236484739446,
+    "corr_mismatched": 0.15182417755099797,
+    "psnr_mismatched": 19.206541265609726
+   },
+   "residual": {
+    "corr_matched": 0.07450039324172673,
+    "psnr_matched": 18.683236484739446,
+    "corr_mismatched": 0.005650277429682403,
+    "psnr_mismatched": 19.206541265609726
+   }
+  },
+  {
+   "name": "s050046_000002.png",
+   "session": "s050046",
+   "partner": "s050046_000011.png",
+   "full": {
+    "corr_matched": 0.12916863349497604,
+    "psnr_matched": 18.93108290428178,
+    "corr_mismatched": 0.14026418547210787,
+    "psnr_mismatched": 19.020914301396516
+   },
+   "residual": {
+    "corr_matched": 0.02557797458632075,
+    "psnr_matched": 18.93108290428178,
+    "corr_mismatched": 0.009972902456974955,
+    "psnr_mismatched": 19.020914301396516
+   }
+  },
+  {
+   "name": "s050046_000003.png",
+   "session": "s050046",
+   "partner": "s050046_000050.png",
+   "full": {
+    "corr_matched": 0.28623929450792474,
+    "psnr_matched": 19.003314102804733,
+    "corr_mismatched": 0.22267873872696264,
+    "psnr_mismatched": 19.050069420548574
+   },
+   "residual": {
+    "corr_matched": 0.21756336277704388,
+    "psnr_matched": 19.003314102804733,
+    "corr_mismatched": 0.03974770718335099,
+    "psnr_mismatched": 19.050069420548574
+   }
+  },
+  {
+   "name": "s050046_000004.png",
+   "session": "s050046",
+   "partner": "s050046_000063.png",
+   "full": {
+    "corr_matched": 0.16664020481566275,
+    "psnr_matched": 19.093327759668217,
+    "corr_mismatched": 0.12028651580268179,
+    "psnr_mismatched": 18.142640152753557
+   },
+   "residual": {
+    "corr_matched": 0.06490878184265574,
+    "psnr_matched": 19.093327759668217,
+    "corr_mismatched": -0.04568328179134155,
+    "psnr_mismatched": 18.142640152753557
+   }
+  },
+  {
+   "name": "s050046_000005.png",
+   "session": "s050046",
+   "partner": "s050046_000035.png",
+   "full": {
+    "corr_matched": 0.2070968387876924,
+    "psnr_matched": 19.294619990536027,
+    "corr_mismatched": 0.13999402639549074,
+    "psnr_mismatched": 18.879793617855388
+   },
+   "residual": {
+    "corr_matched": 0.08143419166943383,
+    "psnr_matched": 19.294619990536027,
+    "corr_mismatched": -0.010690315887161716,
+    "psnr_mismatched": 18.879793617855388
+   }
+  },
+  {
+   "name": "s050046_000006.png",
+   "session": "s050046",
+   "partner": "s050046_000008.png",
+   "full": {
+    "corr_matched": 0.20939733159371057,
+    "psnr_matched": 18.6499460778932,
+    "corr_mismatched": 0.14863083919931028,
+    "psnr_mismatched": 18.220102119498236
+   },
+   "residual": {
+    "corr_matched": 0.08168449549854097,
+    "psnr_matched": 18.6499460778932,
+    "corr_mismatched": -0.06344607267364677,
+    "psnr_mismatched": 18.220102119498236
+   }
+  },
+  {
+   "name": "s050046_000007.png",
+   "session": "s050046",
+   "partner": "s050046_000031.png",
+   "full": {
+    "corr_matched": 0.18791752610350235,
+    "psnr_matched": 18.94541824007219,
+    "corr_mismatched": 0.1733580992096495,
+    "psnr_mismatched": 18.765167758820173
+   },
+   "residual": {
+    "corr_matched": 0.014819000672934866,
+    "psnr_matched": 18.94541824007219,
+    "corr_mismatched": -0.013900897953392916,
+    "psnr_mismatched": 18.765167758820173
+   }
+  },
+  {
+   "name": "s050046_000008.png",
+   "session": "s050046",
+   "partner": "s050046_000000.png",
+   "full": {
+    "corr_matched": 0.19807816850855905,
+    "psnr_matched": 19.253260759689155,
+    "corr_mismatched": 0.1956078013182577,
+    "psnr_mismatched": 19.730738984387713
+   },
+   "residual": {
+    "corr_matched": 0.10683761939764824,
+    "psnr_matched": 19.253260759689155,
+    "corr_mismatched": 0.061305668678476755,
+    "psnr_mismatched": 19.730738984387713
+   }
+  },
+  {
+   "name": "s050046_000009.png",
+   "session": "s050046",
+   "partner": "s050046_000019.png",
+   "full": {
+    "corr_matched": 0.23939956889972244,
+    "psnr_matched": 19.814903190578455,
+    "corr_mismatched": 0.058282802354791975,
+    "psnr_mismatched": 18.80077771461615
+   },
+   "residual": {
+    "corr_matched": 0.08877373564896823,
+    "psnr_matched": 19.814903190578455,
+    "corr_mismatched": -0.04411287076747259,
+    "psnr_mismatched": 18.80077771461615
+   }
+  },
+  {
+   "name": "s050046_000010.png",
+   "session": "s050046",
+   "partner": "s050046_000044.png",
+   "full": {
+    "corr_matched": 0.15617937232827273,
+    "psnr_matched": 19.610847927692078,
+    "corr_mismatched": 0.07518891886769766,
+    "psnr_mismatched": 18.661162565071752
+   },
+   "residual": {
+    "corr_matched": 0.08894448899203411,
+    "psnr_matched": 19.610847927692078,
+    "corr_mismatched": -0.04680481020115723,
+    "psnr_mismatched": 18.661162565071752
+   }
+  },
+  {
+   "name": "s050046_000011.png",
+   "session": "s050046",
+   "partner": "s050046_000046.png",
+   "full": {
+    "corr_matched": 0.1287164398660823,
+    "psnr_matched": 19.252197248281888,
+    "corr_mismatched": 0.0011613130696824098,
+    "psnr_mismatched": 18.53545369910592
+   },
+   "residual": {
+    "corr_matched": 0.09742925976511622,
+    "psnr_matched": 19.252197248281888,
+    "corr_mismatched": -0.04671045498510059,
+    "psnr_mismatched": 18.53545369910592
+   }
+  },
+  {
+   "name": "s050046_000012.png",
+   "session": "s050046",
+   "partner": "s050046_000000.png",
+   "full": {
+    "corr_matched": 0.1969338040588902,
+    "psnr_matched": 19.377979198703578,
+    "corr_mismatched": 0.20982921267780918,
+    "psnr_mismatched": 19.382137892739163
+   },
+   "residual": {
+    "corr_matched": -0.06416696768983386,
+    "psnr_matched": 19.377979198703578,
+    "corr_mismatched": -0.03454306540786504,
+    "psnr_mismatched": 19.382137892739163
+   }
+  },
+  {
+   "name": "s050046_000013.png",
+   "session": "s050046",
+   "partner": "s050046_000016.png",
+   "full": {
+    "corr_matched": 0.23621665111957887,
+    "psnr_matched": 18.361949713289327,
+    "corr_mismatched": 0.21387020745784247,
+    "psnr_mismatched": 18.28719146503683
+   },
+   "residual": {
+    "corr_matched": 0.1180223704266059,
+    "psnr_matched": 18.361949713289327,
+    "corr_mismatched": 0.006920794751200568,
+    "psnr_mismatched": 18.28719146503683
+   }
+  },
+  {
+   "name": "s050046_000014.png",
+   "session": "s050046",
+   "partner": "s050046_000044.png",
+   "full": {
+    "corr_matched": 0.30950405442702883,
+    "psnr_matched": 19.444361762135102,
+    "corr_mismatched": 0.22722134086151416,
+    "psnr_mismatched": 18.69570256896197
+   },
+   "residual": {
+    "corr_matched": 0.08620424263470022,
+    "psnr_matched": 19.444361762135102,
+    "corr_mismatched": 0.015120952984412475,
+    "psnr_mismatched": 18.69570256896197
+   }
+  },
+  {
+   "name": "s050046_000015.png",
+   "session": "s050046",
+   "partner": "s050046_000055.png",
+   "full": {
+    "corr_matched": 0.1953969089863837,
+    "psnr_matched": 19.586234277569197,
+    "corr_mismatched": 0.14676371290025078,
+    "psnr_mismatched": 19.32611079219861
+   },
+   "residual": {
+    "corr_matched": 0.040969158450516296,
+    "psnr_matched": 19.586234277569197,
+    "corr_mismatched": -0.04718016169936013,
+    "psnr_mismatched": 19.32611079219861
+   }
+  },
+  {
+   "name": "s050046_000016.png",
+   "session": "s050046",
+   "partner": "s050046_000048.png",
+   "full": {
+    "corr_matched": 0.28627455010591474,
+    "psnr_matched": 19.516855361389588,
+    "corr_mismatched": 0.1019512557731409,
+    "psnr_mismatched": 18.545090017270397
+   },
+   "residual": {
+    "corr_matched": 0.17494135460277624,
+    "psnr_matched": 19.516855361389588,
+    "corr_mismatched": 0.031090434747405027,
+    "psnr_mismatched": 18.545090017270397
+   }
+  },
+  {
+   "name": "s050046_000017.png",
+   "session": "s050046",
+   "partner": "s050046_000038.png",
+   "full": {
+    "corr_matched": 0.22106444524527943,
+    "psnr_matched": 19.619605895045844,
+    "corr_mismatched": 0.1782661015370477,
+    "psnr_mismatched": 19.43165573274336
+   },
+   "residual": {
+    "corr_matched": 0.06531116841423322,
+    "psnr_matched": 19.619605895045844,
+    "corr_mismatched": 0.011424269234348977,
+    "psnr_mismatched": 19.43165573274336
+   }
+  },
+  {
+   "name": "s050046_000018.png",
+   "session": "s050046",
+   "partner": "s050046_000031.png",
+   "full": {
+    "corr_matched": 0.20701192574521873,
+    "psnr_matched": 19.488671671704356,
+    "corr_mismatched": 0.1268579099615332,
+    "psnr_mismatched": 18.924965091876892
+   },
+   "residual": {
+    "corr_matched": -0.028591797623441037,
+    "psnr_matched": 19.488671671704356,
+    "corr_mismatched": -0.10126006640860341,
+    "psnr_mismatched": 18.924965091876892
+   }
+  },
+  {
+   "name": "s050046_000019.png",
+   "session": "s050046",
+   "partner": "s050046_000050.png",
+   "full": {
+    "corr_matched": 0.1543012330341947,
+    "psnr_matched": 19.029424040793195,
+    "corr_mismatched": 0.19144926056069075,
+    "psnr_mismatched": 19.101187344771553
+   },
+   "residual": {
+    "corr_matched": 0.024028182419464677,
+    "psnr_matched": 19.029424040793195,
+    "corr_mismatched": -0.04503487274895787,
+    "psnr_mismatched": 19.101187344771553
+   }
+  },
+  {
+   "name": "s050046_000020.png",
+   "session": "s050046",
+   "partner": "s050046_000025.png",
+   "full": {
+    "corr_matched": 0.36428710076601334,
+    "psnr_matched": 19.669192622670447,
+    "corr_mismatched": 0.21337472147015688,
+    "psnr_mismatched": 19.33264387792432
+   },
+   "residual": {
+    "corr_matched": 0.21259687727368526,
+    "psnr_matched": 19.669192622670447,
+    "corr_mismatched": -0.013468015628761931,
+    "psnr_mismatched": 19.33264387792432
+   }
+  },
+  {
+   "name": "s050046_000021.png",
+   "session": "s050046",
+   "partner": "s050046_000029.png",
+   "full": {
+    "corr_matched": 0.16606588300139308,
+    "psnr_matched": 18.512262008762118,
+    "corr_mismatched": 0.03381996566787123,
+    "psnr_mismatched": 18.070362307693813
+   },
+   "residual": {
+    "corr_matched": -0.01616358241705473,
+    "psnr_matched": 18.512262008762118,
+    "corr_mismatched": -0.128960967872251,
+    "psnr_mismatched": 18.070362307693813
+   }
+  },
+  {
+   "name": "s050046_000022.png",
+   "session": "s050046",
+   "partner": "s050046_000057.png",
+   "full": {
+    "corr_matched": 0.26221258692886695,
+    "psnr_matched": 19.55973494942339,
+    "corr_mismatched": 0.10522996138497243,
+    "psnr_mismatched": 18.889355438529428
+   },
+   "residual": {
+    "corr_matched": 0.19496383488306135,
+    "psnr_matched": 19.55973494942339,
+    "corr_mismatched": 0.1088192316999806,
+    "psnr_mismatched": 18.889355438529428
+   }
+  },
+  {
+   "name": "s050046_000023.png",
+   "session": "s050046",
+   "partner": "s050046_000012.png",
+   "full": {
+    "corr_matched": 0.13782343828273644,
+    "psnr_matched": 19.14322441899686,
+    "corr_mismatched": 0.2564885603640788,
+    "psnr_mismatched": 20.0715125332447
+   },
+   "residual": {
+    "corr_matched": 0.06356276870866776,
+    "psnr_matched": 19.14322441899686,
+    "corr_mismatched": 0.14798953491790262,
+    "psnr_mismatched": 20.0715125332447
+   }
+  },
+  {
+   "name": "s050046_000024.png",
+   "session": "s050046",
+   "partner": "s050046_000010.png",
+   "full": {
+    "corr_matched": 0.31141751460362443,
+    "psnr_matched": 20.224271936178432,
+    "corr_mismatched": 0.16347702200293945,
+    "psnr_mismatched": 19.75325490939015
+   },
+   "residual": {
+    "corr_matched": 0.1834144545473508,
+    "psnr_matched": 20.224271936178432,
+    "corr_mismatched": 0.08733160050760809,
+    "psnr_mismatched": 19.75325490939015
+   }
+  },
+  {
+   "name": "s050046_000025.png",
+   "session": "s050046",
+   "partner": "s050046_000018.png",
+   "full": {
+    "corr_matched": 0.14325837237917363,
+    "psnr_matched": 19.342031552543894,
+    "corr_mismatched": 0.13775013208638118,
+    "psnr_mismatched": 19.32573386687476
+   },
+   "residual": {
+    "corr_matched": -0.056873458323897084,
+    "psnr_matched": 19.342031552543894,
+    "corr_mismatched": -0.06930657292909596,
+    "psnr_mismatched": 19.32573386687476
+   }
+  },
+  {
+   "name": "s050046_000026.png",
+   "session": "s050046",
+   "partner": "s050046_000023.png",
+   "full": {
+    "corr_matched": 0.35158344581176815,
+    "psnr_matched": 20.090704740308038,
+    "corr_mismatched": 0.05849051273795149,
+    "psnr_mismatched": 18.82484603856288
+   },
+   "residual": {
+    "corr_matched": 0.2308018231141518,
+    "psnr_matched": 20.090704740308038,
+    "corr_mismatched": -0.05937160052131276,
+    "psnr_mismatched": 18.82484603856288
+   }
+  },
+  {
+   "name": "s050046_000027.png",
+   "session": "s050046",
+   "partner": "s050046_000047.png",
+   "full": {
+    "corr_matched": 0.29257482881551705,
+    "psnr_matched": 19.057941024502934,
+    "corr_mismatched": 0.15286798485655065,
+    "psnr_mismatched": 17.961243978597178
+   },
+   "residual": {
+    "corr_matched": 0.10054513683959376,
+    "psnr_matched": 19.057941024502934,
+    "corr_mismatched": -0.046511081568876254,
+    "psnr_mismatched": 17.961243978597178
+   }
+  },
+  {
+   "name": "s050046_000028.png",
+   "session": "s050046",
+   "partner": "s050046_000050.png",
+   "full": {
+    "corr_matched": 0.20523319468995727,
+    "psnr_matched": 18.226253098110874,
+    "corr_mismatched": 0.2422953140470833,
+    "psnr_mismatched": 18.72757557911228
+   },
+   "residual": {
+    "corr_matched": 0.14362336101401366,
+    "psnr_matched": 18.226253098110874,
+    "corr_mismatched": 0.03205078421172818,
+    "psnr_mismatched": 18.72757557911228
+   }
+  },
+  {
+   "name": "s050046_000029.png",
+   "session": "s050046",
+   "partner": "s050046_000027.png",
+   "full": {
+    "corr_matched": 0.13003723372477424,
+    "psnr_matched": 18.759008200597833,
+    "corr_mismatched": 0.2772537786111921,
+    "psnr_mismatched": 19.608455428259994
+   },
+   "residual": {
+    "corr_matched": 0.06185604591981977,
+    "psnr_matched": 18.759008200597833,
+    "corr_mismatched": 0.10147530807556536,
+    "psnr_mismatched": 19.608455428259994
+   }
+  },
+  {
+   "name": "s050046_000030.png",
+   "session": "s050046",
+   "partner": "s050046_000012.png",
+   "full": {
+    "corr_matched": 0.1531361398741201,
+    "psnr_matched": 18.59437506465981,
+    "corr_mismatched": 0.2279335206779549,
+    "psnr_mismatched": 19.47278565779962
+   },
+   "residual": {
+    "corr_matched": 0.07901745201821622,
+    "psnr_matched": 18.59437506465981,
+    "corr_mismatched": 0.04172382879131964,
+    "psnr_mismatched": 19.47278565779962
+   }
+  },
+  {
+   "name": "s050046_000031.png",
+   "session": "s050046",
+   "partner": "s050046_000000.png",
+   "full": {
+    "corr_matched": 0.3106349249231948,
+    "psnr_matched": 19.661492325230817,
+    "corr_mismatched": 0.24713179702522672,
+    "psnr_mismatched": 19.455301754964086
+   },
+   "residual": {
+    "corr_matched": 0.2025346959587434,
+    "psnr_matched": 19.661492325230817,
+    "corr_mismatched": 0.08562572519013799,
+    "psnr_mismatched": 19.455301754964086
+   }
+  },
+  {
+   "name": "s050046_000032.png",
+   "session": "s050046",
+   "partner": "s050046_000031.png",
+   "full": {
+    "corr_matched": 0.17107935414285666,
+    "psnr_matched": 18.89500502979717,
+    "corr_mismatched": 0.20102435272808558,
+    "psnr_mismatched": 19.071632446751934
+   },
+   "residual": {
+    "corr_matched": 0.08587135199254921,
+    "psnr_matched": 18.89500502979717,
+    "corr_mismatched": 0.06226197556260924,
+    "psnr_mismatched": 19.071632446751934
+   }
+  },
+  {
+   "name": "s050046_000033.png",
+   "session": "s050046",
+   "partner": "s050046_000058.png",
+   "full": {
+    "corr_matched": 0.1739850707473419,
+    "psnr_matched": 18.992012162875977,
+    "corr_mismatched": 0.11513062549785476,
+    "psnr_mismatched": 18.36956379843358
+   },
+   "residual": {
+    "corr_matched": 0.15867138350442422,
+    "psnr_matched": 18.992012162875977,
+    "corr_mismatched": 0.09073650793298842,
+    "psnr_mismatched": 18.36956379843358
+   }
+  },
+  {
+   "name": "s050046_000034.png",
+   "session": "s050046",
+   "partner": "s050046_000054.png",
+   "full": {
+    "corr_matched": 0.09377898949753587,
+    "psnr_matched": 18.636084597838497,
+    "corr_mismatched": 0.31489853417058694,
+    "psnr_mismatched": 19.7530087885463
+   },
+   "residual": {
+    "corr_matched": -0.047190017188202926,
+    "psnr_matched": 18.636084597838497,
+    "corr_mismatched": 0.07138086154373256,
+    "psnr_mismatched": 19.7530087885463
+   }
+  },
+  {
+   "name": "s050046_000035.png",
+   "session": "s050046",
+   "partner": "s050046_000028.png",
+   "full": {
+    "corr_matched": 0.21941924701058735,
+    "psnr_matched": 19.758972616941,
+    "corr_mismatched": 0.035936010512163025,
+    "psnr_mismatched": 18.16137302479558
+   },
+   "residual": {
+    "corr_matched": 0.1332596279287996,
+    "psnr_matched": 19.758972616941,
+    "corr_mismatched": 0.03284220946753738,
+    "psnr_mismatched": 18.16137302479558
+   }
+  },
+  {
+   "name": "s050046_000036.png",
+   "session": "s050046",
+   "partner": "s050046_000037.png",
+   "full": {
+    "corr_matched": 0.14548943242090626,
+    "psnr_matched": 19.638992623146663,
+    "corr_mismatched": 0.1550077883998248,
+    "psnr_mismatched": 19.567871692041628
+   },
+   "residual": {
+    "corr_matched": 0.08397792930080776,
+    "psnr_matched": 19.638992623146663,
+    "corr_mismatched": 0.027895515905043522,
+    "psnr_mismatched": 19.567871692041628
+   }
+  },
+  {
+   "name": "s050046_000037.png",
+   "session": "s050046",
+   "partner": "s050046_000015.png",
+   "full": {
+    "corr_matched": 0.34247473444752435,
+    "psnr_matched": 20.534150994672093,
+    "corr_mismatched": 0.19416444386668605,
+    "psnr_mismatched": 19.64045754941094
+   },
+   "residual": {
+    "corr_matched": 0.278486722526143,
+    "psnr_matched": 20.534150994672093,
+    "corr_mismatched": 0.09115734107495528,
+    "psnr_mismatched": 19.64045754941094
+   }
+  },
+  {
+   "name": "s050046_000038.png",
+   "session": "s050046",
+   "partner": "s050046_000023.png",
+   "full": {
+    "corr_matched": 0.2263404640626575,
+    "psnr_matched": 20.09309114173326,
+    "corr_mismatched": 0.17378743730282128,
+    "psnr_mismatched": 19.567357420091042
+   },
+   "residual": {
+    "corr_matched": 0.17309675669733257,
+    "psnr_matched": 20.09309114173326,
+    "corr_mismatched": 0.09937294695847891,
+    "psnr_mismatched": 19.567357420091042
+   }
+  },
+  {
+   "name": "s050046_000039.png",
+   "session": "s050046",
+   "partner": "s050046_000032.png",
+   "full": {
+    "corr_matched": 0.25863751474646257,
+    "psnr_matched": 19.846357552996764,
+    "corr_mismatched": 0.10252527862310017,
+    "psnr_mismatched": 18.92769284929457
+   },
+   "residual": {
+    "corr_matched": 0.13734774147301337,
+    "psnr_matched": 19.846357552996764,
+    "corr_mismatched": -0.007656265426221911,
+    "psnr_mismatched": 18.92769284929457
+   }
+  },
+  {
+   "name": "s050046_000040.png",
+   "session": "s050046",
+   "partner": "s050046_000015.png",
+   "full": {
+    "corr_matched": 0.19262389960745482,
+    "psnr_matched": 19.167660735260696,
+    "corr_mismatched": 0.227944078693632,
+    "psnr_mismatched": 19.791211735730737
+   },
+   "residual": {
+    "corr_matched": 0.12659923359020045,
+    "psnr_matched": 19.167660735260696,
+    "corr_mismatched": 0.04102313955462297,
+    "psnr_mismatched": 19.791211735730737
+   }
+  },
+  {
+   "name": "s050046_000041.png",
+   "session": "s050046",
+   "partner": "s050046_000030.png",
+   "full": {
+    "corr_matched": 0.27041584699259075,
+    "psnr_matched": 20.595792572059104,
+    "corr_mismatched": 0.06868541206308659,
+    "psnr_mismatched": 18.90473503124577
+   },
+   "residual": {
+    "corr_matched": 0.11414614671831103,
+    "psnr_matched": 20.595792572059104,
+    "corr_mismatched": 0.05179641349290206,
+    "psnr_mismatched": 18.90473503124577
+   }
+  },
+  {
+   "name": "s050046_000042.png",
+   "session": "s050046",
+   "partner": "s050046_000057.png",
+   "full": {
+    "corr_matched": 0.24579834846188633,
+    "psnr_matched": 18.68572864556995,
+    "corr_mismatched": 0.10853690358523804,
+    "psnr_mismatched": 18.447579136446763
+   },
+   "residual": {
+    "corr_matched": 0.08552431784181129,
+    "psnr_matched": 18.68572864556995,
+    "corr_mismatched": -0.0401177485938665,
+    "psnr_mismatched": 18.447579136446763
+   }
+  },
+  {
+   "name": "s050046_000043.png",
+   "session": "s050046",
+   "partner": "s050046_000058.png",
+   "full": {
+    "corr_matched": 0.193532400778049,
+    "psnr_matched": 19.332244013978645,
+    "corr_mismatched": 0.07348844269354306,
+    "psnr_mismatched": 17.99538000816129
+   },
+   "residual": {
+    "corr_matched": 0.2188654803163029,
+    "psnr_matched": 19.332244013978645,
+    "corr_mismatched": 0.005601874027805732,
+    "psnr_mismatched": 17.99538000816129
+   }
+  },
+  {
+   "name": "s050046_000044.png",
+   "session": "s050046",
+   "partner": "s050046_000056.png",
+   "full": {
+    "corr_matched": 0.18820151574320074,
+    "psnr_matched": 18.77075240679175,
+    "corr_mismatched": 0.16182710546978088,
+    "psnr_mismatched": 18.885333373065652
+   },
+   "residual": {
+    "corr_matched": 0.008674523273396498,
+    "psnr_matched": 18.77075240679175,
+    "corr_mismatched": -0.0071208507945871545,
+    "psnr_mismatched": 18.885333373065652
+   }
+  },
+  {
+   "name": "s050046_000045.png",
+   "session": "s050046",
+   "partner": "s050046_000034.png",
+   "full": {
+    "corr_matched": 0.08546229496545173,
+    "psnr_matched": 18.642763407822354,
+    "corr_mismatched": 0.06294807606854,
+    "psnr_mismatched": 18.530637943440478
+   },
+   "residual": {
+    "corr_matched": -0.06799237658029376,
+    "psnr_matched": 18.642763407822354,
+    "corr_mismatched": -0.11229114069544739,
+    "psnr_mismatched": 18.530637943440478
+   }
+  },
+  {
+   "name": "s050046_000046.png",
+   "session": "s050046",
+   "partner": "s050046_000031.png",
+   "full": {
+    "corr_matched": 0.13063846758144557,
+    "psnr_matched": 19.322032036790834,
+    "corr_mismatched": 0.2020941827121315,
+    "psnr_mismatched": 19.817402052915373
+   },
+   "residual": {
+    "corr_matched": 0.07799135205886919,
+    "psnr_matched": 19.322032036790834,
+    "corr_mismatched": 0.08692229444608435,
+    "psnr_mismatched": 19.817402052915373
+   }
+  },
+  {
+   "name": "s050046_000047.png",
+   "session": "s050046",
+   "partner": "s050046_000012.png",
+   "full": {
+    "corr_matched": 0.2827933057314123,
+    "psnr_matched": 19.45051535458628,
+    "corr_mismatched": 0.2408605628620358,
+    "psnr_mismatched": 19.789901724715467
+   },
+   "residual": {
+    "corr_matched": 0.10960213202735214,
+    "psnr_matched": 19.45051535458628,
+    "corr_mismatched": -0.00599434130322059,
+    "psnr_mismatched": 19.789901724715467
+   }
+  },
+  {
+   "name": "s050046_000048.png",
+   "session": "s050046",
+   "partner": "s050046_000047.png",
+   "full": {
+    "corr_matched": 0.22322164706599654,
+    "psnr_matched": 19.00389150678602,
+    "corr_mismatched": 0.1742852713748457,
+    "psnr_mismatched": 18.641452713946386
+   },
+   "residual": {
+    "corr_matched": 0.0964051381596257,
+    "psnr_matched": 19.00389150678602,
+    "corr_mismatched": -0.05382237618879543,
+    "psnr_mismatched": 18.641452713946386
+   }
+  },
+  {
+   "name": "s050046_000049.png",
+   "session": "s050046",
+   "partner": "s050046_000041.png",
+   "full": {
+    "corr_matched": 0.1984422009435177,
+    "psnr_matched": 19.481915511065655,
+    "corr_mismatched": 0.2339111240200714,
+    "psnr_mismatched": 20.317125346433606
+   },
+   "residual": {
+    "corr_matched": 0.038631189713695335,
+    "psnr_matched": 19.481915511065655,
+    "corr_mismatched": 0.04661713020367913,
+    "psnr_mismatched": 20.317125346433606
+   }
+  },
+  {
+   "name": "s050046_000050.png",
+   "session": "s050046",
+   "partner": "s050046_000015.png",
+   "full": {
+    "corr_matched": 0.2856729175512995,
+    "psnr_matched": 19.640734790407688,
+    "corr_mismatched": 0.20976883551740066,
+    "psnr_mismatched": 19.42040149031555
+   },
+   "residual": {
+    "corr_matched": 0.05460459469949241,
+    "psnr_matched": 19.640734790407688,
+    "corr_mismatched": -0.07483131846583908,
+    "psnr_mismatched": 19.42040149031555
+   }
+  },
+  {
+   "name": "s050046_000051.png",
+   "session": "s050046",
+   "partner": "s050046_000003.png",
+   "full": {
+    "corr_matched": 0.20533512594826522,
+    "psnr_matched": 18.403186702631594,
+    "corr_mismatched": 0.10581242217840585,
+    "psnr_mismatched": 18.28372259142764
+   },
+   "residual": {
+    "corr_matched": 0.16293764594470653,
+    "psnr_matched": 18.403186702631594,
+    "corr_mismatched": 0.04540257432966485,
+    "psnr_mismatched": 18.28372259142764
+   }
+  },
+  {
+   "name": "s050046_000052.png",
+   "session": "s050046",
+   "partner": "s050046_000011.png",
+   "full": {
+    "corr_matched": 0.3034090905004276,
+    "psnr_matched": 20.253852684058764,
+    "corr_mismatched": 0.08680644190613374,
+    "psnr_mismatched": 19.20311742917693
+   },
+   "residual": {
+    "corr_matched": 0.15979516201661947,
+    "psnr_matched": 20.253852684058764,
+    "corr_mismatched": 0.03189995410882262,
+    "psnr_mismatched": 19.20311742917693
+   }
+  },
+  {
+   "name": "s050046_000053.png",
+   "session": "s050046",
+   "partner": "s050046_000059.png",
+   "full": {
+    "corr_matched": 0.1914762621842114,
+    "psnr_matched": 19.509869221592655,
+    "corr_mismatched": 0.2257598932105148,
+    "psnr_mismatched": 19.198321917628217
+   },
+   "residual": {
+    "corr_matched": -0.0013986486093056523,
+    "psnr_matched": 19.509869221592655,
+    "corr_mismatched": 0.016002478772340976,
+    "psnr_mismatched": 19.198321917628217
+   }
+  },
+  {
+   "name": "s050046_000054.png",
+   "session": "s050046",
+   "partner": "s050046_000003.png",
+   "full": {
+    "corr_matched": 0.35826551922708666,
+    "psnr_matched": 19.932035227562903,
+    "corr_mismatched": 0.16920008838255193,
+    "psnr_mismatched": 18.346491552232095
+   },
+   "residual": {
+    "corr_matched": 0.16863589873859305,
+    "psnr_matched": 19.932035227562903,
+    "corr_mismatched": 0.06987578413329502,
+    "psnr_mismatched": 18.346491552232095
+   }
+  },
+  {
+   "name": "s050046_000055.png",
+   "session": "s050046",
+   "partner": "s050046_000029.png",
+   "full": {
+    "corr_matched": 0.2823302413343618,
+    "psnr_matched": 19.584111893480383,
+    "corr_mismatched": 0.0448820719545067,
+    "psnr_mismatched": 18.30602119082521
+   },
+   "residual": {
+    "corr_matched": 0.13510501055024945,
+    "psnr_matched": 19.584111893480383,
+    "corr_mismatched": 0.024695400235431472,
+    "psnr_mismatched": 18.30602119082521
+   }
+  },
+  {
+   "name": "s050046_000056.png",
+   "session": "s050046",
+   "partner": "s050046_000019.png",
+   "full": {
+    "corr_matched": 0.2378940289504569,
+    "psnr_matched": 18.849248350848153,
+    "corr_mismatched": 0.11871389172371123,
+    "psnr_mismatched": 18.250883298996953
+   },
+   "residual": {
+    "corr_matched": -0.012621070144312222,
+    "psnr_matched": 18.849248350848153,
+    "corr_mismatched": -0.1263039931817397,
+    "psnr_mismatched": 18.250883298996953
+   }
+  },
+  {
+   "name": "s050046_000057.png",
+   "session": "s050046",
+   "partner": "s050046_000038.png",
+   "full": {
+    "corr_matched": 0.1409578750039985,
+    "psnr_matched": 16.607111935426477,
+    "corr_mismatched": 0.11108198609173302,
+    "psnr_mismatched": 16.54713140039194
+   },
+   "residual": {
+    "corr_matched": 0.04012900473701982,
+    "psnr_matched": 16.607111935426477,
+    "corr_mismatched": -0.0374118494188324,
+    "psnr_mismatched": 16.54713140039194
+   }
+  },
+  {
+   "name": "s050046_000058.png",
+   "session": "s050046",
+   "partner": "s050046_000039.png",
+   "full": {
+    "corr_matched": 0.1590155789558846,
+    "psnr_matched": 17.396618358465826,
+    "corr_mismatched": 0.18216936438812584,
+    "psnr_mismatched": 18.32407168682619
+   },
+   "residual": {
+    "corr_matched": 0.06652197129987181,
+    "psnr_matched": 17.396618358465826,
+    "corr_mismatched": 0.0609739958926657,
+    "psnr_mismatched": 18.32407168682619
+   }
+  },
+  {
+   "name": "s050046_000059.png",
+   "session": "s050046",
+   "partner": "s050046_000035.png",
+   "full": {
+    "corr_matched": 0.30216977942660733,
+    "psnr_matched": 18.633058541395613,
+    "corr_mismatched": 0.17845740372629623,
+    "psnr_mismatched": 18.186612763864154
+   },
+   "residual": {
+    "corr_matched": 0.0929790113131007,
+    "psnr_matched": 18.633058541395613,
+    "corr_mismatched": 0.009966956892854402,
+    "psnr_mismatched": 18.186612763864154
+   }
+  },
+  {
+   "name": "s050046_000060.png",
+   "session": "s050046",
+   "partner": "s050046_000030.png",
+   "full": {
+    "corr_matched": 0.23024437608700268,
+    "psnr_matched": 18.519244726503242,
+    "corr_mismatched": 0.06804757795863282,
+    "psnr_mismatched": 17.4273826022954
+   },
+   "residual": {
+    "corr_matched": 0.018537835237863027,
+    "psnr_matched": 18.519244726503242,
+    "corr_mismatched": -0.0469846134020769,
+    "psnr_mismatched": 17.4273826022954
+   }
+  },
+  {
+   "name": "s050046_000061.png",
+   "session": "s050046",
+   "partner": "s050046_000049.png",
+   "full": {
+    "corr_matched": 0.30444506269013266,
+    "psnr_matched": 20.051551435016922,
+    "corr_mismatched": 0.2721440387506996,
+    "psnr_mismatched": 19.25630600642431
+   },
+   "residual": {
+    "corr_matched": 0.08142601738902588,
+    "psnr_matched": 20.051551435016922,
+    "corr_mismatched": 0.06277615480737912,
+    "psnr_mismatched": 19.25630600642431
+   }
+  },
+  {
+   "name": "s050046_000062.png",
+   "session": "s050046",
+   "partner": "s050046_000052.png",
+   "full": {
+    "corr_matched": 0.2126729030532326,
+    "psnr_matched": 18.908108391866453,
+    "corr_mismatched": 0.23495226544825165,
+    "psnr_mismatched": 19.11672943139058
+   },
+   "residual": {
+    "corr_matched": 0.04128619581245078,
+    "psnr_matched": 18.908108391866453,
+    "corr_mismatched": -0.09086623312707286,
+    "psnr_mismatched": 19.11672943139058
+   }
+  },
+  {
+   "name": "s050046_000063.png",
+   "session": "s050046",
+   "partner": "s050046_000047.png",
+   "full": {
+    "corr_matched": 0.30678852410225765,
+    "psnr_matched": 19.17025577785364,
+    "corr_mismatched": 0.19774670743322662,
+    "psnr_mismatched": 18.737499735571664
+   },
+   "residual": {
+    "corr_matched": 0.11421889649268602,
+    "psnr_matched": 19.17025577785364,
+    "corr_mismatched": -0.08370952036802938,
+    "psnr_mismatched": 18.737499735571664
+   }
+  }
+ ]
+}

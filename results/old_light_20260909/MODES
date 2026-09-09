@@ -1,0 +1,14 @@
+armi_cross_configuration/kit/download.sh
+armi_cross_configuration/kit/run_arms.sh
+armi_cross_configuration/kit/run_controls.sh
+armi_cross_configuration/kit/run_e2023_order_check.sh
+armi_cross_configuration/kit/run_fewshot.sh
+armi_cross_configuration/kit/run_followup.sh
+armi_cross_configuration/kit/run_trajectory.sh
+armi_cross_configuration/kit/run_warped.sh
+pix2pixhd_old_light/kit/box_bootstrap.sh
+pix2pixhd_old_light/kit/run_evals.sh
+pix2pixhd_old_light/kit/run_pretrain_evals.sh
+pix2pixhd_old_light/kit/train_oldlight.sh
+train_free_coupling_old_sessions/code/finish_2023.sh
+train_free_coupling_old_sessions/code/run_all.sh

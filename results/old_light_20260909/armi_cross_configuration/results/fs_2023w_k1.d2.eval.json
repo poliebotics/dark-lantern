@@ -1,0 +1,180 @@
+{
+ "checkpoint": "armi/checkpoints/fs_2023w_k1/latest.pt",
+ "checkpoint_sha256": "244ae97b39f858cf0fa9f5147a61b75d55a1a29f362b10a9e15fda746254db4e",
+ "checkpoint_step": 2000,
+ "crop_id": "UNCROPPED_FULL_FRAME_20260825",
+ "out_size": "96,112",
+ "conditioning": "ARM-I: rendered emission image (3 ch) + coord (2)",
+ "train_args": {
+  "sessions": "1680412337",
+  "august_train_rows": 712,
+  "seed": 20260908,
+  "max_steps": 2000,
+  "cond_drop": 0.0,
+  "base_ch": 16,
+  "lr": 5e-05,
+  "bs": 8,
+  "accum": 1,
+  "emission_image": true,
+  "monitor_sessions": ""
+ },
+ "arch": {
+  "kind": "armi",
+  "base_ch": 16,
+  "mults": [
+   1,
+   2,
+   4,
+   4
+  ],
+  "hint_in_ch": 5,
+  "params": 1113204
+ },
+ "preprocessing": {
+  "C": "whole frame, no crop: 2026 the raw RGGB Bayer frame packed to 4 planes; 2024/2023 the stored demosaiced frame re-mosaiced onto the RGGB grid (R top-left, G top-right and bottom-left, B bottom-right of each 2x2 cell; 2024 recordings are stored BGR, 2023 reports RGB); planes /255, area-resized to out_size",
+  "E": "the rendered emission image as displayed, RGB in [0,1], area-resized to out_size (2026 tile PNG 1920x1080; 2024 HDF5 emissions 1920x1080 RGB; 2023 npy 1024x1024 float 0..255 stored BGR through OpenCV, reversed to RGB and clipped)"
+ },
+ "protocol": {
+  "t": 150,
+  "offsets": [
+   -2,
+   2,
+   -15,
+   15,
+   30
+  ],
+  "stride": 1,
+  "seed": 20260823,
+  "sub_blocks": 40,
+  "n_boot": 1000,
+  "noise_rule": "one generator per session, manual_seed(EVAL_SEED), one draw per row in row order",
+  "primary": "pooled AUROC of correct residual vs per-row mean of the available wrong-offset residuals; paired fraction P(correct < wrong-mean)",
+  "secondary": "single wrong row, offset OFFSETS[row mod 5] mirrored at the session ends (the zkdiff proof-row rule)",
+  "claim_boundary": "emission-recording correspondence under a change of rig, camera, alignment and emission family; no realness, liveness or capture claim"
+ },
+ "sessions": {
+  "d2": {
+   "era": "2026",
+   "kind": "tb2026",
+   "note": "published eval blocks (60-row guards), in-distribution sanity check",
+   "n_rows": 1200,
+   "contiguous_eval_blocks": [
+    400,
+    400,
+    400
+   ],
+   "blocks_used": [
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40
+   ],
+   "conditions": {
+    "correct": 0.06254574473015964,
+    "wrong_-2": 0.06697835225301484,
+    "wrong_+2": 0.06694998775919278,
+    "wrong_-15": 0.06690178755670786,
+    "wrong_+15": 0.06689685378223657,
+    "wrong_+30": 0.06688649700333675,
+    "single_wrong": 0.06692748434220751
+   },
+   "delta_wrong_mean": {
+    "mean": 0.004376950940738122,
+    "ci95_block_bootstrap": [
+     0.0041585517131257806,
+     0.004611734817844505
+    ],
+    "relative": 0.06997999559556847
+   },
+   "paired_fraction_correct_lower": 0.9483333333333334,
+   "auroc": {
+    "correct_vs_wrong_avg": 0.8017041666666667,
+    "correct_vs_wrong_-2": 0.7885229166666666,
+    "correct_vs_wrong_+2": 0.7863423611111111,
+    "correct_vs_wrong_-15": 0.781296875,
+    "correct_vs_wrong_+15": 0.7803899305555556,
+    "correct_vs_wrong_+30": 0.7781850694444444
+   },
+   "row_bootstrap": {
+    "auroc": 0.8017041666666667,
+    "auroc_ci95": [
+     0.7899489756944444,
+     0.8138853993055555
+    ],
+    "paired": 0.9483333333333334,
+    "paired_ci95": [
+     0.9358333333333333,
+     0.9608333333333333
+    ],
+    "n": 1200,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "secondary_single_wrong_mod5_mirrored": {
+    "auroc": 0.7767864583333334,
+    "auroc_ci95": [
+     0.7635502690972222,
+     0.7897125520833334
+    ],
+    "paired": 0.8916666666666667,
+    "paired_ci95": [
+     0.8733333333333333,
+     0.9091666666666667
+    ],
+    "n": 1200,
+    "resamples": 1000,
+    "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED"
+   },
+   "raw_scores": "armi/per_row_scores/fs_2023w_k1.d2raw_d2.npz"
+  }
+ },
+ "eras": {
+  "2026": {
+   "sessions": [
+    "d2"
+   ],
+   "n_rows": 1200,
+   "auroc": 0.8017041666666667,
+   "auroc_ci95_row_bootstrap": [
+    0.7899489756944444,
+    0.8138853993055555
+   ],
+   "auroc_ci95_session_cluster_bootstrap": null,
+   "paired": 0.9483333333333334,
+   "paired_ci95_row_bootstrap": [
+    0.9358333333333333,
+    0.9608333333333333
+   ],
+   "delta_wrong_mean": 0.004376950940738122,
+   "mean_correct": 0.06254574473015964,
+   "mean_wrong": 0.06692269567089776,
+   "note": "august (same session as training) excluded from the 2026 pool"
+  }
+ }
+}

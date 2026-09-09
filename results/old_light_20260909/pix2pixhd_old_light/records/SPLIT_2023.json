@@ -1,0 +1,186 @@
+{
+ "schema": "oldlight-split/1",
+ "track": "2023",
+ "size": [
+  1792,
+  1120
+ ],
+ "crop_x0y0x1y1": [
+  64,
+  248,
+  1856,
+  1368
+ ],
+ "held_session": "1682718815",
+ "tail_fraction": 0.1,
+ "sessions": {
+  "1680410249": {
+   "pairs": 10,
+   "unmatched_indices": [],
+   "role": "train+tail",
+   "train_positions": [
+    0,
+    8
+   ],
+   "test_tail_positions": [
+    9,
+    9
+   ],
+   "train_index_range": [
+    0,
+    8
+   ],
+   "test_index_range": [
+    9,
+    9
+   ]
+  },
+  "1680410569": {
+   "pairs": 10,
+   "unmatched_indices": [],
+   "role": "train+tail",
+   "train_positions": [
+    0,
+    8
+   ],
+   "test_tail_positions": [
+    9,
+    9
+   ],
+   "train_index_range": [
+    0,
+    8
+   ],
+   "test_index_range": [
+    9,
+    9
+   ]
+  },
+  "1680412337": {
+   "pairs": 777,
+   "unmatched_indices": [],
+   "role": "train+tail",
+   "train_positions": [
+    0,
+    698
+   ],
+   "test_tail_positions": [
+    699,
+    776
+   ],
+   "train_index_range": [
+    0,
+    698
+   ],
+   "test_index_range": [
+    699,
+    776
+   ]
+  },
+  "1681945334": {
+   "pairs": 777,
+   "unmatched_indices": [],
+   "role": "train+tail",
+   "train_positions": [
+    0,
+    698
+   ],
+   "test_tail_positions": [
+    699,
+    776
+   ],
+   "train_index_range": [
+    0,
+    698
+   ],
+   "test_index_range": [
+    699,
+    776
+   ]
+  },
+  "1682013847": {
+   "pairs": 158,
+   "unmatched_indices": [
+    "000158"
+   ],
+   "role": "train+tail",
+   "train_positions": [
+    0,
+    141
+   ],
+   "test_tail_positions": [
+    142,
+    157
+   ],
+   "train_index_range": [
+    0,
+    141
+   ],
+   "test_index_range": [
+    142,
+    157
+   ]
+  },
+  "1682014432": {
+   "pairs": 113,
+   "unmatched_indices": [
+    "000113"
+   ],
+   "role": "train+tail",
+   "train_positions": [
+    0,
+    100
+   ],
+   "test_tail_positions": [
+    101,
+    112
+   ],
+   "train_index_range": [
+    0,
+    100
+   ],
+   "test_index_range": [
+    101,
+    112
+   ]
+  },
+  "1682712156": {
+   "pairs": 777,
+   "unmatched_indices": [],
+   "role": "train+tail",
+   "train_positions": [
+    0,
+    698
+   ],
+   "test_tail_positions": [
+    699,
+    776
+   ],
+   "train_index_range": [
+    1,
+    699
+   ],
+   "test_index_range": [
+    700,
+    777
+   ]
+  },
+  "1682718815": {
+   "pairs": 777,
+   "unmatched_indices": [],
+   "role": "heldsession"
+  }
+ },
+ "emission_geometry": "1024x1024 float -> uint8 -> SIZE bicubic (reproduces the recorder's fullscreen stretch to 16:10)",
+ "report_geometry": "2048x1536 uint8 crop (64, 248, 1856, 1368) -> rotate 180 -> SIZE lanczos",
+ "rot180": true,
+ "counts": {
+  "train_A": 2358,
+  "train_B": 2358,
+  "test_A": 264,
+  "test_B": 264,
+  "heldsession_A": 777,
+  "heldsession_B": 777
+ },
+ "made_now": 3399
+}

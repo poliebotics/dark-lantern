@@ -1,0 +1,1049 @@
+{
+ "schema": "oldlight-d-verifier/1",
+ "discriminator": "[checkpoints, on the persistent filesystem, not published]/ol2024_mean/latest_net_D.pth",
+ "discriminator_sha256": "f831df169a5536818017efc929199475576bab15ee70b4dc46b90d55892197d4",
+ "final_kernel": 4,
+ "final_act": "none",
+ "resize": "1024x576",
+ "meanprior": "oldlight/records/mean_train_B_2024.png",
+ "test": "heldsession",
+ "pairs": "[local disk work area]/pairs2024",
+ "map": "oldlight/records/results/2024/d_derangement_heldsession.json",
+ "map_sha256": "5f0e02beb6c22fa5696eed18c0334b4a4ab08a0bb805a31369d1a41acee4e682",
+ "results": {
+  "full:s050046": {
+   "n_pairs": 64,
+   "auroc_matched_vs_mismatched": 0.933837890625,
+   "wins": 60,
+   "ties": 0,
+   "paired_ordering": 0.9375,
+   "matched_mean": 0.6404822128242813,
+   "mismatched_mean": 0.23533869841776325
+  },
+  "full:pooled": {
+   "n_pairs": 64,
+   "auroc_matched_vs_mismatched": 0.933837890625,
+   "wins": 60,
+   "ties": 0,
+   "paired_ordering": 0.9375,
+   "matched_mean": 0.6404822128242813,
+   "mismatched_mean": 0.23533869841776325
+  },
+  "full_emission_swap:s050046": {
+   "n_pairs": 64,
+   "auroc_matched_vs_mismatched": 0.943603515625,
+   "wins": 64,
+   "ties": 0,
+   "paired_ordering": 1.0,
+   "matched_mean": 0.6404822128242813,
+   "mismatched_mean": 0.23202941822091816
+  },
+  "full_emission_swap:pooled": {
+   "n_pairs": 64,
+   "auroc_matched_vs_mismatched": 0.943603515625,
+   "wins": 64,
+   "ties": 0,
+   "paired_ordering": 1.0,
+   "matched_mean": 0.6404822128242813,
+   "mismatched_mean": 0.23202941822091816
+  },
+  "crop512:s050046": {
+   "n_pairs": 64,
+   "auroc_matched_vs_mismatched": 0.86474609375,
+   "wins": 56,
+   "ties": 0,
+   "paired_ordering": 0.875,
+   "matched_mean": 0.8763878700168183,
+   "mismatched_mean": 0.5174499294298585
+  },
+  "crop512:pooled": {
+   "n_pairs": 64,
+   "auroc_matched_vs_mismatched": 0.86474609375,
+   "wins": 56,
+   "ties": 0,
+   "paired_ordering": 0.875,
+   "matched_mean": 0.8763878700168183,
+   "mismatched_mean": 0.5174499294298585
+  },
+  "crop512_emission_swap:s050046": {
+   "n_pairs": 64,
+   "auroc_matched_vs_mismatched": 0.867431640625,
+   "wins": 64,
+   "ties": 0,
+   "paired_ordering": 1.0,
+   "matched_mean": 0.8763878700168183,
+   "mismatched_mean": 0.5119886278868458
+  },
+  "crop512_emission_swap:pooled": {
+   "n_pairs": 64,
+   "auroc_matched_vs_mismatched": 0.867431640625,
+   "wins": 64,
+   "ties": 0,
+   "paired_ordering": 1.0,
+   "matched_mean": 0.8763878700168183,
+   "mismatched_mean": 0.5119886278868458
+  }
+ },
+ "per_pair": [
+  {
+   "target": "s050046_000000.png",
+   "partner": "s050046_000056.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.5707595149676005,
+    "capture_swap": 0.055435540775458016,
+    "emission_swap": 0.07111830140153567
+   },
+   "crop512": {
+    "matched": 0.9256945848464966,
+    "capture_swap": 0.16604395334919295,
+    "emission_swap": 0.33400896439949673
+   }
+  },
+  {
+   "target": "s050046_000001.png",
+   "partner": "s050046_000045.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.55277086297671,
+    "capture_swap": 0.11125069856643677,
+    "emission_swap": 0.15587830046812692
+   },
+   "crop512": {
+    "matched": 0.9042947888374329,
+    "capture_swap": 0.48107634981473285,
+    "emission_swap": 0.4739309499661128
+   }
+  },
+  {
+   "target": "s050046_000002.png",
+   "partner": "s050046_000040.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.42476117610931396,
+    "capture_swap": 0.10255891705552737,
+    "emission_swap": 0.06669138371944427
+   },
+   "crop512": {
+    "matched": 0.732572098573049,
+    "capture_swap": 0.43389424681663513,
+    "emission_swap": 0.32406781055033207
+   }
+  },
+  {
+   "target": "s050046_000003.png",
+   "partner": "s050046_000042.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.8650449911753336,
+    "capture_swap": -0.009560897946357727,
+    "emission_swap": 0.4665863911310832
+   },
+   "crop512": {
+    "matched": 1.3622677326202393,
+    "capture_swap": 0.3763719325264295,
+    "emission_swap": 0.9249079426129659
+   }
+  },
+  {
+   "target": "s050046_000004.png",
+   "partner": "s050046_000019.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.8143973151842753,
+    "capture_swap": 0.09188172966241837,
+    "emission_swap": 0.319658820827802
+   },
+   "crop512": {
+    "matched": 1.3247657616933186,
+    "capture_swap": 0.4904332098861535,
+    "emission_swap": 0.7608950138092041
+   }
+  },
+  {
+   "target": "s050046_000005.png",
+   "partner": "s050046_000036.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.850435197353363,
+    "capture_swap": 0.32546570152044296,
+    "emission_swap": 0.3715071305632591
+   },
+   "crop512": {
+    "matched": 1.2428598205248516,
+    "capture_swap": 0.7733000218868256,
+    "emission_swap": 0.7489672799905142
+   }
+  },
+  {
+   "target": "s050046_000006.png",
+   "partner": "s050046_000026.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.7560700178146362,
+    "capture_swap": 0.288277342915535,
+    "emission_swap": 0.3893265450994174
+   },
+   "crop512": {
+    "matched": 1.1056290070215862,
+    "capture_swap": 0.5586583465337753,
+    "emission_swap": 0.6585816542307535
+   }
+  },
+  {
+   "target": "s050046_000007.png",
+   "partner": "s050046_000024.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.6585578719774882,
+    "capture_swap": 0.21577365944782892,
+    "emission_swap": 0.2930762867132823
+   },
+   "crop512": {
+    "matched": 1.0832855502764385,
+    "capture_swap": 0.4858062093456586,
+    "emission_swap": 0.7476744552453359
+   }
+  },
+  {
+   "target": "s050046_000008.png",
+   "partner": "s050046_000015.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.8823404908180237,
+    "capture_swap": 0.35274185985326767,
+    "emission_swap": 0.4637974885602792
+   },
+   "crop512": {
+    "matched": 1.093001405398051,
+    "capture_swap": 0.6552223265171051,
+    "emission_swap": 0.7227871616681417
+   }
+  },
+  {
+   "target": "s050046_000009.png",
+   "partner": "s050046_000059.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.5440600017706553,
+    "capture_swap": 0.4507437376305461,
+    "emission_swap": 0.15939904004335403
+   },
+   "crop512": {
+    "matched": 0.8018842538197836,
+    "capture_swap": 0.7522057692209879,
+    "emission_swap": 0.47618891050418216
+   }
+  },
+  {
+   "target": "s050046_000010.png",
+   "partner": "s050046_000005.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.825375517209371,
+    "capture_swap": 0.2816938981413841,
+    "emission_swap": 0.2628122406701247
+   },
+   "crop512": {
+    "matched": 0.968883216381073,
+    "capture_swap": 0.6923916141192118,
+    "emission_swap": 0.4119101073592901
+   }
+  },
+  {
+   "target": "s050046_000011.png",
+   "partner": "s050046_000031.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.7984382510185242,
+    "capture_swap": 0.3456078718105952,
+    "emission_swap": 0.3283820350964864
+   },
+   "crop512": {
+    "matched": 0.9116273919741312,
+    "capture_swap": 0.5968964894612631,
+    "emission_swap": 0.5073606812705597
+   }
+  },
+  {
+   "target": "s050046_000012.png",
+   "partner": "s050046_000006.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.43436596790949505,
+    "capture_swap": 0.42550546924273175,
+    "emission_swap": 0.035157943765322365
+   },
+   "crop512": {
+    "matched": 0.8340446750322977,
+    "capture_swap": 0.7468557755152384,
+    "emission_swap": 0.4369978706041972
+   }
+  },
+  {
+   "target": "s050046_000013.png",
+   "partner": "s050046_000007.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.7581751147905985,
+    "capture_swap": 0.27454405029614765,
+    "emission_swap": 0.38082730397582054
+   },
+   "crop512": {
+    "matched": 1.102004885673523,
+    "capture_swap": 0.7071291009585062,
+    "emission_swap": 0.5742870271205902
+   }
+  },
+  {
+   "target": "s050046_000014.png",
+   "partner": "s050046_000027.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.5556663026412328,
+    "capture_swap": 0.23999477674563727,
+    "emission_swap": 0.324412335952123
+   },
+   "crop512": {
+    "matched": 0.8594692846139272,
+    "capture_swap": 0.4858804593483607,
+    "emission_swap": 0.6180325547854105
+   }
+  },
+  {
+   "target": "s050046_000015.png",
+   "partner": "s050046_000035.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.7063592076301575,
+    "capture_swap": 0.17400785783926645,
+    "emission_swap": 0.34025844434897107
+   },
+   "crop512": {
+    "matched": 1.0163418650627136,
+    "capture_swap": 0.45165425601104897,
+    "emission_swap": 0.7280429701010386
+   }
+  },
+  {
+   "target": "s050046_000016.png",
+   "partner": "s050046_000061.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.7411593993504842,
+    "capture_swap": 0.20936383803685507,
+    "emission_swap": 0.2781219283739726
+   },
+   "crop512": {
+    "matched": 0.8473290701707205,
+    "capture_swap": 0.6196322540442148,
+    "emission_swap": 0.5418245308101177
+   }
+  },
+  {
+   "target": "s050046_000017.png",
+   "partner": "s050046_000058.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.4206682046254476,
+    "capture_swap": 0.6205170055230459,
+    "emission_swap": 0.00986874724427859
+   },
+   "crop512": {
+    "matched": 0.7410262723763784,
+    "capture_swap": 0.6044022937615713,
+    "emission_swap": 0.45238259186347324
+   }
+  },
+  {
+   "target": "s050046_000018.png",
+   "partner": "s050046_000023.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.36287807921568555,
+    "capture_swap": 0.4670160586635272,
+    "emission_swap": -0.014809108649690947
+   },
+   "crop512": {
+    "matched": 0.6574347913265228,
+    "capture_swap": 0.7276317775249481,
+    "emission_swap": 0.3295263350009918
+   }
+  },
+  {
+   "target": "s050046_000019.png",
+   "partner": "s050046_000052.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.3487291932106018,
+    "capture_swap": 0.19545178674161434,
+    "emission_swap": 0.059823776284853615
+   },
+   "crop512": {
+    "matched": 0.6562671264012655,
+    "capture_swap": 0.580937867363294,
+    "emission_swap": 0.4289231048896909
+   }
+  },
+  {
+   "target": "s050046_000020.png",
+   "partner": "s050046_000034.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.7259497046470642,
+    "capture_swap": 0.05055708189805349,
+    "emission_swap": 0.19877040137847266
+   },
+   "crop512": {
+    "matched": 0.26909643908341724,
+    "capture_swap": 0.41772898569858324,
+    "emission_swap": 0.026023076226313908
+   }
+  },
+  {
+   "target": "s050046_000021.png",
+   "partner": "s050046_000049.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.6831957697868347,
+    "capture_swap": 0.13112841298182806,
+    "emission_swap": 0.2952129046122233
+   },
+   "crop512": {
+    "matched": 0.26286860058705014,
+    "capture_swap": 0.43585314353307086,
+    "emission_swap": 0.1119477351506551
+   }
+  },
+  {
+   "target": "s050046_000022.png",
+   "partner": "s050046_000054.png",
+   "session": "s050046",
+   "full": {
+    "matched": 1.0297516981760662,
+    "capture_swap": 0.29344187925259274,
+    "emission_swap": 0.5350672403971354
+   },
+   "crop512": {
+    "matched": 1.09528648853302,
+    "capture_swap": 0.8003277977307638,
+    "emission_swap": 0.6827256878217062
+   }
+  },
+  {
+   "target": "s050046_000023.png",
+   "partner": "s050046_000043.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.9461528658866882,
+    "capture_swap": 0.05723105619351069,
+    "emission_swap": 0.4101308435201645
+   },
+   "crop512": {
+    "matched": 1.1292004982630413,
+    "capture_swap": 0.3030682693157966,
+    "emission_swap": 0.6119665950536728
+   }
+  },
+  {
+   "target": "s050046_000024.png",
+   "partner": "s050046_000028.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.521521250406901,
+    "capture_swap": 0.3510853859285514,
+    "emission_swap": 0.1332556133468946
+   },
+   "crop512": {
+    "matched": 0.7663885354995728,
+    "capture_swap": 0.6124393542607626,
+    "emission_swap": 0.4176448956131935
+   }
+  },
+  {
+   "target": "s050046_000025.png",
+   "partner": "s050046_000001.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.5995178818702698,
+    "capture_swap": 0.17741571615139642,
+    "emission_swap": 0.21012414246797562
+   },
+   "crop512": {
+    "matched": 0.9311872323354086,
+    "capture_swap": 0.45371031761169434,
+    "emission_swap": 0.5980317195256551
+   }
+  },
+  {
+   "target": "s050046_000026.png",
+   "partner": "s050046_000060.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.7838385502497355,
+    "capture_swap": 0.6050897240638733,
+    "emission_swap": 0.29257407784461975
+   },
+   "crop512": {
+    "matched": 0.8735988736152649,
+    "capture_swap": 0.9313454031944275,
+    "emission_swap": 0.48353370279073715
+   }
+  },
+  {
+   "target": "s050046_000027.png",
+   "partner": "s050046_000062.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.5566586156686147,
+    "capture_swap": -0.04172648241122564,
+    "emission_swap": 0.16686074746151766
+   },
+   "crop512": {
+    "matched": 0.8707553942998251,
+    "capture_swap": 0.11075426234553258,
+    "emission_swap": 0.4348517879843712
+   }
+  },
+  {
+   "target": "s050046_000028.png",
+   "partner": "s050046_000038.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.7187610665957133,
+    "capture_swap": 0.18804496278365454,
+    "emission_swap": 0.3007603995501995
+   },
+   "crop512": {
+    "matched": 1.084527810414632,
+    "capture_swap": 0.55065189798673,
+    "emission_swap": 0.5731776158014933
+   }
+  },
+  {
+   "target": "s050046_000029.png",
+   "partner": "s050046_000057.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.7307086984316508,
+    "capture_swap": 0.75171426932017,
+    "emission_swap": 0.3135990301767985
+   },
+   "crop512": {
+    "matched": 1.0938005844751995,
+    "capture_swap": 0.7815983394781748,
+    "emission_swap": 0.5549741089344025
+   }
+  },
+  {
+   "target": "s050046_000030.png",
+   "partner": "s050046_000051.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.8119823137919108,
+    "capture_swap": 0.25289803293223184,
+    "emission_swap": 0.27588524917761487
+   },
+   "crop512": {
+    "matched": 1.1009575923283894,
+    "capture_swap": 0.5612496063113213,
+    "emission_swap": 0.4986407806475957
+   }
+  },
+  {
+   "target": "s050046_000031.png",
+   "partner": "s050046_000037.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.8303843339284261,
+    "capture_swap": 0.2685250034555793,
+    "emission_swap": 0.2777831703424454
+   },
+   "crop512": {
+    "matched": 1.114972194035848,
+    "capture_swap": 0.4710078611969948,
+    "emission_swap": 0.4794853776693344
+   }
+  },
+  {
+   "target": "s050046_000032.png",
+   "partner": "s050046_000012.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.910258154074351,
+    "capture_swap": 0.0007640967766443888,
+    "emission_swap": 0.4041302849849065
+   },
+   "crop512": {
+    "matched": 1.1607160965601604,
+    "capture_swap": 0.42054280266165733,
+    "emission_swap": 0.5713858207066854
+   }
+  },
+  {
+   "target": "s050046_000033.png",
+   "partner": "s050046_000018.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.5700958967208862,
+    "capture_swap": -0.005859871705373128,
+    "emission_swap": 0.20553106193741164
+   },
+   "crop512": {
+    "matched": 0.7133553226788839,
+    "capture_swap": 0.40305223936835927,
+    "emission_swap": 0.4783603996038437
+   }
+  },
+  {
+   "target": "s050046_000034.png",
+   "partner": "s050046_000017.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.37080051501592,
+    "capture_swap": -0.0605036069949468,
+    "emission_swap": 0.04185947310179472
+   },
+   "crop512": {
+    "matched": 0.7024064064025879,
+    "capture_swap": 0.3420575261116028,
+    "emission_swap": 0.3886212930083275
+   }
+  },
+  {
+   "target": "s050046_000035.png",
+   "partner": "s050046_000055.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.603373795747757,
+    "capture_swap": 0.43849430481592816,
+    "emission_swap": 0.1582294205824534
+   },
+   "crop512": {
+    "matched": 0.7519628008206686,
+    "capture_swap": 0.6508603195349375,
+    "emission_swap": 0.4542894462744395
+   }
+  },
+  {
+   "target": "s050046_000036.png",
+   "partner": "s050046_000004.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.7330166101455688,
+    "capture_swap": 0.48872417708237964,
+    "emission_swap": 0.2956277094781399
+   },
+   "crop512": {
+    "matched": 1.122710684935252,
+    "capture_swap": 0.9275172253449758,
+    "emission_swap": 0.7342287003993988
+   }
+  },
+  {
+   "target": "s050046_000037.png",
+   "partner": "s050046_000030.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.7310828864574432,
+    "capture_swap": 0.299248144030571,
+    "emission_swap": 0.27019282306234044
+   },
+   "crop512": {
+    "matched": 0.8216049273808798,
+    "capture_swap": 0.5047962615887324,
+    "emission_swap": 0.4901096945007642
+   }
+  },
+  {
+   "target": "s050046_000038.png",
+   "partner": "s050046_000000.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.6182844042778015,
+    "capture_swap": 0.12868593260645866,
+    "emission_swap": 0.2783773938814799
+   },
+   "crop512": {
+    "matched": 0.933111826578776,
+    "capture_swap": 0.4260854373375575,
+    "emission_swap": 0.6391109724839529
+   }
+  },
+  {
+   "target": "s050046_000039.png",
+   "partner": "s050046_000041.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.40149646004041034,
+    "capture_swap": 0.03555557752648989,
+    "emission_swap": 0.028707851966222126
+   },
+   "crop512": {
+    "matched": 0.615728477636973,
+    "capture_swap": 0.25201087491586804,
+    "emission_swap": 0.31417082995176315
+   }
+  },
+  {
+   "target": "s050046_000040.png",
+   "partner": "s050046_000039.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.5585267543792725,
+    "capture_swap": -0.02559453745683034,
+    "emission_swap": 0.16354826961954436
+   },
+   "crop512": {
+    "matched": 0.7441565195719401,
+    "capture_swap": 0.298404465119044,
+    "emission_swap": 0.4859975129365921
+   }
+  },
+  {
+   "target": "s050046_000041.png",
+   "partner": "s050046_000046.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.3983818491299947,
+    "capture_swap": 0.08072803216055036,
+    "emission_swap": -0.002956243852774302
+   },
+   "crop512": {
+    "matched": 0.5319125155607859,
+    "capture_swap": 0.3348380848765373,
+    "emission_swap": 0.23924540169537067
+   }
+  },
+  {
+   "target": "s050046_000042.png",
+   "partner": "s050046_000033.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.3128126660982768,
+    "capture_swap": 0.2215782105922699,
+    "emission_swap": -0.03694350769122442
+   },
+   "crop512": {
+    "matched": 0.5746437658866247,
+    "capture_swap": 0.48880091309547424,
+    "emission_swap": 0.35707911600669223
+   }
+  },
+  {
+   "target": "s050046_000043.png",
+   "partner": "s050046_000053.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.41254284605383873,
+    "capture_swap": 0.18156757454077402,
+    "emission_swap": 0.04955532650152842
+   },
+   "crop512": {
+    "matched": 0.6056572223703066,
+    "capture_swap": 0.5363980929056803,
+    "emission_swap": 0.3352220344046752
+   }
+  },
+  {
+   "target": "s050046_000044.png",
+   "partner": "s050046_000021.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.6074325541655222,
+    "capture_swap": 0.30376966794331867,
+    "emission_swap": 0.22418327629566193
+   },
+   "crop512": {
+    "matched": 0.921272337436676,
+    "capture_swap": 0.19859491847455502,
+    "emission_swap": 0.6016764491796494
+   }
+  },
+  {
+   "target": "s050046_000045.png",
+   "partner": "s050046_000014.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.4131833116213481,
+    "capture_swap": 0.2896349678436915,
+    "emission_swap": 0.04572305083274841
+   },
+   "crop512": {
+    "matched": 0.6839023033777872,
+    "capture_swap": 0.6435112257798513,
+    "emission_swap": 0.4371782423307498
+   }
+  },
+  {
+   "target": "s050046_000046.png",
+   "partner": "s050046_000016.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.5516921679178873,
+    "capture_swap": 0.2476343959569931,
+    "emission_swap": 0.10809691871205966
+   },
+   "crop512": {
+    "matched": 0.6849761605262756,
+    "capture_swap": 0.4560053509970506,
+    "emission_swap": 0.3741159563263257
+   }
+  },
+  {
+   "target": "s050046_000047.png",
+   "partner": "s050046_000011.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.4444936662912369,
+    "capture_swap": 0.2958207925160726,
+    "emission_swap": 0.1222372551759084
+   },
+   "crop512": {
+    "matched": 0.7305192748705546,
+    "capture_swap": 0.4721686647584041,
+    "emission_swap": 0.5530825365955631
+   }
+  },
+  {
+   "target": "s050046_000048.png",
+   "partner": "s050046_000008.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.44037235776583356,
+    "capture_swap": 0.45778952973584336,
+    "emission_swap": 0.19651244084040323
+   },
+   "crop512": {
+    "matched": 0.7163640956083933,
+    "capture_swap": 0.7201480468114217,
+    "emission_swap": 0.5878004784074923
+   }
+  },
+  {
+   "target": "s050046_000049.png",
+   "partner": "s050046_000048.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.5010599046945572,
+    "capture_swap": 0.13850984970728555,
+    "emission_swap": 0.15581429687639078
+   },
+   "crop512": {
+    "matched": 0.6548901200294495,
+    "capture_swap": 0.5124824369947115,
+    "emission_swap": 0.41286550896863144
+   }
+  },
+  {
+   "target": "s050046_000050.png",
+   "partner": "s050046_000002.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.38219595452149707,
+    "capture_swap": 0.09017440925041835,
+    "emission_swap": -0.02439103415235877
+   },
+   "crop512": {
+    "matched": 0.6244736810525259,
+    "capture_swap": 0.36229222764571506,
+    "emission_swap": 0.3866344566146533
+   }
+  },
+  {
+   "target": "s050046_000051.png",
+   "partner": "s050046_000025.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.7988283832867941,
+    "capture_swap": 0.10172174374262492,
+    "emission_swap": 0.24843128894766173
+   },
+   "crop512": {
+    "matched": 1.0759119590123494,
+    "capture_swap": 0.44633951286474866,
+    "emission_swap": 0.5107490985343853
+   }
+  },
+  {
+   "target": "s050046_000052.png",
+   "partner": "s050046_000022.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.732552707195282,
+    "capture_swap": 0.6172755261262258,
+    "emission_swap": 0.1675216183066368
+   },
+   "crop512": {
+    "matched": 1.0873212416966755,
+    "capture_swap": 0.7469057043393453,
+    "emission_swap": 0.5588197559118271
+   }
+  },
+  {
+   "target": "s050046_000053.png",
+   "partner": "s050046_000063.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.7619125445683798,
+    "capture_swap": -0.05027210401992003,
+    "emission_swap": 0.23357605437437692
+   },
+   "crop512": {
+    "matched": 1.0795494318008423,
+    "capture_swap": 0.13963214680552483,
+    "emission_swap": 0.6211024125417074
+   }
+  },
+  {
+   "target": "s050046_000054.png",
+   "partner": "s050046_000020.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.5423873464266459,
+    "capture_swap": 0.2531755020221074,
+    "emission_swap": 0.295933881153663
+   },
+   "crop512": {
+    "matched": 1.04704346259435,
+    "capture_swap": 0.11990478883186977,
+    "emission_swap": 0.7947892447312673
+   }
+  },
+  {
+   "target": "s050046_000055.png",
+   "partner": "s050046_000010.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.9656579693158468,
+    "capture_swap": 0.2848020978271961,
+    "emission_swap": 0.470401793718338
+   },
+   "crop512": {
+    "matched": 1.1400265296300252,
+    "capture_swap": 0.45660699779788655,
+    "emission_swap": 0.7395183046658834
+   }
+  },
+  {
+   "target": "s050046_000056.png",
+   "partner": "s050046_000029.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.48323415716489154,
+    "capture_swap": 0.29434867203235626,
+    "emission_swap": 0.06701080252726872
+   },
+   "crop512": {
+    "matched": 0.3808007538318634,
+    "capture_swap": 0.49600332975387573,
+    "emission_swap": 0.16199941684802374
+   }
+  },
+  {
+   "target": "s050046_000057.png",
+   "partner": "s050046_000050.png",
+   "session": "s050046",
+   "full": {
+    "matched": 1.1321959495544434,
+    "capture_swap": -0.015189053490757942,
+    "emission_swap": 0.8352907598018646
+   },
+   "crop512": {
+    "matched": 1.243743658065796,
+    "capture_swap": 0.3496813972791036,
+    "emission_swap": 0.8279478152592977
+   }
+  },
+  {
+   "target": "s050046_000058.png",
+   "partner": "s050046_000047.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.9097106456756592,
+    "capture_swap": 0.12539677818616232,
+    "emission_swap": 0.6486731568972269
+   },
+   "crop512": {
+    "matched": 0.8753775358200073,
+    "capture_swap": 0.5587342511862516,
+    "emission_swap": 0.6080974042415619
+   }
+  },
+  {
+   "target": "s050046_000059.png",
+   "partner": "s050046_000013.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.781021515528361,
+    "capture_swap": 0.41536232580741245,
+    "emission_swap": 0.4027702286839485
+   },
+   "crop512": {
+    "matched": 1.1255159775416057,
+    "capture_swap": 0.6147200266520182,
+    "emission_swap": 0.6789053380489349
+   }
+  },
+  {
+   "target": "s050046_000060.png",
+   "partner": "s050046_000003.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.8423900802930196,
+    "capture_swap": 0.41889870415131253,
+    "emission_swap": 0.5594016015529633
+   },
+   "crop512": {
+    "matched": 1.296973745028178,
+    "capture_swap": 0.8498842517534891,
+    "emission_swap": 0.9831084410349528
+   }
+  },
+  {
+   "target": "s050046_000061.png",
+   "partner": "s050046_000032.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.5489453077316284,
+    "capture_swap": 0.40180157124996185,
+    "emission_swap": 0.17342040066917738
+   },
+   "crop512": {
+    "matched": 0.9649553696314493,
+    "capture_swap": 0.5721066296100616,
+    "emission_swap": 0.5929556488990784
+   }
+  },
+  {
+   "target": "s050046_000062.png",
+   "partner": "s050046_000044.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.38507180909315747,
+    "capture_swap": 0.17700904607772827,
+    "emission_swap": -0.05253025392691294
+   },
+   "crop512": {
+    "matched": 0.35277294119199115,
+    "capture_swap": 0.5712694376707077,
+    "emission_swap": 0.1243703414996465
+   }
+  },
+  {
+   "target": "s050046_000063.png",
+   "partner": "s050046_000009.png",
+   "session": "s050046",
+   "full": {
+    "matched": 0.33641502261161804,
+    "capture_swap": 0.1269482970237732,
+    "emission_swap": -0.05597379058599472
+   },
+   "crop512": {
+    "matched": 0.36114270985126495,
+    "capture_swap": 0.42828040197491646,
+    "emission_swap": 0.049433112144470215
+   }
+  }
+ ]
+}

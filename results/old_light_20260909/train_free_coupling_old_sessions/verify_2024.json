@@ -1,0 +1,65 @@
+{
+ "20241219_044529": {
+  "path": "[local copies of the public 2024 HDF5 files]/20241219_044529/data.h5",
+  "size": 5096765440,
+  "sha256": "a1af71ead4c6a0e7516d7223e922b67c21f68b9d9f28b30b6cf839d6b17b1807",
+  "expected": "a1af71ead4c6a0e7516d7223e922b67c21f68b9d9f28b30b6cf839d6b17b1807",
+  "match": true,
+  "checked": "2026-09-09T01:59:31Z",
+  "expected_source": "_control/SHA256SUMS"
+ },
+ "20241219_051150": {
+  "path": "[local copies of the public 2024 HDF5 files]/20241219_051150/data.h5",
+  "size": 5096765440,
+  "sha256": "26effcfedd3da4c3b7f54c58794f9a5b7e5ad9d32cfa7bd526068ea32a320d61",
+  "expected": "26effcfedd3da4c3b7f54c58794f9a5b7e5ad9d32cfa7bd526068ea32a320d61",
+  "match": true,
+  "checked": "2026-09-09T01:59:36Z",
+  "expected_source": "_control/SHA256SUMS"
+ },
+ "20241219_051629": {
+  "path": "[local copies of the public 2024 HDF5 files]/20241219_051629/data.h5",
+  "size": 5096765440,
+  "sha256": "5aab6e520131d82061370c4a49501ff225aeddf1446a5d13ca1ff0922df96885",
+  "expected": "5aab6e520131d82061370c4a49501ff225aeddf1446a5d13ca1ff0922df96885",
+  "match": true,
+  "checked": "2026-09-09T01:59:41Z",
+  "expected_source": "_control/SHA256SUMS"
+ },
+ "20241219_050046": {
+  "path": "[local copies of the public 2024 HDF5 files]/20241219_050046/data.h5",
+  "size": 5096765440,
+  "sha256": "f4792a200cffcb70471a03c6ee6212737cefd4b71630ed5e72f654f445b8496a",
+  "expected": "f4792a200cffcb70471a03c6ee6212737cefd4b71630ed5e72f654f445b8496a",
+  "match": true,
+  "checked": "2026-09-09T02:05:15Z",
+  "expected_source": "RELEASE.json existing_ipfs_packages.payload_sha256"
+ },
+ "20241219_050648": {
+  "path": "[local copies of the public 2024 HDF5 files]/20241219_050648/data.h5",
+  "size": 5096765440,
+  "sha256": "e246d0f3ab933e37df307e60f40528540a65c762d80432c2857c2887041dd0fd",
+  "expected": "e246d0f3ab933e37df307e60f40528540a65c762d80432c2857c2887041dd0fd",
+  "match": true,
+  "checked": "2026-09-09T02:05:20Z",
+  "expected_source": "_control/SHA256SUMS"
+ },
+ "20241219_052040": {
+  "path": "[local copies of the public 2024 HDF5 files]/20241219_052040/data.h5",
+  "size": 5096765440,
+  "sha256": "225ce01d2abaa50c8b78fa451bdf49a872b7abe2c8f047fecffb72ddc0c7f9cc",
+  "expected": "225ce01d2abaa50c8b78fa451bdf49a872b7abe2c8f047fecffb72ddc0c7f9cc",
+  "match": true,
+  "checked": "2026-09-09T02:06:54Z",
+  "expected_source": "_control/SHA256SUMS"
+ },
+ "20241219_044052": {
+  "path": "[local copies of the public 2024 HDF5 files]/20241219_044052/data.h5",
+  "size": 5096765440,
+  "sha256": "e47c768adb327e89fc4af6d4c3d6a3bfad81541023e316706dd01e6619935129",
+  "expected": "e47c768adb327e89fc4af6d4c3d6a3bfad81541023e316706dd01e6619935129",
+  "match": true,
+  "checked": "2026-09-09T02:07:59Z",
+  "expected_source": "_control/SHA256SUMS"
+ }
+}

@@ -1,0 +1,80 @@
+{
+ "arm": "armi_2024six_s20260908",
+ "n_rows": 448,
+ "period_definition": "mean over RGB of 1/scale (px on the 1920x1080 display); camera px = 2.40 x",
+ "bins": [
+  {
+   "lo": 40.0,
+   "hi": 60.0,
+   "n": 97,
+   "auroc": 0.990328408970135,
+   "auroc_ci95": [
+    0.9798012541183972,
+    0.9979806568179402
+   ],
+   "paired": 1.0,
+   "paired_ci95": [
+    1.0,
+    1.0
+   ],
+   "resamples": 1000,
+   "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED",
+   "mean_delta": 0.007860370814044964
+  },
+  {
+   "lo": 60.0,
+   "hi": 80.0,
+   "n": 143,
+   "auroc": 0.98122157562717,
+   "auroc_ci95": [
+    0.9612694997310381,
+    0.9962345346960731
+   ],
+   "paired": 1.0,
+   "paired_ci95": [
+    1.0,
+    1.0
+   ],
+   "resamples": 1000,
+   "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED",
+   "mean_delta": 0.009595479999857768
+  },
+  {
+   "lo": 80.0,
+   "hi": 110.0,
+   "n": 157,
+   "auroc": 0.9993508864456976,
+   "auroc_ci95": [
+    0.9978487971114447,
+    1.0
+   ],
+   "paired": 1.0,
+   "paired_ci95": [
+    1.0,
+    1.0
+   ],
+   "resamples": 1000,
+   "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED",
+   "mean_delta": 0.010846761463906006
+  },
+  {
+   "lo": 110.0,
+   "hi": 200.0,
+   "n": 51,
+   "auroc": 0.9992310649750096,
+   "auroc_ci95": [
+    0.9965301806997309,
+    1.0
+   ],
+   "paired": 1.0,
+   "paired_ci95": [
+    1.0,
+    1.0
+   ],
+   "resamples": 1000,
+   "rule": "row bootstrap, rows resampled with replacement, seed EVAL_SEED",
+   "mean_delta": 0.012601991841459976
+  }
+ ],
+ "spearman_period_vs_delta": 0.49780912948130174
+}

@@ -1,0 +1,54 @@
+{
+ "1682718815": {
+  "n_lines": 779,
+  "first": "0_En__Rn_0xcb03596c69e47b651c3a9251e491b",
+  "last": "778_En_bd2bfb5307e574b60f9d73145827add82986e6bd3de3cb354f9a2",
+  "tag_formats": {
+   "Ep_Rp": 777,
+   "En_Rn": 2
+  },
+  "emission_chain_links_ok": "0/778",
+  "bad_links": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  "links_ok_reconstructed_plain_unpadded": "777/778",
+  "links_ok_reconstructed_zfill6": "0/778",
+  "index_zero_padded_in_log": false,
+  "first_emission_hash_is_0x_prefixed": false,
+  "report_bytes_hash_eq_filename": "25/25",
+  "report_filename_eq_log": "25/25",
+  "emission_generator_check": [
+   {
+    "index": 1,
+    "dtype": "float64",
+    "filename_hash_eq_log": true,
+    "gen_max_abs_diff": 6.536993168992922e-13,
+    "stored_max": 237.13425883022336,
+    "gen_max": 237.13425883022296,
+    "stored_frac_gt255": 0.0
+   },
+   {
+    "index": 33,
+    "dtype": "float32",
+    "filename_hash_eq_log": true,
+    "gen_max_abs_diff": 6.353674581305313e-05,
+    "stored_max": 233.8333740234375,
+    "gen_max": 233.83339179003062,
+    "stored_frac_gt255": 0.0
+   },
+   {
+    "index": 65,
+    "dtype": "float32",
+    "filename_hash_eq_log": true,
+    "gen_max_abs_diff": 0.0001015342097048233,
+    "stored_max": 228.1314697265625,
+    "gen_max": 228.1314909758271,
+    "stored_frac_gt255": 0.0
+   }
+  ]
+ }
+}

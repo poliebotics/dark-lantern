@@ -1,0 +1,8 @@
+1682718815: fit frames 97; mean grid-16 matched corr blind 0.4991 -> refined 0.5392; corner shifts (full px) [22.1, 23.4, 71.5, 83.8]; nfev 430; 73s
+  eval blind    grid  8: AUROC 1.0000 [0.9999999999999999, 1.0] wins 98/98 matched mean 0.4553
+  eval blind    grid 16: AUROC 1.0000 [0.9999999999999999, 1.0] wins 98/98 matched mean 0.5037
+  eval blind    grid 32: AUROC 1.0000 [0.9999999999999999, 1.0] wins 98/98 matched mean 0.4966
+  eval refined  grid  8: AUROC 1.0000 [0.9999999999999999, 1.0] wins 98/98 matched mean 0.4498
+  eval refined  grid 16: AUROC 1.0000 [0.9999999999999999, 1.0] wins 98/98 matched mean 0.4528
+  eval refined  grid 32: AUROC 1.0000 [0.9999999999999999, 1.0] wins 98/98 matched mean 0.4689
+written train_free_coupling_old_sessions/results/refine_check_1682718815.json
