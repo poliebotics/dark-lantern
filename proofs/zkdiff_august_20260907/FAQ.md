@@ -1,5 +1,5 @@
 ---
-version: 1.5
+version: 1.7
 date: 2026-09-08
 status: every question the three outside-agent readability audits of 8 September 2026 raised that the package can answer, answered from the package's files, with the questions that only the principal can settle marked as such
 author: BOSUN for Cathal Ryan Hynes
@@ -113,9 +113,12 @@ tensors are published; see `FRAMES.md`. The August frames depict a masked partic
 **17. What are d2 and v10, what was recorded, when, how many rows, and where can they be obtained?** Two earlier Truth Beam
 sessions recorded with the same kind of rig, the programme's public development sessions: d2 has 5,992 rows, v10 3,743
 (`oracle/trainer/train_lean.py` `SESSIONS`). The package ships the cached 96 x 112 reductions and emission rows it used (on
-the data layer, `LARGE_FILES.md`), not their frames, and does not carry the public location of those frames or their recording
-dates: **not decided at publication** (the principal to add the reference). The frames of the August proof rows are published
-(`FRAMES.md`). Training blocks: d2 rows 0 to 1237, 1758 to 2735,
+the data layer, `LARGE_FILES.md`), not their frames. The frames are public, in the Truth Beam session bundles
+`https://data.truthbeam.com/sessions/d2/` (Truth Beam protocol v9, recorded 2026-04-25T02:08:30Z, 5,992 frames) and
+`https://data.truthbeam.com/sessions/v10/` (protocol v10, recorded 2026-04-25T05:10:42Z, 3,743 frames), each with its `README_BUNDLE.md` (the
+protocol version) and `capture_log.csv` (`session_iso_utc`, the recording date); row N of a session is `Recordings/frame_{N:06d}.raw`
+in that prefix. The frame counts agree with the trainer's `SESSIONS` (`rows_total` 5,992 and 3,743). The frames of the August proof
+rows are published (`FRAMES.md`). Training blocks: d2 rows 0 to 1237, 1758 to 2735,
 3256 to 4233, 4754 to 5991 (4,432 rows); v10 rows 0 to 1049, 1420 to 2284, 2655 to 3742 (3,003 rows). Evaluation blocks:
 d2 1298 to 1697, 2796 to 3195, 4294 to 4693 (1,200 rows); v10 1110 to 1359, 2345 to 2594 (500 rows). The blocks are
 disjoint with 60-row gaps, and 4,432 + 3,003 + 600 August rows = 8,035, the trainer's count. `RESULTS.md` section 1.
@@ -461,8 +464,9 @@ in the public ZeeBeam repository (github.com/poliebotics/zeebeam), 2,779 bytes, 
 (`source/logs/verify_groth16_only_row096_20260907.json` records the same bytes and digest).
 
 **82. Can the checkpoint be retrained from the published material?** No. The checkpoint, the trainer and its log and the
-evaluation-row caches (`oracle/rows/d2/`, `oracle/rows/v10/`, `oracle/rows_august/`) are published; the training-block caches and
-the frames of rows 0 to 599 and of the d2 and v10 sessions are not, and no claim in this package rests on retraining.
+evaluation-row caches (`oracle/rows/d2/`, `oracle/rows/v10/`, `oracle/rows_august/`) are published, and the d2 and v10 frames are
+public in their session bundles (question 17); the training-block caches and the frames of the August training rows 0 to 599 are not
+published, and no claim in this package rests on retraining.
 
 **83. Why is Astra round 8 (18:01) dated before round 7 (18:08)?** The two ran concurrently on the same frozen bytes, the privacy
 sweep (round 7) and the confirmation re-read of the round-6 dispositions (round 8); round 8's verdict landed first, neither saw the
@@ -479,3 +483,5 @@ rounds 7 and 8 and the second reading").
 | 1.3 | 2026-09-08 | BOSUN | Astra round 9: the pending-decision label reads 'not decided at publication' wherever it appears. |
 | 1.4 | 2026-09-08 | BOSUN | Third outside reading: question 35 names the eight policy-only rows; questions 79 to 83 (check counts, the frozen table's provenance digests, the row-96 artifact, retraining, the order of rounds 7 and 8). |
 | 1.5 | 2026-09-08 | BOSUN | Astra round 11: question 43 covers rounds 9 and 10 and the third reading; the audit inventory rendered from audits/. |
+| 1.6 | 2026-09-09 | BOSUN | Revision 1.1: question 17 gives the public d2 and v10 session bundles, their recording dates, frame counts, protocol versions and the frame path rule. |
+| 1.7 | 2026-09-09 | BOSUN | Revision 1.1, Astra round 13: question 82 no longer calls the d2 and v10 frames unpublished. |

@@ -1,5 +1,5 @@
 ---
-version: 1.3
+version: 1.4
 date: 2026-09-08
 status: every term and acronym used in the prose of this package, defined for a reader with no context; added after the outside-agent readability audits (AUDIT_TRAIL.md, the first reading, A1)
 author: BOSUN for Cathal Ryan Hynes
@@ -127,7 +127,9 @@ programme's public development sessions. Their training blocks trained the model
 1298 to 1697, 2796 to 3195, 4294 to 4693; v10: 1110 to 1359, 2345 to 2594) were scored repeatedly to compare candidates,
 which makes them **development validation** rather than a test set (`RESULTS.md` sections 1 and 2; block bounds in
 `oracle/trainer/train_lean.py`). The package ships their cached 96 x 112 reductions and emission rows on the data layer, not
-their frames.
+their frames; the frames are public in the Truth Beam session bundles `https://data.truthbeam.com/sessions/d2/` (Truth Beam protocol v9, recorded 2026-04-25T02:08:30Z, 5,992 frames) and
+`https://data.truthbeam.com/sessions/v10/` (protocol v10, recorded 2026-04-25T05:10:42Z, 3,743 frames), where row N is
+`Recordings/frame_{N:06d}.raw` (`FAQ.md` 17).
 
 **Development validation.** Data excluded from weight training but consulted while choosing the model. Its scores describe
 the selected model on data that influenced the selection; they are not an estimate of performance on unseen data.
@@ -326,3 +328,4 @@ and write the framed artifact; distinct from `sp1-verifier`, the small crate tha
 | 1.1 | 2026-09-08 | BOSUN | Privacy sweep and second reading: the frames are published (what they show is in FRAMES.md); the quick-screen rows stated as four proof rows among 28; the machines named by role; the cache entry; the mark; the declared offset rule. |
 | 1.2 | 2026-09-08 | BOSUN | Third outside reading: short entries for ABI, Aravis and GenICam, BLS12-381, BN254, bincode, ELF, Random123 and Philox, SDK. |
 | 1.3 | 2026-09-08 | BOSUN | Third outside reading: the development machine's memory and GPU stated; the release desk and the transmit items defined. |
+| 1.4 | 2026-09-09 | BOSUN | Revision 1.1: the d2 and v10 entry names the public session bundles. |

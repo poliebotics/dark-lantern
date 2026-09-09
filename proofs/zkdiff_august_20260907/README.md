@@ -1,5 +1,6 @@
 ---
-version: 1.6
+version: 1.7
+revision: 1.1 (1.0 is the tree published at Dark Lantern commit d8cd9278a21dc636bb5c0233276d3cf4beeafd70 on 8 September 2026; 1.1 adds the public d2 and v10 session-bundle reference and nothing else)
 date: 2026-09-08
 status: proof package of the zero-knowledge diffusion demonstration; one Groth16 proof per August row 600 to 711; results rendered from the collection; primer, glossary, FAQ, offline capsule, published frames and audit texts added after the outside-agent readability audits and the principal's publication decision
 author: BOSUN for Cathal Ryan Hynes
@@ -185,3 +186,4 @@ under any patent.
 | 1.4 | 2026-09-08 | BOSUN | Section table: the replication kit's fresh-machine run named. |
 | 1.5 | 2026-09-08 | BOSUN | Third outside reading: the two-part publication stated in one paragraph, with the bundle's controls and where their digests are fixed. |
 | 1.6 | 2026-09-08 | BOSUN | Astra round 11: the audit inventory rendered from audits/ (inline markers); the two-part paragraph says which inventory sits only in the bundle's manifest. |
+| 1.7 | 2026-09-09 | BOSUN | Revision 1.1: FAQ 17 and the glossary give the public location of the d2 and v10 session bundles (Truth Beam v9 and v10, 25 April 2026); the revision recorded in the front matter, AUDIT_TRAIL.md and PINS.json; nothing else changes. |

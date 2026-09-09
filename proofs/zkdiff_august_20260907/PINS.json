@@ -1,5 +1,9 @@
 {
  "schema": "zkdiff-august-pins/v1",
+ "package_revision": {
+  "revision": "1.1",
+  "note": "1.0 is the tree published at Dark Lantern commit d8cd9278a21dc636bb5c0233276d3cf4beeafd70 (8 September 2026); 1.1 adds the public d2 and v10 session-bundle reference (FAQ.md 17, GLOSSARY.md) and nothing else"
+ },
  "what": "every constant a verifier of the zkdiff August proofs must pin; hashes computed from the files at staging (tools_release/make_pins.py); the `batch` section is added by fill_results.py once the 112 proofs are collected",
  "date": "2026-09-08",
  "program": {

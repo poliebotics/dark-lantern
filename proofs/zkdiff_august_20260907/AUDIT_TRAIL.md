@@ -1,5 +1,5 @@
 ---
-version: 1.8
+version: 1.9
 date: 2026-09-08
 status: the second-model audit rounds (five before the proofs, the sixth on the finished package, the seventh a privacy sweep of the payloads, the eighth and later ones confirmation re-reads) and the readings by three outside agents, with their verdict lines, the subjects of every finding, what changed after each, and the texts in audits/
 author: BOSUN for Cathal Ryan Hynes
@@ -242,6 +242,13 @@ published here, has not itself been re-read; the changes it made are recorded in
 `REDACTION.md` and the redaction ledgers. The node timing pilot ran on the round-4 ELF that round 5 superseded; its proof is not part of this package and only
 its timing measurements are quoted, labelled as such (`RESULTS.md` section 5).
 
+## Revisions
+
+| revision | date | change | published as |
+|---|---|---|---|
+| 1.0 | 8 September 2026 | the package as audited through round 11 and read three times by the outside agents | Dark Lantern commit `d8cd9278a21dc636bb5c0233276d3cf4beeafd70`; data layer `results/zkdiff_august_20260907/v1/` (manifest `e1bca0243dda85d8431c9091ba81fb3313609123fc1b7730f9781bf210df3f88`) |
+| 1.1 | 9 September 2026 | d2/v10 reference: `FAQ.md` 17 and `GLOSSARY.md` name the public Truth Beam session bundles of d2 and v10 (their locations, recording dates, frame counts, protocol versions and the frame path rule), which the package had called not decided at publication; the revision is recorded in `README.md`, this table and `PINS.json`; the package ledger and the root ledger are regenerated; nothing else changes | one commit on `d8cd9278…` (item 034) and the changed front-matter copies on the data layer (item 035), both staged for the publisher |
+
 ## Sources
 
 The verdict lines are the closing lines of the verdict files, published as `audits/astra/r1_verdict.md` to `r6_verdict.md`
@@ -264,3 +271,4 @@ Log, the round-1 and round-2 verdicts, and, for the later rounds, `FAQ.md`, `RED
 | 1.6 | 2026-09-08 | BOSUN | Astra rounds 9 and 10 and the third outside reading: table rows, what changed after each, sources. |
 | 1.7 | 2026-09-08 | BOSUN | The third reading's Claude row; the first outside reading named as such (A1), not round 7; ten rounds. |
 | 1.8 | 2026-09-08 | BOSUN | Astra round 11: the status line carries no counts (the table is the inventory). |
+| 1.9 | 2026-09-09 | BOSUN | Revision 1.1: the Revisions section (1.0 as published, 1.1 the d2/v10 reference). |
