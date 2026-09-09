@@ -1,11 +1,11 @@
 ---
-version: 1.2
-date: 2026-09-06
+version: 1.3
+date: 2026-09-09
 status: public extract of a development-data arithmetic fixture; revalidated 6 September 2026
 author: BOSUN for Cathal Ryan Hynes
 ---
 
-# Two Proofs, One Commitment: conditional micro-PLONK proofs of a frozen discriminator margin and a fixed-noise residual inequality over one committed tensor collection (23 August 2026, revalidated 6 September 2026)
+# Two Sides of the Same Coin: conditional micro-PLONK proofs of a frozen discriminator margin and a fixed-noise residual inequality over one committed tensor collection (23 August 2026, revalidated 6 September 2026)
 
 Two verified PLONK proofs establish knowledge of the same committed 224-byte collection of derived 4×4 camera and emission tensors satisfying a frozen bilinear aggregate-score inequality and a frozen, fixed-noise t=150 conditional epsilon-residual aggregate inequality.
 
@@ -73,6 +73,7 @@ covers every other package file.
 
 ## Log
 
+- 1.3 (2026-09-09, BOSUN) — title revision, 9 September 2026.
 - 1.2 (2026-09-06, BOSUN) — title given its paper form; no other change.
 - 1.1 (2026-09-06, BOSUN) — after Astra's audit of the first extract: registered sentence restored verbatim; fixture, lineage,
   nonce-hiding and entropy limitations stated; four negative artefacts named; synthetic zero-margin witness tests added and

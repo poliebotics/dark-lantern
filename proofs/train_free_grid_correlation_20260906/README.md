@@ -1,11 +1,11 @@
 ---
-version: 1.2
-date: 2026-09-06
+version: 1.3
+date: 2026-09-09
 status: public engineering demonstration on public data; retrospective; CPU-generated PLONK proofs
 author: BOSUN for Cathal Ryan Hynes
 ---
 
-# Sixteen Cells, One Threshold: two PLONK proofs of an exact train-free emission–capture correlation bound over committed 4×4 cell-sum grids
+# Exact Change: Sixteen Cells, One Threshold: two PLONK proofs of an exact train-free emission–capture correlation bound over committed 4×4 cell-sum grids
 
 On two disclosed public-data examples, CPU-generated PLONK proofs verified that the mean-channel Pearson correlation of Poseidon-committed 4×4 RGB cell-sum grids exceeded 1/8 for the matched capture–emission pair and remained below 1/8 for the same capture with its fixed recorded mismatch.
 
@@ -76,6 +76,7 @@ every other file.
 
 ## Log
 
+- 1.3 (2026-09-09, BOSUN) — title revision, 9 September 2026.
 - 1.2 (2026-09-06, BOSUN) — title given its paper form; no other change.
 - 1.1 (2026-09-06, BOSUN) — after Astra's audit (HOLD H1–H3): the checker now verifies source digests, grids and commitments
   against the frozen openings from the package root; fixtures shipped; toolchain hashes, rerun peak memory, build logs, the fresh

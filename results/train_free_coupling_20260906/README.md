@@ -1,11 +1,11 @@
 ---
-version: 1.2
-date: 2026-09-06
+version: 1.3
+date: 2026-09-09
 status: public results package; retrospective, previously inspected frames; registered controls frozen before scoring
 author: BOSUN for Cathal Ryan Hynes
 ---
 
-# No Training Required: emission-capture grid correlation on the held-out tails of two Truth Beam sessions, reproduced from public frames with registered controls
+# The Untrained Eye: emission-capture grid correlation on the held-out tails of two Truth Beam sessions, reproduced from public frames with registered controls
 
 On the 975 previously inspected tail frames from sessions d2 and v10, all five evaluated train-free grid-correlation
 statistics scored matched emission–capture pairs above their recorded same-session random mismatches in aggregate; their
@@ -127,6 +127,7 @@ source that expects the working-directory layout. `SHA256SUMS` covers every othe
 
 ## Log
 
+- 1.3 (2026-09-09, BOSUN) — title revision, 9 September 2026.
 - 1.2 (2026-09-06, BOSUN) — title given its paper form; no other change.
 - 1.1 (2026-09-06, BOSUN) — after Astra's audit (HOLD on wording, provenance and packaging): protocol details and deviations
   stated, block-level variation reported, claims bounded, learned-package hold retained, shipped paths reduced with the as-run hashes

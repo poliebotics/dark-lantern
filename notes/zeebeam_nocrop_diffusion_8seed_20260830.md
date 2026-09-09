@@ -1,11 +1,11 @@
 ---
-version: 3.1
-date: 2026-08-31
+version: 3.2
+date: 2026-09-09
 status: settled-ML-result; v4-claim-draft-audited-PASS; broader-interpretations-not-audited
 author: BOSUN
 ---
 
-# Eight Seeds, One Answer: uncropped ARM-C row conditioning across all eight seeds
+# Same Difference: uncropped ARM-C row conditioning across all eight seeds
 
 > **SETTLED.** All eight seeds were re-evaluated at the declared horizon (step 12000,
 > `latest.pt`, verified per result file) under the frozen evaluator, and the claim passed a
@@ -92,6 +92,7 @@ At issue time a 50,000-step run was in flight; this note contains no terminal re
 
 ## Log
 
+- 3.2 (2026-09-09, BOSUN) — title revision, 9 September 2026.
 - 3.1 (2026-09-06, BOSUN) — title given its paper form; no other change.
 - 3.0 (2026-08-31, BOSUN) — SETTLED. Homogeneous re-evaluation of all eight seeds at
   the declared step 12000; Sol audit v1 BLOCK -> v2 BLOCK(4) -> v3 BLOCK(4) -> v4 PASS
