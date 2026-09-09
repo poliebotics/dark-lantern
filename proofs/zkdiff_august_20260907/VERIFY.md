@@ -1,8 +1,8 @@
 ---
-version: 1.7
-date: 2026-09-08
+version: 1.8
+date: 2026-09-09
 status: how to verify one proof and all of them, with nothing installed (the capsule), with Rust, or with the SP1 toolchain, with or without the network (the offline build kit); decode a statement, rebuild the program and its key, check every pinned identity, recompute a row from its published frame; verification routes rehearsed on 8 September 2026 (section 9, replicate/TEST_LOG.md, capsule/README.md); unrehearsed routes are identified below
-author: BOSUN for Cathal Ryan Hynes
+author: Cathal Ryan Hynes (author of record); drafted with BOSUN, the project's automated research assistant
 ---
 
 # Verifying the zkdiff August proofs
@@ -574,3 +574,4 @@ regeneration with the August rows placed and the export of the August sets were 
 | 1.5 | 2026-09-08 | BOSUN | Astra round 9: the offline kit re-run against this revision's frozen sources (second run, its source inventory shipped); the kit's file count, bytes and manifest digest; the upstream binaries' path strings stated; the afternoon-rehearsal note made historical (source, oracle and model changed in the privacy sweep). |
 | 1.6 | 2026-09-08 | BOSUN | Astra round 10 and the third outside reading: the two-part publication stated up front; a renamed copy noted at P=; the eight policy-only rows; the first outside reading named as such; the offline kit test's fourth run (two host-source comment lines changed by the release-step wording; the third run had used an incompletely adapted staging copy) recorded in 2b and section 9. |
 | 1.7 | 2026-09-08 | BOSUN | Astra round 11: which inventory sits only in the bundle's manifest; the kit manifest digest refreshed after the write-up's size correction. |
+| 1.8 | 2026-09-09 | BOSUN | authorship line, 9 September 2026. |

@@ -1,8 +1,8 @@
 ---
-version: 1.7
-date: 2026-09-08
+version: 1.8
+date: 2026-09-09
 status: every question the three outside-agent readability audits of 8 September 2026 raised that the package can answer, answered from the package's files, with the questions that only the principal can settle marked as such
-author: BOSUN for Cathal Ryan Hynes
+author: Cathal Ryan Hynes (author of record); drafted with BOSUN, the project's automated research assistant
 ---
 
 # Questions an outside reader asked, and the answers the package gives
@@ -485,3 +485,4 @@ rounds 7 and 8 and the second reading").
 | 1.5 | 2026-09-08 | BOSUN | Astra round 11: question 43 covers rounds 9 and 10 and the third reading; the audit inventory rendered from audits/. |
 | 1.6 | 2026-09-09 | BOSUN | Revision 1.1: question 17 gives the public d2 and v10 session bundles, their recording dates, frame counts, protocol versions and the frame path rule. |
 | 1.7 | 2026-09-09 | BOSUN | Revision 1.1, Astra round 13: question 82 no longer calls the d2 and v10 frames unpublished. |
+| 1.8 | 2026-09-09 | BOSUN | authorship line, 9 September 2026. |

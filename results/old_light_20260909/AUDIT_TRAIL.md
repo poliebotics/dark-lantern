@@ -1,8 +1,8 @@
 ---
-version: 1.3
+version: 1.4
 date: 2026-09-09
 status: the four second-model results audits of 9 September 2026 (two rounds on ARM-I, one on the statistic, one on the pix2pixHD work), their verdict lines verbatim, what each reproduced and what changed after each, the owner correction of the same day, the texts in audits/, and the package audit's three rounds with their dispositions
-author: BOSUN for Cathal Ryan Hynes
+author: Cathal Ryan Hynes (author of record); drafted with BOSUN, the project's automated research assistant
 ---
 
 # Audit trail
@@ -136,6 +136,13 @@ the post-039 main and the transmit helpers PASS (11 seals matching; 325 reposito
 subshell, then re-freeze.", applied in `REPRODUCE.md` 1.2 (the checkpoint-loading command runs in a subshell, so the runbook's blocks work in
 order). The audit texts are the coordinator's record and are not published here.
 
+## Revisions
+
+| revision | date | change | published as |
+|---|---|---|---|
+| 1.0 | 9 September 2026 | the package as audited through the package audit's three rounds | Dark Lantern commit `8b60d384ff67a55b5faf0c102424943eddf7290e` (item 037); data layer `results/old_light_20260909/v1/` (manifest `dfe707e955509eb02ce519cb660cf5bbe1d1339acb2bb114b6fd6054e3d258b7`, item 036) |
+| 1.1 | 9 September 2026 | authorship line: every document of the package carries the author-of-record line, `author: Cathal Ryan Hynes (author of record); drafted with BOSUN, the project's automated research assistant` (a desk qualifier kept in parentheses where one existed), with its version, date and Log advanced; the revision is recorded in `README.md`, this table and `PINS.json`; the package ledger and the root ledger are regenerated; nothing else changes | one commit on `8b60d384…` (item 040) and the changed front-matter copies on the data layer (item 041), both staged for the publisher |
+
 ## Sources
 
 The verdict lines are the closing lines of `audits/astra/armi_r1_verdict.md`, `armi_r2_verdict.md`,
@@ -151,3 +158,4 @@ their audit-note sections. The owner correction is recorded in the ARM-I report'
 | 1.1 | 2026-09-09 | BOSUN | The package audit's round 1 recorded with its verdict line and the dispositions applied; the ship named in the owner correction. |
 | 1.2 | 2026-09-09 | BOSUN | The package audit's round 2 recorded with its verdict line and the seven dispositions applied. |
 | 1.3 | 2026-09-09 | BOSUN | The package audit's round 3 recorded with its verdict line and the one disposition applied. |
+| 1.4 | 2026-09-09 | BOSUN | Revision 1.1: the authorship line of 9 September 2026 (the Revisions section: 1.0 as published, 1.1 the authorship line). |

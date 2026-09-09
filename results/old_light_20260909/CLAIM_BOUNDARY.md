@@ -1,8 +1,8 @@
 ---
-version: 1.1
+version: 1.2
 date: 2026-09-09
 status: the claim boundary of this package: emission-recording correspondence within the recordings named, and nothing wider; the four paragraphs govern every sentence in this directory
-author: BOSUN for Cathal Ryan Hynes
+author: Cathal Ryan Hynes (author of record); drafted with BOSUN, the project's automated research assistant
 ---
 
 # Claim boundary
@@ -64,3 +64,4 @@ limits inside each result are stated here (`RESULTS.md`).
 |---|---|---|---|
 | 1.0 | 2026-09-09 | BOSUN | First version, drafted from the three audited reports before the package audit. |
 | 1.1 | 2026-09-09 | BOSUN | Package audit round 1 applied: the closing sentence names no unpublished measurement. |
+| 1.2 | 2026-09-09 | BOSUN | authorship line, 9 September 2026. |

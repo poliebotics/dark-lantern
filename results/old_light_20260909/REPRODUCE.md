@@ -1,8 +1,8 @@
 ---
-version: 1.2
+version: 1.3
 date: 2026-09-09
 status: the public-layout runbook: what regenerates from the files in this directory, what needs the data-layer bundle, what needs the public recordings and a GPU, and how each script finds its inputs in the published layout
-author: BOSUN for Cathal Ryan Hynes
+author: Cathal Ryan Hynes (author of record); drafted with BOSUN, the project's automated research assistant
 ---
 
 # Reproducing the tables and figures, and re-running the work
@@ -154,3 +154,4 @@ the saved scores under `results/`.
 | 1.0 | 2026-09-09 | BOSUN | First version, after the package audit's readability finding. |
 | 1.1 | 2026-09-09 | BOSUN | Package audit round 2 applied: the ARM-I steps run in order (the download list by absolute path, the 2026 precache step and its log marker, `XCFG_LEAN` as the cache root, the homographies and Perlin parameters found beside the kit); the pix2pixHD kit inputs placed from the bundle and the checkout pinned before the bootstrap; the saved-score scope limited to the numerical tables and score plots, the contact sheets distinguished; the interval summary described with its 73 groups. |
 | 1.2 | 2026-09-09 | BOSUN | Package audit round 3 applied: the checkpoint-loading command runs in a subshell, so the caller stays in `PKG` for the blocks that follow. |
+| 1.3 | 2026-09-09 | BOSUN | authorship line, 9 September 2026. |

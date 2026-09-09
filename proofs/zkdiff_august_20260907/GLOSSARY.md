@@ -1,8 +1,8 @@
 ---
-version: 1.4
-date: 2026-09-08
+version: 1.5
+date: 2026-09-09
 status: every term and acronym used in the prose of this package, defined for a reader with no context; added after the outside-agent readability audits (AUDIT_TRAIL.md, the first reading, A1)
-author: BOSUN for Cathal Ryan Hynes
+author: Cathal Ryan Hynes (author of record); drafted with BOSUN, the project's automated research assistant
 ---
 
 # Glossary
@@ -329,3 +329,4 @@ and write the framed artifact; distinct from `sp1-verifier`, the small crate tha
 | 1.2 | 2026-09-08 | BOSUN | Third outside reading: short entries for ABI, Aravis and GenICam, BLS12-381, BN254, bincode, ELF, Random123 and Philox, SDK. |
 | 1.3 | 2026-09-08 | BOSUN | Third outside reading: the development machine's memory and GPU stated; the release desk and the transmit items defined. |
 | 1.4 | 2026-09-09 | BOSUN | Revision 1.1: the d2 and v10 entry names the public session bundles. |
+| 1.5 | 2026-09-09 | BOSUN | authorship line, 9 September 2026. |

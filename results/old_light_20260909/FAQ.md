@@ -1,8 +1,8 @@
 ---
-version: 1.2
+version: 1.3
 date: 2026-09-09
 status: the questions a reader of this package is likely to ask, answered from its files; where the answer is a decision of the principal that has not been taken, the entry says so
-author: BOSUN for Cathal Ryan Hynes
+author: Cathal Ryan Hynes (author of record); drafted with BOSUN, the project's automated research assistant
 ---
 
 # Questions a reader will ask, and the answers the package gives
@@ -153,3 +153,4 @@ chose to publish the results as they stand, and those items remain open.
 | 1.0 | 2026-09-09 | BOSUN | First version. |
 | 1.1 | 2026-09-09 | BOSUN | Package audit round 1 applied: AUROC beside every paired count (items 1 and 5), the January 2025 entry reduced to the artefact-only fact (items 11 and 18), the two reproduction scopes stated (items 12 and 13), the pix2pixHD bootstrap described as it is (clones the default branch, records HEAD). |
 | 1.2 | 2026-09-09 | BOSUN | Package audit round 2 applied: the saved-score promise limited to the numerical tables and score plots, the contact sheets distinguished (items 12 and 13); the pix2pixHD bootstrap's inputs and checkout order stated (item 13). |
+| 1.3 | 2026-09-09 | BOSUN | authorship line, 9 September 2026. |

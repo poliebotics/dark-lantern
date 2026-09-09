@@ -1,8 +1,8 @@
 ---
-version: 1.0
-date: 2026-09-07
+version: 1.1
+date: 2026-09-09
 status: verbatim-copy-of-proved-source
-author: BOSUN
+author: Cathal Ryan Hynes (author of record); drafted with BOSUN, the project's automated research assistant
 ---
 
 # zeebeam-b3xof-relation, copied verbatim from the proved tree
@@ -26,4 +26,5 @@ advance), `META_BYTES`, `TILE_W`, `TILE_H`, `CHANNELS`, `TOTAL_BYTES_PER_CHANNEL
 
 ## Log
 
+- 1.1 (2026-09-09, BOSUN) — authorship line, 9 September 2026.
 - 1.0 (2026-09-07, BOSUN) — copied with `cp`, digests recorded with `sha256sum` on both sides.

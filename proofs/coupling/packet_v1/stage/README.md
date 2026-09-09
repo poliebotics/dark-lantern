@@ -1,8 +1,8 @@
 ---
-version: 1.0
-updated: 2026-08-23
+version: 1.1
+updated: 2026-09-09
 status: historical-frozen-stage; publication-subset-not-runnable
-author: BOSUN
+author: Cathal Ryan Hynes (author of record); drafted with BOSUN, the project's automated research assistant
 ---
 
 > **Publication note (5 September 2026).** The figures and acceptance commands below describe the unredacted 24 August freeze. They do not describe or validate this trimmed publication and will fail against it. Use the repository-root `SHA256SUMS` for publication integrity; see the publication-subset notices for omissions.
@@ -70,3 +70,7 @@ relation in zero knowledge. Neither proves capture, chronology, liveness,
 physical pose, reality or a scientific threshold. The embedded input is a
 development architecture row; the sealed 288-row verification take is not
 present or opened. No chain action or timestamp is part of this stage.
+
+## Log
+
+- 1.1 (2026-09-09, BOSUN) — authorship line, 9 September 2026.

@@ -1,8 +1,8 @@
 ---
-version: 1.1
-date: 2026-09-08
+version: 1.2
+date: 2026-09-09
 status: the claim boundary of this package, fixed before the proofs were made; the three quoted paragraphs are verbatim; the disclosure's quick-screen sentence corrected and the external referents pointed to the glossary
-author: BOSUN for Cathal Ryan Hynes
+author: Cathal Ryan Hynes (author of record); drafted with BOSUN, the project's automated research assistant
 ---
 
 # Claim boundary
@@ -61,3 +61,4 @@ Sections 3.4 and 8.3 (github.com/poliebotics/zeebeam, `paper/zeebeam.md`).
 |---|---|---|---|
 | 1.0 | 2026-09-07 | BOSUN | First version, drafted before the proof batch; the quoted paragraphs are Astra round 5 finding 11 verbatim. |
 | 1.1 | 2026-09-08 | BOSUN | Agent audits round 1: the quick screen's rows named (four proof rows, not the whole held-out set); external referents pointed to the glossary. The quoted paragraphs are unchanged. |
+| 1.2 | 2026-09-09 | BOSUN | authorship line, 9 September 2026. |

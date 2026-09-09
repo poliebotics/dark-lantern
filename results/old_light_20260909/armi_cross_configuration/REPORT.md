@@ -1,8 +1,8 @@
 ---
-version: 1.4
+version: 1.5
 date: 2026-09-09
 status: FINAL (measured; Astra r1 and r2 fixes applied; owner scene correction of 9 September applied; follow-up run appended)
-author: BOSUN for Cathal Ryan Hynes (the ARM-I desk)
+author: Cathal Ryan Hynes (author of record); drafted with BOSUN, the project's automated research assistant (the ARM-I desk)
 ---
 
 > Published copy of the desk report of 9 September 2026, as audited (`../AUDIT_TRAIL.md`). Every table and number is the
@@ -266,6 +266,7 @@ The controls support correspondence under random, exhaustive, matched-period and
 
 ## Log
 
+- 1.5 (2026-09-09, BOSUN) — authorship line, 9 September 2026.
 - 1.4 (2026-09-09, BOSUN) — owner scene correction applied (the principal, 9 September, verified by the desk against d2 preview frame 1300): the 2026 sessions were recorded in CittaDel's wheelhouse, a different room from the 2023/2024 bookshelf sessions; the 2024 to 2026 transfers are cross-scene; the same-bookshelf caveat corrected in the plain paragraph, the 2023 paragraph, the reverse-arm paragraph, the caveats, the shelf verdict and the contact-sheet caption; every other caveat kept.
 - 1.3 (2026-09-09, BOSUN) — Astra results audit r2 fixes applied: the spatial/colour conclusion replaced by the supported statement, complete monitoring disclosure for the unified runs, raw-trailer wording, the surviving round-1 contradictions removed, restricted one-session claim, three recorded rig configurations, identification counts kept distinct from paired fractions, narrower control wording, Astra's shelf entries and plain paragraph adopted, kit manifest regenerated.
 - 1.2 (2026-09-09, BOSUN) — Astra results audit r1 fixes applied throughout (see the audit note); follow-up run sections appended (unified three-rig model, few-shot adaptation, controls, motion split), second box.

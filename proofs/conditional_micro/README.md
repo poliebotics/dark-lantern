@@ -1,8 +1,8 @@
 ---
-version: 1.3
+version: 1.4
 date: 2026-09-09
 status: public extract of a development-data arithmetic fixture; revalidated 6 September 2026
-author: BOSUN for Cathal Ryan Hynes
+author: Cathal Ryan Hynes (author of record); drafted with BOSUN, the project's automated research assistant
 ---
 
 # Two Sides of the Same Coin: conditional micro-PLONK proofs of a frozen discriminator margin and a fixed-noise residual inequality over one committed tensor collection (23 August 2026, revalidated 6 September 2026)
@@ -73,6 +73,7 @@ covers every other package file.
 
 ## Log
 
+- 1.4 (2026-09-09, BOSUN) — authorship line, 9 September 2026.
 - 1.3 (2026-09-09, BOSUN) — title revision, 9 September 2026.
 - 1.2 (2026-09-06, BOSUN) — title given its paper form; no other change.
 - 1.1 (2026-09-06, BOSUN) — after Astra's audit of the first extract: registered sentence restored verbatim; fixture, lineage,

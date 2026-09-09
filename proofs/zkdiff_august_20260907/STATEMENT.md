@@ -1,8 +1,8 @@
 ---
-version: 1.3
-date: 2026-09-08
+version: 1.4
+date: 2026-09-09
 status: the statement each proof establishes: public inputs, witness, relation, layout and the declared offset rule, as frozen before proving; section 1a and the field notes added after the outside-agent readability audits
-author: BOSUN for Cathal Ryan Hynes
+author: Cathal Ryan Hynes (author of record); drafted with BOSUN, the project's automated research assistant
 ---
 
 # The statement
@@ -252,3 +252,4 @@ statement about the physical world; `CLAIM_BOUNDARY.md` governs.
 | 1.1 | 2026-09-08 | BOSUN | Minor editorial correction; no change of substance. |
 | 1.2 | 2026-09-08 | BOSUN | Agent audits round 1: section 1a (shared beacon rounds, the predecessor leg, staleness, the quicknet key), the `meta` fields, the leaf and context formulas, the fractional bits, the denominator, masked-table hits, the roles behind "owner" and "coordinator". |
 | 1.3 | 2026-09-08 | BOSUN | The declared offset rule named as such; the domain strings of the context and leaf digests and the byte order of the fixed noising fields stated (second reading). |
+| 1.4 | 2026-09-09 | BOSUN | authorship line, 9 September 2026. |

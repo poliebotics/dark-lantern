@@ -1,8 +1,8 @@
 ---
-version: 1.0
-updated: 2026-08-24
+version: 1.1
+updated: 2026-09-09
 status: historical-source-handoff-record; source-model-and-fixture-absent-from-publication
-author: BOSUN
+author: Cathal Ryan Hynes (author of record); drafted with BOSUN, the project's automated research assistant
 ---
 
 # BOSUN-worker source handoff for the joined pose proof
@@ -90,3 +90,4 @@ reality.
 | Version | Date | Author | Change |
 |---|---|---|---|
 | 1.0 | 2026-08-24 | BOSUN | Froze the joined pose source handoff, bounded Groth16 runner, receipt contract, and honest local interruption record. |
+| 1.1 | 2026-09-09 | BOSUN | authorship line, 9 September 2026. |

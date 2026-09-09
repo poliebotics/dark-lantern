@@ -1,8 +1,8 @@
 ---
-version: 1.9
-date: 2026-09-08
+version: 1.10
+date: 2026-09-09
 status: the second-model audit rounds (five before the proofs, the sixth on the finished package, the seventh a privacy sweep of the payloads, the eighth and later ones confirmation re-reads) and the readings by three outside agents, with their verdict lines, the subjects of every finding, what changed after each, and the texts in audits/
-author: BOSUN for Cathal Ryan Hynes
+author: Cathal Ryan Hynes (author of record); drafted with BOSUN, the project's automated research assistant
 ---
 
 # Audit trail
@@ -247,7 +247,8 @@ its timing measurements are quoted, labelled as such (`RESULTS.md` section 5).
 | revision | date | change | published as |
 |---|---|---|---|
 | 1.0 | 8 September 2026 | the package as audited through round 11 and read three times by the outside agents | Dark Lantern commit `d8cd9278a21dc636bb5c0233276d3cf4beeafd70`; data layer `results/zkdiff_august_20260907/v1/` (manifest `e1bca0243dda85d8431c9091ba81fb3313609123fc1b7730f9781bf210df3f88`) |
-| 1.1 | 9 September 2026 | d2/v10 reference: `FAQ.md` 17 and `GLOSSARY.md` name the public Truth Beam session bundles of d2 and v10 (their locations, recording dates, frame counts, protocol versions and the frame path rule), which the package had called not decided at publication; the revision is recorded in `README.md`, this table and `PINS.json`; the package ledger and the root ledger are regenerated; nothing else changes | one commit on `d8cd9278…` (item 034) and the changed front-matter copies on the data layer (item 035), both staged for the publisher |
+| 1.1 | 9 September 2026 | d2/v10 reference: `FAQ.md` 17 and `GLOSSARY.md` name the public Truth Beam session bundles of d2 and v10 (their locations, recording dates, frame counts, protocol versions and the frame path rule), which the package had called not decided at publication; the revision is recorded in `README.md`, this table and `PINS.json`; the package ledger and the root ledger are regenerated; nothing else changes | Dark Lantern commit `4c9b90c631244693e5813ac7b69300323648094e` (item 034); data layer `results/zkdiff_august_20260907/v1/` (manifest `3702e36ab85a2b9f650ce838f2cd79d35919764ca25e1ec3dfa32f78ca688f65`, item 035) |
+| 1.2 | 9 September 2026 | authorship line: every document of the package carries the author-of-record line, `author: Cathal Ryan Hynes (author of record); drafted with BOSUN, the project's automated research assistant` (a desk qualifier kept in parentheses where one existed), with its version, date and Log advanced; the revision is recorded in `README.md`, this table and `PINS.json`; the copied notes under `source/` and `oracle/` that took the line are listed in `REDACTION.md`; the package ledger and the root ledger are regenerated; nothing else changes | one commit on `8b60d384…` (item 040) and the changed front-matter copies on the data layer (item 041), both staged for the publisher |
 
 ## Sources
 
@@ -272,3 +273,4 @@ Log, the round-1 and round-2 verdicts, and, for the later rounds, `FAQ.md`, `RED
 | 1.7 | 2026-09-08 | BOSUN | The third reading's Claude row; the first outside reading named as such (A1), not round 7; ten rounds. |
 | 1.8 | 2026-09-08 | BOSUN | Astra round 11: the status line carries no counts (the table is the inventory). |
 | 1.9 | 2026-09-09 | BOSUN | Revision 1.1: the Revisions section (1.0 as published, 1.1 the d2/v10 reference). |
+| 1.10 | 2026-09-09 | BOSUN | Revision 1.2: the authorship line of 9 September 2026 (the Revisions row; the 1.1 row's publication record completed). |

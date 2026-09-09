@@ -1,8 +1,8 @@
 ---
-version: 2.5
-date: 2026-09-07
+version: 2.6
+date: 2026-09-09
 status: FINAL G1 artifact for g0e_armc_b16_96x112_cd0_aug_s20260908_24k; Rust parity PASSED after this note was frozen (source/FULL_GUEST.md section 4, RESULTS.md section 4); regenerable by one command; published copy, see the banner below the title
-author: BOSUN
+author: Cathal Ryan Hynes (author of record); drafted with BOSUN, the project's automated research assistant
 ---
 
 # G1 FINAL: integer execution contract and artifact for the proof model
@@ -433,3 +433,4 @@ hashes, so the guest batch driver can check its residuals against the oracle row
   added here (7b) and in FREEZE_SUMMARY.md, per-row noise BLAKE3 map added to the August manifest.
 - 2.5 (2026-09-08, BOSUN): published copy: banner with the layout mapping and the data-layer inputs, Rust parity closed in
   the status line and section 9, the section 7 ratio sentence corrected, `standard` renamed `direct` (agent audits r1).
+- 2.6 (2026-09-09, BOSUN): authorship line, 9 September 2026.

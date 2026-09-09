@@ -549,7 +549,7 @@
    "pix2pixhd_old_light/ci_summary.json": "3ea60f4d61af856ceb0d0401525c99d925144faa2de6462ddc4854dc87054446"
   }
  },
- "revision": "1.0",
+ "revision": "1.1",
  "schema": "old-light-pins/v1",
  "supporting": {
   "data-layer:supporting/data_look/alignment_atlas.png": "af8f6a071ce5e9932519106df0354c993788acbf427be1b02d1109ef5d19ab4f",
@@ -569,7 +569,7 @@
   "supporting/data_look/20241219_051150_stats.json": "5e96bc8beb245cb6aef9f5ef17ddbd191ea16c7b0493211b610cbc62833ec304",
   "supporting/data_look/20241219_051629_stats.json": "45df5602c97f37c24b265a36f163f00532de9b5868ad6dca1f8793ad9d5642dd",
   "supporting/data_look/20241219_052040_stats.json": "61dc4ff1960e295120d6c713adbacc81ab9010f301fd3332474fd7ad13db9b60",
-  "supporting/data_look/README.md": "79142c4e3ba1b07b6fbe4a293148fe430262de8e0d6d07971782dd4c63734079",
+  "supporting/data_look/README.md": "f66a195f2c1252a0008214358ca7befb1a03b0f48925bdc818b9e07e86a030cd",
   "supporting/data_look/alignment_table.csv": "7be1248d038c699289f0635d21454dffe3f975486ea536cc2b42caba4a964639",
   "supporting/data_look/alignment_table.md": "7e78ea77528e3b2920bd49ebc990aeff3a19bb09b396e53d0a4c29f02756bab3",
   "supporting/data_look/session_timing_2023.json": "e5423ca8b8085168ab8044d474adadc2705c7f134bf1493b1a9f192c7ee6428c",

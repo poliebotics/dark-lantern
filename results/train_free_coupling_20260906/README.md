@@ -1,8 +1,8 @@
 ---
-version: 1.3
+version: 1.4
 date: 2026-09-09
 status: public results package; retrospective, previously inspected frames; registered controls frozen before scoring
-author: BOSUN for Cathal Ryan Hynes
+author: Cathal Ryan Hynes (author of record); drafted with BOSUN, the project's automated research assistant
 ---
 
 # The Untrained Eye: emission-capture grid correlation on the held-out tails of two Truth Beam sessions, reproduced from public frames with registered controls
@@ -127,6 +127,7 @@ source that expects the working-directory layout. `SHA256SUMS` covers every othe
 
 ## Log
 
+- 1.4 (2026-09-09, BOSUN) — authorship line, 9 September 2026.
 - 1.3 (2026-09-09, BOSUN) — title revision, 9 September 2026.
 - 1.2 (2026-09-06, BOSUN) — title given its paper form; no other change.
 - 1.1 (2026-09-06, BOSUN) — after Astra's audit (HOLD on wording, provenance and packaging): protocol details and deviations

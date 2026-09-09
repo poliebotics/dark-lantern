@@ -1,8 +1,8 @@
 ---
-version: 1.2
-date: 2026-09-06
+version: 1.3
+date: 2026-09-09
 status: historical-cropped-proof-state
-author: BOSUN
+author: Cathal Ryan Hynes (author of record); drafted with BOSUN, the project's automated research assistant
 ---
 
 # Proof of Pose: what exists, what it proves, and what it does not
@@ -93,6 +93,7 @@ The progress report formerly here is superseded by `zeebeam_nocrop_diffusion_8se
 
 ## Log
 
+- 1.3 (2026-09-09, BOSUN) — authorship line, 9 September 2026.
 - 1.2 (2026-09-06, BOSUN) — title given its paper form; no other change.
 - 1.1 (2026-09-06, BOSUN) — publication edit for the Dark Lantern record under the 6 September rule (GPT-6 Astra's
   audit of the ninth tree): section 5, a withdrawn discriminator line of BOSUN's (void, not evidence), is held from the

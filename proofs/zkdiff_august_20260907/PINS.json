@@ -1,8 +1,8 @@
 {
  "schema": "zkdiff-august-pins/v1",
  "package_revision": {
-  "revision": "1.1",
-  "note": "1.0 is the tree published at Dark Lantern commit d8cd9278a21dc636bb5c0233276d3cf4beeafd70 (8 September 2026); 1.1 adds the public d2 and v10 session-bundle reference (FAQ.md 17, GLOSSARY.md) and nothing else"
+  "revision": "1.2",
+  "note": "1.0 is the tree published at Dark Lantern commit d8cd9278a21dc636bb5c0233276d3cf4beeafd70 (8 September 2026); 1.1 (Dark Lantern commit 4c9b90c631244693e5813ac7b69300323648094e, 9 September 2026) added the public d2 and v10 session-bundle reference (FAQ.md 17, GLOSSARY.md); 1.2 (9 September 2026) gives every document the author-of-record line, author: Cathal Ryan Hynes (author of record); drafted with BOSUN, the project's automated research assistant, and changes nothing else"
  },
  "what": "every constant a verifier of the zkdiff August proofs must pin; hashes computed from the files at staging (tools_release/make_pins.py); the `batch` section is added by fill_results.py once the 112 proofs are collected",
  "date": "2026-09-08",
@@ -1016,8 +1016,8 @@
     "bytes": 3558
    },
    "README_FINAL.md": {
-    "sha256": "849e6f1fc55cbf38b94e5e519e240cbfb331fe7df2600c62d19d7a17e1a9f6d9",
-    "bytes": 36795
+    "sha256": "0e121f955dc8bee70def8f989ffe8d3e046a0c01aa78f904ade6c0b0e7f8c97e",
+    "bytes": 36952
    },
    "agreement.json": {
     "sha256": "f9869c7045facc8c9f889edf36fe5e3e451b402aace4e19845d80d90cf99986c",
@@ -1927,7 +1927,7 @@
  },
  "redaction": {
   "ledger": "REDACTION_LEDGER.tsv",
-  "sha256": "37c915104c6fa625c27342249a62091d02f5494e7057d7bc486ab780cc32c04b",
+  "sha256": "f78b873395fcdf77529e290ceccfcab333cbf8f53d8259ab9f57c413cec9146d",
   "files": 249,
   "note": "every published file under source/, oracle/ and model/ whose bytes differ from the private original, with both digests (REDACTION.md); the receipts' ledger is receipts/REDACTION_LEDGER.tsv"
  },
@@ -2001,11 +2001,11 @@
     "bytes": 67
    },
    "capsule/README.md": {
-    "sha256": "8ec23e20b7a5e006069a62c3ffc786f7a8e8f9fdbc86b9f7ae9f592b8c07b6eb",
-    "bytes": 11116
+    "sha256": "4e4a4320bcdcbca9f50d6dc764bf0532d6eee3953ae4c0a584a8b4bdb2e88221",
+    "bytes": 11255
    },
    "capsule/SHA256SUMS": {
-    "sha256": "7d532495221e87243ac8c153657395ec2604a01d4ffbd53619b28bebb9ac0c0a",
+    "sha256": "9519295af4211bf81ace6c200a8c4e625d96eaca2d56585c04d7d82699c4a094",
     "bytes": 36182
    },
    "capsule/SOURCE_DIGESTS.txt": {

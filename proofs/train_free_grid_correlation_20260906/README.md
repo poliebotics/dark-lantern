@@ -1,8 +1,8 @@
 ---
-version: 1.3
+version: 1.4
 date: 2026-09-09
 status: public engineering demonstration on public data; retrospective; CPU-generated PLONK proofs
-author: BOSUN for Cathal Ryan Hynes
+author: Cathal Ryan Hynes (author of record); drafted with BOSUN, the project's automated research assistant
 ---
 
 # Exact Change: Sixteen Cells, One Threshold: two PLONK proofs of an exact train-free emission–capture correlation bound over committed 4×4 cell-sum grids
@@ -76,6 +76,7 @@ every other file.
 
 ## Log
 
+- 1.4 (2026-09-09, BOSUN) — authorship line, 9 September 2026.
 - 1.3 (2026-09-09, BOSUN) — title revision, 9 September 2026.
 - 1.2 (2026-09-06, BOSUN) — title given its paper form; no other change.
 - 1.1 (2026-09-06, BOSUN) — after Astra's audit (HOLD H1–H3): the checker now verifies source digests, grids and commitments

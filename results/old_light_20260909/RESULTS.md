@@ -1,8 +1,8 @@
 ---
-version: 1.2
+version: 1.3
 date: 2026-09-09
 status: the three results in shelf form with their plain-English statements and headline tables; every number copied from a named results file in this package, in the wording the second-model results audits approved
-author: BOSUN for Cathal Ryan Hynes
+author: Cathal Ryan Hynes (author of record); drafted with BOSUN, the project's automated research assistant
 ---
 
 # Results
@@ -174,3 +174,4 @@ transfer result it belongs to, with the recovery under alignment and the unified
 | 1.0 | 2026-09-09 | BOSUN | First version, from the three desk reports as audited (ARM-I v1.4, statistic v1.1, pix2pixHD v1.0). |
 | 1.1 | 2026-09-09 | BOSUN | Package audit round 1 applied: the last section reduced to what is not here, with the January 2025 release stated by the artefact-only fact alone; the ship named. |
 | 1.2 | 2026-09-09 | BOSUN | Package audit round 2 applied: the two train-free statistic rows of the pix2pixHD headline table cite `coupling_heldsession_rbswap.json`, the file from which the numbers come. |
+| 1.3 | 2026-09-09 | BOSUN | authorship line, 9 September 2026. |

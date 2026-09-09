@@ -1,8 +1,8 @@
 ---
-version: 1.2
-updated: 2026-09-08
+version: 1.3
+updated: 2026-09-09
 status: active
-author: BOSUN for Cathal Ryan Hynes
+author: Cathal Ryan Hynes (author of record); drafted with BOSUN, the project's automated research assistant
 ---
 
 # Replicate the zkdiff August proofs yourself
@@ -214,6 +214,7 @@ fresh proof) are `TEST_LOG_LAMBDA_A100.md` and `lambda_a100_20260908/` beside th
 
 | Version | Date | Author | Change |
 |---|---|---|---|
+| 1.3 | 2026-09-09 | BOSUN | authorship line, 9 September 2026. |
 | 1.2 | 2026-09-08 | BOSUN | The fresh-machine rehearsal (Lambda A100-SXM4-40GB, the whole ladder with `prove`, 62m26s) added with its table, log and artefacts; the GPU path no longer [untested here]; the memory note names both cards. |
 | 1.1 | 2026-09-08 | BOSUN | The frames and the August tensors are published: `execute` and `prove` take the shipped row-600 frame or fetch a published frame; the parity classifier reports absent data-layer files, not held ones; sizes corrected; the build kit named; three sentences reworded. |
 | 1.0 | 2026-09-08 | BOSUN | CPU path rehearsed end to end in a fresh Ubuntu 22.04 container (10m43s); rehearsal table, nested-build note and the git-path check added; GPU path stays [untested here]. |

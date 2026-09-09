@@ -1,8 +1,8 @@
 ---
-version: 1.0
-date: 2026-09-07
+version: 1.1
+date: 2026-09-09
 status: generated, all files sha256-listed in MANIFEST.json
-author: BOSUN
+author: Cathal Ryan Hynes (author of record); drafted with BOSUN, the project's automated research assistant
 ---
 
 # vectors_relation: reference vectors for the relation crate (G2-B)
@@ -37,4 +37,5 @@ advances reproduce and the last one yields `S_N`.
 
 ## Log
 
+- 1.1 (2026-09-09, BOSUN) — authorship line, 9 September 2026.
 - 1.0 (2026-09-07, BOSUN) — first generation, 65 files, 6 MB.

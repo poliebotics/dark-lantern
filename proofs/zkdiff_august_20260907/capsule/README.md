@@ -1,8 +1,8 @@
 ---
-version: 1.2
-date: 2026-09-08
+version: 1.3
+date: 2026-09-09
 status: the offline verification capsule: prebuilt static binaries and the exact inputs to verify all 112 proofs, and to recompute any row's statement from its raw frame, with no Rust toolchain, no Python and no network; tested in a fresh ubuntu:22.04 container with --network none
-author: BOSUN for Cathal Ryan Hynes
+author: Cathal Ryan Hynes (author of record); drafted with BOSUN, the project's automated research assistant
 ---
 
 # capsule/: verify every proof offline, with nothing installed
@@ -117,3 +117,4 @@ Both were rehearsed; the rows below are the evening rebuild's, the afternoon's n
 | 1.0 | 2026-09-08 | BOSUN | First version: offline verification and re-execution capsule, after the outside-agent readability audits (the first reading, A1) and the principal's publication decision. |
 | 1.1 | 2026-09-08 | BOSUN | The binaries rebuilt under a path remap (the privacy sweep, Astra round 7) and re-pinned; the re-execution described as the guest in the SP1 executor; glibc 2.43; timings; the expected identities' two digests; the notices completed. |
 | 1.2 | 2026-09-08 | BOSUN | Third outside reading: the first reading named as such (it is not Astra round 7). |
+| 1.3 | 2026-09-09 | BOSUN | authorship line, 9 September 2026. |

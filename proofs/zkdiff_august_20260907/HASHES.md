@@ -1,8 +1,8 @@
 ---
-version: 1.3
-date: 2026-09-08
+version: 1.4
+date: 2026-09-09
 status: every published hash and what it is the hash of, one line each, with the exact input bytes and where to recompute it; added after the outside-agent readability audits (AUDIT_TRAIL.md, the first reading, A1)
-author: BOSUN for Cathal Ryan Hynes
+author: Cathal Ryan Hynes (author of record); drafted with BOSUN, the project's automated research assistant
 ---
 
 # What every hash is a hash of
@@ -97,3 +97,4 @@ are 32-byte chain states, not digests of a file. Values abbreviated here are com
 | 1.1 | 2026-09-08 | BOSUN | The published frames replace the held wording; the expected identities and the checkpoint carry both digests; the redaction ledger, the build kit manifest and MODES added. |
 | 1.2 | 2026-09-08 | BOSUN | Astra round 9: published and as-recorded digests told apart for the merged manifest, the proof controls, the per-GPU manifests, the evaluator output and the build records; the fixtures' location. |
 | 1.3 | 2026-09-08 | BOSUN | Astra round 10: three static binaries; the kit manifest's two exclusions stated. |
+| 1.4 | 2026-09-09 | BOSUN | authorship line, 9 September 2026. |

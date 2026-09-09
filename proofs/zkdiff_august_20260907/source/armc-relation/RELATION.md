@@ -1,8 +1,8 @@
 ---
-version: 1.2
-date: 2026-09-07
+version: 1.3
+date: 2026-09-09
 status: relation side built and vector-tested on the development machine; network integrated (armc-int adapter, G2-D, see FULL_GUEST.md); August proof set prepared under the two-part offset rule; Astra r5 finding 1 applied (direct and mirrored offsets validated together, -30 admitted only as a mirror; ELF re-pinned in FULL_GUEST.md)
-author: BOSUN
+author: Cathal Ryan Hynes (author of record); drafted with BOSUN, the project's automated research assistant
 ---
 
 > **Amended by G2-D (2026-09-07 evening), see `../FULL_GUEST.md` for the complete guest.** Four things in this
@@ -431,3 +431,4 @@ path end to end; the network (stubbed). Nothing was written outside `g2_guest/ar
   the batch driver, the acceptance verifier and the 112-row regression test; synthetic 40-row mirror session and the
   row-684 prepared-witness test added; sections 1, 1.1, 1.2, 1.3, 5, 7 and 9 updated; the eight policy-only rows
   named. Pins moved to FULL_GUEST.md v1.2.
+- 1.3 (2026-09-09, BOSUN) — authorship line, 9 September 2026.

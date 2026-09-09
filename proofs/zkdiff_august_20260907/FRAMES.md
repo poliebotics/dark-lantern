@@ -1,8 +1,8 @@
 ---
-version: 1.1
-date: 2026-09-08
+version: 1.2
+date: 2026-09-09
 status: the 112 raw sensor frames of the proof rows, published on the data layer by the principal's decision of 8 September 2026: paths, sizes, BLAKE3 (the chain log's and the statements') and SHA-256 (the receipts'), and how to re-execute any row from them
-author: BOSUN for Cathal Ryan Hynes
+author: Cathal Ryan Hynes (author of record); drafted with BOSUN, the project's automated research assistant
 ---
 
 # The raw frames of the proof rows
@@ -154,3 +154,4 @@ the bundle's `_control/RELEASE.json` carries the staging time); `PINS.json` `fra
 |---|---|---|---|
 | 1.0 | 2026-09-08 | BOSUN | First version, on the principal's decision to publish the frames. |
 | 1.1 | 2026-09-08 | BOSUN | What the frames show (the privacy sweep, Astra round 7); how to read a frame; the staging time moved to the bundle's RELEASE.json. |
+| 1.2 | 2026-09-09 | BOSUN | authorship line, 9 September 2026. |

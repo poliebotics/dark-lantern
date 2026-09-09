@@ -1,8 +1,8 @@
 ---
-version: 1.3
-date: 2026-09-08
+version: 1.4
+date: 2026-09-09
 status: development validation, integer agreement, guest parity and the proof batch; sections 1 to 5 are frozen records, section 6 is rendered from the proof collection by fill_results.py; the quick-screen rows corrected and three explanations added after the outside-agent readability audits
-author: BOSUN for Cathal Ryan Hynes
+author: Cathal Ryan Hynes (author of record); drafted with BOSUN, the project's automated research assistant
 ---
 
 # Results
@@ -350,3 +350,4 @@ Section 6: `receipts/`.
 | 1.1 | 2026-09-08 | BOSUN | Astra round 6: residual-ratio sentence corrected (finding 2); the synthetic-session test statement no longer described as a published outcome (finding 4); operational context of the batch rendered into section 6 and framed artifact sizes stated (findings 2 and 14). |
 | 1.2 | 2026-09-08 | BOSUN | Agent audits round 1: the quick screen's 28 August rows named (24 training rows, 4 proof rows) and the earlier "held-out" wording corrected; the 507-pair count derived; the selection record and the absence of a baseline stated. |
 | 1.3 | 2026-09-08 | BOSUN | Section 5: the fresh-machine single-row replication's timing and memory quoted beside the pilot's. |
+| 1.4 | 2026-09-09 | BOSUN | authorship line, 9 September 2026. |

@@ -1,8 +1,8 @@
 ---
-version: 1.0
+version: 1.1
 date: 2026-09-09
 status: the public archive control files the statistic desk verified its inputs against, by URL and digest
-author: BOSUN for Cathal Ryan Hynes
+author: Cathal Ryan Hynes (author of record); drafted with BOSUN, the project's automated research assistant
 ---
 
 # Control inputs
@@ -43,3 +43,4 @@ The 2023 recorder source the report cites (`truth_beam_2023_REDACTED.py`) is pub
 | Version | Date | Author | Change |
 |---|---|---|---|
 | 1.0 | 2026-09-09 | BOSUN | First version, rendered by the staging script. |
+| 1.1 | 2026-09-09 | BOSUN | authorship line, 9 September 2026. |

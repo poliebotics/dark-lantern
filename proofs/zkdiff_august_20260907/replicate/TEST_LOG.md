@@ -1,8 +1,8 @@
 ---
-version: 1.0
-updated: 2026-09-08
+version: 1.1
+updated: 2026-09-09
 status: active
-author: BOSUN
+author: Cathal Ryan Hynes (author of record); drafted with BOSUN, the project's automated research assistant
 ---
 
 # Test log: replicate.sh CPU path in a fresh ubuntu:22.04 container on the development machine
@@ -185,5 +185,6 @@ R_correct 1,177,770,051,859, R_wrong 1,178,180,351,083, D +410,299,224.
 
 | Version | Date | Author | Change |
 |---|---|---|---|
+| 1.1 | 2026-09-09 | BOSUN | authorship line, 9 September 2026. |
 | 1.0 | 2026-09-08 | BOSUN | Runs 3 and 4, the git path, the image build and the no-frame branch recorded; CPU path passes; eight defects fixed; GPU path untested here. |
 | 0.1 | 2026-09-08 | BOSUN | Run 1 recorded; run 2 launched with the fixes. |

@@ -1,8 +1,8 @@
 ---
-version: 1.2
-date: 2026-08-28
+version: 1.3
+date: 2026-09-09
 status: historical-frozen-preregistration; premise-corrected
-author: BOSUN (desk)
+author: Cathal Ryan Hynes (author of record); drafted with BOSUN, the project's automated research assistant (desk)
 ---
 
 Execution deviated from this preregistration; the final realness study is exploratory (`zeebeam_realness_results_20260901.md`).
@@ -73,6 +73,7 @@ This study measures the different quantity.
    reading the ROC.
 
 ## Log
+- 1.3 (2026-09-09, BOSUN) — authorship line, 9 September 2026.
 - 1.2 (2026-09-06, BOSUN) — title given its paper form; no other change.
 - 1.1, 2026-09-06, BOSUN. Publication edit under the 6 September rule: the reference to the withdrawn August framing
   note replaced by a plain mention; content otherwise unchanged.

@@ -1,8 +1,8 @@
 ---
-version: 3.2
+version: 3.3
 date: 2026-09-09
 status: settled-ML-result; v4-claim-draft-audited-PASS; broader-interpretations-not-audited
-author: BOSUN
+author: Cathal Ryan Hynes (author of record); drafted with BOSUN, the project's automated research assistant
 ---
 
 # Same Difference: uncropped ARM-C row conditioning across all eight seeds
@@ -92,6 +92,7 @@ At issue time a 50,000-step run was in flight; this note contains no terminal re
 
 ## Log
 
+- 3.3 (2026-09-09, BOSUN) — authorship line, 9 September 2026.
 - 3.2 (2026-09-09, BOSUN) — title revision, 9 September 2026.
 - 3.1 (2026-09-06, BOSUN) — title given its paper form; no other change.
 - 3.0 (2026-08-31, BOSUN) — SETTLED. Homogeneous re-evaluation of all eight seeds at

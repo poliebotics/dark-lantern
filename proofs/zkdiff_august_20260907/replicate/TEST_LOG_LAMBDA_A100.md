@@ -1,8 +1,8 @@
 ---
-version: 1.0
-updated: 2026-09-08
+version: 1.1
+updated: 2026-09-09
 status: active
-author: BOSUN
+author: Cathal Ryan Hynes (author of record); drafted with BOSUN, the project's automated research assistant
 ---
 
 # Test log: replicate.sh, the whole ladder with `prove`, on a freshly launched Lambda A100-SXM4-40GB
@@ -463,3 +463,4 @@ tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.proven
 | Version | Date | Author | Change |
 |---|---|---|---|
 | 1.0 | 2026-09-08 | BOSUN | First version: the fresh-machine run of 17:05Z to 18:07Z, its artefacts and the redaction applied to them. |
+| 1.1 | 2026-09-09 | BOSUN | authorship line, 9 September 2026. |

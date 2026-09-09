@@ -1,8 +1,8 @@
 ---
-version: 1.1
+version: 1.2
 date: 2026-09-09
 status: what every published digest is a digest of, and where to recompute it
-author: BOSUN for Cathal Ryan Hynes
+author: Cathal Ryan Hynes (author of record); drafted with BOSUN, the project's automated research assistant
 ---
 
 # What every hash is a hash of
@@ -46,3 +46,4 @@ complete in `PINS.json` and in the ledgers.
 |---|---|---|---|
 | 1.0 | 2026-09-09 | BOSUN | First version. |
 | 1.1 | 2026-09-09 | BOSUN | Package audit round 2 applied: the figures row says which PNGs regenerate from the results files and which need the bundle or the withheld generated images. |
+| 1.2 | 2026-09-09 | BOSUN | authorship line, 9 September 2026. |

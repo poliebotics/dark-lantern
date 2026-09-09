@@ -1,8 +1,8 @@
 ---
-version: 1.1
+version: 1.2
 date: 2026-09-09
 status: what the data-layer bundle carries, directory by directory, and which ledger covers what; the object counts and byte totals of the payload directories are rendered from the staged bundle
-author: BOSUN for Cathal Ryan Hynes
+author: Cathal Ryan Hynes (author of record); drafted with BOSUN, the project's automated research assistant
 ---
 
 # The data-layer bundle
@@ -96,3 +96,4 @@ unobscured face appears. These materials are not anonymised; identity may be inf
 |---|---|---|---|
 | 1.0 | 2026-09-09 | BOSUN | First version; the directory table is rendered by the staging script from the bundle. |
 | 1.1 | 2026-09-09 | BOSUN | Package audit round 1 applied: the copyable fetch, verification and placement sequence. |
+| 1.2 | 2026-09-09 | BOSUN | authorship line, 9 September 2026. |

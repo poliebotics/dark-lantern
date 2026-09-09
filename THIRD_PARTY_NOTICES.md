@@ -1,8 +1,8 @@
 ---
-version: 1.6
-date: 2026-09-08
+version: 1.7
+date: 2026-09-09
 status: third-party-notices
-author: BOSUN
+author: Cathal Ryan Hynes (author of record); drafted with BOSUN, the project's automated research assistant
 ---
 
 # Third-party notices
@@ -31,6 +31,7 @@ pinned toolchain (its `capsule/README.md` gives the rebuild); the one guest prog
 
 ## Log
 
+- 1.7 (2026-09-09, BOSUN): authorship line, 9 September 2026.
 - 1.6 (2026-09-08, BOSUN): the zkdiff August package (`proofs/zkdiff_august_20260907/`): rows for its three statically linked executables with their crate licence lists and glibc, and for the second copy of `groth16_vk.bin`; 12 licence texts added under `licenses/`; the compiled-code sentence corrected.
 - 1.5 (2026-09-06, BOSUN) — thirteenth build: the circomlib-derived WebAssembly witness generators and the Circom-emitted JavaScript helpers of the three added packages, under GPL-3.0; runtime tools named.
 - 1.4 (2026-09-05, BOSUN) — sixth build: no change of substance; regenerated.

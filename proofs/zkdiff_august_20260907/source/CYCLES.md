@@ -1,8 +1,8 @@
 ---
-version: 1.3
-date: 2026-09-07
+version: 1.4
+date: 2026-09-09
 status: measured (execute-only, SP1 6.4.0, the development machine) for the pre-r4 kernels; ancillary numbers corrected per Astra r4 item 8; the kernel crate itself has since moved to the FINAL saturation contract (see the banner) and its parity record is FULL_GUEST.md
-author: BOSUN
+author: Cathal Ryan Hynes (author of record); drafted with BOSUN, the project's automated research assistant
 ---
 
 > **Superseded in part (2026-09-07, Astra r4, applied in G2-D).** The kernels measured here (v3, ELF `3fd902b3…`)
@@ -379,6 +379,7 @@ reproduced from the constants, not copied. Nothing was proved; no ELF left the d
 
 ## Log
 
+- 1.4 (2026-09-09, BOSUN) — authorship line, 9 September 2026.
 - 1.3 (2026-09-07, BOSUN, G2-D) — Astra r4 item 8 applied: v3 gas, execute time, wall and RSS corrected
   (the table had carried v2's), KiB/GB stated, 235-instruction steady path, the inconsistent "60 instructions,
   0.5 per MAC" remark removed; banner recording the post-r4 kernel changes and where their parity lives.

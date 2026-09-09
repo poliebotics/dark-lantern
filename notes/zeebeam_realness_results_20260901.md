@@ -1,8 +1,8 @@
 ---
-version: 2.1
-date: 2026-09-01
+version: 2.2
+date: 2026-09-09
 status: exploratory-one-generator-class; one-unpreserved-generator-free-diagnostic; classes-2-and-4-unrun
-author: BOSUN
+author: Cathal Ryan Hynes (author of record); drafted with BOSUN, the project's automated research assistant
 ---
 
 # Smelling a Fake: does the frozen scorer reject forged chains?
@@ -82,6 +82,7 @@ real-versus-generated, and not a general anti-forgery claim.
 
 ## Log
 
+- 2.2 (2026-09-09, BOSUN) — authorship line, 9 September 2026.
 - 2.1 (2026-09-06, BOSUN) — title given its paper form; no other change.
 - 2.0 (2026-09-01, BOSUN) — corrected after Sol's ultra audit returned BLOCK. Coverage
   restated from three classes to one generator-based class plus one diagnostic; exploratory

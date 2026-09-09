@@ -1,8 +1,8 @@
 ---
-version: 1.2
-date: 2026-09-07
+version: 1.3
+date: 2026-09-09
 status: complete guest built reproducibly on the development machine AND on the node (different absolute paths, byte-identical ELF, one vkey), never proved; Astra r5 findings 1, 3, 4 (wording), 5, 6, 9, 10, 11, 12 applied; parity PASS on d2 1328 (both constant sets), on the eight FINAL layer sets, on the 42 FINAL boundary fixtures, on August rows 600-603 in the complete guest with the acceptance verifier, and on a synthetic mirrored -30 statement through the complete guest; row 684's complete run waits for its frame on the node [pending node]
-author: BOSUN
+author: Cathal Ryan Hynes (author of record); drafted with BOSUN, the project's automated research assistant
 ---
 
 # G2-D: the complete zkdiff guest (relation legs + armc-int network), parity, instruction count, node batch procedure
@@ -626,3 +626,4 @@ the integer scales. "Untouched test set" would be false. Astra's three paragraph
   node (`g2_guest_r5`). The /tmp probe log, quoted: `guest_elf_bytes=396200
   guest_elf_sha256=51b7bc3548d0a4fdb822aa8ed8c8982b5fe707900133d67d664fa3a732fc75cc`,
   `sp1_vkey=0x00f0189431f373a5a931f1db0c6abd9673e4176e653e0f84f97724d302fda027`. Nothing proved.
+- 1.3 (2026-09-09, BOSUN) — authorship line, 9 September 2026.

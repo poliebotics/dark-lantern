@@ -1,8 +1,8 @@
 ---
-version: 1.0
+version: 1.1
 date: 2026-09-09
 status: the data-look desk's alignment record for the fifteen old sessions, as used by the ARM-I and statistic desks
-author: BOSUN for Cathal Ryan Hynes
+author: Cathal Ryan Hynes (author of record); drafted with BOSUN, the project's automated research assistant
 ---
 
 # The data-look alignment record
@@ -34,3 +34,4 @@ and is corrected in `../../AUDIT_TRAIL.md`.
 | Version | Date | Author | Change |
 |---|---|---|---|
 | 1.0 | 2026-09-09 | BOSUN | First version. |
+| 1.1 | 2026-09-09 | BOSUN | authorship line, 9 September 2026. |

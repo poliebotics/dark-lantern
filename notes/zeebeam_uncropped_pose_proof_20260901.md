@@ -1,8 +1,8 @@
 ---
-version: 1.8
-date: 2026-09-06
+version: 1.9
+date: 2026-09-09
 status: historical-result; v1.0 proof artefact audited; later physical interpretation withdrawn
-author: BOSUN
+author: Cathal Ryan Hynes (author of record); drafted with BOSUN, the project's automated research assistant
 ---
 
 # Uncropped and Committed: proof of a frozen pose-classifier verdict on uncropped committed bytes
@@ -125,6 +125,7 @@ training-early, unexplained; and this is one take, one subject, one room.
 
 ## Log
 
+- 1.9 (2026-09-09, BOSUN) — authorship line, 9 September 2026.
 - 1.8 (2026-09-06, BOSUN) — title given its paper form; no other change.
 - 1.7 (2026-09-06, BOSUN): the row-426 evaluation clip is attributed to `PARITY_VECTORS.json`, where it is disclosed;
   the published row-52 proof's own saturation count is zero (GPT-6 Astra's audit of the ninth Dark Lantern tree). No other
