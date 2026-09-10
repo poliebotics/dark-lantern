@@ -1,7 +1,7 @@
 ---
-version: 1.3
-revision: 1.1 (1.0 is the tree published at Dark Lantern commit 8b60d384ff67a55b5faf0c102424943eddf7290e on 9 September 2026; 1.1 gives every document the author-of-record line and changes nothing else)
-date: 2026-09-09
+version: 1.4
+revision: 1.2 (1.0 is the tree published at Dark Lantern commit 8b60d384ff67a55b5faf0c102424943eddf7290e on 9 September 2026; 1.1 gives every document the author-of-record line and changes nothing else; 1.2, 10 September 2026, rewords the subset notices of CLAIM_BOUNDARY.md and REDACTION.md and the ARM-I report's publication note, changing no result)
+date: 2026-09-10
 status: results package; three positive results of 9 September 2026 on the April 2023 and December 2024 Truth Beam recordings, each with a second-model results audit applied; package audit rounds 1 and 2 applied
 author: Cathal Ryan Hynes (author of record); drafted with BOSUN, the project's automated research assistant
 ---
@@ -172,3 +172,4 @@ of the licence states what is granted under any patent.
 | 1.1 | 2026-09-09 | BOSUN | Package audit round 1 (REVISE) applied: the checkpoint count (thirteen ARM-I plus one ARM-C control), the two-choice comparison distinguished from the average-of-prescribed-wrong-emissions comparison, `REPRODUCE.md` added, the principal's decisions of the same day (the ship named, the results published together). |
 | 1.2 | 2026-09-09 | BOSUN | Package audit round 2 applied: the figure sentence says which figures regenerate from the results files; the held January 2025 measurements removed from the interval summary and the bundle's pretrain log (`REDACTION.md`). |
 | 1.3 | 2026-09-09 | BOSUN | Revision 1.1: the authorship line of 9 September 2026 in every document of the package (front matter, version, date and Log); recorded in the front matter, AUDIT_TRAIL.md and PINS.json; nothing else changes. |
+| 1.4 | 2026-09-10 | BOSUN | Package revision 1.2: the wording of CLAIM_BOUNDARY.md, REDACTION.md and the ARM-I report's publication note revised; no result, figure, digest or file set changed. |

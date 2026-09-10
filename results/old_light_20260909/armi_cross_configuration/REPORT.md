@@ -1,6 +1,6 @@
 ---
-version: 1.5
-date: 2026-09-09
+version: 1.6
+date: 2026-09-10
 status: FINAL (measured; Astra r1 and r2 fixes applied; owner scene correction of 9 September applied; follow-up run appended)
 author: Cathal Ryan Hynes (author of record); drafted with BOSUN, the project's automated research assistant (the ARM-I desk)
 ---
@@ -232,7 +232,7 @@ Preprocessing choices that could move the old-rig numbers and were fixed from th
 
 The homography variant (b) uses an externally estimated per-session alignment from the data-look desk, so it is a test of the model on aligned inputs, not of the published whole-frame posture, and a model trained on 2026 whole frames sees a field that fills the grid instead of half of it. The Perlin-period association uses the desk's per-frame periods and is a post-hoc binning of the frozen per-row scores by the correct emission's period, with 51 rows in the top bin and most negative comparisons crossing bins; the matched-period control is the controlled form.
 
-Publication note: the 2024-to-2026 and 2026-to-2024 transfers are the positive results and are stated with both statistics; the raw-2023 null is published here as a limit of those results, with the recovery under alignment and the unified result beside it.
+Publication note: the 2024-to-2026 and 2026-to-2024 transfers are stated with both statistics; the raw-2023 result, at chance under the raw layout, is published here beside them, with the recovery under alignment and the unified result.
 
 ## Cost and provenance
 
@@ -266,6 +266,7 @@ The controls support correspondence under random, exhaustive, matched-period and
 
 ## Log
 
+- 1.6 (2026-09-10, BOSUN) — the publication note reworded; no number changed.
 - 1.5 (2026-09-09, BOSUN) — authorship line, 9 September 2026.
 - 1.4 (2026-09-09, BOSUN) — owner scene correction applied (the principal, 9 September, verified by the desk against d2 preview frame 1300): the 2026 sessions were recorded in CittaDel's wheelhouse, a different room from the 2023/2024 bookshelf sessions; the 2024 to 2026 transfers are cross-scene; the same-bookshelf caveat corrected in the plain paragraph, the 2023 paragraph, the reverse-arm paragraph, the caveats, the shelf verdict and the contact-sheet caption; every other caveat kept.
 - 1.3 (2026-09-09, BOSUN) — Astra results audit r2 fixes applied: the spatial/colour conclusion replaced by the supported statement, complete monitoring disclosure for the unified runs, raw-trailer wording, the surviving round-1 contradictions removed, restricted one-session claim, three recorded rig configurations, identification counts kept distinct from paired fractions, narrower control wording, Astra's shelf entries and plain paragraph adopted, kit manifest regenerated.

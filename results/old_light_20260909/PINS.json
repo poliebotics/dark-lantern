@@ -549,7 +549,7 @@
    "pix2pixhd_old_light/ci_summary.json": "3ea60f4d61af856ceb0d0401525c99d925144faa2de6462ddc4854dc87054446"
   }
  },
- "revision": "1.1",
+ "revision": "1.2",
  "schema": "old-light-pins/v1",
  "supporting": {
   "data-layer:supporting/data_look/alignment_atlas.png": "af8f6a071ce5e9932519106df0354c993788acbf427be1b02d1109ef5d19ab4f",

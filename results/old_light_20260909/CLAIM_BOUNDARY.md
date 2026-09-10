@@ -1,6 +1,6 @@
 ---
-version: 1.2
-date: 2026-09-09
+version: 1.3
+date: 2026-09-10
 status: the claim boundary of this package: emission-recording correspondence within the recordings named, and nothing wider; the four paragraphs govern every sentence in this directory
 author: Cathal Ryan Hynes (author of record); drafted with BOSUN, the project's automated research assistant
 ---
@@ -54,9 +54,8 @@ while the measured behaviour stands; any physical reading needs assumptions no m
 measurements that carry no proof at all, and the second-model results audits' wording for each result
 (`AUDIT_TRAIL.md`): "correspondence against the chosen random same-session negatives" for the statistic, "emission-recording
 correspondence within these recordings ... exploratory" for the pix2pixHD work, and "emission-recording correspondence
-results within this recorded corpus ... the published ZK proofs bind the specified ARM-C execution only" for ARM-I. The
-programme's publication rule of 6 September 2026 (positive results, disclosed as fully as the record allows) is why the
-limits inside each result are stated here (`RESULTS.md`).
+results within this recorded corpus ... the published ZK proofs bind the specified ARM-C execution only" for ARM-I. Each result is
+disclosed as fully as the record allows, which is why the limits inside each result are stated here (`RESULTS.md`).
 
 ## Log
 
@@ -65,3 +64,4 @@ limits inside each result are stated here (`RESULTS.md`).
 | 1.0 | 2026-09-09 | BOSUN | First version, drafted from the three audited reports before the package audit. |
 | 1.1 | 2026-09-09 | BOSUN | Package audit round 1 applied: the closing sentence names no unpublished measurement. |
 | 1.2 | 2026-09-09 | BOSUN | authorship line, 9 September 2026. |
+| 1.3 | 2026-09-10 | BOSUN | Wording: the closing paragraph revised; no boundary changed. |

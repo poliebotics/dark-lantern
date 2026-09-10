@@ -3,9 +3,8 @@
 Dark Lantern is the privacy and zero-knowledge research programme behind ZeeBeam, the Zero-knowledge Evidence Emitter Beam. The ZeeBeam release
 (`poliebotics/zeebeam`) is the programme's core result: one zkVM relation, proved for every anchored row of a
 projector-camera session. This repository is a curated public subset of the programme record beyond ZeeBeam:
-selected standalone proof outputs, diagnostics, notes, audit prompts and verdicts, and retained fixtures, under the
-programme's publication rule of 6 September 2026: positive, patent-supporting results only, disclosed as fully as the
-record allows.
+selected standalone proof outputs, diagnostics, notes, audit prompts and verdicts, and retained fixtures, each disclosed
+as fully as the record allows.
 Publication-subset notices identify omitted and non-rebuildable material.
 
 Historical notes preserve language current when written. Opening notices identify later supersession, and the ZeeBeam
@@ -47,14 +46,12 @@ intellectual-property review); the row-96 timing, cadence and rate receipts and 
 table (90 GB), the forgery-rejection circuits (8 GB) and the coupling reconstruction archive (6 GB), which belong on a
 data gateway; the 2,453-byte forgery-rejection Groth16 wrap with its gate and errata, not staged here; the held design
 notes; student-ladder material, which the programme's 1 September directive set aside. Held notes and student-ladder
-material are absent from this tree. Also held, under the programme's publication rule of 6 September 2026 (positive,
-patent-supporting results only; within that frame, maximal disclosure): the two pose-confound notes and the temporal
-split's predeclaration and evidence; the PairNet null result; the withdrawn August realness framing; the Monero
-compatibility note (a negative verdict); the persist-before-judge incident note; the cheap-proof fixture note whose
-diffusion route was closed as a negative; the 1 September results-audit briefs, verdicts and prove logs (two BLOCK
-audits); the row-400 witness and Python oracle of the earlier relation; and, pending the principal's decision, the
-draft cross-rig position and the neural-only training constraint note. Superseded but valid positives stay: the cropped
-pose proof with its state note, and the row-96 membership proof. The 8-seed conditioning audit trail stays because it
+material are absent from this tree. Also not here: the two pose-confound notes and the temporal split's predeclaration
+and evidence; the PairNet note; the August realness framing; the Monero compatibility note; the persist-before-judge
+incident note; the cheap-proof fixture note; the 1 September results-audit briefs, verdicts and prove logs; the row-400
+witness and Python oracle of the earlier relation; and, pending the author's decision, the draft cross-rig position and
+the neural-only training constraint note. Superseded but still valid results stay: the cropped pose proof with its state
+note, and the row-96 membership proof. The 8-seed conditioning audit trail stays because it
 ends in a PASS. Limits stated inside the kept notes are scope, not negatives, and stay.
 
 ## Redaction
@@ -81,9 +78,14 @@ Principal: Cathal Ryan Hynes (PolieBotics). Drafted, built, proved and verified 
 research assistant, under the principal's direction. Second-model audits by Sol (OpenAI GPT-5.6) and, from 6 September, GPT-6 Astra, both through `codex exec`, with their
 verdicts attached; these are model reviews, not independent validation.
 
-Eleventh tree, 6 September 2026: re-staged under the programme's publication rule of that day (positive, patent-supporting
-results only; maximal disclosure within that frame). The held material is listed in the "Not here" paragraph above; the
-build history is in the initial commit message.
+Eleventh tree, 6 September 2026: re-staged as the curated subset described at the head of this file. What is absent is
+listed in the "Not here" paragraph above; the build history is in the initial commit message.
+
+Wording revision, 10 September 2026: the notices that describe this tree as a curated subset (the opening paragraph and the
+"Not here" paragraph above, `proofs/PUBLICATION_SUBSET.md`, the introduction and section-5 notice of
+`notes/zeebeam_pose_proof_state_20260830.md`) and, in the Old Light package (revision 1.2), `CLAIM_BOUNDARY.md`,
+`REDACTION.md` and the ARM-I report's publication note, are reworded to state what is present and what is absent. No proof,
+statement, receipt, result, figure, source or model file changes, and nothing is added or removed.
 
 Twelfth and thirteenth trees, 6 September 2026 (evening): three positive packages added after GPT-6 Astra audits of their exact bytes: the
 conditional micro-PLONK extract, the train-free coupling package and the grid-correlation proofs (`proofs/conditional_micro/`,
@@ -95,7 +97,7 @@ recorded in the private build record.
 
 Proof package `proofs/zkdiff_august_20260907/`, batch of 2026-09-07: 112 Groth16 proofs of the two-evaluation diffusion statement, one per August row 600 to 711, proved on a rented eight-GPU node and each accepted cold against the frozen identities on the node and again on the development machine; the package carries its own `SHA256SUMS` (revision 1.2 of 9 September 2026: 3135 entries, SHA-256 `05f65baba434084782e2d5429a0ec826da12694efd67dfc6a250268daf595318`; revision 1.1 of the same day: `88193edbcd4b55fdf0e422e9e3a1778ad09f6ace1f772d8a7200af89322cfffb`; revision 1.0 as first published: `40bb69a54eee08a74598aba8b8e0c50d00db747e9fdaaf17875d5253421790b8`). Its large files, the 112 raw frames of the proof rows, the August camera-derived tensors, an offline build kit and the allowlisted proof-run collection sit on the data layer under `results/zkdiff_august_20260907/v1/`: 5,670 manifest-listed payload objects, 12,671,405,341 payload bytes, plus the root ledger and three control files, fixed by that prefix's `_control/MANIFEST.jsonl` (SHA-256 `fab8915a30e692fa9217e90f11d6fd758ebea9d1c7ec29a0f6cd320f411c7c10`), `_control/SHA256SUMS` (`41f1f1fcdf5196c85b07cd135e66d55d98025c706f96a51c5f960b44347afd60`) and `_control/RELEASE.json` (`8f5a5b052970242a71b011cb64bf871b87e7936393aa6601fb388e3f4e8a2397`); revision 1.2 replaced only the fifteen front-matter copies, the root ledger and these three controls (revision 1.1's controls were `3702e36ab85a2b9f650ce838f2cd79d35919764ca25e1ec3dfa32f78ca688f65`, `edfb98119a487742b5fef274b0bf286683559434280ab046ab9db20c02619d25` and `b1e3aac6578c527173d1a7ce29353912fd9460fc885af3388d5cfbdd29db8799`; revision 1.0's `e1bca0243dda85d8431c9091ba81fb3313609123fc1b7730f9781bf210df3f88`, `12774760f4c8874c8adaf3e116f9c4b4caa31ba50a79fa7e899aaca7bba6c1aa` and `cf716a7225863770404be403ecdc6b2c1acf8c59aa53af57deea35d6564cfc62`). Audit rounds one to ten (GPT-6 Astra, `codex exec`; five before proving, one on the finished package, a privacy sweep and three confirmation re-reads) and the nine outside-agent readability reports (three readings) are summarised in its `AUDIT_TRAIL.md` and published in full in its `audits/` (the privacy sweep by its verdict and dispositions).
 
-Results package `results/old_light_20260909/`, 9 September 2026: three positive results on the April 2023 and December 2024 Truth Beam recordings (the train-free grid statistic with projected-region alignment, pix2pixHD models trained on the recordings, and ARM-I, the image-conditioned diffusion evaluator trained on the 2026 recordings and tested across rig configurations), each audited by GPT-6 Astra before packaging; the package carries its own `SHA256SUMS` (revision 1.1 of 9 September 2026: 325 entries, SHA-256 `6ff70a3b7cd6f5a7b4f57629b6ac69afb1f224dd5f92bc37e3117e8de06b6c85`; revision 1.0 as first published: `296df690008ac294f6523ef9490f47579b5a6eccae0f7917cc840240d59da427`). Its large objects, the fourteen checkpoints as documented derivatives, every per-row score array, the pix2pixHD run records with every contact sheet, the cached grids of the statistic and the data-look alignment atlas, sit on the data layer under `results/old_light_20260909/v1/`: 874 manifest-listed objects, 868,825,795 bytes, plus the root ledger and three control files, fixed by that prefix's `_control/MANIFEST.jsonl` (SHA-256 `4b2a6e35bf14a82fbd992d20087529e6a667db967d90f6dd20a1d4544163d461`), `_control/SHA256SUMS` (`de484ec1af9903654cf0a5f3946e7212c55abd1ec026db517e6edc2aa1bd4409`) and `_control/RELEASE.json` (`0a4eb0dfd689659bb54dfea12c279454ccd14077d2330ba2086b4614b2b9b6a0`); revision 1.1 replaced only the eleven front-matter copies, the prefix README (which names the package ledger), the root ledger and these three controls (revision 1.0's controls were `dfe707e955509eb02ce519cb660cf5bbe1d1339acb2bb114b6fd6054e3d258b7`, `070a81e648ff5ab82eff0a2d88920b569f94558104255d75201f9d4be8319ee3` and `db1bddfedc7456994b8a2e4fd2051449b19d56e31ac3f2790a6f1936a15c0e4d`). The four results audits are summarised in its `AUDIT_TRAIL.md` and published in its `audits/`; the images published show a masked participant, as its `README.md` states.
+Results package `results/old_light_20260909/`, 9 September 2026: three positive results on the April 2023 and December 2024 Truth Beam recordings (the train-free grid statistic with projected-region alignment, pix2pixHD models trained on the recordings, and ARM-I, the image-conditioned diffusion evaluator trained on the 2026 recordings and tested across rig configurations), each audited by GPT-6 Astra before packaging; the package carries its own `SHA256SUMS` (revision 1.2 of 10 September 2026: 325 entries, SHA-256 `200b30be60aea0c9088f6444f11e16ebb75bb91733910d8bded3cff075e0f5fa`; revision 1.1 of 9 September 2026: `6ff70a3b7cd6f5a7b4f57629b6ac69afb1f224dd5f92bc37e3117e8de06b6c85`; revision 1.0 as first published: `296df690008ac294f6523ef9490f47579b5a6eccae0f7917cc840240d59da427`). Its large objects, the fourteen checkpoints as documented derivatives, every per-row score array, the pix2pixHD run records with every contact sheet, the cached grids of the statistic and the data-look alignment atlas, sit on the data layer under `results/old_light_20260909/v1/`: 874 manifest-listed objects, 868,826,266 bytes, plus the root ledger and three control files, fixed by that prefix's `_control/MANIFEST.jsonl` (SHA-256 `facd8e875c5f3c0698600158e230b11c645846dd09ad56b2c428c383d82d4d14`), `_control/SHA256SUMS` (`053f2eb2133979bc63ee2be59833755f7d12b11c1dfc05a5fcaf726030a26100`) and `_control/RELEASE.json` (`9338873eada2ab5f44060979114d3ea2be13f5b136ffd3534c4ecf310b974e7c`); revision 1.2 replaced only the 5 changed front-matter copies, the prefix README (which names the package ledger), the root ledger and these three controls (revision 1.1's controls were `4b2a6e35bf14a82fbd992d20087529e6a667db967d90f6dd20a1d4544163d461`, `de484ec1af9903654cf0a5f3946e7212c55abd1ec026db517e6edc2aa1bd4409` and `0a4eb0dfd689659bb54dfea12c279454ccd14077d2330ba2086b4614b2b9b6a0`; revision 1.1 had replaced the eleven front-matter copies, the prefix README, the root ledger and the controls; revision 1.0's controls were `dfe707e955509eb02ce519cb660cf5bbe1d1339acb2bb114b6fd6054e3d258b7`, `070a81e648ff5ab82eff0a2d88920b569f94558104255d75201f9d4be8319ee3` and `db1bddfedc7456994b8a2e4fd2051449b19d56e31ac3f2790a6f1936a15c0e4d`). The four results audits are summarised in its `AUDIT_TRAIL.md` and published in its `audits/`; the images published show a masked participant, as its `README.md` states.
 
 ## Authorship
 

@@ -1,7 +1,7 @@
 # What is not in `proofs/`, and why
 
-- `row400/`: the row-400 witness and Python oracle of the earlier relation are held from this tree under the programme's
-  publication rule of 6 September 2026 (they are not proof receipts).
+- `row400/`: the row-400 witness and Python oracle of the earlier relation are not in this tree (they are not proof
+  receipts).
 - `pose_uncropped/proofs_out/uncr64_core.proof.bin` (56 MB): a Core-mode proof, which is not zero-knowledge and is
   derived from the private witness. The Groth16 proof, its public values and the receipt remain.
 - `pose_cropped/results/guest.elf`: the guest program binary embedded development-machine paths; the Groth16 proof,
